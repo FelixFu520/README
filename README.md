@@ -1,13 +1,21 @@
 # 项目目录
+### 深度学习学习
+1. 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml    
 
-* code_of_learn-deep-learning-with-pytorch ——>《深度学习入门Pytorch》——>![链接](https://github.com/FelixFu520/code_of_learn-deep-learning-with-pytorch)   
-* DeepDream——>“DeepDream实现代码”——>![链接](https://github.com/FelixFu520/DeepDream)  
-* dl-by-hand——>“手动实现MLP、CNN、RNN、LSTM”——>![链接](https://github.com/FelixFu520/dl-by-hand)
-* lhy_ml——>“李宏毅学习笔记”——>![链接](https://github.com/FelixFu520/lhy_ml)
-* TensorRT——>“TensorRT学习笔记”——>![链接](https://github.com/FelixFu520/TensorRT)
-* Pytorch2Onnx2TensorRT——>“Pytorch转ONNX转TensorRT”——>![链接](https://github.com/FelixFu520/Pytorch2Onnx2TensorRT)
-* TensorRT——>"TensorRT学习笔记“——>![链接](https://github.com/FelixFu520/Pytorch1.4)
-* Neural-Transfer——>“风格迁移”——>![](https://github.com/FelixFu520/Neural-Transfer)
-* Class Activation Map(CAM)——>“CAM学习“——>![](https://github.com/FelixFu520/CAM)
+### Pytorch学习
+1. Pytorch官网API学习：https://github.com/FelixFu520/PyTorch   
+2. 《深度学习入门Pytorch》书籍学习：https://github.com/FelixFu520/code_of_learn-deep-learning-with-pytorch   
+3. Pytorch1.4:https://github.com/FelixFu520/Pytorch1.4   
+
+### TensorRT学习
+1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
+2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
+3. 
+
+### 小项目代码
+1. DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
+2. 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
+3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer
+4. “CAM学习“：https://github.com/FelixFu520/CAM
 
 
