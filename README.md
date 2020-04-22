@@ -6,6 +6,7 @@
 1. Pytorch官网API学习：https://github.com/FelixFu520/PyTorch   
 2. 《深度学习入门Pytorch》书籍学习：https://github.com/FelixFu520/code_of_learn-deep-learning-with-pytorch   
 3. Pytorch1.4:https://github.com/FelixFu520/Pytorch1.4   
+4. Pytorch 分布式入门：https://github.com/FelixFu520/Pytorch-Distributed   
 
 ### TensorRT学习
 1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
@@ -15,7 +16,9 @@
 ### 小项目代码
 1. DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
 2. 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
-3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer
+3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
+4. 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
+
 #### CAM
 * “CAM学习“：https://github.com/FelixFu520/CAM
 * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
