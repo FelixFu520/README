@@ -1,6 +1,7 @@
 # 项目目录
 ### 深度学习学习
-1. 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml    
+1. 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml   
+2. 李宏毅PPT&代码：https://github.com/FelixFu520/lhy_DL_Hw  
 
 ### Pytorch学习
 1. Pytorch官网API学习：https://github.com/FelixFu520/PyTorch   
@@ -28,3 +29,9 @@
 * NestedUNet-dsb2018_96:https://github.com/FelixFu520/NestedUNet-dsb2018_96  
 #### Nano
 * DLI Nano:https://github.com/FelixFu520/Nano_DLI.  
+
+#### DeepStream
+* Gstreamer：https://github.com/FelixFu520/Gstreamer
+
+
+#### 
