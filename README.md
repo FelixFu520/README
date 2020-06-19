@@ -10,9 +10,9 @@
 4. Pytorch 分布式入门：https://github.com/FelixFu520/Parallel-Pytorch   
 
 ### TensorRT学习
-1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT_   
+1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
 2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
-3. 
+3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT_
 
 ### 小项目代码
 1. DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
