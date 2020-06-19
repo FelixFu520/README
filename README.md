@@ -10,7 +10,7 @@
 4. Pytorch 分布式入门：https://github.com/FelixFu520/Parallel-Pytorch   
 
 ### TensorRT学习
-1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
+1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT_   
 2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
 3. 
 
