@@ -12,8 +12,7 @@
 ### TensorRT学习
 1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
 2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
-3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT_
-4. TensorRT：https://github.com/FelixFu520/TensorRT-
+3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT-
 
 
 ### 小项目代码
