@@ -13,12 +13,16 @@
 1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
 2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
 3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT_
+4. TensorRT：https://github.com/FelixFu520/TensorRT-
+
 
 ### 小项目代码
 1. DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
 2. 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
 3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
 4. 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
+5. cityscapesScripts：https://github.com/FelixFu520/cityscapesScripts
+6. CarvanaImageMaskingChallenge：https://github.com/FelixFu520/CarvanaImageMaskingChallenge
 
 #### CAM
 * “CAM学习“：https://github.com/FelixFu520/CAM
@@ -27,6 +31,7 @@
 #### UNet
 * Unet-simple:https://github.com/FelixFu520/Unet-Simple
 * NestedUNet-dsb2018_96:https://github.com/FelixFu520/NestedUNet-dsb2018_96  
+* u_net_liver：https://github.com/FelixFu520/u_net_liver
 #### Nano
 * DLI Nano:https://github.com/FelixFu520/Nano_DLI.  
 
@@ -34,4 +39,18 @@
 * Gstreamer：https://github.com/FelixFu520/Gstreamer
 
 
-#### 
+#### ONNX
+* ONNX-Tutorial：https://github.com/FelixFu520/ONNX-Tutorial   
+* Nano-Pytorch-ONNX-TensorRT：https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT   
+* 
+#### 部署
+* AI部署：https://github.com/FelixFu520/ai-deployment
+
+#### C++
+* 入门视频：https://github.com/FelixFu520/Cpp-0-1-Resource
+
+#### Flask
+* Flask：https://github.com/FelixFu520/Flask_
+
+#### Yolo
+* yolo1：https://github.com/FelixFu520/Yolo_v1-Pytorch
