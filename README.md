@@ -49,8 +49,8 @@
 2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
 3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT-
 ### ONNX
-* https://github.com/FelixFu520/ProtoBuf-Demo
-* ONNX-Tutorial：https://github.com/FelixFu520/ONNX-Tutorial   
+* ProtoBuf: https://github.com/FelixFu520/ProtoBuf-Demo
+* ONNX-Tutorial：https://github.com/FelixFu520/onnx   
 * Nano-Pytorch-ONNX-TensorRT：https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT   
 * 
 ### 部署
