@@ -60,6 +60,7 @@
 * AI部署：https://github.com/FelixFu520/ai-deployment
 
 
-# 小项目（私有）
+# 小项目
 如有需要请联系我，邮箱：alanmathisonturing@163.com
-* 使用 MedNIST 数据集进行医学图像分类：https://github.com/FelixFu520/DLI_MedNIST
+* （私有）使用 MedNIST 数据集进行医学图像分类：https://github.com/FelixFu520/DLI_MedNIST
+* AI训练和部署——教程：https://github.com/FelixFu520/CIMC
