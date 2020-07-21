@@ -19,7 +19,7 @@
 3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
 4. 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
 5. cityscapesScripts：https://github.com/FelixFu520/cityscapesScripts
-6. CarvanaImageMaskingChallenge：https://github.com/FelixFu520/CarvanaImageMaskingChallenge
+
 
 ### CAM
 * “CAM学习“：https://github.com/FelixFu520/CAM
