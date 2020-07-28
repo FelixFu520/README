@@ -36,19 +36,14 @@
 * yolo1：https://github.com/FelixFu520/Yolo_v1-Pytorch
 
 ## 三、推理（Inference）
-#### TensorRT学习
-1. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT   
-2. “Pytorch转ONNX转TensorRT”：https://github.com/FelixFu520/Pytorch2Onnx2TensorRT   
-3. TensorRT学习笔记：https://github.com/FelixFu520/TensorRT-
 #### ONNX
-* ProtoBuf: https://github.com/FelixFu520/ProtoBuf-Demo
-* ONNX-Tutorial：https://github.com/FelixFu520/onnx   
-* Nano-Pytorch-ONNX-TensorRT：https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT   
-* 
-#### 部署
-* AI部署：https://github.com/FelixFu520/ai-deployment
-
-
+* [ProtoBuf&gRPC](https://github.com/FelixFu520/ProtoBuf_gRPC)
+* [ONNX教程](https://github.com/FelixFu520/onnx)   
+* [Nano-Pytorch-ONNX-TensorRT](https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT)(TODO)   
+#### TensorRT学习
+* [TensorRT学习笔记](https://github.com/FelixFu520/TensorRT)(TODO)   
+* [Pytorch转ONNX转TensorRT](https://github.com/FelixFu520/Pytorch2Onnx2TensorRT)(TODO)   
+* [TensorRT学习笔记](https://github.com/FelixFu520/TensorRT-)(TODO)
 # 小项目
 如有需要请联系我，邮箱：alanmathisonturing@163.com
 * （私有）使用 MedNIST 数据集进行医学图像分类：https://github.com/FelixFu520/DLI_MedNIST
