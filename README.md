@@ -1,14 +1,17 @@
-# 📒AI笔记
+# 📒AI NOTES📒
 
-## 环境
-
-
-
-## 训练
+## 基础知识
 
 
 
-## 推理
+## 模型训练
 
 
+
+## 推理部署
+
+* [ONNX](notes/onnx/README.md)
+* [TensorRT](notes/tensorrt/README.md)
+* TVM
+* 
 
