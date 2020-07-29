@@ -10,6 +10,8 @@
 
 ## 推理部署
 
+* [HTTP协议](http/README.md)
+
 * [序列化](serialization/README.md)
 * [ONNX](notes/onnx/README.md)
 * [TensorRT](notes/tensorrt/README.md)
