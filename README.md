@@ -1,23 +1,22 @@
 # 📒AI NOTES📒
 
-## 基础知识
+## 📖基础知识
+
+* 🍀[C++](notes/c/README.md)
+
+## 📖模型训练
 
 
 
-## 模型训练
+## 📖推理部署
 
+- 🍀️[BS/CS](notes/bs_cs/README.md)
+- 🍀️[序列化](notes/serialization/README.md)
+- 🍀[ONNX](notes/onnx/README.md)
+- 🍀[TensorRT](notes/tensorrt/README.md)
+- 🍀TVM
 
-
-## 推理部署
-
-* [BS/CS](notes/bs_cs/README.md)
-
-* [序列化](notes/serialization/README.md)
-* [ONNX](notes/onnx/README.md)
-* [TensorRT](notes/tensorrt/README.md)
-* TVM
-
-## 小项目
+## 👍小项目
 
 如有需要请联系我，邮箱：alanmathisonturing@163.com
 
