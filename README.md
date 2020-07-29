@@ -1,4 +1,4 @@
-# 📒AI NOTES📒
+# 🏠AI NOTES
 
 ## 📖基础知识
 
@@ -20,8 +20,8 @@
 
 如有需要请联系我，邮箱：alanmathisonturing@163.com
 
-* （私有）[使用 MedNIST 数据集进行医学图像分类](https://github.com/FelixFu520/DLI_MedNIST)
-* [AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
+* 🐘[使用 MedNIST 数据集进行医学图像分类](https://github.com/FelixFu520/DLI_MedNIST)
+* 🐘[AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
 
 # 学习目录
 
