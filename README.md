@@ -10,7 +10,7 @@
 
 ## 推理部署
 
-* [HTTP协议](notes/http/README.md)
+* [BS/CS](notes/bs_cs/README.md)
 
 * [序列化](notes/serialization/README.md)
 * [ONNX](notes/onnx/README.md)
