@@ -1,4 +1,5 @@
 theme: jekyll-theme-merlot
+mathjax: https://cdn.bootcss.com/mathjax/2.7.0/MathJax.js
 math:
    engine: 'mathjax' # or 'katex'
    mathjax:
