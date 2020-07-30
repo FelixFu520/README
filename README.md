@@ -4,6 +4,8 @@
 
 * 🍀[C++](notes/c/README.md)
 * 🍀[Python](notes/python/README.md)
+* 🍀[Flask-Restful]()
+* Flask：https://github.com/FelixFu520/Flask_
 
 ## 📖模型训练
 
@@ -24,15 +26,7 @@
 * 🐘[使用 MedNIST 数据集进行医学图像分类](https://github.com/FelixFu520/DLI_MedNIST)
 * 🐘[AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
 
-# 学习目录
 
-## 一、环境（Environment）
-
-* [图片处理（python)](https://github.com/FelixFu520/images-python)
-
-### Flask
-
-* Flask：https://github.com/FelixFu520/Flask_
 
 ## 二、训练（Training）
 
