@@ -45,6 +45,7 @@ TP、FP、TN、FN，第二个字母表示样本被预测的类别，第一个字
 
  准确率（accuracy）计算公式如下所示：
 
+http://chart.googleapis.com/chart?cht=tx&chl=\Large accuracy=\frac{𝑇𝑃+𝑇𝑁}{𝑇𝑃+𝑇𝑁+𝐹𝑃+𝐹𝑁}=\frac{𝑇𝑃+𝑇𝑁}{all\ data})
 
 $$
 accuracy=\frac{𝑇𝑃+𝑇𝑁}{𝑇𝑃+𝑇𝑁+𝐹𝑃+𝐹𝑁}=\frac{𝑇𝑃+𝑇𝑁}{all\ data}
