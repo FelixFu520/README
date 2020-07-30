@@ -1,25 +1,27 @@
 # 🏠AI NOTES
 
-**📖-->🌲-->🍀**
+---
 
 ## 📖基础知识
+
+### 🌲数学
 
 ### 🌲语言
 
 * 🍀[C++](notes/c/README.md)
 * 🍀[Python](notes/python/README.md)
-* 🍀[Flask-Restful]()
-* Flask：https://github.com/FelixFu520/Flask_
 
 ### 🌲GPU知识
 
-
+### 🌲分布式
 
 ## 📖模型训练
 
 ### 🌲框架
 
 ### 🌲常用概念
+
+- 🍀[DL常见概念](notes/dl_concept/README.md)
 
 ### 🌲训练流程
 
@@ -32,8 +34,14 @@
 
 ## 📖推理部署
 
+### 🌲WEB
+
+- 🍀Flask：https://github.com/FelixFu520/Flask_
 - 🍀️[BS/CS](notes/bs_cs/README.md)
 - 🍀️[序列化](notes/serialization/README.md)
+
+### 🌲模型部署
+
 - 🍀[ONNX](notes/onnx/README.md)
 - 🍀[TensorRT](notes/tensorrt/README.md)
 - 🍀TVM
