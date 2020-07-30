@@ -3,6 +3,7 @@
 ## 📖基础知识
 
 * 🍀[C++](notes/c/README.md)
+* 🍀[Python](notes/python/README.md)
 
 ## 📖模型训练
 
