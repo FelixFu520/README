@@ -1,5 +1,9 @@
 # 编译器GCC与G++的区别
 
+2020年7月30日
+
+---
+
 > GCC:GNU Compiler Collection(GUN 编译器集合)，它可以编译C、C++、JAV、Fortran、Pascal、Object-C等语言。
 >
 > gcc是GCC中的GUN C Compiler（C 编译器）

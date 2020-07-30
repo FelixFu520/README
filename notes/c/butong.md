@@ -2,7 +2,7 @@
 
 2020年7月29日，原文地址见末尾
 
-
+---
 
 今天突然好奇C、C++和C#这三门语言都有个C，那么它们之间到底有什么关联呢。所以就去Google了，找到了这篇文章：[Understanding the Differences Between C#, C++, and C - C# Station](https://csharp-station.com/understanding-the-differences-between-c-c-and-c/)。看完感觉写得挺好的，就打算翻译出来。
 

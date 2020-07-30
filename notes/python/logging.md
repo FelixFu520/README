@@ -2,7 +2,7 @@
 
 2020年7月30日
 
-
+---
 
 > This module defines functions and classes which implement a flexible event logging system for applications and libraries.
 
