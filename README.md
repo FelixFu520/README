@@ -1,13 +1,32 @@
 # 🏠AI NOTES
 
+**📖-->🌲-->🍀**
+
 ## 📖基础知识
+
+### 🌲语言
 
 * 🍀[C++](notes/c/README.md)
 * 🍀[Python](notes/python/README.md)
 * 🍀[Flask-Restful]()
 * Flask：https://github.com/FelixFu520/Flask_
 
+### 🌲GPU知识
+
+
+
 ## 📖模型训练
+
+### 🌲框架
+
+### 🌲常用概念
+
+### 🌲训练流程
+
+- 🍀数据读取
+- 🍀模型
+- 🍀损失函数
+- 🍀优化器
 
 
 
