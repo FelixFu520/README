@@ -11,7 +11,9 @@
 
 ## Numpy
 
-🍀[Numpy—轴](axis.md)
+- 🍀[Numpy—axis](axis.md)
+- 🍀[Numpy—argmax](argmax.md)
+- 
 
 ---
 
