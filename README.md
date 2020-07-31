@@ -21,19 +21,10 @@
 
 🍀[Pytorch](notes/pytorch/README.md)
 
-- 1. Pytorch官网API学习：https://github.com/FelixFu520/PyTorch   
-  2. 《深度学习入门Pytorch》书籍学习：https://github.com/FelixFu520/code_of_learn-deep-learning-with-pytorch   
-  3. Pytorch1.4:https://github.com/FelixFu520/Pytorch1.4   
-  4. Pytorch 分布式入门：https://github.com/FelixFu520/Parallel-Pytorch   
-
-- ### 🌲常用概念
-
+### 🌲常用概念
 
 - 🍀[DL常见概念](notes/dl_concept/README.md)
-- CAM
-  * “CAM学习“：https://github.com/FelixFu520/CAM
-  * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
-  * CAM最全实现：https://github.com/FelixFu520/Grad-CAM.pytorch
+- 
 
 ### 🌲训练流程
 
@@ -63,13 +54,13 @@
 * 🐘[使用 MedNIST 数据集进行医学图像分类](https://github.com/FelixFu520/DLI_MedNIST)
 * 🐘[AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
 
-1. DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
-2. 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
-3. “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
-4. 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
-5. cityscapesScripts：https://github.com/FelixFu520/cityscapesScripts
-6. DLI Nano:https://github.com/FelixFu520/Nano_DLI.  
-7. Gstreamer：https://github.com/FelixFu520/Gstreamer
-8. 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml   
-9. 李宏毅PPT&代码：https://github.com/FelixFu520/lhy_DL_Hw  
+- DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
+- 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
+- “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
+- 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
+- cityscapesScripts：https://github.com/FelixFu520/cityscapesScripts
+- DLI Nano:https://github.com/FelixFu520/Nano_DLI.  
+- Gstreamer：https://github.com/FelixFu520/Gstreamer
+- 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml   
+- 李宏毅PPT&代码：https://github.com/FelixFu520/lhy_DL_Hw  
 
