@@ -20,6 +20,8 @@ YOLOv1,YOLOv2,YOLOv3,YOLOv4,YOLOv5简介
 
 **代码下载：**[https://github.com/pjreddie/darknet](https://link.zhihu.com/?target=https%3A//github.com/pjreddie/darknet)
 
+**自己代码实现**：
+
 **核心思想**：将整张图片作为网络的输入（类似于Faster-RCNN），直接在输出层对BBox的位置和类别进行回归。
 
 ### 1.1 实现方法
@@ -442,24 +444,7 @@ YOLOv5源代码：
 
 https://www.kaggle.com/c/global-wheat-detection）www.kaggle.com
 
-## 参考
 
-1. [^](https://zhuanlan.zhihu.com/p/136382095#ref_1_0)V1，V2，V3参考地址： https://blog.csdn.net/App_12062011/article/details/77554288
-2. [^](https://zhuanlan.zhihu.com/p/136382095#ref_2_0)V4转载地址： https://mp.weixin.qq.com/s/Ua3T-DOuzmLWuXfohEiVFw
-
-编辑于 07-28
-
-[目标检测](https://www.zhihu.com/topic/19596960)
-
-[深度学习（Deep Learning）](https://www.zhihu.com/topic/19813032)
-
-[计算机视觉](https://www.zhihu.com/topic/19590195)
-
-赞同 3473 条评论
-
-分享
-
-喜欢收藏
 
 ## 参考
 

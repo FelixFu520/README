@@ -2,4 +2,5 @@
 
 ---
 
-🍀[YOLO系列](yolos.md)
+🍀[YOLO系列简介](yolos.md)
+
