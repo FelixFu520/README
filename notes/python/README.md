@@ -9,7 +9,9 @@
 - 🍀[读取图片](images.md)
 - 🍀[进程和线程](thread.md)
 
+## Numpy
 
+🍀[Numpy—轴](axis.md)
 
 ---
 
