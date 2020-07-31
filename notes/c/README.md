@@ -6,4 +6,4 @@
 * 🍀[gcc和g++](gcc.md)
 * 🍀[实用Make与CMake教程](cmake.md)
 * 🍀[机器人C/C++编程：实用Make与CMake教程](make.md)
-* 🍀
+* 🍀入门视频：https://github.com/FelixFu520/Cpp-0-1-Resource
