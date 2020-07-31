@@ -8,6 +8,7 @@
 - 🍀[转义字符](change.md)
 - 🍀[读取图片](images.md)
 - 🍀[进程和线程](thread.md)
+- 🍀[数据类型转换](typechange.md)
 
 ## Numpy
 
@@ -19,22 +20,17 @@
 
 ## Python模块
 
-
-
+- 🍀[内置函数](built_in.md)
 - 🍀[platform](platform.md)
 - 🍀[sys](sys.md)
 - 🍀[logging](logging.md)
 - 🍀[argparse](argparse.md)
 - 🍀[concurrent.futures](concurrent.md)
 - 🍀[os](os.md)
+- 🍀[pickle](pickle.md)
+- 🍀[tqdm](tqdm.md)
 
 
-
----
-
-## 代码
-
-- 🍀[Python 100 天](https://github.com/FelixFu520/python-100-day)
 
 ## 参考
 
