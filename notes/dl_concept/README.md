@@ -9,6 +9,7 @@
 * 🍀[IOU](iou.md)
 * 🍀[特征缩放](featurescale.md)
 * 🍀[正则化](regularization.md)
+* 🍀[模型初始化](init.md)
 * CAM
   * “CAM学习“：https://github.com/FelixFu520/CAM
   * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
