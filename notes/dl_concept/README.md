@@ -8,6 +8,7 @@
 * 🍀[mAP](map.md)
 * 🍀[IOU](iou.md)
 * 🍀[特征缩放](featurescale.md)
+* 🍀[正则化](regularization.md)
 * CAM
   * “CAM学习“：https://github.com/FelixFu520/CAM
   * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
