@@ -30,7 +30,7 @@
 
 - 🍀[数据读取](notes/dataloader/README.md)
 - 🍀[模型](notes/models/README.md)
-- 🍀损失函数
+- 🍀[损失函数](notes/loss/README.md)
 - 🍀优化器
 
 ## 📖推理部署
