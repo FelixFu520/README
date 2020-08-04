@@ -14,5 +14,6 @@
 ## 进程交互
 
 * 🍀[Rest、GraphQL、Webhook和gRPC选型](xuanxing.md)
+* 🍀[浅谈 RPC 和 REST: SOAP, gRPC, REST](soap.md)
 * 🍀[Restful入门理解](restful.md)
 
