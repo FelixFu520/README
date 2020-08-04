@@ -19,7 +19,8 @@
 
 ### 🌲框架
 
-🍀[Pytorch](notes/pytorch/README.md)
+- 🍀[Pytorch](notes/pytorch/README.md)
+
 
 ### 🌲常用概念
 
