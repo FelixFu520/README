@@ -2,6 +2,8 @@
 
 ---
 
+🍀[感知器模型](prec.md)
+
 🍀[YOLO系列简介](yolos.md)
 
 🍀[UNet系列]()
