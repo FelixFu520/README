@@ -1,6 +1,8 @@
 # Pytorch框架学习
 
-🍀[detach函数理解](detach.md)
+- 🍀[torchsummary](torchsummary.md)
+- 🍀[detach函数理解](detach.md)
+
 
 
 
