@@ -11,6 +11,7 @@
 - 🍀[数据类型转换](typechange.md)
 - 🍀[split&strip](split.md)
 - 🍀[EasyDict](easydict.md)
+- 🍀[glob](glob.md)
 
 ## Numpy
 
