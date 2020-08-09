@@ -18,7 +18,7 @@
 - 🍀[Numpy—axis](axis.md)
 - 🍀[Numpy—argmax](argmax.md)
 - 🍀[Numpy—转换](change_numpy.md)
-- 
+- 🍀[Numpy—控制、测试](kongzhi.md)
 
 ---
 
