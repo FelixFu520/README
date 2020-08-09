@@ -10,6 +10,7 @@
 - 🍀[进程和线程](thread.md)
 - 🍀[数据类型转换](typechange.md)
 - 🍀[split&strip](split.md)
+- 🍀[EasyDict](easydict.md)
 
 ## Numpy
 
