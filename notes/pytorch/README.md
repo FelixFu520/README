@@ -1,6 +1,7 @@
 # Pytorch框架学习
 
 - 🍀[torchsummary](torchsummary.md)
+- 🍀[Pytorch张量（Tensor）复制](copy.md)
 - 🍀[detach函数理解](detach.md)
 
 
