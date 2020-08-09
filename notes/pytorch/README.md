@@ -4,6 +4,7 @@
 - 🍀[Pytorch张量（Tensor）复制](copy.md)
 - 🍀[detach函数理解](detach.md)
 - 🍀[PixelShuffle类](PixelShuffle.md)
+- 🍀[pytorch常见方法](changjian.md)
 
 
 

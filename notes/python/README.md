@@ -20,6 +20,7 @@
 - 🍀[Numpy—转换](change_numpy.md)
 - 🍀[Numpy—控制、测试](kongzhi.md)
 - 🍀[ravel()、flatten()、squeeze()](ravel.md)
+- 🍀[np.prod](prod.md)
 
 ---
 
