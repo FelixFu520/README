@@ -12,6 +12,7 @@
 - 🍀[split&strip](split.md)
 - 🍀[EasyDict](easydict.md)
 - 🍀[glob](glob.md)
+- 🍀[dir&vars](dir.md)
 
 ## Numpy
 
