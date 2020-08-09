@@ -6,6 +6,10 @@
 
 ### 🌲数学
 
+- 🍀[微积分](notes/math/README.md)
+- 🍀[概率论](notes/math/README.md)
+- 🍀[线性代数](notes/math/README.md)
+
 ### 🌲语言
 
 * 🍀[C++](notes/c/README.md)
