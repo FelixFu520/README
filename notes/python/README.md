@@ -9,6 +9,7 @@
 - 🍀[读取图片](images.md)
 - 🍀[进程和线程](thread.md)
 - 🍀[数据类型转换](typechange.md)
+- 🍀[split&strip](split.md)
 
 ## Numpy
 
