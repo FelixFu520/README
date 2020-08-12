@@ -4,34 +4,33 @@
 
 ## 📖基础知识
 
-### 🌲数学
+#### 🌲数学
 
 - 🍀[微积分](notes/math/README.md)
 - 🍀[概率论](notes/math/README.md)
 - 🍀[线性代数](notes/math/README.md)
 
-### 🌲语言
+#### 🌲语言
 
 * 🍀[C++](notes/c/README.md)
 * 🍀[Python](notes/python/README.md)
 
-### 🌲GPU知识
+#### 🌲GPU知识
 
-### 🌲分布式
+#### 🌲分布式
 
 ## 📖模型训练
 
-### 🌲框架
+#### 🌲框架
 
 - 🍀[Pytorch](notes/pytorch/README.md)
 
 
-### 🌲常用概念
+#### 🌲常用概念
 
 - 🍀[DL常见概念](notes/dl_concept/README.md)
-- 
 
-### 🌲训练流程
+#### 🌲训练流程
 
 - 🍀[数据读取](notes/dataloader/README.md)
 - 🍀[模型](notes/models/README.md)
@@ -40,13 +39,13 @@
 
 ## 📖推理部署
 
-### 🌲WEB
+#### 🌲WEB
 
 - 🍀Flask：https://github.com/FelixFu520/Flask_
 - 🍀️[BS/CS](notes/bs_cs/README.md)
 - 🍀️[序列化](notes/serialization/README.md)
 
-### 🌲模型部署
+#### 🌲模型部署
 
 - 🍀[ONNX](notes/onnx/README.md)
 - 🍀[TensorRT](notes/tensorrt/README.md)
@@ -54,10 +53,17 @@
 
 ## 👍小项目
 
-如有需要请联系我，邮箱：alanmathisonturing@163.com
+#### ❤️教程系列
 
-* 🐘[使用 MedNIST 数据集进行医学图像分类](https://github.com/FelixFu520/DLI_MedNIST)
+* 🐘[使用 MedNIST 数据集进行医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)\<如有需要请📮alanmathisonturing@163.com\>
 * 🐘[AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
+
+#### ❤️YOLO系列
+
+- 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)
+- 🐘[Yolo V3](https://github.com/FelixFu520/yolov3)
+
+#### 💗其他
 
 - DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
 - 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
