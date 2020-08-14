@@ -61,6 +61,7 @@
 #### ❤️YOLO系列
 
 - 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)
+- 🐘[Yolo V2](https://github.com/FelixFu520/yolov2)
 - 🐘[Yolo V3](https://github.com/FelixFu520/yolov3)
 
 #### 💗其他
