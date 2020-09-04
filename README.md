@@ -17,7 +17,11 @@
 
 #### 🌲GPU知识
 
+- 🍀[环境安装](gpus/README.md)
+
 #### 🌲分布式
+
+- 🍀[硬件、库和框架](parallel_computing/README.md)
 
 ## 📖模型训练
 
