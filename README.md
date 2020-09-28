@@ -14,6 +14,7 @@
 
 * 🍀[C++](notes/c/README.md)
 * 🍀[Python](notes/python/README.md)
+* 🍀
 
 #### 🌲GPU知识
 
@@ -54,33 +55,42 @@
 - 🍀[ONNX](notes/onnx/README.md)
 - 🍀[TensorRT](notes/tensorrt/README.md)
 - 🍀TVM
+- 🍀[WEB](notes/web/README.md)
 
 ## 👍小项目
 
 #### ❤️教程系列
 
-* 🐘[使用 MedNIST 数据集进行医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)\<如有需要请📮alanmathisonturing@163.com\>
+* 🐘[ MedNIST 数据集医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)\<如有需要请📮alanmathisonturing@163.com\>
 * 🐘[AI训练和部署——教程](https://github.com/FelixFu520/CIMC)
 
 #### ❤️YOLO系列
 
-- 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)——[Docker Image]()
+- 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)——[Docker Image : `docker pull fusimeng/project:yolov1`]
 - 🐘 [Yolo V2](https://github.com/FelixFu520/yolov2)——[Docker Image]()
 - 🐘 [Yolo V3](https://github.com/FelixFu520/yolov3)——[Docker Image]()  ***** 
+- 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)
+
+#### ❤️UNet系列
+
+- 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)
+- 🐘 [NestedUNet-dsb2018_96](https://github.com/FelixFu520/NestedUNet-dsb2018_96)
+- 🐘 [Unet_Simple](https://github.com/FelixFu520/Unet-Simple)
+- 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)
+
+#### ❤️Nano
+
+- 🐘[Nano_DLI](https://github.com/FelixFu520/Nano_DLI)
 
 #### 💗其他
 
 - 🐘 [CityScapesScripts](https://github.com/FelixFu520/cityscapesScripts)
-- 🐘 [Multi-Node-pytorch]()
+- 🐘 [CAM](https://github.com/FelixFu520/CAM) ｜ [CAM-Cifar10](https://github.com/FelixFu520/CAM-Cifar10)
+- 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )  
+- 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed) 
+- 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
 
-### ❤️
-
-- DeepDream实现代码：https://github.com/FelixFu520/DeepDream   
-- 手动实现MLP、CNN、RNN、LSTM：https://github.com/FelixFu520/dl-by-hand   
-- “风格迁移”：https://github.com/FelixFu520/Neural-Transfer   
-- 图像分割-APEX-多机多卡：https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed   
-- DLI Nano:https://github.com/FelixFu520/Nano_DLI.  
-- Gstreamer：https://github.com/FelixFu520/Gstreamer
-- 李宏毅教学视频2020学习:https://github.com/FelixFu520/lhy_ml   
-- 李宏毅PPT&代码：https://github.com/FelixFu520/lhy_DL_Hw  
+- 🐘[DeepDream实现代码](https://github.com/FelixFu520/DeepDream)   
+- 🐘[Gstreamer](https://github.com/FelixFu520/Gstreamer)
+- 🐘[李宏毅PPT&代码](https://github.com/FelixFu520/lhy_DL_Hw)
 
