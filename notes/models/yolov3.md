@@ -395,4 +395,8 @@ YOLOv3的损失函数主要分为三个部分：目标定位偏移量损失![\sm
 
 > [【论文解读】Yolo三部曲解读——Yolov3](https://zhuanlan.zhihu.com/p/76802514)
 >
-> 
+> https://github.com/Cw-zero/TensorRT_yolo3
+>
+> https://github.com/ultralytics/yolov3
+>
+> https://github.com/eriklindernoren/PyTorch-YOLOv3
