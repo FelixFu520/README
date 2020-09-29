@@ -2,7 +2,7 @@
 
 ---
 
-## 📖基础知识
+### 📖基础知识
 
 #### 🌲数学
 
@@ -24,7 +24,7 @@
 
 - 🍀[硬件、库和框架](parallel_computing/README.md)
 
-## 📖模型训练
+### 📖模型训练
 
 #### 🌲框架
 
@@ -42,7 +42,7 @@
 - 🍀[损失函数](notes/loss/README.md)
 - 🍀[优化器](notes/optimizer/README.md)
 
-## 📖推理部署
+### 📖推理部署
 
 #### 🌲WEB
 
@@ -55,7 +55,6 @@
 - 🍀[ONNX](notes/onnx/README.md)
 - 🍀[TensorRT](notes/tensorrt/README.md)
 - 🍀TVM
-- 🍀[WEB](notes/web/README.md)
 
 ## 👍小项目
 
@@ -73,7 +72,7 @@
 
 #### ❤️UNet系列
 
-- 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)
+- 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)——[Docker Image : `docker pull fusimeng/project:cimc`]
 - 🐘 [NestedUNet-dsb2018_96](https://github.com/FelixFu520/NestedUNet-dsb2018_96)
 - 🐘 [Unet_Simple](https://github.com/FelixFu520/Unet-Simple)
 - 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)

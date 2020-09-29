@@ -17,3 +17,8 @@
 * 🍀[浅谈 RPC 和 REST: SOAP, gRPC, REST](soap.md)
 * 🍀[Restful入门理解](restful.md)
 
+## 项目
+
+- 🐘 [GPRC](https://github.com/FelixFu520/ProtoBuf_gRPC)
+- 🐘[Flask](https://github.com/FelixFu520/Flask_)
+- 🐘 [ai-deployment](https://github.com/FelixFu520/ai-deployment)
