@@ -4,6 +4,12 @@
 
 ---
 
+> Yolov3论文名：《Yolov3: An Incremental Improvement》
+>
+> Yolov3论文地址：arxiv.org/pdf/1804.0276
+
+Yolov3是2018年发明提出的，这成为了目标检测one-stage中非常经典的算法，包含Darknet-53网络结构、anchor锚框、FPN等非常优秀的结构。
+
 ## 1. 网络结构
 
 ### 1.1 主干网络
@@ -400,3 +406,5 @@ YOLOv3的损失函数主要分为三个部分：目标定位偏移量损失![\sm
 > https://github.com/ultralytics/yolov3
 >
 > https://github.com/eriklindernoren/PyTorch-YOLOv3
+>
+> https://mp.weixin.qq.com/s/uzj7X89zKHBk6PI46xrRiw
