@@ -68,7 +68,7 @@
 - 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)——[Docker Image : `docker pull fusimeng/project:yolov1`]
 - 🐘 [Yolo V2](https://github.com/FelixFu520/yolov2)——[Docker Image: `docker pull fusimeng/project:yolov2`]
 - 🐘 [Yolo V3](https://github.com/FelixFu520/yolov3)——[Docker Image : `docker pull fusimeng/project:yolov3`]   *
-- 🐘 [YoloV4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
+- 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
 - 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)
 
 #### ❤️UNet系列
@@ -76,11 +76,21 @@
 - 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)——[Docker Image : `docker pull fusimeng/project:cimc`]
 - 🐘 [NestedUNet-dsb2018_96](https://github.com/FelixFu520/NestedUNet-dsb2018_96)
 - 🐘 [Unet_Simple](https://github.com/FelixFu520/Unet-Simple)
-- 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)
+- 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)——[Docker Image : `docker pull fusimeng/project:unet`] 
 
 #### ❤️Nano
 
 - 🐘[Nano_DLI](https://github.com/FelixFu520/Nano_DLI)
+- 🐘 [Nano-Pytorch-ONNX-TensorRT](https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT)
+
+❤️部署
+
+- 🐘 [TensorRT](https://github.com/FelixFu520/TensorRT)
+- 🐘 [onnx](https://github.com/FelixFu520/onnx)
+
+❤️框架
+
+- 🐘 [Pytorch](https://github.com/FelixFu520/Parallel-Pytorch)
 
 #### 💗其他
 
@@ -92,5 +102,4 @@
 
 - 🐘[DeepDream实现代码](https://github.com/FelixFu520/DeepDream)   
 - 🐘[Gstreamer](https://github.com/FelixFu520/Gstreamer)
-- 🐘[李宏毅PPT&代码](https://github.com/FelixFu520/lhy_DL_Hw)
 
