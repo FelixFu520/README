@@ -5,6 +5,19 @@
 ## 深度之眼👀
 
 - [第二章  Python基本语法元素.ipynb](eyes/02.ipynb)
+- [第三章 基本数据类型.ipynb](3.ipynb)
+- [第四章 组合数据类型.ipynb](4.ipynb)
+- [第五章 程序控制结构.ipynb](5.ipynb)
+- [第六章 函数.ipynb](6.ipynb)
+- [第七章 类——面向对象的编程.ipynb](7.ipynb)
+- [第八章 文件、异常和模块.ipynb](8.ipynb)
+- [第九章 有益的探索.ipynb](9.ipynb)
+- [第十章   Python标准库.ipynb](10.ipynb)
+- [第十一章 Numpy库.ipynb](11.ipynb)
+- [第十二章   Pandas 库.ipynb](12.ipynb)
+- [第十三章 Matplotlib库.ipynb](13.ipynb)
+- [第十四章 scikit-learn 库.ipynb](14.ipynb)
+- [第十五章 再谈编程.ipynb](15.ipynb)
 
 ## 常见函数/功能
 
