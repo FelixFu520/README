@@ -361,7 +361,7 @@ Bounding Box Regeression的Loss近些年的发展过程是：Smooth L1 Loss-> Io
 
 ##### b.GIOU_Loss
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-443123f1aa540f7dfdc84b233edcdc67_b.png)
+![img](imgs/v2-443123f1aa540f7dfdc84b233edcdc67_b.png)
 
 
 
@@ -1177,9 +1177,109 @@ CIOU loss
 
 
 
+### YoloV2～3
 
+![yolov4-3](imgs/yolov4/yolov4-3.png)
 
+![yolov4-29](imgs/yolov4/yolov4-29.png)
 
+![yolov4-30](imgs/yolov4/yolov4-30.png)
+
+![yolov4-31](imgs/yolov4/yolov4-31.png)
+
+![yolov4-32](imgs/yolov4/yolov4-32.png)
+
+![yolov4-33](imgs/yolov4/yolov4-33.png)
+
+![yolov4-34](imgs/yolov4/yolov4-34.png)
+
+![yolov4-35](imgs/yolov4/yolov4-35.png)
+
+![yolov4-36](imgs/yolov4/yolov4-36.png)
+
+![yolov4-37](imgs/yolov4/yolov4-37.png)
+
+![yolov4-38](imgs/yolov4/yolov4-38.png)
+
+![yolov4-39](imgs/yolov4/yolov4-39.png)
+
+![yolov4-40](imgs/yolov4/yolov4-40.png)
+
+![yolov4-41](imgs/yolov4/yolov4-41.png)
+
+![yolov4-42](imgs/yolov4/yolov4-42.png)
+
+![yolov4-43](imgs/yolov4/yolov4-43.png)
+
+![yolov4-44](imgs/yolov4/yolov4-44.png)
+
+![yolov4-46](imgs/yolov4/yolov4-46.png)
+
+![yolov4-47](imgs/yolov4/yolov4-47.png)
+
+![yolov4-48](imgs/yolov4/yolov4-48.png)
+
+![yolov4-49](imgs/yolov4/yolov4-49.png)
+
+![yolov4-50](imgs/yolov4/yolov4-50.png)
+
+![yolov4-51](imgs/yolov4/yolov4-51.png)
+
+![yolov4-52](imgs/yolov4/yolov4-52.png)
+
+![yolov4-53](imgs/yolov4/yolov4-53.png)
+
+![yolov4-54](imgs/yolov4/yolov4-54.png)
+
+![yolov4-55](imgs/yolov4/yolov4-55.png)
+
+![yolov4-56](imgs/yolov4/yolov4-56.png)
+
+![yolov4-57](imgs/yolov4/yolov4-57.png)
+
+![yolov4-58](imgs/yolov4/yolov4-58.png)
+
+![yolov4-59](imgs/yolov4/yolov4-59.png)
+
+![yolov4-60](imgs/yolov4/yolov4-60.png)
+
+![yolov4-61](imgs/yolov4/yolov4-61.png)
+
+![yolov4-62](imgs/yolov4/yolov4-62.png)
+
+![yolov4-63](imgs/yolov4/yolov4-63.png)
+
+![yolov4-64](imgs/yolov4/yolov4-64.png)
+
+![yolov4-65](imgs/yolov4/yolov4-65.png)
+
+![yolov4-66](imgs/yolov4/yolov4-66.png)
+
+![yolov4-67](imgs/yolov4/yolov4-67.png)
+
+![yolov4-68](imgs/yolov4/yolov4-68.png)
+
+![yolov4-69](imgs/yolov4/yolov4-69.png)
+
+![yolov4-70](imgs/yolov4/yolov4-70.png)
+
+![yolov4-71](imgs/yolov4/yolov4-71.png)
+
+![yolov4-72](imgs/yolov4/yolov4-72.png)
+
+![yolov4-73](imgs/yolov4/yolov4-73.png)
+
+![yolov4-75](imgs/yolov4/yolov4-75.png)
+
+![yolov4-76](imgs/yolov4/yolov4-76.png)
+
+![yolov4-77](imgs/yolov4/yolov4-77.png)
+
+![yolov4-78](imgs/yolov4/yolov4-78.png)
+
+![yolov4-79](imgs/yolov4/yolov4-79.png)
+
+![yolov4-80](imgs/yolov4/yolov4-80.png)
 
 
 
