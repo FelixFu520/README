@@ -1556,11 +1556,19 @@ node02
 
 horovod的dockerhub地址：https://hub.docker.com/r/horovod/horovod/tags
 
+### 2. 运行程序
+
+[官方教程](https://horovod.readthedocs.io/en/latest/docker.html)
+
+#### 单机
 
 
 
+#### 多机
 
 
+
+#### 多机+IB
 
 
 
