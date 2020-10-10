@@ -1,4 +1,9 @@
 # Ubuntu命令行网络配置
+
+2020年10月10日
+
+----
+
 ### 1.配置IP
 打开ubuntu的/etc/network/interfaces文件默认的内容如下：
 ```
@@ -38,7 +43,7 @@ $ifconfig
 ```
 ### 4.看看是不是能够ping通
 ping不通网关说明网络配置有问题 ping不通域名说明dns有问题
-   
+
 ```
 查看DNS：cat /etc/resolv.conf   
 查看网关：ip route show    

@@ -1,0 +1,1 @@
+/usr/local/openmpi/bin/mpirun --allow-run-as-root --tag-output -np 2 -H localhost:1,node2:1 -bind-to none -map-by slot -mca pml ob1 -mca btl ^openib -mca btl_tcp_if_exclude lo -x NCCL_DEBUG=INFO -x NCCL_SOCKET_IFNAME=ib0  python pytorch_mnist.py

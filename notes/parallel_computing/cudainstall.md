@@ -1,4 +1,9 @@
 # 一、安装CUDA(根据需求选择版本）
+
+2020年10月10日
+
+---
+
 ## 1.下载
 [官方下载地址](https://developer.nvidia.com/cuda-downloads)    
 如果是远程可以用wget下载:    
@@ -10,13 +15,13 @@ wget https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_1
 ```
 $sudo service lightdm stop
 ```
-  
+
 按Ctrl+Alt+F1进入命令行，输入用户名密码登录（通过Ctrl+Alt+F7可返回界面）
 进入下载目录，给文件赋予执行权限（忘记文件名就ls）
 ```
 $sudo chmod a+x cuda_8.0.61_375.26_linux 
 ```
-  
+
 安装cuda，注意参数    
 ```
 $sudo ./cuda_8.0.61_375.26_linux.run --no-opengl-libs
