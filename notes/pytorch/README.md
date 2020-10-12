@@ -12,7 +12,7 @@
 
 ### 项目
 
-- 🦐 [Parallel-Pytorch](https://github.com/FelixFu520/Parallel-Pytorch)
+- 🍀[Pytorch分布式学习笔记](https://github.com/FelixFu520/Parallel-Pytorch)
 - 🐘 [Pytorch2Onnx2TensorRT](https://github.com/FelixFu520/Pytorch2Onnx2TensorRT)
 - 🐘 [Pytorch笔记](https://github.com/FelixFu520/Pytorch1.4)
 

@@ -2,7 +2,8 @@
 
 - 🍀[分布式介绍](introduce.md)
 - 🍀[MPI概念介绍](mpi.md)
-- 🍀
+- 🍀[pytorch分布式](https://github.com/FelixFu520/Parallel-Pytorch)
+- 
 
 
 
