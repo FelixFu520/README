@@ -24,7 +24,7 @@
 
 6. [Ubuntu16.04 安装CUDA，cuDNN](cudainstall.md)【二、安装cuda10.2 和cudnn7.6.5，可根据需求调换版本】
 
-7. [Ubuntu16.04安装nccl](https://docs.nvidia.com/deeplearning/nccl/install-guide/index.html#debian)|[测试](https://github.com/NVIDIA/nccl-tests)【三、安装nccl 2.6.4，可根据需求调换版本，apt-cache madison】
+7. [Ubuntu16.04安装nccl](https://docs.nvidia.com/deeplearning/nccl/install-guide/index.html#debian) & [测试](https://github.com/NVIDIA/nccl-tests)【三、安装nccl 2.6.4，可根据需求调换版本，apt-cache madison】
 
 8. [Pytorch多机多卡](https://github.com/FelixFu520/Parallel-Pytorch)【四、测试多机多卡，先测试无RDMA的。需安装torch 1.2   torchvision0.4.0】
 

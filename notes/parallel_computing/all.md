@@ -1560,19 +1560,822 @@ horovod的dockerhub地址：https://hub.docker.com/r/horovod/horovod/tags
 
 [官方教程](https://horovod.readthedocs.io/en/latest/docker.html)
 
-#### 单机
+#### 2.1 单机
+
+```
+root@node01:~# docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+root@node01:~# docker images
+REPOSITORY          TAG                                                         IMAGE ID            CREATED             SIZE
+horovod/horovod     0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1   56f05ec4dcc6        5 weeks ago         9.71GB
+
+
+root@node01:~# nvidia-docker run -it horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+
+root@46c870d02c7a:/examples# horovodrun -np 1 -H localhost:1 python pytorch_mnist.py  --epochs 2 --batch-size 1000     
+2020-10-10 09:58:31.926453: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to data-0/MNIST/raw/train-images-idx3-ubyte.gz
+100.1%[1,0]<stdout>:Extracting data-0/MNIST/raw/train-images-idx3-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to data-0/MNIST/raw/train-labels-idx1-ubyte.gz
+113.5%[1,0]<stdout>:Extracting data-0/MNIST/raw/train-labels-idx1-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to data-0/MNIST/raw/t10k-images-idx3-ubyte.gz
+100.4%[1,0]<stdout>:Extracting data-0/MNIST/raw/t10k-images-idx3-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to data-0/MNIST/raw/t10k-labels-idx1-ubyte.gz
+180.4%[1,0]<stdout>:Extracting data-0/MNIST/raw/t10k-labels-idx1-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Processing...
+[1,0]<stdout>:Done!
+[1,0]<stderr>:/usr/local/lib/python3.7/dist-packages/torchvision/datasets/mnist.py:469: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /pytorch/torch/csrc/utils/tensor_numpy.cpp:141.)
+
+2020-10-10 09:59:11.309628: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+[1,0]<stdout>:Train Epoch: 1 [0/60000 (0%)]	Loss: 2.317314
+[1,0]<stdout>:Train Epoch: 1 [10000/60000 (17%)]	Loss: 2.300637
+[1,0]<stdout>:Train Epoch: 1 [20000/60000 (33%)]	Loss: 2.310155
+[1,0]<stdout>:Train Epoch: 1 [30000/60000 (50%)]	Loss: 2.292786
+[1,0]<stdout>:Train Epoch: 1 [40000/60000 (67%)]	Loss: 2.292384
+[1,0]<stdout>:Train Epoch: 1 [50000/60000 (83%)]	Loss: 2.285198
+[1,0]<stderr>:pytorch_mnist.py:52: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+[1,0]<stderr>:  return F.log_softmax(x)
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.2605, Accuracy: 31.41%
+[1,0]<stdout>:
+[1,0]<stderr>:/usr/local/lib/python3.7/dist-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+[1,0]<stderr>:  warnings.warn(warning.format(ret))
+[1,0]<stderr>:pytorch_mnist.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+[1,0]<stderr>:  tensor = torch.tensor(val)
+[1,0]<stdout>:Train Epoch: 2 [0/60000 (0%)]	Loss: 2.271717
+[1,0]<stdout>:Train Epoch: 2 [10000/60000 (17%)]	Loss: 2.271208
+[1,0]<stdout>:Train Epoch: 2 [20000/60000 (33%)]	Loss: 2.251949
+[1,0]<stdout>:Train Epoch: 2 [30000/60000 (50%)]	Loss: 2.228002
+[1,0]<stdout>:Train Epoch: 2 [40000/60000 (67%)]	Loss: 2.187219
+[1,0]<stdout>:Train Epoch: 2 [50000/60000 (83%)]	Loss: 2.190933
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.0798, Accuracy: 56.69%
+[1,0]<stdout>:
+root@46c870d02c7a:/examples#
+```
+
+#### 2.2 多机 (无IB)
+
+node01
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
+
+node02
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
 
 
 
-#### 多机
+node01和node02
+
+```
+
+四、免密登录
+此时A和B应分别在horovod容器内。
+
+这里踩了个坑，如果按照horovod的Docker教程, 创建容器时如果添加映射 share/ssh:/root/.ssh，就一直实现不了免密的登录，不添加映射反而可以免密登录了。
+
+A-->B免密登录
+先在B服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在A服务器上创建秘钥并且免密登录到B
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.50.12
+
+#测试是否可以免密登录
+ssh -p 12345 B
+
+
+B-->A 免密登录过程相反
+先在A服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在B服务器上创建秘钥并且免密登录到A
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.50.11
+
+#测试是否可以免密登录
+ssh -p 12345 root@192.168.50.11
+
+```
 
 
 
-#### 多机+IB
+```
+执行代码
+在node01的容器中
+root@node01:/examples# horovodrun -np 2 -H 192.168.50.11:1,192.168.50.12:1 -p 12345 python pytorch_mnist.py  --epochs 2 --batch-size 1000
+2020-10-12 03:48:20.385148: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+[1,0]<stdout>:Train Epoch: 1 [0/30000 (0%)]	Loss: 2.323001
+[1,1]<stdout>:Train Epoch: 1 [0/30000 (0%)]	Loss: 2.324043
+[1,0]<stdout>:Train Epoch: 1 [10000/30000 (33%)]	Loss: 2.307951
+[1,1]<stdout>:Train Epoch: 1 [10000/30000 (33%)]	Loss: 2.305638
+[1,0]<stdout>:Train Epoch: 1 [20000/30000 (67%)]	Loss: 2.292747
+[1,1]<stdout>:Train Epoch: 1 [20000/30000 (67%)]	Loss: 2.283674
+[1,1]<stderr>:pytorch_mnist.py:52: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+[1,1]<stderr>:  return F.log_softmax(x)
+[1,0]<stderr>:pytorch_mnist.py:52: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+[1,0]<stderr>:  return F.log_softmax(x)
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.2623, Accuracy: 30.13%
+[1,0]<stdout>:
+[1,1]<stderr>:/usr/local/lib/python3.7/dist-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+[1,1]<stderr>:  warnings.warn(warning.format(ret))
+[1,1]<stderr>:pytorch_mnist.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+[1,1]<stderr>:  tensor = torch.tensor(val)
+[1,0]<stderr>:/usr/local/lib/python3.7/dist-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+[1,0]<stderr>:  warnings.warn(warning.format(ret))
+[1,0]<stderr>:pytorch_mnist.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+[1,0]<stderr>:  tensor = torch.tensor(val)
+[1,0]<stdout>:Train Epoch: 2 [0/30000 (0%)]	Loss: 2.271112
+[1,1]<stdout>:Train Epoch: 2 [0/30000 (0%)]	Loss: 2.270766
+[1,1]<stdout>:Train Epoch: 2 [10000/30000 (33%)]	Loss: 2.243483
+[1,0]<stdout>:Train Epoch: 2 [10000/30000 (33%)]	Loss: 2.248678
+[1,0]<stdout>:Train Epoch: 2 [20000/30000 (67%)]	Loss: 2.204532
+[1,1]<stdout>:Train Epoch: 2 [20000/30000 (67%)]	Loss: 2.213562
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.0946, Accuracy: 58.02%
+[1,0]<stdout>:
+
+node02中的容器什么也不用做
+```
 
 
 
+#### 2.3 多机+IB
 
+node01
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g --cap-add=IPC_LOCK --device=/dev/infiniband -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
+
+node02
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g --cap-add=IPC_LOCK --device=/dev/infiniband -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
+
+
+
+node01和node02
+
+```
+四、免密登录
+此时A和B应分别在horovod容器内。
+
+这里踩了个坑，如果按照horovod的Docker教程, 创建容器时如果添加映射 share/ssh:/root/.ssh，就一直实现不了免密的登录，不添加映射反而可以免密登录了。
+
+A-->B免密登录
+先在B服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在A服务器上创建秘钥并且免密登录到B
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.33.12
+
+#测试是否可以免密登录
+ssh -p 12345 root@192.168.33.12
+
+
+B-->A 免密登录过程相反
+先在A服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在B服务器上创建秘钥并且免密登录到A
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.33.11
+
+#测试是否可以免密登录
+ssh -p 12345 root@192.168.33.11
+
+```
+
+
+
+```
+执行代码——horovod镜像自带代码
+在node01的容器中
+root@node01:/examples# horovodrun -np 2 -H 192.168.33.11:1,192.168.33.12:1 -p 12345 python pytorch_mnist.p
+y  --epochs 2 --batch-size 1000
+2020-10-12 04:05:41.719514: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to data-0/MNIST/raw/train-images-idx3-ubyte.gz
+[1,1]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz to data-1/MNIST/raw/train-images-idx3-ubyte.gz
+100.1%[1,0]<stdout>:Extracting data-0/MNIST/raw/train-images-idx3-ubyte.gz to data-0/MNIST/raw
+38.8%[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to data-0/MNIST/raw/train-labels-idx1-ubyte.gz
+113.5%[1,0]<stdout>:Extracting data-0/MNIST/raw/train-labels-idx1-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to data-0/MNIST/raw/t10k-images-idx3-ubyte.gz
+100.4%[1,0]<stdout>:Extracting data-0/MNIST/raw/t10k-images-idx3-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to data-0/MNIST/raw/t10k-labels-idx1-ubyte.gz
+180.4%[1,0]<stdout>:Extracting data-0/MNIST/raw/t10k-labels-idx1-ubyte.gz to data-0/MNIST/raw
+[1,0]<stdout>:Processing...
+74.5%[1,0]<stdout>:Done!
+100.1%[1,1]<stdout>:Extracting data-1/MNIST/raw/train-images-idx3-ubyte.gz to data-1/MNIST/raw
+[1,1]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz to data-1/MNIST/raw/train-labels-idx1-ubyte.gz
+113.5%[1,1]<stdout>:Extracting data-1/MNIST/raw/train-labels-idx1-ubyte.gz to data-1/MNIST/raw
+[1,1]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz to data-1/MNIST/raw/t10k-images-idx3-ubyte.gz
+100.4%[1,1]<stdout>:Extracting data-1/MNIST/raw/t10k-images-idx3-ubyte.gz to data-1/MNIST/raw
+[1,1]<stdout>:Downloading http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz to data-1/MNIST/raw/t10k-labels-idx1-ubyte.gz
+180.4%[1,1]<stdout>:Extracting data-1/MNIST/raw/t10k-labels-idx1-ubyte.gz to data-1/MNIST/raw
+[1,1]<stdout>:Processing...
+[1,1]<stdout>:Done!
+[1,0]<stderr>:/usr/local/lib/python3.7/dist-packages/torchvision/datasets/mnist.py:469: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /pytorch/torch/csrc/utils/tensor_numpy.cpp:141.)
+[1,0]<stderr>:  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+[1,1]<stderr>:/usr/local/lib/python3.7/dist-packages/torchvision/datasets/mnist.py:469: UserWarning: The given NumPy array is not writeable, and PyTorch does not support non-writeable tensors. This means you can write to the underlying (supposedly non-writeable) NumPy array using the tensor. You may want to copy the array to protect its data or make it writeable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at  /pytorch/torch/csrc/utils/tensor_numpy.cpp:141.)
+[1,1]<stderr>:  return torch.from_numpy(parsed.astype(m[2], copy=False)).view(*s)
+[1,0]<stdout>:Train Epoch: 1 [0/30000 (0%)]	Loss: 2.323001
+[1,1]<stdout>:Train Epoch: 1 [0/30000 (0%)]	Loss: 2.324043
+[1,0]<stdout>:Train Epoch: 1 [10000/30000 (33%)]	Loss: 2.307951
+[1,1]<stdout>:Train Epoch: 1 [10000/30000 (33%)]	Loss: 2.305638
+[1,0]<stdout>:Train Epoch: 1 [20000/30000 (67%)]	Loss: 2.292747
+[1,1]<stdout>:Train Epoch: 1 [20000/30000 (67%)]	Loss: 2.283674
+[1,1]<stderr>:pytorch_mnist.py:52: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+[1,1]<stderr>:  return F.log_softmax(x)
+[1,0]<stderr>:pytorch_mnist.py:52: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+[1,0]<stderr>:  return F.log_softmax(x)
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.2623, Accuracy: 30.13%
+[1,0]<stdout>:
+[1,0]<stderr>:/usr/local/lib/python3.7/dist-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+[1,0]<stderr>:  warnings.warn(warning.format(ret))
+[1,0]<stderr>:pytorch_mnist.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+[1,0]<stderr>:  tensor = torch.tensor(val)
+[1,1]<stderr>:/usr/local/lib/python3.7/dist-packages/torch/nn/_reduction.py:44: UserWarning: size_average and reduce args will be deprecated, please use reduction='sum' instead.
+[1,1]<stderr>:  warnings.warn(warning.format(ret))
+[1,1]<stderr>:pytorch_mnist.py:76: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+[1,1]<stderr>:  tensor = torch.tensor(val)
+[1,0]<stdout>:Train Epoch: 2 [0/30000 (0%)]	Loss: 2.271112
+[1,1]<stdout>:Train Epoch: 2 [0/30000 (0%)]	Loss: 2.270766
+[1,0]<stdout>:Train Epoch: 2 [10000/30000 (33%)]	Loss: 2.248678
+[1,1]<stdout>:Train Epoch: 2 [10000/30000 (33%)]	Loss: 2.243483
+[1,0]<stdout>:Train Epoch: 2 [20000/30000 (67%)]	Loss: 2.204532
+[1,1]<stdout>:Train Epoch: 2 [20000/30000 (67%)]	Loss: 2.213562
+[1,0]<stdout>:
+[1,0]<stdout>:Test set: Average loss: 2.0946, Accuracy: 58.02%
+[1,0]<stdout>:
+
+node02中的容器什么也不用做
+```
+
+
+
+#### 2.4 多机——自己代码有无IB对比
+
+node01
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g --cap-add=IPC_LOCK --device=/dev/infiniband -p 12346:12346 -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
+
+node02
+
+```
+一、pull docker
+docker pull horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1
+
+二、建立容器
+这里需要注意要把上一步的共享目录映射进来，如果需要跑自己的任务的话
+nvidia-docker run -itd --net=host -v /root/data:/data --name horovod --shm-size=64g --cap-add=IPC_LOCK --device=/dev/infiniband -p 12346:12346 -p 12345:12345 horovod/horovod:0.20.0-tf2.3.0-torch1.6.0-mxnet1.6.0.post0-py3.7-cuda10.1 bash
+
+三、运行容器
+docker exec -it horovod bash
+```
+
+
+
+node01和node02
+
+```
+四、免密登录
+此时A和B应分别在horovod容器内。
+
+这里踩了个坑，如果按照horovod的Docker教程, 创建容器时如果添加映射 share/ssh:/root/.ssh，就一直实现不了免密的登录，不添加映射反而可以免密登录了。
+
+A-->B免密登录
+先在B服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在A服务器上创建秘钥并且免密登录到B
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.33.12
+
+#测试是否可以免密登录
+ssh -p 12345 root@192.168.33.12
+
+
+B-->A 免密登录过程相反
+先在A服务器上开启ssh
+#1. 修改sshd配置
+vim /etc/ssh/sshd_config
+#2. 改动如下
+Port 12345
+PermitRootLogin yes
+PubkeyAuthentication yes
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+#3. 保存配置，启动sshd
+/usr/sbin/sshd
+#4. 查看ssh是否启动
+ps -ef | grep ssh
+#5. 修改root的密码
+passwd
+
+在B服务器上创建秘钥并且免密登录到A
+#1. 生成秘钥
+ssh-keygen -t rsa
+
+ssh-copy-id  -p 12345  root@192.168.33.11
+
+#测试是否可以免密登录
+ssh -p 12345 root@192.168.33.11
+
+```
+
+
+
+```
+执行自己的代码—— 四中的代码
+
+有IB
+
+node01 容器中执行
+CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ib0 NCCL_IB_DISABLE=0 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.33.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 0
+
+node02容器中执行
+CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ib0 NCCL_IB_DISABLE=0 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.33.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 1
+
+node01日志
+root@node01:/data# CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ib0 NCCL_IB_DISABLE=0 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.33.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 0
+Use GPU: 0 for training
+node01:354:354 [0] NCCL INFO Bootstrap : Using [0]ib0:192.168.33.11<0>
+node01:354:354 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node01:354:354 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+node01:354:354 [0] NCCL INFO NET/IB : Using [0]mlx4_0:1/IB ; OOB ib0:192.168.33.11<0>
+NCCL version 2.4.8+cuda10.1
+node01:354:386 [0] NCCL INFO Setting affinity for GPU 0 to 03f03f
+node01:354:386 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  PHB
+node01:354:386 [0] NCCL INFO Channel 00 :    0   1
+node01:354:386 [0] NCCL INFO Ring 00 : 1 -> 0 [receive] via NET/IB/0
+node01:354:386 [0] NCCL INFO Ring 00 : 0 -> 1 [send] via NET/IB/0
+node01:354:386 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+node01:354:386 [0] NCCL INFO comm 0x7f3410002270 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node01:354:354 [0] NCCL INFO Launch mode Parallel
+Epoch: [0][  0/313]	Time 12.346 (12.346)	Data  7.001 ( 7.001)	Loss 6.9903e+00 (6.9903e+00)
+Epoch: [0][ 10/313]	Time  1.681 ( 2.654)	Data  0.000 ( 0.637)	Loss 0.0000e+00 (6.3548e-01)
+Epoch: [0][ 20/313]	Time  1.680 ( 2.192)	Data  0.000 ( 0.334)	Loss 0.0000e+00 (3.3287e-01)
+Epoch: [0][ 30/313]	Time  1.687 ( 2.028)	Data  0.000 ( 0.226)	Loss 0.0000e+00 (2.2549e-01)
+Epoch: [0][ 40/313]	Time  1.686 ( 1.944)	Data  0.000 ( 0.171)	Loss 0.0000e+00 (1.7050e-01)
+Epoch: [0][ 50/313]	Time  1.687 ( 1.893)	Data  0.000 ( 0.137)	Loss 0.0000e+00 (1.3706e-01)
+Epoch: [0][ 60/313]	Time  1.685 ( 1.859)	Data  0.000 ( 0.115)	Loss 0.0000e+00 (1.1460e-01)
+Epoch: [0][ 70/313]	Time  1.684 ( 1.835)	Data  0.000 ( 0.099)	Loss 0.0000e+00 (9.8455e-02)
+Epoch: [0][ 80/313]	Time  1.681 ( 1.816)	Data  0.000 ( 0.087)	Loss 0.0000e+00 (8.6300e-02)
+Epoch: [0][ 90/313]	Time  1.680 ( 1.801)	Data  0.000 ( 0.077)	Loss 0.0000e+00 (7.6816e-02)
+Epoch: [0][100/313]	Time  1.683 ( 1.790)	Data  0.000 ( 0.070)	Loss 0.0000e+00 (6.9211e-02)
+Epoch: [0][110/313]	Time  1.686 ( 1.780)	Data  0.000 ( 0.063)	Loss 0.0000e+00 (6.2976e-02)
+Epoch: [0][120/313]	Time  1.691 ( 1.773)	Data  0.000 ( 0.058)	Loss 0.0000e+00 (5.7771e-02)
+Epoch: [0][130/313]	Time  1.682 ( 1.766)	Data  0.000 ( 0.054)	Loss 0.0000e+00 (5.3361e-02)
+Epoch: [0][140/313]	Time  1.680 ( 1.760)	Data  0.000 ( 0.050)	Loss 0.0000e+00 (4.9577e-02)
+Epoch: [0][150/313]	Time  1.683 ( 1.755)	Data  0.000 ( 0.047)	Loss 0.0000e+00 (4.6293e-02)
+Epoch: [0][160/313]	Time  1.683 ( 1.751)	Data  0.000 ( 0.044)	Loss 0.0000e+00 (4.3418e-02)
+Epoch: [0][170/313]	Time  1.685 ( 1.747)	Data  0.000 ( 0.041)	Loss 0.0000e+00 (4.0879e-02)
+Epoch: [0][180/313]	Time  1.693 ( 1.744)	Data  0.000 ( 0.039)	Loss 0.0000e+00 (3.8620e-02)
+Epoch: [0][190/313]	Time  1.682 ( 1.740)	Data  0.000 ( 0.037)	Loss 0.0000e+00 (3.6598e-02)
+Epoch: [0][200/313]	Time  1.687 ( 1.738)	Data  0.000 ( 0.035)	Loss 0.0000e+00 (3.4778e-02)
+Epoch: [0][210/313]	Time  1.687 ( 1.735)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (3.3129e-02)
+Epoch: [0][220/313]	Time  1.680 ( 1.733)	Data  0.000 ( 0.032)	Loss 0.0000e+00 (3.1630e-02)
+Epoch: [0][230/313]	Time  1.693 ( 1.731)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (3.0261e-02)
+Epoch: [0][240/313]	Time  1.683 ( 1.729)	Data  0.000 ( 0.029)	Loss 0.0000e+00 (2.9005e-02)
+Epoch: [0][250/313]	Time  1.681 ( 1.727)	Data  0.000 ( 0.028)	Loss 0.0000e+00 (2.7850e-02)
+Epoch: [0][260/313]	Time  1.689 ( 1.726)	Data  0.000 ( 0.027)	Loss 0.0000e+00 (2.6783e-02)
+Epoch: [0][270/313]	Time  1.690 ( 1.724)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (2.5794e-02)
+Epoch: [0][280/313]	Time  1.682 ( 1.723)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (2.4876e-02)
+Epoch: [0][290/313]	Time  1.683 ( 1.721)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (2.4022e-02)
+Epoch: [0][300/313]	Time  1.690 ( 1.720)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (2.3224e-02)
+Epoch: [0][310/313]	Time  1.685 ( 1.719)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (2.2477e-02)
+539.5836219787598
+Epoch: [1][  0/313]	Time  8.240 ( 8.240)	Data  6.559 ( 6.559)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 10/313]	Time  1.685 ( 2.279)	Data  0.000 ( 0.596)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 20/313]	Time  1.683 ( 1.996)	Data  0.000 ( 0.313)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 30/313]	Time  1.687 ( 1.895)	Data  0.000 ( 0.212)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 40/313]	Time  1.680 ( 1.844)	Data  0.000 ( 0.160)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 50/313]	Time  1.681 ( 1.812)	Data  0.000 ( 0.129)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 60/313]	Time  1.682 ( 1.791)	Data  0.000 ( 0.108)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 70/313]	Time  1.687 ( 1.776)	Data  0.000 ( 0.093)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 80/313]	Time  1.682 ( 1.765)	Data  0.000 ( 0.081)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 90/313]	Time  1.680 ( 1.756)	Data  0.000 ( 0.072)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][100/313]	Time  1.688 ( 1.749)	Data  0.000 ( 0.065)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][110/313]	Time  1.684 ( 1.743)	Data  0.000 ( 0.059)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][120/313]	Time  1.686 ( 1.738)	Data  0.000 ( 0.054)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][130/313]	Time  1.683 ( 1.734)	Data  0.000 ( 0.050)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][140/313]	Time  1.683 ( 1.730)	Data  0.000 ( 0.047)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][150/313]	Time  1.684 ( 1.727)	Data  0.000 ( 0.044)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][160/313]	Time  1.680 ( 1.725)	Data  0.000 ( 0.041)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][170/313]	Time  1.681 ( 1.722)	Data  0.000 ( 0.039)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][180/313]	Time  1.682 ( 1.720)	Data  0.000 ( 0.036)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][190/313]	Time  1.681 ( 1.718)	Data  0.000 ( 0.035)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][200/313]	Time  1.683 ( 1.716)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][210/313]	Time  1.681 ( 1.715)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][220/313]	Time  1.689 ( 1.713)	Data  0.000 ( 0.030)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][230/313]	Time  1.682 ( 1.712)	Data  0.000 ( 0.029)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][240/313]	Time  1.692 ( 1.711)	Data  0.000 ( 0.027)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][250/313]	Time  1.684 ( 1.710)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][260/313]	Time  1.690 ( 1.709)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][270/313]	Time  1.688 ( 1.708)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][280/313]	Time  1.681 ( 1.707)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][290/313]	Time  1.680 ( 1.706)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][300/313]	Time  1.680 ( 1.706)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][310/313]	Time  1.685 ( 1.705)	Data  0.000 ( 0.021)	Loss 0.0000e+00 (0.0000e+00)
+532.9512767791748
+
+node02日志
+root@node02:/data# CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ib0 NCCL_IB_DISABLE=0 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.33.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 1
+Use GPU: 0 for training
+node02:213:213 [0] NCCL INFO Bootstrap : Using [0]ib0:192.168.33.12<0>
+node02:213:213 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node02:213:213 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+node02:213:213 [0] NCCL INFO NET/IB : Using [0]mlx4_0:1/IB ; OOB ib0:192.168.33.12<0>
+node02:213:243 [0] NCCL INFO Setting affinity for GPU 0 to fc0fc0
+node02:213:243 [0] NCCL INFO CUDA Dev 0[0], IB NIC distance :  SYS
+node02:213:243 [0] NCCL INFO Ring 00 : 0 -> 1 [receive] via NET/IB/0
+node02:213:243 [0] NCCL INFO Ring 00 : 1 -> 0 [send] via NET/IB/0
+node02:213:243 [0] NCCL INFO comm 0x7f7404002270 rank 1 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+Epoch: [0][  0/313]	Time 12.352 (12.352)	Data  6.911 ( 6.911)	Loss 6.9862e+00 (6.9862e+00)
+Epoch: [0][ 10/313]	Time  1.681 ( 2.654)	Data  0.000 ( 0.629)	Loss 0.0000e+00 (6.3511e-01)
+Epoch: [0][ 20/313]	Time  1.681 ( 2.192)	Data  0.000 ( 0.330)	Loss 0.0000e+00 (3.3268e-01)
+Epoch: [0][ 30/313]	Time  1.686 ( 2.028)	Data  0.002 ( 0.224)	Loss 0.0000e+00 (2.2536e-01)
+Epoch: [0][ 40/313]	Time  1.686 ( 1.944)	Data  0.001 ( 0.169)	Loss 0.0000e+00 (1.7039e-01)
+Epoch: [0][ 50/313]	Time  1.687 ( 1.893)	Data  0.001 ( 0.136)	Loss 0.0000e+00 (1.3698e-01)
+Epoch: [0][ 60/313]	Time  1.689 ( 1.859)	Data  0.001 ( 0.114)	Loss 0.0000e+00 (1.1453e-01)
+Epoch: [0][ 70/313]	Time  1.684 ( 1.834)	Data  0.001 ( 0.098)	Loss 0.0000e+00 (9.8397e-02)
+Epoch: [0][ 80/313]	Time  1.681 ( 1.816)	Data  0.001 ( 0.086)	Loss 0.0000e+00 (8.6249e-02)
+Epoch: [0][ 90/313]	Time  1.680 ( 1.801)	Data  0.000 ( 0.077)	Loss 0.0000e+00 (7.6771e-02)
+Epoch: [0][100/313]	Time  1.684 ( 1.790)	Data  0.001 ( 0.069)	Loss 0.0000e+00 (6.9170e-02)
+Epoch: [0][110/313]	Time  1.685 ( 1.780)	Data  0.001 ( 0.063)	Loss 0.0000e+00 (6.2939e-02)
+Epoch: [0][120/313]	Time  1.682 ( 1.773)	Data  0.001 ( 0.058)	Loss 0.0000e+00 (5.7737e-02)
+Epoch: [0][130/313]	Time  1.682 ( 1.766)	Data  0.001 ( 0.053)	Loss 0.0000e+00 (5.3330e-02)
+Epoch: [0][140/313]	Time  1.680 ( 1.760)	Data  0.001 ( 0.050)	Loss 0.0000e+00 (4.9547e-02)
+Epoch: [0][150/313]	Time  1.684 ( 1.755)	Data  0.000 ( 0.046)	Loss 0.0000e+00 (4.6266e-02)
+Epoch: [0][160/313]	Time  1.683 ( 1.751)	Data  0.001 ( 0.044)	Loss 0.0000e+00 (4.3393e-02)
+Epoch: [0][170/313]	Time  1.689 ( 1.747)	Data  0.001 ( 0.041)	Loss 0.0000e+00 (4.0855e-02)
+Epoch: [0][180/313]	Time  1.693 ( 1.744)	Data  0.001 ( 0.039)	Loss 0.0000e+00 (3.8598e-02)
+Epoch: [0][190/313]	Time  1.682 ( 1.740)	Data  0.000 ( 0.037)	Loss 0.0000e+00 (3.6577e-02)
+Epoch: [0][200/313]	Time  1.687 ( 1.738)	Data  0.000 ( 0.035)	Loss 0.0000e+00 (3.4757e-02)
+Epoch: [0][210/313]	Time  1.688 ( 1.735)	Data  0.001 ( 0.033)	Loss 0.0000e+00 (3.3110e-02)
+Epoch: [0][220/313]	Time  1.679 ( 1.733)	Data  0.001 ( 0.032)	Loss 0.0000e+00 (3.1612e-02)
+Epoch: [0][230/313]	Time  1.696 ( 1.731)	Data  0.001 ( 0.031)	Loss 0.0000e+00 (3.0243e-02)
+Epoch: [0][240/313]	Time  1.684 ( 1.729)	Data  0.000 ( 0.029)	Loss 0.0000e+00 (2.8988e-02)
+Epoch: [0][250/313]	Time  1.687 ( 1.727)	Data  0.001 ( 0.028)	Loss 0.0000e+00 (2.7833e-02)
+Epoch: [0][260/313]	Time  1.691 ( 1.726)	Data  0.001 ( 0.027)	Loss 0.0000e+00 (2.6767e-02)
+Epoch: [0][270/313]	Time  1.688 ( 1.724)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (2.5779e-02)
+Epoch: [0][280/313]	Time  1.686 ( 1.723)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (2.4862e-02)
+Epoch: [0][290/313]	Time  1.681 ( 1.721)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (2.4008e-02)
+Epoch: [0][300/313]	Time  1.681 ( 1.720)	Data  0.001 ( 0.024)	Loss 0.0000e+00 (2.3210e-02)
+Epoch: [0][310/313]	Time  1.683 ( 1.719)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (2.2464e-02)
+539.5735106468201
+Epoch: [1][  0/313]	Time  8.252 ( 8.252)	Data  6.096 ( 6.096)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 10/313]	Time  1.685 ( 2.280)	Data  0.001 ( 0.555)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 20/313]	Time  1.683 ( 1.996)	Data  0.001 ( 0.291)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 30/313]	Time  1.687 ( 1.896)	Data  0.001 ( 0.197)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 40/313]	Time  1.680 ( 1.844)	Data  0.001 ( 0.149)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 50/313]	Time  1.681 ( 1.813)	Data  0.000 ( 0.120)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 60/313]	Time  1.682 ( 1.792)	Data  0.001 ( 0.101)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 70/313]	Time  1.687 ( 1.776)	Data  0.000 ( 0.086)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 80/313]	Time  1.682 ( 1.765)	Data  0.000 ( 0.076)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 90/313]	Time  1.680 ( 1.756)	Data  0.000 ( 0.068)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][100/313]	Time  1.697 ( 1.749)	Data  0.001 ( 0.061)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][110/313]	Time  1.680 ( 1.743)	Data  0.001 ( 0.056)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][120/313]	Time  1.684 ( 1.738)	Data  0.001 ( 0.051)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][130/313]	Time  1.683 ( 1.734)	Data  0.001 ( 0.047)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][140/313]	Time  1.691 ( 1.730)	Data  0.001 ( 0.044)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][150/313]	Time  1.684 ( 1.727)	Data  0.001 ( 0.041)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][160/313]	Time  1.680 ( 1.725)	Data  0.001 ( 0.038)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][170/313]	Time  1.681 ( 1.722)	Data  0.000 ( 0.036)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][180/313]	Time  1.681 ( 1.720)	Data  0.001 ( 0.034)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][190/313]	Time  1.681 ( 1.718)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][200/313]	Time  1.682 ( 1.716)	Data  0.001 ( 0.031)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][210/313]	Time  1.680 ( 1.715)	Data  0.001 ( 0.030)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][220/313]	Time  1.690 ( 1.714)	Data  0.001 ( 0.028)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][230/313]	Time  1.683 ( 1.712)	Data  0.001 ( 0.027)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][240/313]	Time  1.681 ( 1.711)	Data  0.001 ( 0.026)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][250/313]	Time  1.684 ( 1.710)	Data  0.001 ( 0.025)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][260/313]	Time  1.691 ( 1.709)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][270/313]	Time  1.686 ( 1.708)	Data  0.001 ( 0.023)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][280/313]	Time  1.693 ( 1.707)	Data  0.001 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][290/313]	Time  1.681 ( 1.706)	Data  0.001 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][300/313]	Time  1.678 ( 1.706)	Data  0.000 ( 0.021)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][310/313]	Time  1.684 ( 1.705)	Data  0.000 ( 0.020)	Loss 0.0000e+00 (0.0000e+00)
+532.9436800479889
+
+```
+
+
+
+```
+执行自己的代码—— 四中的代码
+
+无IB
+
+node01 容器中执行
+CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=eno1 NCCL_IB_DISABLE=1 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.50.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 0
+
+node02容器中执行
+CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ens9f0 NCCL_IB_DISABLE=1 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.50.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 1
+
+node01日志
+root@node01:/data# CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=eno1 NCCL_IB_DISABLE=1 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.50.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 0
+Use GPU: 0 for training
+node01:886:886 [0] NCCL INFO Bootstrap : Using [0]eno1:192.168.50.11<0>
+node01:886:886 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node01:886:886 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node01:886:886 [0] NCCL INFO NET/Socket : Using [0]eno1:192.168.50.11<0>
+NCCL version 2.4.8+cuda10.1
+node01:886:917 [0] NCCL INFO Setting affinity for GPU 0 to 03f03f
+node01:886:917 [0] NCCL INFO CUDA Dev 0[0], Socket NIC distance :  SYS
+node01:886:917 [0] NCCL INFO Channel 00 :    0   1
+node01:886:917 [0] NCCL INFO Ring 00 : 1 -> 0 [receive] via NET/Socket/0
+node01:886:917 [0] NCCL INFO NET/Socket: Using 1 threads and 1 sockets per thread
+node01:886:917 [0] NCCL INFO Ring 00 : 0 -> 1 [send] via NET/Socket/0
+node01:886:917 [0] NCCL INFO Using 256 threads, Min Comp Cap 6, Trees disabled
+node01:886:917 [0] NCCL INFO comm 0x7f04ac002270 rank 0 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+node01:886:886 [0] NCCL INFO Launch mode Parallel
+Epoch: [0][  0/313]	Time 13.391 (13.391)	Data  6.572 ( 6.572)	Loss 6.8988e+00 (6.8988e+00)
+Epoch: [0][ 10/313]	Time  2.164 ( 3.347)	Data  0.000 ( 0.598)	Loss 0.0000e+00 (6.2716e-01)
+Epoch: [0][ 20/313]	Time  2.164 ( 2.784)	Data  0.000 ( 0.313)	Loss 0.0000e+00 (3.2851e-01)
+Epoch: [0][ 30/313]	Time  2.163 ( 2.584)	Data  0.000 ( 0.212)	Loss 0.0000e+00 (2.2254e-01)
+Epoch: [0][ 40/313]	Time  2.164 ( 2.481)	Data  0.000 ( 0.161)	Loss 0.0000e+00 (1.6826e-01)
+Epoch: [0][ 50/313]	Time  2.165 ( 2.419)	Data  0.000 ( 0.129)	Loss 0.0000e+00 (1.3527e-01)
+Epoch: [0][ 60/313]	Time  2.167 ( 2.377)	Data  0.000 ( 0.108)	Loss 0.0000e+00 (1.1310e-01)
+Epoch: [0][ 70/313]	Time  2.168 ( 2.347)	Data  0.000 ( 0.093)	Loss 0.0000e+00 (9.7166e-02)
+Epoch: [0][ 80/313]	Time  2.164 ( 2.324)	Data  0.000 ( 0.081)	Loss 0.0000e+00 (8.5170e-02)
+Epoch: [0][ 90/313]	Time  2.161 ( 2.307)	Data  0.000 ( 0.073)	Loss 0.0000e+00 (7.5811e-02)
+Epoch: [0][100/313]	Time  2.161 ( 2.319)	Data  0.000 ( 0.065)	Loss 0.0000e+00 (6.8305e-02)
+Epoch: [0][110/313]	Time  2.162 ( 2.305)	Data  0.000 ( 0.059)	Loss 0.0000e+00 (6.2151e-02)
+Epoch: [0][120/313]	Time  2.165 ( 2.293)	Data  0.000 ( 0.055)	Loss 0.0000e+00 (5.7015e-02)
+Epoch: [0][130/313]	Time  2.164 ( 2.283)	Data  0.000 ( 0.050)	Loss 0.0000e+00 (5.2663e-02)
+Epoch: [0][140/313]	Time  2.165 ( 2.275)	Data  0.000 ( 0.047)	Loss 0.0000e+00 (4.8928e-02)
+Epoch: [0][150/313]	Time  2.161 ( 2.267)	Data  0.000 ( 0.044)	Loss 0.0000e+00 (4.5687e-02)
+Epoch: [0][160/313]	Time  2.166 ( 2.261)	Data  0.000 ( 0.041)	Loss 0.0000e+00 (4.2850e-02)
+Epoch: [0][170/313]	Time  2.163 ( 2.255)	Data  0.000 ( 0.039)	Loss 0.0000e+00 (4.0344e-02)
+Epoch: [0][180/313]	Time  2.164 ( 2.250)	Data  0.000 ( 0.037)	Loss 0.0000e+00 (3.8115e-02)
+Epoch: [0][190/313]	Time  2.165 ( 2.245)	Data  0.000 ( 0.035)	Loss 0.0000e+00 (3.6119e-02)
+Epoch: [0][200/313]	Time  2.162 ( 2.241)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (3.4322e-02)
+Epoch: [0][210/313]	Time  2.165 ( 2.238)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (3.2696e-02)
+Epoch: [0][220/313]	Time  2.448 ( 2.242)	Data  0.000 ( 0.030)	Loss 0.0000e+00 (3.1216e-02)
+Epoch: [0][230/313]	Time  2.161 ( 2.242)	Data  0.000 ( 0.029)	Loss 0.0000e+00 (2.9865e-02)
+Epoch: [0][240/313]	Time  2.298 ( 2.258)	Data  0.001 ( 0.028)	Loss 0.0000e+00 (2.8626e-02)
+Epoch: [0][250/313]	Time  2.336 ( 2.255)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (2.7485e-02)
+Epoch: [0][260/313]	Time  2.453 ( 2.258)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (2.6432e-02)
+Epoch: [0][270/313]	Time  2.221 ( 2.271)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (2.5457e-02)
+Epoch: [0][280/313]	Time  2.162 ( 2.267)	Data  0.001 ( 0.024)	Loss 0.0000e+00 (2.4551e-02)
+Epoch: [0][290/313]	Time  2.169 ( 2.268)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (2.3707e-02)
+Epoch: [0][300/313]	Time  2.197 ( 2.275)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (2.2920e-02)
+Epoch: [0][310/313]	Time  2.161 ( 2.271)	Data  0.000 ( 0.021)	Loss 0.0000e+00 (2.2183e-02)
+712.8490884304047
+Epoch: [1][  0/313]	Time  8.646 ( 8.646)	Data  6.489 ( 6.489)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 10/313]	Time  2.162 ( 2.751)	Data  0.000 ( 0.590)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 20/313]	Time  2.159 ( 2.472)	Data  0.000 ( 0.309)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 30/313]	Time  3.095 ( 2.411)	Data  0.000 ( 0.210)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 40/313]	Time  2.162 ( 2.435)	Data  0.000 ( 0.158)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 50/313]	Time  2.528 ( 2.400)	Data  0.000 ( 0.127)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 60/313]	Time  3.241 ( 2.391)	Data  0.000 ( 0.107)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 70/313]	Time  2.487 ( 2.444)	Data  0.000 ( 0.092)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 80/313]	Time  2.164 ( 2.413)	Data  0.000 ( 0.080)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 90/313]	Time  2.165 ( 2.386)	Data  0.000 ( 0.071)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][100/313]	Time  2.166 ( 2.364)	Data  0.000 ( 0.064)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][110/313]	Time  2.163 ( 2.351)	Data  0.000 ( 0.059)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][120/313]	Time  2.179 ( 2.335)	Data  0.000 ( 0.054)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][130/313]	Time  2.165 ( 2.322)	Data  0.000 ( 0.050)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][140/313]	Time  2.162 ( 2.311)	Data  0.000 ( 0.046)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][150/313]	Time  2.167 ( 2.301)	Data  0.000 ( 0.043)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][160/313]	Time  2.160 ( 2.293)	Data  0.000 ( 0.040)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][170/313]	Time  2.161 ( 2.285)	Data  0.000 ( 0.038)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][180/313]	Time  2.168 ( 2.279)	Data  0.000 ( 0.036)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][190/313]	Time  2.165 ( 2.273)	Data  0.000 ( 0.034)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][200/313]	Time  2.166 ( 2.267)	Data  0.000 ( 0.032)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][210/313]	Time  2.160 ( 2.269)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][220/313]	Time  2.172 ( 2.264)	Data  0.000 ( 0.030)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][230/313]	Time  2.163 ( 2.260)	Data  0.000 ( 0.028)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][240/313]	Time  2.166 ( 2.256)	Data  0.000 ( 0.027)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][250/313]	Time  2.164 ( 2.252)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][260/313]	Time  2.165 ( 2.250)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][270/313]	Time  2.163 ( 2.247)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][280/313]	Time  2.164 ( 2.244)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][290/313]	Time  2.166 ( 2.241)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][300/313]	Time  2.175 ( 2.238)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][310/313]	Time  2.166 ( 2.236)	Data  0.000 ( 0.021)	Loss 0.0000e+00 (0.0000e+00)
+699.6082167625427
+
+
+node02日志
+root@node02:/data# CUDA_VISIBLE_DEVICES=0  NCCL_SOCKET_IFNAME=ens9f0 NCCL_IB_DISABLE=1 NCCL_DEBUG=INFO  python main.py -b 160 --dist-url 'tcp://192.168.50.11:12346' --dist-backend 'nccl' --multiprocessing-distributed --epochs 2 --world-size 2 --rank 1
+Use GPU: 0 for training
+node02:743:743 [0] NCCL INFO Bootstrap : Using [0]ens9f0:192.168.50.12<0>
+node02:743:743 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so).
+node02:743:743 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+node02:743:743 [0] NCCL INFO NET/Socket : Using [0]ens9f0:192.168.50.12<0>
+node02:743:772 [0] NCCL INFO Setting affinity for GPU 0 to fc0fc0
+node02:743:772 [0] NCCL INFO CUDA Dev 0[0], Socket NIC distance :  SYS
+node02:743:772 [0] NCCL INFO Ring 00 : 0 -> 1 [receive] via NET/Socket/0
+node02:743:772 [0] NCCL INFO NET/Socket: Using 1 threads and 1 sockets per thread
+node02:743:772 [0] NCCL INFO Ring 00 : 1 -> 0 [send] via NET/Socket/0
+node02:743:772 [0] NCCL INFO comm 0x7f41c8002270 rank 1 nranks 2 cudaDev 0 nvmlDev 0 - Init COMPLETE
+Epoch: [0][  0/313]	Time 13.335 (13.335)	Data  6.816 ( 6.816)	Loss 6.8945e+00 (6.8945e+00)
+Epoch: [0][ 10/313]	Time  2.163 ( 3.342)	Data  0.000 ( 0.620)	Loss 0.0000e+00 (6.2678e-01)
+Epoch: [0][ 20/313]	Time  2.164 ( 2.782)	Data  0.000 ( 0.325)	Loss 0.0000e+00 (3.2831e-01)
+Epoch: [0][ 30/313]	Time  2.163 ( 2.582)	Data  0.000 ( 0.220)	Loss 0.0000e+00 (2.2240e-01)
+Epoch: [0][ 40/313]	Time  2.163 ( 2.480)	Data  0.000 ( 0.167)	Loss 0.0000e+00 (1.6816e-01)
+Epoch: [0][ 50/313]	Time  2.157 ( 2.418)	Data  0.001 ( 0.134)	Loss 0.0000e+00 (1.3519e-01)
+Epoch: [0][ 60/313]	Time  2.167 ( 2.376)	Data  0.000 ( 0.112)	Loss 0.0000e+00 (1.1303e-01)
+Epoch: [0][ 70/313]	Time  2.168 ( 2.346)	Data  0.000 ( 0.096)	Loss 0.0000e+00 (9.7106e-02)
+Epoch: [0][ 80/313]	Time  2.164 ( 2.324)	Data  0.000 ( 0.084)	Loss 0.0000e+00 (8.5118e-02)
+Epoch: [0][ 90/313]	Time  2.161 ( 2.306)	Data  0.000 ( 0.075)	Loss 0.0000e+00 (7.5764e-02)
+Epoch: [0][100/313]	Time  2.162 ( 2.318)	Data  0.000 ( 0.068)	Loss 0.0000e+00 (6.8263e-02)
+Epoch: [0][110/313]	Time  2.163 ( 2.304)	Data  0.000 ( 0.062)	Loss 0.0000e+00 (6.2113e-02)
+Epoch: [0][120/313]	Time  2.163 ( 2.293)	Data  0.000 ( 0.057)	Loss 0.0000e+00 (5.6980e-02)
+Epoch: [0][130/313]	Time  2.164 ( 2.283)	Data  0.000 ( 0.052)	Loss 0.0000e+00 (5.2630e-02)
+Epoch: [0][140/313]	Time  2.164 ( 2.274)	Data  0.000 ( 0.049)	Loss 0.0000e+00 (4.8897e-02)
+Epoch: [0][150/313]	Time  2.160 ( 2.267)	Data  0.000 ( 0.045)	Loss 0.0000e+00 (4.5659e-02)
+Epoch: [0][160/313]	Time  2.166 ( 2.261)	Data  0.000 ( 0.043)	Loss 0.0000e+00 (4.2823e-02)
+Epoch: [0][170/313]	Time  2.163 ( 2.255)	Data  0.000 ( 0.040)	Loss 0.0000e+00 (4.0319e-02)
+Epoch: [0][180/313]	Time  2.164 ( 2.250)	Data  0.000 ( 0.038)	Loss 0.0000e+00 (3.8091e-02)
+Epoch: [0][190/313]	Time  2.165 ( 2.245)	Data  0.000 ( 0.036)	Loss 0.0000e+00 (3.6097e-02)
+Epoch: [0][200/313]	Time  2.162 ( 2.241)	Data  0.000 ( 0.034)	Loss 0.0000e+00 (3.4301e-02)
+Epoch: [0][210/313]	Time  2.165 ( 2.237)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (3.2676e-02)
+Epoch: [0][220/313]	Time  2.448 ( 2.242)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (3.1197e-02)
+Epoch: [0][230/313]	Time  2.162 ( 2.242)	Data  0.000 ( 0.030)	Loss 0.0000e+00 (2.9847e-02)
+Epoch: [0][240/313]	Time  2.299 ( 2.257)	Data  0.000 ( 0.029)	Loss 0.0000e+00 (2.8608e-02)
+Epoch: [0][250/313]	Time  2.337 ( 2.255)	Data  0.000 ( 0.027)	Loss 0.0000e+00 (2.7468e-02)
+Epoch: [0][260/313]	Time  2.454 ( 2.258)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (2.6416e-02)
+Epoch: [0][270/313]	Time  2.221 ( 2.271)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (2.5441e-02)
+Epoch: [0][280/313]	Time  2.162 ( 2.267)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (2.4536e-02)
+Epoch: [0][290/313]	Time  2.169 ( 2.268)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (2.3693e-02)
+Epoch: [0][300/313]	Time  2.197 ( 2.275)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (2.2905e-02)
+Epoch: [0][310/313]	Time  2.161 ( 2.271)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (2.2169e-02)
+712.7787353992462
+Epoch: [1][  0/313]	Time  8.667 ( 8.667)	Data  6.206 ( 6.206)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 10/313]	Time  2.162 ( 2.753)	Data  0.000 ( 0.564)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 20/313]	Time  2.159 ( 2.473)	Data  0.000 ( 0.296)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 30/313]	Time  3.095 ( 2.411)	Data  0.000 ( 0.200)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 40/313]	Time  2.161 ( 2.436)	Data  0.000 ( 0.152)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 50/313]	Time  2.529 ( 2.401)	Data  0.000 ( 0.122)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 60/313]	Time  3.240 ( 2.391)	Data  0.000 ( 0.102)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 70/313]	Time  2.486 ( 2.445)	Data  0.000 ( 0.088)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 80/313]	Time  2.165 ( 2.413)	Data  0.000 ( 0.077)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][ 90/313]	Time  2.166 ( 2.386)	Data  0.000 ( 0.068)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][100/313]	Time  2.166 ( 2.364)	Data  0.000 ( 0.062)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][110/313]	Time  2.163 ( 2.351)	Data  0.000 ( 0.056)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][120/313]	Time  2.179 ( 2.336)	Data  0.000 ( 0.052)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][130/313]	Time  2.165 ( 2.322)	Data  0.000 ( 0.048)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][140/313]	Time  2.162 ( 2.311)	Data  0.000 ( 0.044)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][150/313]	Time  2.167 ( 2.302)	Data  0.000 ( 0.041)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][160/313]	Time  2.160 ( 2.293)	Data  0.000 ( 0.039)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][170/313]	Time  2.161 ( 2.286)	Data  0.000 ( 0.037)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][180/313]	Time  2.169 ( 2.279)	Data  0.000 ( 0.035)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][190/313]	Time  2.165 ( 2.273)	Data  0.000 ( 0.033)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][200/313]	Time  2.166 ( 2.267)	Data  0.000 ( 0.031)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][210/313]	Time  2.160 ( 2.269)	Data  0.000 ( 0.030)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][220/313]	Time  2.172 ( 2.264)	Data  0.000 ( 0.028)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][230/313]	Time  2.163 ( 2.260)	Data  0.000 ( 0.027)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][240/313]	Time  2.166 ( 2.256)	Data  0.000 ( 0.026)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][250/313]	Time  2.164 ( 2.252)	Data  0.000 ( 0.025)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][260/313]	Time  2.165 ( 2.250)	Data  0.000 ( 0.024)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][270/313]	Time  2.164 ( 2.247)	Data  0.000 ( 0.023)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][280/313]	Time  2.163 ( 2.244)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][290/313]	Time  2.166 ( 2.241)	Data  0.000 ( 0.022)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][300/313]	Time  2.174 ( 2.238)	Data  0.000 ( 0.021)	Loss 0.0000e+00 (0.0000e+00)
+Epoch: [1][310/313]	Time  2.166 ( 2.236)	Data  0.000 ( 0.020)	Loss 0.0000e+00 (0.0000e+00)
+699.6246151924133
+```
+
+
+
+- 单台，用时：900.99，      显存占用率97%。
+- 两台，未用IB卡时间：675.04, 显存占用率97%，900.99 / 675.04 = 1.33
+- 两台，用IB卡（开启IB对IB的RDMA）的时间：515.55,   显存占用率97%，900.99 / 515.55 = 1.75， 675.04 / 515.55 = 1.31
+- 两台，用IB卡，且开启GPURDMA的时间：516.97，显存占用97%，没有影响，可能是因为卡数太少了
+- 两台，Docker容器，无IB卡：699.62
+- 两台，Docker容器，有IB卡：532.94
+
+## 参考
+
+> [horovod多机多卡启动指南](http://chaopeng.name/2020/01/03/horovod多机多卡启动指南/)
+>
+> [官方教程](https://horovod.readthedocs.io/en/latest/docker.html)
 
 
 
