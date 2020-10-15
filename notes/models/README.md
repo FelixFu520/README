@@ -20,11 +20,8 @@
 
 ## UNet系列
 
-- 🍀[UNet系列]()
+- 🍀[UNet]()
 
-- * Unet-simple:https://github.com/FelixFu520/Unet-Simple
-  * NestedUNet-dsb2018_96:https://github.com/FelixFu520/NestedUNet-dsb2018_96  
-  * u_net_liver：https://github.com/FelixFu520/u_net_liver
 
 
 ## 
