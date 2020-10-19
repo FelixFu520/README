@@ -11,6 +11,7 @@
 * 🍀[正则化](regularization.md)
 * 🍀[模型初始化](init.md)
 * 🍀[梯度消失、爆炸原因及其解决方法](tidu.md)
+* 🍀[随机数](random.md)
 * CAM
   * “CAM学习“：https://github.com/FelixFu520/CAM
   * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
