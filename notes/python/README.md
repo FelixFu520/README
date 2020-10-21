@@ -30,6 +30,7 @@
 - 🍀[EasyDict](easydict.md)
 - 🍀[glob](glob.md)
 - 🍀[dir&vars](dir.md)
+- 🍀[assert](assert.md)
 
 ## Numpy
 
@@ -39,6 +40,7 @@
 - 🍀[Numpy—控制、测试](kongzhi.md)
 - 🍀[ravel()、flatten()、squeeze()](ravel.md)
 - 🍀[np.prod](prod.md)
+- 🍀[np.where](where.md)
 
 ---
 
