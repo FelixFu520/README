@@ -1,6 +1,6 @@
 # mAP
 
-2020年7月31日
+2020年7月31日 [视频](https://www.bilibili.com/video/av583749910/)
 
 ---
 
@@ -360,3 +360,5 @@ AP衡量的是学出来的模型在给定类别上的好坏，而mAP衡量的是
 ## 参考
 
 > [原文地址](https://www.cnblogs.com/makefile/p/metrics-mAP.html)
+>
+> https://blog.csdn.net/laizi_laizi/article/details/103887550

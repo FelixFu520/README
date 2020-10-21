@@ -53,6 +53,7 @@
 - 🍀[np.where](where.md)
 - 🍀[np.clip](clip.md)
 - 🍀[argsort](argsort.md)
+- 🍀[concatenate](concatenate.md)
 
 ## 参考
 
