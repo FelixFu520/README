@@ -1,5 +1,7 @@
 # Python
 
+[廖雪峰](https://www.liaoxuefeng.com/wiki/1016959663602400)
+
 ---
 
 ## 深度之眼👀
@@ -41,6 +43,7 @@
 - 🍀[pickle](pickle.md)
 - 🍀[tqdm](tqdm.md)
 - 🍀[@property](property.md)
+- 🍀[collections](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
 
 ## Numpy
 

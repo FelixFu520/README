@@ -9,6 +9,7 @@
 - 🍀[上/下采样interpolate](interpolate.md)
 - 🍀[torch.argmax](argmax.md)
 - 🍀[expand&repeat](expand.md)
+- 🍀[contiguous](contiguous.md)
 
 
 
