@@ -10,4 +10,5 @@
 - 🍀[OpenCV编译安装](opencv.md)
 - 
 - 🍀[JupyterLab安装](jupyterlab.md)
+- 🍀[Matlab安装](matlab.md)
 
