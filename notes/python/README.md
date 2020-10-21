@@ -31,22 +31,6 @@
 - 🍀[glob](glob.md)
 - 🍀[dir&vars](dir.md)
 - 🍀[assert](assert.md)
-
-## Numpy
-
-- 🍀[Numpy—axis](axis.md)
-- 🍀[Numpy—argmax](argmax.md)
-- 🍀[Numpy—转换](change_numpy.md)
-- 🍀[Numpy—控制、测试](kongzhi.md)
-- 🍀[ravel()、flatten()、squeeze()](ravel.md)
-- 🍀[np.prod](prod.md)
-- 🍀[np.where](where.md)
-- 🍀[np.clip](clip.md)
-
----
-
-## Python模块
-
 - 🍀[内置函数](built_in.md)
 - 🍀[platform](platform.md)
 - 🍀[sys](sys.md)
@@ -58,7 +42,17 @@
 - 🍀[tqdm](tqdm.md)
 - 🍀[@property](property.md)
 
+## Numpy
 
+- 🍀[Numpy—axis](axis.md)
+- 🍀[Numpy—argmax](argmax.md)
+- 🍀[Numpy—转换](change_numpy.md)
+- 🍀[Numpy—控制、测试](kongzhi.md)
+- 🍀[ravel()、flatten()、squeeze()](ravel.md)
+- 🍀[np.prod](prod.md)
+- 🍀[np.where](where.md)
+- 🍀[np.clip](clip.md)
+- 🍀[argsort](argsort.md)
 
 ## 参考
 
