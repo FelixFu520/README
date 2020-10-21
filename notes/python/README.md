@@ -41,6 +41,7 @@
 - 🍀[ravel()、flatten()、squeeze()](ravel.md)
 - 🍀[np.prod](prod.md)
 - 🍀[np.where](where.md)
+- 🍀[np.clip](clip.md)
 
 ---
 

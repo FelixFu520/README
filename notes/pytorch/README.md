@@ -7,6 +7,8 @@
 - 🍀[PixelShuffle类](PixelShuffle.md)
 - 🍀[pytorch常见方法](changjian.md)
 - 🍀[上/下采样interpolate](interpolate.md)
+- 🍀[torch.argmax](argmax.md)
+- 🍀[expand&repeat](expand.md)
 
 
 
