@@ -56,9 +56,12 @@
 - 🍀[os](os.md)
 - 🍀[pickle](pickle.md)
 - 🍀[tqdm](tqdm.md)
+- 🍀[@property](property.md)
 
 
 
 ## 参考
 
 > [Python 100天](http://www.ityouknow.com/python.html)
+>
+> [廖雪峰](https://www.liaoxuefeng.com/wiki/1016959663602400/1017502538658208)
