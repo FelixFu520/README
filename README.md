@@ -40,6 +40,7 @@
 - 🍀[模型](notes/models/README.md)
 - 🍀[损失函数](notes/loss/README.md)
 - 🍀[优化器](notes/optimizer/README.md)
+- 🍀[训练技巧trick](notes/trick/README.md)
 
 ### 📖推理部署
 
