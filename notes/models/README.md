@@ -7,6 +7,7 @@
 - 🍀[感知器模型](prec.md)
 - 🍀[VGG](vgg.md)
 - 🍀[ResNet](resnet.md)
+- 🍀[激活函数](activation.md)
 
 ## Yolo系列
 
