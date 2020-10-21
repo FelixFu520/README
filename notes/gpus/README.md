@@ -8,4 +8,6 @@
 - 🍀[装Docker](docker.md)
 - 🍀[装NV Docker](nvdocker.md)
 - 🍀[OpenCV编译安装](opencv.md)
+- 
+- 🍀[JupyterLab安装](jupyterlab.md)
 
