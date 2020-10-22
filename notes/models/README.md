@@ -14,6 +14,7 @@
 - 🍀[VGG](vgg.md)
 - 🍀[ResNet](resnet.md)
 - 🍀[激活函数](activation.md)
+- 🍀[上采样](up.md)
 
 ## Yolo系列
 
