@@ -6,7 +6,10 @@
 
 - 🍀[最小二乘法](multi.md)
 
+## CNN历史
 
+- 🍀[神经网络发展史](rcnn/history.md)
+- 🍀[CNN](rcnn/cnn.md)
 
 ## 基础网络
 
@@ -20,6 +23,7 @@
 ## RCNNs
 
 - 🍀[rcnns](rcnn/rcnns.md)
+- 🍀
 
 ## Yolo系列
 
