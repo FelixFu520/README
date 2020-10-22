@@ -13,6 +13,7 @@
 - 🍀[感知器模型](prec.md)
 - 🍀[VGG](vgg.md)
 - 🍀[ResNet](resnet.md)
+- 🍀[DenseNet](densenet.md)
 - 🍀[激活函数](activation.md)
 - 🍀[上采样](up.md)
 
@@ -28,7 +29,7 @@
 
 ## UNet系列
 
-- 🍀[UNet]()
+- 🍀[UNet](https://github.com/ShawnBIT/UNet-family)
 
 
 
