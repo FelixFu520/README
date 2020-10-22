@@ -42,10 +42,6 @@
 - 🍀[优化器](notes/optimizer/README.md)
 - 🍀[训练技巧trick](notes/trick/README.md)
 
-### 🌲视频处理
-
-- [视频编解码](notes/videocodec/README.md)
-
 ### 📖推理部署
 
 #### 🌲WEB
@@ -59,6 +55,10 @@
 - 🍀[ONNX](notes/onnx/README.md)
 - 🍀[TensorRT](notes/tensorrt/README.md)
 - 🍀[TVM](notes/tvm/README.md)
+
+#### 🌲视频处理
+
+- [视频编解码](notes/videocodec/README.md)
 
 ### 📖面试题
 

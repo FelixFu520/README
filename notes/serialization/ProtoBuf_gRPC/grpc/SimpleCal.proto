@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service Cal {
+  rpc Add(AddRequest) returns (ResultReply) {}
+  rpc Multiply(MultiplyRequest) returns (ResultReply) {}
+}
+
+message AddRequest {
+  int32 number1  = 1;
+  int32 number2  = 2;
+}
+
+message MultiplyRequest {
+  int32 number1  = 1;
+  int32 number2  = 2;
+}
+
+message ResultReply {
+  int32 number = 1;
+}

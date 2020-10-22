@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+service Contact {
+    rpc sendStatus (stream ClientMsg) returns (stream Result);
+    rpc getTask (Empty) returns (stream ServerMsg);
+    rpc tellResult (stream Result) returns (Empty);
+}
+
+message ClientMsg {
+    string msg = 1;
+}
+
+message ServerMsg {
+    string task = 1;
+}
+
+message Empty {
+
+}
+
+message Result {
+    string ret = 1;
+}
+

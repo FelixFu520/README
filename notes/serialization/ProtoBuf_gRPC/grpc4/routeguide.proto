@@ -1,0 +1,42 @@
+// [python quickstart](https://grpc.io/docs/quickstart/python.html#run-a-grpc-application)
+// python -m grpc_tools.protoc --python_out=. --grpc_python_out=. -I. routeguide.proto
+
+syntax = "proto3";
+
+service RouteGuide {
+    // simple rpc
+    rpc GetFeature(Point) returns (Feature) {}
+    // server2client stream rpc
+    rpc ListFeature(Rectangle) returns (stream Feature) {}
+    // client2server stream rpc
+    rpc RecordRoute(stream Point) returns (RouteSummary) {}
+    // stream rpc
+    rpc RouteChat(stream RouteNote) returns (stream RouteNote) {}
+}
+
+message Point {
+    int32 latitude = 1;
+    int32 longitude = 2;
+}
+
+message Rectangle {
+    Point lo = 1;
+    Point hi = 2;
+}
+
+message Feature {
+    string name = 1;
+    Point location = 2;
+}
+
+message RouteNote {
+    Point location = 1;
+    string message = 2;
+}
+
+message RouteSummary {
+    int32 point_count = 1;
+    int32 feature_count = 2;
+    int32 distance = 3;
+    int32 elapsed_time = 4;
+}
