@@ -42,6 +42,10 @@
 - 🍀[优化器](notes/optimizer/README.md)
 - 🍀[训练技巧trick](notes/trick/README.md)
 
+### 🌲视频处理
+
+- [视频编解码](notes/videocodec/README.md)
+
 ### 📖推理部署
 
 #### 🌲WEB
