@@ -21,6 +21,9 @@
 * 🍀[BN/LN/IN/GN/SN](bn.md)
   * [BN](bn2.md)|[BN](bn3.md)|[Pytorch BN](bn4.md)
   * [LN](ln.md)
+
+
+
 * CAM
   * “CAM学习“：https://github.com/FelixFu520/CAM
   * CAM-Cifar10实现：https://github.com/FelixFu520/CAM-Cifar10   
