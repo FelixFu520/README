@@ -4,9 +4,9 @@
 
 ### 📖基础知识
 
-#### |—🌲数学
+#### 🌲数学
 
-|		|—🍀[微积分](notes/math/README.md)
+|—🍀[微积分](notes/math/README.md)
 
 |—🍀[概率论](notes/math/README.md)
 
@@ -41,32 +41,39 @@
 
 |—🍀[数据读取](notes/dataloader/README.md)
 
-- 🍀[模型](notes/models/README.md)
-- 🍀[损失函数](notes/loss/README.md)
-- 🍀[优化器](notes/optimizer/README.md)
-- 🍀[训练技巧trick](notes/trick/README.md)
+|—🍀[模型](notes/models/README.md)
+
+|—🍀[损失函数](notes/loss/README.md)
+
+|—🍀[优化器](notes/optimizer/README.md)
+
+|—🍀[训练技巧trick](notes/trick/README.md)
 
 ### 📖推理部署
 
 #### 🌲WEB
 
-- 🍀[Flask](https://github.com/FelixFu520/Flask_)
-- 🍀️[BS/CS](notes/bs_cs/README.md)
-- 🍀️[序列化](notes/serialization/README.md)
+|—🍀[Flask](https://github.com/FelixFu520/Flask_)
+
+|—🍀️[BS/CS](notes/bs_cs/README.md)
+
+|—🍀️[序列化](notes/serialization/README.md)
 
 #### 🌲模型部署
 
-- 🍀[ONNX](notes/onnx/README.md)
-- 🍀[TensorRT](notes/tensorrt/README.md)
-- 🍀[TVM](notes/tvm/README.md)
+|—🍀[ONNX](notes/onnx/README.md)
+
+|—🍀[TensorRT](notes/tensorrt/README.md)
+
+|—🍀[TVM](notes/tvm/README.md)
 
 #### 🌲视频处理
 
-- [视频编解码](notes/videocodec/README.md)
+|—🍀[视频编解码](notes/videocodec/README.md)
 
 ### 📖面试题
 
-- 🍀[DL](notes/interview/README.md)
+|—🍀[DL](notes/interview/README.md)
 
 ## 👍小项目
 
