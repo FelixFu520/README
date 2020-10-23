@@ -59,7 +59,7 @@
 
 |—🍀️[序列化](notes/serialization/README.md)
 
-#### 🌲模型部署
+#### 🌲[模型部署](notes/infer/infer.md)
 
 |—🍀[ONNX](notes/onnx/README.md)
 
