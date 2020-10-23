@@ -4,9 +4,9 @@
 
 ### 📖基础知识
 
-#### 🌲数学
+#### |—🌲数学
 
-|—🍀[微积分](notes/math/README.md)
+|		|—🍀[微积分](notes/math/README.md)
 
 |—🍀[概率论](notes/math/README.md)
 
@@ -20,26 +20,27 @@
 
 #### 🌲GPU知识
 
-- 🍀[环境安装](notes/gpus/README.md)
+|—🍀[环境安装](notes/gpus/README.md)
 
 #### 🌲分布式
 
-- 🍀[硬件、库和框架](notes/parallel_computing/README.md)
+|—🍀[硬件、库和框架](notes/parallel_computing/README.md)
 
 ### 📖模型训练
 
 #### 🌲框架
 
-- 🍀[Pytorch](notes/pytorch/README.md)
+|—🍀[Pytorch](notes/pytorch/README.md)
 
 
 #### 🌲常用概念
 
-- 🍀[DL常见概念](notes/dl_concept/README.md)
+|—🍀[DL常见概念](notes/dl_concept/README.md)
 
 #### 🌲训练流程
 
-- 🍀[数据读取](notes/dataloader/README.md)
+|—🍀[数据读取](notes/dataloader/README.md)
+
 - 🍀[模型](notes/models/README.md)
 - 🍀[损失函数](notes/loss/README.md)
 - 🍀[优化器](notes/optimizer/README.md)
