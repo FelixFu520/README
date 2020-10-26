@@ -2755,15 +2755,24 @@ type list； size 3 存放的是yolo三个曾测的anchors值
 
 ### Yolo loss forward
 
+区别：
+
+1. 原图（images）
+2. 网格（grid）
+3. 锚点（anchor）
+4. 预测框（predict box）
+5. 真实框（ground truth）
+6. 偏移位置（delta）
+
 xin
 
 type list size =3
 
 0:（8， 255， 76， 76）
 
-1:
+1:（8， 255， 38， 38）
 
-2:
+2:（8， 255， 19， 19）
 
 
 
