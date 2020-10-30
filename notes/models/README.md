@@ -6,6 +6,12 @@
 
 - 🍀[最小二乘法](multi.md)
 
+## 手动实现DL模型
+
+- 🍀[零基础入门深度学习(1) -感知器](dlbyhand/Perceptron.md)
+- 🍀[零基础入门深度学习(2) - 线性单元和梯度下降](dlbyhand/linear_unit.md)
+- 🍀[零基础入门深度学习(3) - 神经网络和反向传播算法](dlbyhand/bp.md)
+
 ## NN历史
 
 - 🍀[什么是深度学习](dl/notes/whatisdl.md)
