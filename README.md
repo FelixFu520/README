@@ -71,6 +71,8 @@
 
 |—🍀[视频编解码](notes/videocodec/README.md)
 
+|—🍀[流媒体](notes/stream/README.md)
+
 ### 📖面试题
 
 |—🍀[DL](notes/interview/README.md)
