@@ -10,7 +10,7 @@
 
 　　混淆矩阵（**confusion matrix**）又称为可能性表格或是错误矩阵。它是一种特定的矩阵用来呈现算法性能的可视化效果，通常是监督学习（非监督学习，通常用匹配矩阵：**matching matrix**）。其每一列代表预测值，每一行代表的是实际的类别。这个名字来源于它可以非常容易的表明多个类别是否有混淆（也就是一个**class**被预测成另一个**class**）, 对于一个二分类问题，我们可以得到如表 1所示的的混淆矩阵（confusion matrix）：
 
-![](/Users/fusimeng/README/notes/dl_concept/imgs/6.png)
+![](imgs/6.png)
 
 表 1 所示的混淆矩阵中，行表示数据在模型上的预测类别（predicted class/predicted condition），列表示数据的真实类别（actual class/true condition）。在看混淆矩阵时，要分清样本的真实类别和预测类别，有些地方的行列表示可能和这里不一致。[在sklearn中，二分类问题下的混淆矩阵需要分别将表 1 中的predicted class和Actual class对调，将横纵坐标的positive class和negative class都分别对调，再重新计算混淆矩阵。](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html)
 
@@ -28,6 +28,24 @@
 | TN   | 真实类别为negative，模型预测的类别也为negative               |
 
 TP、FP、TN、FN，**第二个字母表示样本被预测的类别，第一个字母表示样本的预测类别与真实类别是否一致**。 
+
+T(true),F(fasle)代表这个样本是否被正确分类。
+
+P(positive),N(negative)代表原来这个样本是正样本，还是负样本。
+
+
+
+TP（True Positives）意思就是被分为了正样本，而且分对了。
+
+TN（True Negatives）意思就是被分为了负样本，而且分对了。
+
+FP（Fasle Positives）意思就是被分为了正样本，但是分错了（事实上这个样本是负样本）。
+
+FN（Fasle Negatives）意思就是被分为了负样本，但是分错了（事实上这个样本是正样本）。
+
+
+
+在mAP计算过程中主要用到了， TP，FP，FN这三个概念。
 
 ## 1. Recall和Precision
 
@@ -107,6 +125,20 @@ recal度量的是【查全率】，所有的正样本是不是都被检测出来
 precision度量的是【查准率】，在所有检测出来的正样本中是不是实际都是正样本。比如在垃圾邮件判断场景中，要求有更高的precision，确保放到回收站的都是垃圾邮件。
 
 一般情况下模型不够理想，准确率高、召回率低，或者召回率低、准确率高。如果做疾病监测、反垃圾，则是保准确率的条件下，提升召回率。如果是做搜索，那就是保证召回的情况下提升准确率。
+
+#### 单指标的局限性
+
+在目标检测算法里面有一个非常重要的概念是置信度，如果执行度设置的高的话，预测的结果和实际情况就很符合，如果设置执行度低的话，就会有很多误检测。
+
+假设一副图里面共有3个正样本，目标检测对这幅图的预测结果有10个，其中3个实际上是正样本，7个实际上是负样本。对应置信度如下。
+
+![image-20201103174255931](imgs/image-20201103174255931.png)
+
+![image-20201103174734581](imgs/image-20201103174734581.png)
+
+引出AP的概念
+
+
 
 ### 1.4 F1、Fβ
 
@@ -218,9 +250,13 @@ Average Precision，即 平均精确度 。
 
 ![](imgs/10.png)
 
+上图是一个类的AP值，
 
+### 参考Github
 
+这个是用来绘制mAP曲线的：https://github.com/Cartucho/mAP
 
+这个是用来获取绘制mAP曲线所需的txt的：https://github.com/bubbliiiing/count-mAP-txt
 
 ### 4.1 mAP是什么
 
