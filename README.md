@@ -83,6 +83,7 @@
 
 * 🐘 [MedNIST 数据集医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)[📮alanmathisonturing@163.com]
 * 🐘 [AI训练和部署](https://github.com/FelixFu520/CIMC)
+* 🐘[mAP计算过程](https://github.com/FelixFu520/mAP)——[Docker Image : `docker pull fusimeng/project:mAP`]
 
 #### ❤️YOLO系列
 
