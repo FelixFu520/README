@@ -6,17 +6,11 @@
 
 #### 🌲数学
 
-|—🍀[微积分](notes/math/README.md)
-
-|—🍀[概率论](notes/math/README.md)
-
-|—🍀[线性代数](notes/math/README.md)
+|—🍀[微积分](notes/math/README.md)   |—🍀[概率论](notes/math/README.md)  |—🍀[线性代数](notes/math/README.md)
 
 #### 🌲语言
 
-|—🍀[C++](notes/c/README.md)
-
-|—🍀[Python](notes/python/README.md)
+|—🍀[C++](notes/c/README.md)    |—🍀[Python](notes/python/README.md)
 
 #### 🌲GPU知识
 
@@ -39,15 +33,7 @@
 
 #### 🌲训练流程
 
-|—🍀[数据读取](notes/dataloader/README.md)
-
-|—🍀[模型](notes/models/README.md)
-
-|—🍀[损失函数](notes/loss/README.md)
-
-|—🍀[优化器](notes/optimizer/README.md)
-
-|—🍀[训练技巧trick](notes/trick/README.md)
+|—🍀[数据读取](notes/dataloader/README.md)  |—🍀[模型](notes/models/README.md)  |—🍀[损失函数](notes/loss/README.md)  |—🍀[优化器](notes/optimizer/README.md)  |—🍀[训练技巧trick](notes/trick/README.md)
 
 ### 📖推理部署
 
@@ -91,6 +77,7 @@
 - 🐘 [Yolo V2](https://github.com/FelixFu520/yolov2)——[Docker Image: `docker pull fusimeng/project:yolov2`]
 - 🐘 [Yolo V3](https://github.com/FelixFu520/yolov3)——[Docker Image : `docker pull fusimeng/project:yolov3`]   *
 - 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
+- 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]   *
 - 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)
 
 #### ❤️UNet系列
@@ -101,8 +88,6 @@
 - 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)——[Docker Image : `docker pull fusimeng/project:unet`] 
 
 ---
-
-
 
 #### ❤️Nano
 
