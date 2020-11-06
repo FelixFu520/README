@@ -5,6 +5,7 @@
 ## 机器学习
 
 - 🍀[最小二乘法](multi.md)
+- 🍀[Kmeans](kmeans.md)
 
 ## 手动实现DL模型
 

@@ -67,7 +67,9 @@
 - 🐘 [Yolo V2](https://github.com/FelixFu520/yolov2)——[Docker Image: `docker pull fusimeng/project:yolov2`]
 - 🐘 [Yolo V3](https://github.com/FelixFu520/yolov3)——[Docker Image : `docker pull fusimeng/project:yolov3`]   *
 - 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
+  - ​			——[Docker Image : `docker pull fusimeng/project:yolov4-v2`]   *
 - 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]   *
+  - 备注：简易版，学习代码使用。
 - 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)
 
 #### ❤️UNet系列
