@@ -8,28 +8,19 @@
 
 |—🍀[微积分](notes/math/README.md)   |—🍀[概率论](notes/math/README.md)  |—🍀[线性代数](notes/math/README.md)
 
-#### 🌲语言
+#### 🌲系统&语言
 
-|—🍀[C++](notes/c/README.md)    |—🍀[Python](notes/python/README.md)
+|—🍀[C++](notes/c/README.md)    |—🍀[Python](notes/python/README.md) ｜—🍀[Linux](notes/linux/README.md)
 
-#### 🌲GPU知识
+#### 🌲GPUs
 
-|—🍀[环境安装](notes/gpus/README.md)
-
-#### 🌲分布式
-
-|—🍀[硬件、库和框架](notes/parallel_computing/README.md)
+|—🍀[环境安装](notes/gpus/README.md)。|—🍀[分布式](notes/parallel_computing/README.md)
 
 ### 📖模型训练
 
-#### 🌲框架
+#### 🌲概念
 
-|—🍀[Pytorch](notes/pytorch/README.md)
-
-
-#### 🌲常用概念
-
-|—🍀[DL常见概念](notes/dl_concept/README.md)
+|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md)
 
 #### 🌲训练流程
 
