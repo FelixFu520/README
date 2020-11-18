@@ -14,13 +14,13 @@
 
 #### 🌲GPUs
 
-|—🍀[环境安装](notes/gpus/README.md)。|—🍀[分布式](notes/parallel_computing/README.md)
+|—🍀[环境安装](notes/gpus/README.md) |—🍀[分布式](notes/parallel_computing/README.md)
 
 ### 📖模型训练
 
 #### 🌲概念
 
-|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md)
+|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md) |—🍀[DL面试](notes/interview/README.md)
 
 #### 🌲训练流程
 
@@ -40,9 +40,9 @@
 
 |—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md)
 
-### 📖面试题
 
-|—🍀[DL](notes/interview/README.md)
+
+
 
 ## 👍小项目
 
