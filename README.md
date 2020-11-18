@@ -82,14 +82,9 @@
 - 🐘 [TensorRT](https://github.com/FelixFu520/TensorRT)
 - 🐘 [onnx](https://github.com/FelixFu520/onnx)
 
-❤️框架
-
-- 🐘 [Pytorch](https://github.com/FelixFu520/Parallel-Pytorch)
-
 #### 💗其他
 
 - 🐘 [CityScapesScripts](https://github.com/FelixFu520/cityscapesScripts)
-- 🐘 [CAM](https://github.com/FelixFu520/CAM) ｜ [CAM-Cifar10](https://github.com/FelixFu520/CAM-Cifar10)
 - 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )  
 - 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed) 
 - 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
