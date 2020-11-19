@@ -36,13 +36,13 @@
 
 |—🍀[ONNX](notes/onnx/README.md)  |—🍀[TensorRT](notes/tensorrt/README.md)  |—🍀[TVM](notes/tvm/README.md)
 
+#### 🌲嵌入式
+
+ |—🍀[Nano](notes/nano/README.md)
+
 #### 🌲视频处理
 
-|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md)
-
-
-
-
+|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md) |—🍀[DeepStream](notes/deepstream/README.md)
 
 ## 👍小项目
 
@@ -50,7 +50,11 @@
 
 * 🐘 [MedNIST 数据集医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)[📮alanmathisonturing@163.com]
 * 🐘 [AI训练和部署](https://github.com/FelixFu520/CIMC)
-* 🐘[mAP计算过程](https://github.com/FelixFu520/mAP)——[Docker Image : `docker pull fusimeng/project:mAP`]
+* 🐘[mAP计算过程](https://github.com/FelixFu520/mAP)—[Docker Image : `docker pull fusimeng/project:mAP`]
+* 🐘[CAM](https://github.com/FelixFu520/CAM) | [CAM2](https://github.com/FelixFu520/CAM-Cifar10)—[Docker Image:`docker pull fusimeng/project:cam`]
+* 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )
+* 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
+* 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed)—[Docker Image:`docker pull fusimeng/project:SegmentatioWithApexMixedPrecisionAndDistributed`]
 
 #### ❤️YOLO系列
 
@@ -61,34 +65,19 @@
   - ​			——[Docker Image : `docker pull fusimeng/project:yolov4-v2`]   *
 - 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]   *
   - 备注：简易版，学习代码使用。
-- 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)
+- 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)—[Docker Image: `docker pull fusimeng/project:yolo_nano`]
 
 #### ❤️UNet系列
 
-- 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)——[Docker Image : `docker pull fusimeng/project:cimc`]
-- 🐘 [NestedUNet-dsb2018_96](https://github.com/FelixFu520/NestedUNet-dsb2018_96)
+- 🐘 [CarvanaImageMaskingChallenge](https://github.com/FelixFu520/CIMC)—[Docker Image : `docker pull fusimeng/project:cimc`]
+- 🐘 [NestedUNet-dsb2018_96](https://github.com/FelixFu520/NestedUNet-dsb2018_96)—[Docker Image:`docker pull fusimeng/project:NestedUNet-dsb2018_96`]
 - 🐘 [Unet_Simple](https://github.com/FelixFu520/Unet-Simple)
 - 🐘 [u_net_liver](https://github.com/FelixFu520/u_net_liver)——[Docker Image : `docker pull fusimeng/project:unet`] 
-
----
 
 #### ❤️Nano
 
 - 🐘[Nano_DLI](https://github.com/FelixFu520/Nano_DLI)
 - 🐘 [Nano-Pytorch-ONNX-TensorRT](https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT)
 
-❤️部署
 
-- 🐘 [TensorRT](https://github.com/FelixFu520/TensorRT)
-- 🐘 [onnx](https://github.com/FelixFu520/onnx)
-
-#### 💗其他
-
-- 🐘 [CityScapesScripts](https://github.com/FelixFu520/cityscapesScripts)
-- 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )  
-- 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed) 
-- 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
-
-- 🐘[DeepDream实现代码](https://github.com/FelixFu520/DeepDream)   
-- 🐘[Gstreamer](https://github.com/FelixFu520/Gstreamer)
 

@@ -3,7 +3,10 @@
 - 🍀[分布式介绍](introduce.md)
 - 🍀[MPI概念介绍](mpi.md)
 - 🍀[pytorch分布式](https://github.com/FelixFu520/Parallel-Pytorch)
-- 
+
+
+
+- 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed)—[Docker Image:`docker pull fusimeng/project:SegmentatioWithApexMixedPrecisionAndDistributed`]
 
 
 
