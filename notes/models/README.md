@@ -8,11 +8,13 @@
 - 🍀[Kmeans](kmeans.md)
 - 🍀[PCA](pca.md)
 
-## 手动实现DL模型-[CODE](https://github.com/FelixFu520/dl-by-hand)
+## 手动实现DL模型--[CODE](https://github.com/FelixFu520/dl-by-hand)
 
 - 🍀[零基础入门深度学习(1) -感知器](dlbyhand/Perceptron.md)
 - 🍀[零基础入门深度学习(2) - 线性单元和梯度下降](dlbyhand/linear_unit.md)
 - 🍀[零基础入门深度学习(3) - 神经网络和反向传播算法](dlbyhand/bp.md)
+- 🍀[零基础入门深度学习(4) - 卷积神经网络](cnn_.md)
+- 🍀[参考](https://www.zybuluo.com/hanbingtao/note/485480)
 
 ## NN历史
 
