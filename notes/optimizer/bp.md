@@ -72,7 +72,7 @@
 
 图2表示一个网络层为2的前馈神经网络：一个隐藏层，一个输出层；隐藏单元为5，记输入层到隐藏层的权重值为W，偏置项为b1,激活函数为g1，隐藏层到输出层的权重值为V,偏置项为b2，激活函数为g2，则图2的模型即为：
 
-​                                ![\hat{Y}=g_{2}(V^{T}g_{1}(W^{T}X+b_{1})+b_{2})](https://private.codecogs.com/gif.latex?%5Chat%7BY%7D%3Dg_%7B2%7D%28V%5E%7BT%7Dg_%7B1%7D%28W%5E%7BT%7DX&plus;b_%7B1%7D%29&plus;b_%7B2%7D%29)
+  ![\hat{Y}=g_{2}(V^{T}g_{1}(W^{T}X+b_{1})+b_{2})](https://private.codecogs.com/gif.latex?%5Chat%7BY%7D%3Dg_%7B2%7D%28V%5E%7BT%7Dg_%7B1%7D%28W%5E%7BT%7DX&plus;b_%7B1%7D%29&plus;b_%7B2%7D%29)
 
 图2是一个比较简单的神经网络，通常，我们见到的神经网络，是具有多个隐藏层的网络，如图3：这是一个隐藏层个数为N个，每层隐藏单元数为5的神经网络。（PS：隐藏层设计，可以考虑层数设计和隐藏单元设计，可根据自己的需要自行设计。)
 
@@ -80,7 +80,7 @@
 
 ![img](imgs/61.png)
 
- 从输入层到隐藏层再到输出层，这一向前传递的过程，我们称之为前向传播。前向传播过程，往往是我们设定模型的过程，也可以理解为设定数学表达式或者列方程的过程。
+从输入层到隐藏层再到输出层，这一向前传递的过程，我们称之为前向传播。前向传播过程，往往是我们设定模型的过程，也可以理解为设定数学表达式或者列方程的过程。
 
 
 
@@ -160,7 +160,7 @@ BP算法的核心思想：使用梯度下降来搜索可能的权向量的假设
 
 ​                             ![\bigtriangledown _{(k)}b_{2}=\frac{\partial E}{\partial b_{2}}=\frac{\partial net_{2}}{\partial b_{2}}\frac{\partial \hat{y}}{\partial net_{2}}\frac{\partial E}{\partial \hat{y}}](https://private.codecogs.com/gif.latex?%5Cbigtriangledown%20_%7B%28k%29%7Db_%7B2%7D%3D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20b_%7B2%7D%7D%3D%5Cfrac%7B%5Cpartial%20net_%7B2%7D%7D%7B%5Cpartial%20b_%7B2%7D%7D%5Cfrac%7B%5Cpartial%20%5Chat%7By%7D%7D%7B%5Cpartial%20net_%7B2%7D%7D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20%5Chat%7By%7D%7D)                    （3-7）
 
-   隐藏单元的误差项，即计算损失函数关于隐藏单元的梯度值或偏导数，根据链式法则有：
+隐藏单元的误差项，即计算损失函数关于隐藏单元的梯度值或偏导数，根据链式法则有：
 
 ​                          **![\bigtriangledown _{(k)}w=\frac{\partial E}{\partial w}=\frac{\partial net_{1}}{\partial w}\frac{\partial h}{\partial net_{1}}\frac{\partial net_{2}}{\partial h}\frac{\partial \hat{y}}{\partial net_{2}}\frac{\partial E}{\partial \hat{y}}](https://private.codecogs.com/gif.latex?%5Cbigtriangledown%20_%7B%28k%29%7Dw%3D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20w%7D%3D%5Cfrac%7B%5Cpartial%20net_%7B1%7D%7D%7B%5Cpartial%20w%7D%5Cfrac%7B%5Cpartial%20h%7D%7B%5Cpartial%20net_%7B1%7D%7D%5Cfrac%7B%5Cpartial%20net_%7B2%7D%7D%7B%5Cpartial%20h%7D%5Cfrac%7B%5Cpartial%20%5Chat%7By%7D%7D%7B%5Cpartial%20net_%7B2%7D%7D%5Cfrac%7B%5Cpartial%20E%7D%7B%5Cpartial%20%5Chat%7By%7D%7D)**            
 
