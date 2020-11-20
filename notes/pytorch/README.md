@@ -10,6 +10,8 @@
 - 🍀[torch.argmax](argmax.md)
 - 🍀[expand&repeat](expand.md)
 - 🍀[contiguous](contiguous.md)
+- 🍀[torch.max](max.md)
+- 🍀[torch.sum](sum.md)
 
 
 

@@ -44,6 +44,7 @@
 - 🍀[tqdm](tqdm.md)
 - 🍀[@property](property.md)
 - 🍀[collections](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
+- 🍀[pdb](pdb.md)
 
 ## Numpy
 
@@ -57,6 +58,8 @@
 - 🍀[np.clip](clip.md)
 - 🍀[argsort](argsort.md)
 - 🍀[concatenate](concatenate.md)
+- 🍀[median](median.md)
+- 🍀[np.r_](r_.md)
 
 ## 参考
 

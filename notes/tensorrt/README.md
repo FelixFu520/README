@@ -12,4 +12,7 @@
 
 - 🐘 [TensorRT](https://github.com/FelixFu520/TensorRT)
 - 🐘 [Nano-Pytorch-ONNX-TensorRT](https://github.com/FelixFu520/Nano-Pytorch-ONNX-TensorRT)
+- https://github.com/Rapternmn/PyTorch-Onnx-Tensorrt
+- https://github.com/jkjung-avt/tensorrt_demos
+- https://github.com/royinx/TensorRT_Deployment
 

@@ -2,6 +2,10 @@
 
 ---
 
+#### TODO
+
+- [detectron](https://github.com/facebookresearch/detectron2)
+
 ### 📖基础知识
 
 #### 🌲数学
@@ -20,7 +24,7 @@
 
 #### 🌲概念
 
-|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md) |—🍀[DL面试](notes/interview/README.md)
+|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md) |—🍀[DL面试](notes/interview/README.md) |—🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
 
 #### 🌲训练流程
 
@@ -34,7 +38,7 @@
 
 #### 🌲[模型部署](notes/infer/infer.md)
 
-|—🍀[ONNX](notes/onnx/README.md)  |—🍀[TensorRT](notes/tensorrt/README.md)  |—🍀[TVM](notes/tvm/README.md)
+|—🍀[ONNX](notes/onnx/README.md)  |—🍀[TensorRT](notes/tensorrt/README.md)  |—🍀[TVM](notes/tvm/README.md)  |—[模型量化](notes/lianghua/README.md)
 
 #### 🌲嵌入式
 
@@ -64,7 +68,7 @@
 - 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
   - ​			——[Docker Image : `docker pull fusimeng/project:yolov4-v2`]   *
 - 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]   *
-  - 备注：简易版，学习代码使用。
+  - 备注：简易版，学习代码使用。[代码解释](https://cloud.tencent.com/developer/article/1649322)
 - 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)—[Docker Image: `docker pull fusimeng/project:yolo_nano`]
 
 #### ❤️UNet系列

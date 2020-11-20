@@ -6,8 +6,9 @@
 
 - 🍀[最小二乘法](multi.md)
 - 🍀[Kmeans](kmeans.md)
+- 🍀[PCA](pca.md)
 
-## 手动实现DL模型
+## 手动实现DL模型-[CODE](https://github.com/FelixFu520/dl-by-hand)
 
 - 🍀[零基础入门深度学习(1) -感知器](dlbyhand/Perceptron.md)
 - 🍀[零基础入门深度学习(2) - 线性单元和梯度下降](dlbyhand/linear_unit.md)
@@ -42,7 +43,6 @@
 ## RCNNs
 
 - 🍀[rcnns](rcnn/rcnns.md)
-- 🍀
 
 ## Yolo系列
 
@@ -57,10 +57,4 @@
 ## UNet系列
 
 - 🍀[UNet](https://github.com/ShawnBIT/UNet-family)
-
-
-
-## 
-
-
 
