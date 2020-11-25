@@ -74,6 +74,8 @@
 
 ## 实现线性单元
 
+[linear_unit](https://github.com/FelixFu520/dl-by-hand/blob/master/linear_unit.py)
+
 接下来，让我们撸一把代码。
 
 因为我们已经写了感知器的代码，因此我们先比较一下感知器模型和线性单元模型，看看哪些代码能够复用。

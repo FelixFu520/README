@@ -58,6 +58,8 @@
 
 ### 编程实战：实现感知器
 
+[perceptron.py](https://github.com/FelixFu520/dl-by-hand/blob/master/perceptron.py)
+
 对于程序员来说，没有什么比亲自动手实现学得更快了，而且，很多时候一行代码抵得上千言万语。接下来我们就将实现一个感知器。
 
 下面是一些说明：
