@@ -34,7 +34,7 @@ import pdb
 然后再在需要设置断点的地方放置如下断点设置代码:
 
 ```python
-pdb.set_trace()1
+pdb.set_trace()
 ```
 
 然后在命令行中正常运行程序,程序会在设置断点的位置自动停下进入pdb调试模式. 

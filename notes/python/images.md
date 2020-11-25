@@ -153,21 +153,17 @@ io.imshow(img)
 
 - numpy转成PIL.Image.Image：
 
-  
-
   ```image
-  注意：保证numpy.ndarray 转换成np.uint8，numpy.astype(np.uint8),像素值[0,255]；  
+注意：保证numpy.ndarray 转换成np.uint8，numpy.astype(np.uint8),像素值[0,255]；  
   灰度图像保证numpy.shape为(H,W)，不能出现channels 
   这里需要np.squeeze()。  
-  彩色图象保证numpy.shape为(H,W,3)```
+  彩色图象保证numpy.shape为(H,W,3)
   ```
-
+  
 - PIL.Image.Image转换成Tensor：
 
-  
-
   ```kotlin
-  彩色图像
+彩色图像
   img2=Image.open('1.tif').convert('RGB')
   import torchvision.transforms as  transforms
   trans=transforms.Compose([transforms.ToTensor()])
@@ -179,7 +175,7 @@ io.imshow(img)
   b=Image.fromarray(a)
   b
   ```
-
+  
 - PIL.Image转换成OpenCV
 
   

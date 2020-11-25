@@ -112,7 +112,7 @@ Parameters:	a : array_like
 Returns:	index_array : ndarray, int
 				Array of indices that sort a along the specified axis. If a
 				is one-dimensional, a[index_array] yields a sorted a.
-123456789101112131415161718
+
 ```
 
 *a*：所需排序的数组
