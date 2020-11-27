@@ -1,5 +1,9 @@
 # C++
 
+
+
+### C++基础知识
+
 - 🍀[入门视频](https://github.com/FelixFu520/Cpp-0-1-Resource) 
 
 * 🍀[C、C++和C#区别](butong.md)
@@ -9,6 +13,8 @@
 * 🍀[机器人C/C++编程：实用Make与CMake教程](make.md)
 * 🍀[gcc、make、cmake](cmake.md)
 
-
-
 * 🍀[CmakeLists学习](cmake2.md)
+
+### C++函数
+
+- 🍀[atof函数](atof.md)

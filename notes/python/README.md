@@ -2,6 +2,10 @@
 
 [廖雪峰](https://www.liaoxuefeng.com/wiki/1016959663602400)
 
+可迭代对象：字符串、列表、字典、元组、集合、文件、生成器、range()
+
+迭代器：生成器、zip、enumerate、文件
+
 ---
 
 ## 深度之眼👀
@@ -45,6 +49,9 @@
 - 🍀[@property](property.md)
 - 🍀[collections](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
 - 🍀[pdb](pdb.md)
+- 🍀[详解类class的方法：实例方法、类方法、静态方法](f.md)
+- 🍀[Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
+- 
 
 ## Numpy
 

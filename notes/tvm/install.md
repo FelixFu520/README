@@ -59,6 +59,41 @@ sudo apt-get install -y python3 python3-pip python3-dev python3-setuptools gcc l
 **第三步，修改config.cmake配置**
 建立build文件夹，复制`config.cmake`。
 
+> 配置信息解释
+>
+> 编辑build/config.cmake文件，里面有一些功能开关，这些配置有：
+>
+> ```text
+> USE_CUDA，NVIDIA的GPU计算；
+> USE_ROCM，通用的GPU计算，AMD提出，目的很显然...；
+> USE_SDACCEL，FPGA计算；
+> USE_AOCL，Intel FPGA SDK for OpenCL (AOCL) runtime；
+> USE_OPENCL，异构平台编写程序的框架，异构平台可由CPU、GPU、DSP、FPGA或其他类型的处理器与硬件加速器所组成；
+> USE_METAL，iOS上的GPU计算；
+> USE_VULKAN，新一代的openGL，Android 7.x开始支持（iOS不支持，因为有自己的metal2）；
+> USE_OPENGL，2D/3D渲染库标准，显卡厂家负责实现和支持；
+> USE_SGX， Intel SGX ; 
+> USE_RPC，远程调用，电脑和手机可以通过网络联调；
+> USE_STACKVM_RUNTIME，embed stackvm into the runtime；
+> USE_GRAPH_RUNTIME，enable tiny embedded graph runtime；
+> USE_GRAPH_RUNTIME_DEBUG，enable additional graph debug functions；
+> USE_LLVM，llvm support；
+> USE_BLAS，API标准，规范发布基础线性代数操作的数值库（如矢量或矩阵乘法），不同的实现有openblas, mkl, atlas, apple
+> USE_RANDOM，contrib.random运行时；
+> USE_NNPACK，
+> USE_CUDNN，
+> USE_CUBLAS，
+> USE_MIOPEN，
+> USE_MPS，
+> USE_ROCBLAS，
+> USE_SORT，使用contrib sort；
+> USE_ANTLR，
+> USE_VTA_TSIM，
+> USE_RELAY_DEBUG，Relay debug模式
+> ```
+>
+> 只打开了set(USE_LLVM ON)、USE_SORT、USE_GRAPH_RUNTIME、USE_RPC。其它的都没开启，为什么？因为有些用不到，有些还不知道是啥意思。
+
 ```
 # 3. Build the shared library
 mkdir build
@@ -79,6 +114,123 @@ make -j4
 ```
 
 如果顺利完成，即可进入Python包安装
+
+> 最终链接出以下so库：
+>
+> ```text
+> [  5%] Linking CXX shared library libvta.so
+> [ 12%] Linking CXX shared library libtvm_runtime.so
+> [ 86%] Linking CXX shared library libtvm.so
+> [ 94%] Linking CXX shared library libtvm_topi.so
+> [100%] Linking CXX shared library libnnvm_compiler.so
+> ```
+>
+> 简单介绍下这几个共享库：
+>
+> 1，libvta.so （VTA，Versatile Tensor Accelerator的缩写），参考[https://docs.tvm.ai/vta/index.html](https://link.zhihu.com/?target=https%3A//docs.tvm.ai/vta/index.html)，由以下这几个编译单元生成。
+>
+> ```text
+> vta/src/device_api.cc 
+> vta/src/runtime.cc 
+> vta/src/sim/sim_driver.cc
+> ```
+>
+> 2，libtvm_runtime.so
+>
+> 顾名思义，tvm的运行时，实际上，这个库是TVM运行时的一个最小化库，由“Minimum runtime related codes”编译而成——也即下面的这些源文件：
+>
+> ```text
+> src/runtime/builtin_fp16.cc
+> src/runtime/c_dsl_api.cc
+> src/runtime/c_runtime_api.cc
+> src/runtime/cpu_device_api.cc
+> src/runtime/dso_module.cc
+> src/runtime/file_util.cc
+> src/runtime/module.cc
+> src/runtime/module_util.cc
+> src/runtime/ndarray.cc
+> src/runtime/registry.cc
+> src/runtime/system_lib_module.cc
+> src/runtime/thread_pool.cc
+> src/runtime/threading_backend.cc
+> src/runtime/vm/memory_manager.cc
+> src/runtime/vm/object.cc
+> src/runtime/vm/vm.cc
+> src/runtime/workspace_pool.cc
+> 3rdparty/bfloat16/bfloat16.cc
+> src/runtime/rpc/*.cc
+> src/runtime/graph/graph_runtime.cc
+> src/contrib/sort/sort.cc
+> ```
+>
+> 3，libtvm.so
+>
+> 完整的tvm，由编译时、运行时、rpc部分等组成：
+>
+> ```text
+> common: Internal common utilities.
+> api: API function registration.
+> lang: The definition of DSL related data structure.
+> arithmetic: Arithmetic expression and set simplification.
+> op: The detail implementations about each operation(compute, scan, placeholder).
+> schedule: The operations on the schedule graph before converting to IR.
+> pass: The optimization pass on the IR structure.
+> codegen: The code generator.
+> runtime: Minimum runtime related codes.
+> autotvm: The auto-tuning module.
+> relay: Implementation of Relay. The second generation of NNVM, a new IR for deep learning frameworks.
+> contrib: Contrib extension libraries.
+> ```
+>
+> 这个库比较大，有200多个编译单元：
+>
+> ```text
+> src/api/*.cc
+> src/arithmetic/*.cc
+> src/autotvm/*.cc
+> src/codegen/*.cc
+> src/lang/*.cc
+> src/op/*.cc
+> src/pass/*.cc
+> src/schedule/*.cc
+> src/relay/backend/*.cc
+> src/relay/ir/*.cc
+> src/relay/op/*.cc
+> src/relay/pass/*.cc
+> 3rdparty/HalideIR/src/*.cpp
+> src/runtime/stackvm/*.cc
+> src/codegen/opt/*.cc
+> src/codegen/llvm/*.cc
+> src/runtime/*.cc
+> src/contrib/hybrid/codegen_hybrid.cc
+> 3rdparty/bfloat16/bfloat16.cc
+> src/contrib/sort/sort.cc
+> ```
+>
+> 4，libtvm_topi.so
+>
+> TOPI（TVM OP Inventory），is the operator collection library for TVM intended at sharing the effort of crafting and optimizing tvm generated kernels。由下面的编译单元生成：
+>
+> ```text
+> topi/src/topi.cc
+> ```
+>
+> 5，libnnvm_compiler.so
+>
+> NNVM编译器，由以下编译单元生成：
+>
+> ```text
+> nnvm/src/c_api/*.cc
+> nnvm/src/compiler/*.cc
+> nnvm/src/core/*.cc
+> nnvm/src/pass/*.cc
+> nnvm/src/top/nn/*.cc
+> nnvm/src/top/tensor/*.cc
+> nnvm/src/top/vision/nms.cc
+> nnvm/src/top/vision/ssd/mutibox_op.cc
+> nnvm/src/top/vision/yolo/reorg.cc
+> nnvm/src/top/image/resize.cc
+> ```
 
 ## 3. Python包安装
 
@@ -144,6 +296,16 @@ pip install --user mypy orderedset antlr4-python3-runtime
 
 
 
+ 安装onnx
+
+```console
+ pip3 install onnx
+```
+
+## 
+
 ## 参考
 
 > https://blog.csdn.net/u014448054/article/details/101352550
+>
+> https://zhuanlan.zhihu.com/p/58995914
