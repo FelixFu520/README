@@ -35,6 +35,10 @@
 
 - 🍀[Matlab安装](matlab.md)
 
+
+
+- 🍀[TensorRT安装](tensorrt.md)
+
 ## IDE环境安装
 
 - [clion debug](clion.md)
