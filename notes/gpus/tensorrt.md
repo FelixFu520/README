@@ -2,6 +2,8 @@
 
 2020年12月3日
 
+整个做完的Docker镜像，[Docker: docker pull fusimeng/project:tensorrt-env]
+
 ---
 
 ## 1.准备工作
