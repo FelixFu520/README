@@ -2,6 +2,8 @@
 
 2020年7月31日
 
+[IOU-->GIOU-->DIOU-->CIOU](https://github.com/FelixFu520/README/blob/master/notes/models/yolov4.md#141-ciou_loss)
+
 ---
 
 IOU，全称为intersection of union， 中文名“交并比”。这个概念理解起来不难，本文将从原理以及代码实践来解读IOU。
@@ -53,7 +55,6 @@ area_label, _ = np.histogram(Gt, bins= NUMCLASS, range=(1, NUMCLASS))
 area_union = area_pred + area_label - area_inter
 iou = area_inter / area_union
 miou = iou.mean()
-1234567891011
 ```
 
 做一下解释。np.histogram是统计直方图的函数，通过该函数，
@@ -118,7 +119,6 @@ def iou(axmin,aymin,axmax,aymax, bxmin,bymin, bxmax, bymax):
     return max(width*height/(
         (ymax-ymin)*(xmax-xmin) + (aymax-aymin)*(axmax-axmin) - width*height
     ), 0)
-123456
 ```
 
 最后结果的结果要和0比较，因为如果得到的IOU小于0，说明没有交集，iou为0.但是分子的面积仍然是非0数字，是负数。所以最后需要和0比较。

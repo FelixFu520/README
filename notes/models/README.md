@@ -4,9 +4,13 @@
 
 ## 机器学习
 
-- 🍀[最小二乘法](multi.md)
-- 🍀[Kmeans](kmeans.md)
-- 🍀[PCA](pca.md)
+- 🍀[最小二乘法](multi.md) ｜🍀[Kmeans](kmeans.md) ｜🍀[PCA](pca.md)
+
+## NN历史
+
+- 🍀[什么是深度学习](dl/notes/whatisdl.md)
+- 🍀[神经网络发展史](rcnn/history.md)
+- 🍀[CNN](rcnn/cnn.md)
 
 ## 手动实现DL模型--[CODE](https://github.com/FelixFu520/dl-by-hand)
 
@@ -16,22 +20,17 @@
 - 🍀[零基础入门深度学习(4) - 卷积神经网络](cnn_.md)
 - 🍀[参考](https://www.zybuluo.com/hanbingtao/note/485480)
 
-## NN历史
+## CNN
 
-- 🍀[什么是深度学习](dl/notes/whatisdl.md)
-- 🍀[神经网络发展史](rcnn/history.md)
-- 🍀[CNN](rcnn/cnn.md)
+- 🍀[感知器模型](prec.md)｜[感知器](dl/notes/network-pre.md) ｜ 🍀[VGG](vgg.md) ｜ 🍀[ResNet](resnet.md)  ｜🍀[DenseNet](densenet.md)  
+- 🍀[激活函数](activation.md)|[激活函数](dl/notes/network-activationfunction.md) ｜🍀[上采样](up.md) ｜🍀[卷积神经网络(CNN)模型结构](dl/notes/network-cnn.md) ｜🍀[平均池化和最大池化区别](dl/notes/network-pool.md)
 
-## 基础网络
+## RNN
 
-- 🍀[感知器模型](prec.md)｜[感知器](dl/notes/network-pre.md)
-- 🍀[VGG](vgg.md)
-- 🍀[ResNet](resnet.md)
-- 🍀[DenseNet](densenet.md)
-- 🍀[激活函数](activation.md)|[激活函数](dl/notes/network-activationfunction.md)
-- 🍀[上采样](up.md)
-- 🍀[卷积神经网络(CNN)模型结构](dl/notes/network-cnn.md)
-- 🍀[平均池化和最大池化区别](dl/notes/network-pool.md)
+- 🍀[RNN](rnn1.md) | 🍀[LSTM](lstm.md) ｜ 🍀[GRU](gru.md)
+- 🍀[RNN](rnn.md)
+
+## 
 
 ## 网络调优
 
