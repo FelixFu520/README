@@ -46,7 +46,7 @@
 
 #### 🌲视频处理
 
-|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md) |—🍀[DeepStream](notes/deepstream/README.md)
+|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md) 
 
 ## 👍小项目
 
