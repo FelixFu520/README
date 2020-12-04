@@ -4,7 +4,7 @@
 
 ### C++基础知识
 
-- 🍀[入门视频](https://github.com/FelixFu520/Cpp-0-1-Resource) 
+- 🍀[入门视频](https://github.com/FelixFu520/Cpp-0-1-Resource) ｜[结构图](arch.md)
 
 * 🍀[C、C++和C#区别](butong.md)
 * 🍀[C语言的编译链接执行过程](clink.md)
