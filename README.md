@@ -42,7 +42,7 @@
 
 #### 🌲嵌入式
 
- |—🍀[Nano](notes/nano/README.md)
+ |—🍀[Nano](notes/nano/README.md) ｜—🍀[树莓派](notes/pi/README.md)
 
 #### 🌲视频处理
 
