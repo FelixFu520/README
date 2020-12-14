@@ -219,22 +219,261 @@
 
 
 
-### 3⃣️常用容器
+### 3⃣️STL-常用容器
 
-- vector容器
-- string容器
+- #### string容器
+
+  - 概念：char * 和string区别
+  - 构造：
+    - `string();` //创建一个空的字符串 例如: string str;
+    - `string(const char* s);` //使用字符串s初始化
+    - `string(const string& str);` //使用一个string对象初始化另一个string对象
+    - `string(int n, char c);` //使用n个字符c初始化
+  - 赋值操作
+    - `string& operator=(const char* s);` //char*类型字符串 赋值给当前的字符串
+    - `string& operator=(const string &s);` //把字符串s赋给当前的字符串
+    - `string& operator=(char c);` //字符赋值给当前的字符串
+    - `string& assign(const char *s);` //把字符串s赋给当前的字符串
+    - `string& assign(const char *s, int n);` //把字符串s的前n个字符赋给当前的字符串
+    - `string& assign(const string &s);` //把字符串s赋给当前字符串
+    - `string& assign(int n, char c);` //用n个字符c赋给当前字符串
+  - 拼接操作
+    - `string& operator+=(const char* str);` //重载+=操作符
+    - `string& operator+=(const char c);` //重载+=操作符
+    - `string& operator+=(const string& str);` //重载+=操作符
+    - `string& append(const char *s); `//把字符串s连接到当前字符串结尾
+    - `string& append(const char *s, int n);` //把字符串s的前n个字符连接到当前字符串结尾
+    - `string& append(const string &s);` //同operator+=(const string& str)
+    - `string& append(const string &s, int pos, int n);`//字符串s中从pos开始的n个字符连接到字符串结尾
+  - 查找和替换
+    - `int find(const string& str, int pos = 0) const;` //查找str第一次出现位置,从pos开始查找
+    - `int find(const char* s, int pos = 0) const; `//查找s第一次出现位置,从pos开始查找
+    - `int find(const char* s, int pos, int n) const; `//从pos位置查找s的前n个字符第一次位置
+    - `int find(const char c, int pos = 0) const; `//查找字符c第一次出现位置
+    - `int rfind(const string& str, int pos = npos) const;` //查找str最后一次位置,从pos开始查找
+    - `int rfind(const char* s, int pos = npos) const;` //查找s最后一次出现位置,从pos开始查找
+    - `int rfind(const char* s, int pos, int n) const;` //从pos查找s的前n个字符最后一次位置
+    - `int rfind(const char c, int pos = 0) const; `//查找字符c最后一次出现位置
+    - `string& replace(int pos, int n, const string& str); `//替换从pos开始n个字符为字符串str
+    - `string& replace(int pos, int n,const char* s); `//替换从pos开始的n个字符为字符串s
+  - 比较操作
+    - `int compare(const string &s) const; `//与字符串s比较
+    - `int compare(const char *s) const;` //与字符串s比较
+  - 存取操作
+    - `char& operator[](int n); `//通过[]方式取字符
+    - `char& at(int n); `//通过at方法获取字符
+  - 插入和删除
+    - `string& insert(int pos, const char* s); `//插入字符串
+    - `string& insert(int pos, const string& str); `//插入字符串
+    - `string& insert(int pos, int n, char c);` //在指定位置插入n个字符c
+    - `string& erase(int pos, int n = npos);` //删除从Pos开始的n个字符
+  - 子串
+    - `string substr(int pos = 0, int n = npos) const;` //返回由pos开始的n个字符组成的字符串
+
+- #### vector容器
+
+  - 概念
   - 构造
-  - 操作
-- deque容器
-- stack容器
-- queue 容器
-- list容器
-- set/ multiset 容器
-- map/ multimap容器
+    - `vector<T> v; `//采用模板实现类实现，默认构造函数
+    - `vector(v.begin(), v.end()); `//将v[begin(), end())区间中的元素拷贝给本身。
+    - `vector(n, elem);` //构造函数将n个elem拷贝给本身。
+    - `vector(const vector &vec);` //拷贝构造函数。
+  - 赋值操作
+    - `vector& operator=(const vector &vec);`//重载等号操作符
+    - `assign(beg, end);` //将[beg, end)区间中的数据拷贝赋值给本身。
+    - `assign(n, elem);` //将n个elem拷贝赋值给本身。
+  - 容量和大小
+    - `empty(); `//判断容器是否为空
+    - `capacity();` //容器的容量
+    - `size();` //返回容器中元素的个数
+    - `resize(int num);` //重新指定容器的长度为num，若容器变长，则以默认值填充新位置。 //如果容器变短，则末尾超出容器长度的元素被删除。
+    - `resize(int num, elem);` //重新指定容器的长度为num，若容器变长，则以elem值填充新位置。 //如果容器变短，则末尾超出容器长度的元素被删除
+  - 插入和删除
+    - `push_back(ele);` //尾部插入元素ele
+    - `pop_back();` //删除最后一个元素
+    - `insert(const_iterator pos, ele);` //迭代器指向位置pos插入元素ele
+    - `insert(const_iterator pos, int count,ele);`//迭代器指向位置pos插入count个元素ele
+    - `erase(const_iterator pos);` //删除迭代器指向的元素
+    - `erase(const_iterator start, const_iterator end);`//删除迭代器从start到end之间的元素
+    - `clear();` //删除容器中所有元素
+  - 数据存取
+    - `at(int idx); `//返回索引idx所指的数据
+    - `operator[]; `//返回索引idx所指的数据
+    - `front(); `//返回容器中第一个数据元素
+    - `back();` //返回容器中最后一个数据元素
+  - 互换容器
+    - `swap(vec);` // 将vec与本身的元素互换
+  - 预留空间
+    - `reserve(int len);`//容器预留len个元素长度，预留位置不初始化，元素不可访问。
+
+  
+
+- #### deque容器
+
+  - 概念
+  - 构造
+    - `deque<T>` deqT; //默认构造形式
+    - `deque(beg, end);` //构造函数将[beg, end)区间中的元素拷贝给本身。
+    - `deque(n, elem);` //构造函数将n个elem拷贝给本身。
+    - `deque(const deque &deq);` //拷贝构造函数
+  - 赋值操作
+    - `deque& operator=(const deque &deq); `//重载等号操作符
+    - `assign(beg, end);` //将[beg, end)区间中的数据拷贝赋值给本身。
+    - `assign(n, elem);` //将n个elem拷贝赋值给本身。
+  - 大小操作
+    - `deque.empty();` //判断容器是否为空
+    - `deque.size();` //返回容器中元素的个数
+    - `deque.resize(num);` //重新指定容器的长度为num,若容器变长，则以默认值填充新位置。 //如果容器变短，则末尾超出容器长度的元素被删除。
+    - `deque.resize(num, elem);` //重新指定容器的长度为num,若容器变长，则以elem值填充新位置。 //如果容器变短，则末尾超出容器长度的元素被删除。
+  - 插入操作
+    - `push_back(elem);` //在容器尾部添加一个数据
+    - `push_front(elem);` //在容器头部插入一个数据
+    - `pop_back();` //删除容器最后一个数据
+    - `pop_front();` //删除容器第一个数据
+    -  
+    - `insert(pos,elem);` //在pos位置插入一个elem元素的拷贝，返回新数据的位置。
+    - `insert(pos,n,elem);` //在pos位置插入n个elem数据，无返回值。
+    - `insert(pos,beg,end);` //在pos位置插入[beg,end)区间的数据，无返回值。
+    - `clear();` //清空容器的所有数据
+    - `erase(beg,end);` //删除[beg,end)区间的数据，返回下一个数据的位置。
+    - `erase(pos);` //删除pos位置的数据，返回下一个数据的位置。
+  - 存取操作
+    - `at(int idx); `//返回索引idx所指的数据
+    - `operator[]; `//返回索引idx所指的数据
+    - `front(); `//返回容器中第一个数据元素
+    - `back();` //返回容器中最后一个数据元素
+  - 排序
+    - `sort(iterator beg, iterator end)` //对beg和end区间内元素进行排序
+
+- #### stack容器
+
+  - 构造函数：
+    - `stack<T> stk;` //stack采用模板类实现， stack对象的默认构造形式
+    - `stack(const stack &stk);` //拷贝构造函数
+  - 赋值操作：
+    - `stack& operator=(const stack &stk);` //重载等号操作符
+  - 数据存取：
+    - `push(elem);` //向栈顶添加元素
+    - `pop();` //从栈顶移除第一个元素
+    - `top(); `//返回栈顶元素
+  - 大小操作：
+    - `empty();` //判断堆栈是否为空
+    - `size(); `//返回栈的大小
+
+- #### queue 容器
+
+  - 构造函数：
+
+    - `queue<T> que;` //queue采用模板类实现，queue对象的默认构造形式
+    - `queue(const queue &que);` //拷贝构造函数
+
+  - 赋值操作：
+
+    - `queue& operator=(const queue &que);` //重载等号操作符
+
+  - 数据存取：
+
+    - `push(elem);` //往队尾添加元素
+    - `pop();` //从队头移除第一个元素
+    - `back();` //返回最后一个元素
+    - `front(); `//返回第一个元素
+
+    大小操作：
+
+    - `empty();` //判断堆栈是否为空
+    - `size(); `//返回栈的大小
+
+- #### list容器
+
+  - list概念
+  - 构造
+    - `list<T> lst;` //list采用采用模板类实现,对象的默认构造形式：
+    - `list(beg,end);` //构造函数将[beg, end)区间中的元素拷贝给本身。
+    - `list(n,elem);` //构造函数将n个elem拷贝给本身。
+    - `list(const list &lst);` //拷贝构造函数。
+  - 赋值和交换
+    - `assign(beg, end);` //将[beg, end)区间中的数据拷贝赋值给本身。
+    - `assign(n, elem);` //将n个elem拷贝赋值给本身。
+    - `list& operator=(const list &lst);` //重载等号操作符
+    - `swap(lst);` //将lst与本身的元素互换。
+  - 大小操作
+    - `size(); `//返回容器中元素的个数
+    - `empty(); `//判断容器是否为空
+    - `resize(num);` //重新指定容器的长度为num，若容器变长，则以默认值填充新位置。 //如果容器变短，则末尾超出容器长度的元素被删除。
+    - `resize(num, elem); `//重新指定容器的长度为num，若容器变长，则以elem值填充新位置。
+  - 插入与删除
+    - push_back(elem);//在容器尾部加入一个元素
+    - pop_back();//删除容器中最后一个元素
+    - push_front(elem);//在容器开头插入一个元素
+    - pop_front();//从容器开头移除第一个元素
+    - insert(pos,elem);//在pos位置插elem元素的拷贝，返回新数据的位置。
+    - insert(pos,n,elem);//在pos位置插入n个elem数据，无返回值。
+    - insert(pos,beg,end);//在pos位置插入[beg,end)区间的数据，无返回值。
+    - clear();//移除容器的所有数据
+    - erase(beg,end);//删除[beg,end)区间的数据，返回下一个数据的位置。
+    - erase(pos);//删除pos位置的数据，返回下一个数据的位置。
+    - remove(elem);//删除容器中所有与elem值匹配的元素。
+  - 存取
+    - `front();` //返回第一个元素。
+    - `back();` //返回最后一个元素
+  - 反转和排序
+    - `reverse();` //反转链表
+    - `sort();` //链表排序
+
+- #### set/ multiset 容器
+
+  - set基本概念
+  - 构造和赋值
+    - `set<T> st;` //默认构造函数：
+    - `set(const set &st);` //拷贝构造函数
+    - `set& operator=(const set &st);` //重载等号操作符
+  - 大小和交换
+    - `size();` //返回容器中元素的数目
+    - `empty();` //判断容器是否为空
+    - `swap(st);` //交换两个集合容器
+  - 插入和删除
+    - `insert(elem);` //在容器中插入元素。
+    - `clear();` //清除所有元素
+    - `erase(pos);` //删除pos迭代器所指的元素，返回下一个元素的迭代器。
+    - `erase(beg, end);` //删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器。
+    - `erase(elem);` //删除容器中值为elem的元素。
+  - 查找和统计
+    - `find(key);` //查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();
+    - `count(key);` //统计key的元素个数
+  - set和multiset区别
+  - pair对组
+    - `pair<type, type> p ( value1, value2 );`
+    - `pair<type, type> p = make_pair( value1, value2 );`
+  - set容器排序
+    - 利用仿函数可以指定set容器的排序规则
+    - set存放自定义数据类型
+
+- #### map/ multimap容器
+
+  - map基本概念
+  - 构造和赋值
+    - `map<T1, T2> mp;` //map默认构造函数:
+    - `map(const map &mp);` //拷贝构造函数
+    - `map& operator=(const map &mp);` //重载等号操作符
+  - 大小和交换
+    - `size();` //返回容器中元素的数目
+    - `empty();` //判断容器是否为空
+    - `swap(st);` //交换两个集合容器
+  - 插入和删除
+    - `insert(elem);` //在容器中插入元素。
+    - `clear();` //清除所有元素
+    - `erase(pos);` //删除pos迭代器所指的元素，返回下一个元素的迭代器。
+    - `erase(beg, end);` //删除区间[beg,end)的所有元素 ，返回下一个元素的迭代器。
+    - `erase(key);` //删除容器中值为key的元素。
+  - 查找和统计
+    - `find(key);` //查找key是否存在,若存在，返回该键的元素的迭代器；若不存在，返回set.end();
+    - `count(key);` //统计key的元素个数
+  - 排序
+    - 利用仿函数，可以改变排序规则
 
 
 
-### 4⃣️ STL- 函数对象
+### 4⃣️STL- 函数对象
 
 - 函数对象
 - 谓词
