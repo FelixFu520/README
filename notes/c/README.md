@@ -1,6 +1,6 @@
 # C++
 
-
+## [试题总](listall.md)
 
 ### C++基础知识
 
@@ -19,11 +19,17 @@
 
 - 🍀[atof函数](atof.md)
 
+#### C++语法
+
+- [unordered_map](map.md)
+- [auto](auto.md)
+
 ## 编程
 
 #### 链表
 
 - [反转链表](reverselist.md) | [链表操作](sl.md) ｜ [按顺序合并链表](hb.md)
+- 
 
 #### 堆
 
