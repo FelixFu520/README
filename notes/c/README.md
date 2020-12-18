@@ -11,7 +11,7 @@
 
 - **编译**
   - 🍀编译过程：[C编译链接执行过程](clink.md)|[编译器工作过程](complier.md) | [静态链接和动态链接](link.md)
-  - 🍀编译器：[gcc和g++](gcc.md) | [gcc、make、cmake](cmake.md)
+  - 🍀编译器：[gcc和g++](gcc.md) | [gcc、make、cmake](cmake.md) ｜ [GUN手册](https://gcc.gnu.org/onlinedocs/) [2](http://www.shanghai.ws/gnu/gcc_1.htm)
   - 🍀工具（make和cmake）：[机器人C/C++编程：实用Make与CMake教程](make.md)
     - [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html)
     - [CmakeLists学习](cmake2.md) ｜ [CMake手册](https://www.zybuluo.com/khan-lau/note/254724)
