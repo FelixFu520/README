@@ -2,6 +2,8 @@
 
 2020年11月27日
 
+[GitHub](https://github.com/TD-4/cmake-demo)
+
 ---
 
 **CMake** 是一个跨平台的、开源的构建工具。`cmake` 是 `makefile` 的上层工具，它们的目的正是为了产生可移植的makefile，并简化自己动手写makefile时的巨大工作量.
