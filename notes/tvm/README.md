@@ -7,11 +7,12 @@
 - 🍀[TVM架构设计](arch.md)
 - 🍀[TVM部署](TVMB.md)
 - 🍀[TVM原理](TVMY.md)
+- 🍀[TVM源码学习](src.md)
 
 #### 案例
 
 - 🍀[Pytorch2onnx2TVM](pytorch2onnx2tvm.md) --[github](https://github.com/FelixFu520/pytorch2onnx2tvm)--[`dockerhub:docker pull fusimeng/project:tvm`]
 - 🍀[利用TVM完成C++端的部署](cpp2tvm.md)--[github](https://github.com/FelixFu520/onnx2tvm_cpp)--{TODO}
   - [树莓派识别摄像头](../pi/opencv.md)
-- 
+- 🍀[SSD🐶识别](https://github.com/TD-4/mxnet-ssd-tvm)｜[CSDN](https://blog.csdn.net/sinat_31425585/article/details/89395680) [需要修改，这个是第一代TVM]
 
