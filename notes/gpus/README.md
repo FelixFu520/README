@@ -43,6 +43,8 @@
 
 - 🍀[TensorRT安装](tensorrt.md)
 
+- 🍀[cmake安装](https://github.com/FelixFu520/README/blob/master/notes/gpus/tensorrt.md#cmake升级)
+
 ## IDE环境安装
 
 - [clion debug](clion.md)
