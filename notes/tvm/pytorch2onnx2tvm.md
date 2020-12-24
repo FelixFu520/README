@@ -2,15 +2,21 @@
 
 2020年12月17日
 
-[参考-1](https://oldpan.me/archives/the-first-step-towards-tvm-1) ｜ [参考-2](https://oldpan.me/archives/the-first-step-towards-tvm-2)|[参考-3](http://whitelok.github.io/2019/06/25/tvm-tutorials-lesson-1/)
+[参考-1](https://oldpan.me/archives/the-first-step-towards-tvm-1) ｜ [参考-2](https://oldpan.me/archives/the-first-step-towards-tvm-2)|[参考-3](http://whitelok.github.io/2019/06/25/tvm-tutorials-lesson-1/) ｜ [参考-4](https://xmfbit.github.io/2019/06/29/tvm-helloworld/)
 
-
+> https://github.com/szad670401/tvm_mobilefacenet
+>
+> https://github.com/liueo/TVM-deploy  *****
+>
+> https://github.com/markson14/Face-Recognition-Cpp
+>
+> https://github.com/whitelok/tvm-lesson *****
 
 ---
 
 | 时间(4000次) | pytorch | TVM(python) | TVM(c++/cpu) | TVM(c++/gpu) | TVM(c++/rasp) |
 | ------------ | ------- | ----------- | ------------ | ------------ | ------------- |
-| 单位s/ms     | 1m23s   | 35s         | 35ms         |              |               |
+| 单位s/ms     | 1m23s   | 35s         | 35ms         | TODO         | 2ms(10次)     |
 
 
 

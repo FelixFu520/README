@@ -15,6 +15,7 @@
   - 🍀工具（make和cmake）：[机器人C/C++编程：实用Make与CMake教程](make.md)
     - [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html)
     - [CmakeLists学习](cmake2.md) ｜[Cmake学习2](cmake3.md)｜ [CMake手册](https://www.zybuluo.com/khan-lau/note/254724) 
+    - [CMake学习笔记](cmakeN.md)
 
 ### 2. C++库学习
 
