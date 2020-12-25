@@ -1,3 +1,4 @@
+```
 root@node01:~/demo/build# cmake ..
 -- Configuring done
 -- Generating done
@@ -37,3 +38,5 @@ Hello World
 root@node01:~/demo/build# main_a
 Hello World
 root@node01:~/demo/build# 
+```
+
