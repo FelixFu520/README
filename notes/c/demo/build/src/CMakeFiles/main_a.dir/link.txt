@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/main_a.dir/main.c.o  -o main_a ../lib/libhello.a 

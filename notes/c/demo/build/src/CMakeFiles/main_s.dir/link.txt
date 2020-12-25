@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/main_s.dir/main.c.o  -o main_s -Wl,-rpath,/root/demo/build/lib: ../lib/libhello.so.1.2 
