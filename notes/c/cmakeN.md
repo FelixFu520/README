@@ -4,6 +4,8 @@ Cmake Practice --Cjacker
 
 2020年12月24日
 
+> https://cmake.readthedocs.io/en/latest/1.html#id29
+
 ----
 
 
@@ -790,27 +792,30 @@ SET_TARGET_PROPERTIES(target1 target2 ...
 
 这样，我们就可以同时得到 libhello.so/libhello.a 两个库了。 
 
-与他对应的指令是：
 
-`GET_TARGET_PROPERTY(VAR target property)`
 
-具体用法如下例，我们向 lib/CMakeListst.txt 中添加：
-
-```
-GET_TARGET_PROPERTY(OUTPUT_VALUE hello_static OUTPUT_NAME)
-MESSAGE(STATUS "This is the hello_static OUTPUT_NAME:" ${OUTPUT_VALUE})
-```
-
-如果没有这个属性定义，则返回 NOTFOUND. 让我们来检查一下最终的构建结果，我们发现，libhello.a 已经构建完成，位于build/lib 目录中，但是 libhello.so 去消失了。这个问题的原因是：cmake 在构建一个新的 target 时，会尝试清理掉其他使用这个名字的库，因为，在构建 libhello.a 时， 就会清理掉 libhello.so.
-
-为了回避这个问题，比如再次使用 SET_TARGET_PROPERTIES 定义`CLEAN_DIRECT_OUTPUT` 属性。 向 lib/CMakeLists.txt 中添加:
-
-```
-SET_TARGET_PROPERTIES(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
-```
-
-这时候，我们再次进行构建，会发现 build/lib 目录中同时生成了 libhello.so 和 libhello.a
+> 与他对应的指令是：
+>
+> `GET_TARGET_PROPERTY(VAR target property)`
+>
+> 具体用法如下例，我们向 lib/CMakeListst.txt 中添加：
+>
+> ```
+> GET_TARGET_PROPERTY(OUTPUT_VALUE hello_static OUTPUT_NAME)
+> MESSAGE(STATUS "This is the hello_static OUTPUT_NAME:" ${OUTPUT_VALUE})
+> ```
+>
+> 如果没有这个属性定义，则返回 NOTFOUND. 让我们来检查一下最终的构建结果，我们发现，libhello.a 已经构建完成，位于build/lib 目录中，但是 libhello.so 去消失了。这个问题的原因是：cmake 在构建一个新的 target 时，会尝试清理掉其他使用这个名字的库，因为，在构建 libhello.a 时， 就会清理掉 libhello.so.
+>
+> 为了回避这个问题，比如再次使用 SET_TARGET_PROPERTIES 定义`CLEAN_DIRECT_OUTPUT` 属性。 向 lib/CMakeLists.txt 中添加:
+>
+> ```
+> SET_TARGET_PROPERTIES(hello PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+> SET_TARGET_PROPERTIES(hello_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+> ```
+>
+> 这时候，我们再次进行构建，会发现 build/lib 目录中同时生成了 libhello.so 和 libhello.a
+>
 
 ### 5，动态库版本号 
 
@@ -903,221 +908,167 @@ return 0;
 }
 ```
 
-
-
 编写工程主文件 CMakeLists.txt
 
+```
 PROJECT(NEWHELLO)
-
 ADD_SUBDIRECTORY(src)
+```
 
 编写 src/CMakeLists.txt
 
-ADD_EXECUTABLE(main main.c) 
+`ADD_EXECUTABLE(main main.c) `
 
 上述工作已经严格按照我们前面季节提到的内容完成了。 
 
-３，外部构建 
+### ３，外部构建 
 
 按照习惯，仍然建立 build 目录，使用 cmake ..方式构建。 
 
 过程：
 
+```
 cmake ..
-
 make
+```
 
-构建失败，如果需要查看细节，可以使用第一节提到的方法
-
-make VERBOSE=1 来构建 
-
-错误输出为是：
+构建失败，如果需要查看细节，可以使用第一节提到的方法`make VERBOSE=1 `来构建 错误输出为是：
 
 /backup/cmake/t4/src/main.c:1:19: error: hello.h: 没有那个文件或目录４，引入头文件搜索路径。
 
-hello.h 位于/usr/include/hello 目录中，并没有位于系统标准的头文件路径， 
+hello.h 位于/usr/include/hello 目录中，并没有位于系统标准的头文件路径， (有人会说了，白痴啊，你就不会 include <hello/hello.h>，同志，要这么干，我这一节就没什么可写了，只能选择一个 glib 或者 libX11 来写了，这些代码写出来很多同志是看不懂的) ，为了让我们的工程能够找到 hello.h 头文件，我们需要引入一个新的指令`INCLUDE_DIRECTORIES`，其完整语法为：
 
-(有人会说了，白痴啊，你就不会 include <hello/hello.h>，同志，要这么干，我这 
+`INCLUDE_DIRECTORIES([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)`
 
-一节就没什么可写了，只能选择一个 glib 或者 libX11 来写了，这些代码写出来很多同志 
+这条指令可以用来向工程添加多个特定的头文件搜索路径，路径之间用空格分割，如果路径中包含了空格，可以使用双引号将它括起来，默认的行为是追加到当前的头文件搜索路径的后面，你可以通过两种方式来进行控制搜索路径添加的方式： 
 
-是看不懂的) 
+- １，CMAKE_INCLUDE_DIRECTORIES_BEFORE，通过 SET 这个 cmake 变量为 on，可以将添加的头文件搜索路径放在已有路径的前面。 
 
-为了让我们的工程能够找到 hello.h 头文件，我们需要引入一个新的指令
+- ２，通过 AFTER 或者 BEFORE 参数，也可以控制是追加还是置前。 
 
-INCLUDE_DIRECTORIES，其完整语法为：
-
-INCLUDE_DIRECTORIES([AFTER|BEFORE] [SYSTEM] dir1 dir2 ...)
-
-这条指令可以用来向工程添加多个特定的头文件搜索路径，路径之间用空格分割，如果路径 
-
-中包含了空格，可以使用双引号将它括起来，默认的行为是追加到当前的头文件搜索路径的 
-
-后面，你可以通过两种方式来进行控制搜索路径添加的方式： 
-
-１，CMAKE_INCLUDE_DIRECTORIES_BEFORE，通过 SET 这个 cmake 变量为 on，可以 
-
-将添加的头文件搜索路径放在已有路径的前面。 
-
-２，通过 AFTER 或者 BEFORE 参数，也可以控制是追加还是置前。 
 
 现在我们在 src/CMakeLists.txt 中添加一个头文件搜索路径，方式很简单，加入：
 
-INCLUDE_DIRECTORIES(/usr/include/hello) 
+```
+# INCLUDE_DIRECTORIES(/usr/include/hello) 
+INCLUDE_DIRECTORIES(../lib) 
+```
 
-进入 build 目录，重新进行构建，这是找不到 hello.h 的错误已经消失，但是出现了一个 
+进入 build 目录，重新进行构建，这是找不到 hello.h 的错误已经消失，但是出现了一个 新的错误：
 
-新的错误：
-
-main.c:(.text+0x12): undefined reference to `HelloFunc' 
+`main.c:(.text+0x12): undefined reference to 'HelloFunc' `
 
 因为我们并没有 link 到共享库 libhello 上。 
 
-5，为 target 添加共享库 
+### 5，为 target 添加共享库 
 
-我们现在需要完成的任务是将目标文件链接到 libhello，这里我们需要引入两个新的指令
+我们现在需要完成的任务是将目标文件链接到 libhello，这里我们需要引入两个新的指令`LINK_DIRECTORIES` 和 `ARGET_LINK_LIBRARIES`
 
-LINK_DIRECTORIES 和 TARGET_LINK_LIBRARIES
+**LINK_DIRECTORIES 的全部语法是：**
 
-LINK_DIRECTORIES 的全部语法是：
+`LINK_DIRECTORIES(directory1 directory2 ...) `
 
-LINK_DIRECTORIES(directory1 directory2 ...) 
+这个指令非常简单，添加非标准的共享库搜索路径，比如，在工程内部同时存在共享库和可执行二进制，在编译时就需要指定一下这些共享库的路径。这个例子中我们没有用到这个指令。
 
-这个指令非常简单，添加非标准的共享库搜索路径，比如，在工程内部同时存在共享库和可 
 
-执行二进制，在编译时就需要指定一下这些共享库的路径。这个例子中我们没有用到这个指 
 
-令。
+**TARGET_LINK_LIBRARIES 的全部语法是:**
 
-TARGET_LINK_LIBRARIES 的全部语法是:
-
-TARGET_LINK_LIBRARIES(target library1
-
-<debug | optimized> library2
-
-...)
+`TARGET_LINK_LIBRARIES(target library1  <debug | optimized> library2 ...)`
 
 这个指令可以用来为 target 添加需要链接的共享库，本例中是一个可执行文件，但是同样可以用于为自己编写的共享库添加共享库链接。 
 
-为了解决我们前面遇到的 HelloFunc 未定义错误，我们需要作的是向
 
-src/CMakeLists.txt 中添加如下指令：
 
-TARGET_LINK_LIBRARIES(main hello)
+为了解决我们前面遇到的 HelloFunc 未定义错误，我们需要作的是向`src/CMakeLists.txt `中添加如下指令：
+
+`TARGET_LINK_LIBRARIES(main hello)`
 
 也可以写成
 
-TARGET_LINK_LIBRARIES(main libhello.so) 
+`TARGET_LINK_LIBRARIES(main libhello.so) `
 
 这里的 hello 指的是我们上一节构建的共享库 libhello. 
 
 进入 build 目录重新进行构建。
 
+```
 cmake ..
-
 make
+```
 
 这是我们就得到了一个连接到 libhello 的可执行程序 main，位于 build/src 目录，运 
 
 行 main 的结果是输出：
 
-Hello World 
+`Hello World `
 
 让我们来检查一下 main 的链接情况：
 
+```
 ldd src/main
-
 linux-gate.so.1 => (0xb7ee7000)
-
 **libhello.so.1 => /usr/lib/libhello.so.1 (0xb7ece000)**
-
 libc.so.6 => /lib/libc.so.6 (0xb7d77000)
-
 /lib/ld-linux.so.2 (0xb7ee8000) 
+```
 
-可以清楚的看到 main 确实链接了共享库 libhello，而且链接的是动态库
+可以清楚的看到 main 确实链接了共享库 libhello，而且链接的是动态库`libhello.so.1`
 
-libhello.so.1
 
-那如何链接到静态库呢？ 
+
+**那如何链接到静态库呢？** 
 
 方法很简单： 
 
 将 TARGET_LINK_LIBRRARIES 指令修改为:
 
-TARGET_LINK_LIBRARIES(main libhello.a)
+`TARGET_LINK_LIBRARIES(main libhello.a)`
 
 重新构建后再来看一下 main 的链接情况
 
+```
 ldd src/main
-
 linux-gate.so.1 => (0xb7fa8000)
-
 libc.so.6 => /lib/libc.so.6 (0xb7e3a000)
+```
 
 /lib/ld-linux.so.2 (0xb7fa9000)说明，main 确实链接到了静态库 libhello.a
 
-6，特殊的环境变量 CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH
+### 6，特殊的环境变量 CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH
 
-务必注意，这两个是环境变量而不是 cmake 变量。 
+务必注意，这两个是环境变量而不是 cmake 变量。 使用方法是要在 bash 中用 export 或者在 csh 中使用 set 命令设置或者`CMAKE_INCLUDE_PATH=/home/include cmake ..`等方式。 
 
-使用方法是要在 bash 中用 export 或者在 csh 中使用 set 命令设置或者
+这两个变量主要是用来解决以前 autotools 工程中`--extra-include-dir `等参数的支持的。 也就是，如果头文件没有存放在常规路径(/usr/include, /usr/local/include 等)， 则可以通过这些变量就行弥补。 
 
-CMAKE_INCLUDE_PATH=/home/include cmake ..等方式。 
+我们以本例中的 hello.h 为例，它存放在/usr/include/hello 目录，所以直接查找肯定是找不到的。 前面我们直接使用了绝对路径 INCLUDE_DIRECTORIES(/usr/include/hello)告诉工程这个头文件目录。 
 
-这两个变量主要是用来解决以前 autotools 工程中 
+为了将程序更智能一点，我们可以使用 CMAKE_INCLUDE_PATH 来进行，使用 bash 的方法如下：
 
---extra-include-dir 等参数的支持的。 
+`export CMAKE_INCLUDE_PATH=/usr/include/hello`
 
-也就是，如果头文件没有存放在常规路径(/usr/include, /usr/local/include 等)， 
+然后在头文件中将 `INCLUDE_DIRECTORIES(/usr/include/hello)`替换为：
 
-则可以通过这些变量就行弥补。 
-
-我们以本例中的 hello.h 为例，它存放在/usr/include/hello 目录，所以直接查找肯 
-
-定是找不到的。 
-
-前面我们直接使用了绝对路径 INCLUDE_DIRECTORIES(/usr/include/hello)告诉工 
-
-程这个头文件目录。 
-
-为了将程序更智能一点，我们可以使用 CMAKE_INCLUDE_PATH 来进行，使用 bash 的方法 
-
-如下：
-
-export CMAKE_INCLUDE_PATH=/usr/include/hello
-
-然后在头文件中将 INCLUDE_DIRECTORIES(/usr/include/hello)替换为：
-
+```
 FIND_PATH(myHeader hello.h)
-
 IF(myHeader)
-
 INCLUDE_DIRECTORIES(${myHeader})
-
 ENDIF(myHeader) 
+```
 
 上述的一些指令我们在后面会介绍。 
 
 这里简单说明一下，FIND_PATH 用来在指定路径中搜索文件名，比如：
 
-FIND_PATH(myHeader NAMES hello.h PATHS /usr/include
+`FIND_PATH(myHeader NAMES hello.h PATHS /usr/include/usr/include/hello) `
 
-/usr/include/hello) 
+这里我们没有指定路径，但是，cmake 仍然可以帮我们找到 hello.h 存放的路径，就是因为我们设置了环境变量 CMAKE_INCLUDE_PATH。 如果你不使用 FIND_PATH，CMAKE_INCLUDE_PATH 变量的设置是没有作用的，你不能指 
 
-这里我们没有指定路径，但是，cmake 仍然可以帮我们找到 hello.h 存放的路径，就是因 
+望它会直接为编译器命令添加参数-I<CMAKE_INCLUDE_PATH>。 以此为例，CMAKE_LIBRARY_PATH 可以用在 FIND_LIBRARY 中。 
 
-为我们设置了环境变量 CMAKE_INCLUDE_PATH。 
+同样，因为这些变量直接为 FIND_指令所使用，所以所有使用 FIND_指令的 cmake 模块都 会受益。
 
-如果你不使用 FIND_PATH，CMAKE_INCLUDE_PATH 变量的设置是没有作用的，你不能指 
-
-望它会直接为编译器命令添加参数-I<CMAKE_INCLUDE_PATH>。 
-
-以此为例，CMAKE_LIBRARY_PATH 可以用在 FIND_LIBRARY 中。 
-
-同样，因为这些变量直接为 FIND_指令所使用，所以所有使用 FIND_指令的 cmake 模块都 
-
-会受益。7，小节： 
+### 7，小节： 
 
 本节我们探讨了: 
 
@@ -1129,19 +1080,822 @@ FIND_PATH(myHeader NAMES hello.h PATHS /usr/include
 
 并解释了如果链接到静态库。 
 
-到这里为止，您应该基本可以使用 cmake 工作了，但是还有很多高级的话题没有探讨，比 
+到这里为止，您应该基本可以使用 cmake 工作了，但是还有很多高级的话题没有探讨，比 如编译条件检查、编译器定义、平台判断、如何跟 pkgconfig 配合使用等等。 
 
-如编译条件检查、编译器定义、平台判断、如何跟 pkgconfig 配合使用等等。 
+到这里，或许你可以理解前面讲到的“cmake 的使用过程其实就是学习 cmake 语言并编写cmake 程序的过程”，既然是“cmake 语言”，自然涉及到变量、语法等. 
 
-到这里，或许你可以理解前面讲到的“cmake 的使用过程其实就是学习 cmake 语言并编写
 
-cmake 程序的过程”，既然是“cmake 语言”，自然涉及到变量、语法等. 
 
-下一节，我们将抛开程序的话题，看看常用的 CMAKE 变量以及一些基本的控制语法规则。七，**cmake** 常用变量和常用环境变量 
+下一节，我们将抛开程序的话题，看看常用的 CMAKE 变量以及一些基本的控制语法规则。
 
-一，cmake 变量引用的方式： 
+## 七，**cmake** 常用变量和常用环境变量 
 
-前面我们已经提到了，使用${}进行变量的引用。在 IF 等语句中，是
+### 1，cmake 变量引用的方式： 
+
+前面我们已经提到了，使用`${}`进行变量的引用。在 IF 等语句中，是直接使用变量名而不通过`${}`取值 
+
+### 2，cmake 自定义变量的方式： 
+
+主要有隐式定义和显式定义两种，前面举了一个隐式定义的例子，就是 PROJECT 指令，他会隐式的定义`<projectname>_BINARY_DIR `和`<projectname>_SOURCE_DIR `两个变量。
+
+显式定义的例子我们前面也提到了，使用 SET 指令，就可以构建一个自定义变量了。 比如:`SET(HELLO_SRC main.c)`，就 `PROJECT_BINARY_DIR` 可以通过`${HELLO_SRC}`来引用这个自定义变量了. 
+
+### 3，cmake 常用变量： 
+
+1，`CMAKE_BINARY_DIR`, `PROJECT_BINARY_DIR`, `<projectname>_BINARY_DIR`这三个变量指代的内容是一致的，如果是 in source 编译，指得就是工程顶层目录，如果是 out-of-source 编译，指的是工程编译发生的目录。PROJECT_BINARY_DIR 跟其他指令稍有区别，现在，你可以理解为他们是一致的。 
+
+
+
+２，`CMAKE_SOURCE_DIR`, `PROJECT_SOURCE_DIR`, `<projectname>_SOURCE_DIR`这三个变量指代的内容是一致的，不论采用何种编译方式，都是工程顶层目录。 也就是在 in source 编译时，他跟 CMAKE_BINARY_DIR 等变量一致。`PROJECT_SOURCE_DIR` 跟其他指令稍有区别，现在，你可以理解为他们是一致的。 
+
+
+
+３，`CMAKE_CURRENT_SOURCE_DIR`指的是当前处理的 CMakeLists.txt 所在的路径，比如上面我们提到的 src 子目录。 
+
+
+
+４，`CMAKE_CURRRENT_BINARY_DIR` 如果是 in-source 编译，它跟 CMAKE_CURRENT_SOURCE_DIR 一致，如果是 out-of
+
+source 编译，他指的是 target 编译目录。 
+
+使用我们上面提到的 ADD_SUBDIRECTORY(src bin)可以更改这个变量的值。 
+
+使用 SET(EXECUTABLE_OUTPUT_PATH <新路径>)并不会对这个变量造成影响，它仅仅修改了最终目标文件存放的路径。
+
+
+
+５，CMAKE_CURRENT_LIST_FILE  输出调用这个变量的 CMakeLists.txt 的完整路径 
+
+
+
+６，CMAKE_CURRENT_LIST_LINE   输出这个变量所在的行 
+
+
+
+7，CMAKE_MODULE_PATH 
+
+这个变量用来定义自己的 cmake 模块所在的路径。如果你的工程比较复杂，有可能会自己编写一些 cmake 模块，这些 cmake 模块是随你的工程发布的，为了让 cmake 在处理CMakeLists.txt 时找到这些模块，你需要通过 SET 指令，将自己的 cmake 模块路径设置一下。
+
+比如
+
+`SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)`
+
+这时候你就可以通过 INCLUDE 指令来调用自己的模块了。 
+
+
+
+８，EXECUTABLE_OUTPUT_PATH 和 LIBRARY_OUTPUT_PATH
+
+分别用来重新定义最终结果的存放目录，前面我们已经提到了这两个变量。 
+
+
+
+9，PROJECT_NAME
+
+返回通过 PROJECT 指令定义的项目名称。 
+
+
+
+### 4，cmake 调用环境变量的方式 
+
+使用`$ENV{NAME}`指令就可以调用系统的环境变量了。 
+
+比如
+
+`MESSAGE(STATUS “HOME dir: $ENV{HOME}”)`
+
+设置环境变量的方式是：
+
+`SET(ENV{变量名} 值)`
+
+
+
+1,CMAKE_INCLUDE_CURRENT_DIR 
+
+自动添加 CMAKE_CURRENT_BINARY_DIR 和 CMAKE_CURRENT_SOURCE_DIR 到当前处理的 CMakeLists.txt。相当于在每个 CMakeLists.txt 加入：
+
+```
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}
+${CMAKE_CURRENT_SOURCE_DIR})
+```
+
+
+
+
+
+
+
+2,CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE
+
+将工程提供的头文件目录始终至于系统头文件目录的前面，当你定义的头文件确实跟系统发生冲突时可以提供一些帮助。
+
+
+
+3,CMAKE_INCLUDE_PATH 和 CMAKE_LIBRARY_PATH 我们在上一节已经提及。 
+
+
+
+### 5，系统信息
+
+1,CMAKE_MAJOR_VERSION，CMAKE 主版本号，比如 2.4.6 中的 2
+
+2,CMAKE_MINOR_VERSION，CMAKE 次版本号，比如 2.4.6 中的 4
+
+3,CMAKE_PATCH_VERSION，CMAKE 补丁等级，比如 2.4.6 中的 6
+
+4,CMAKE_SYSTEM，系统名称，比如 Linux-2.6.22
+
+5,CMAKE_SYSTEM_NAME，不包含版本的系统名，比如 Linux
+
+6,CMAKE_SYSTEM_VERSION，系统版本，比如 2.6.22
+
+7,CMAKE_SYSTEM_PROCESSOR，处理器名称，比如 i686.
+
+8,UNIX，在所有的类 UNIX 平台为 TRUE，包括 OS X 和 cygwin
+
+9,WIN32，在所有的 win32 平台为 TRUE，包括 cygwin
+
+### 6，主要的开关选项： 
+
+1，CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS，用来控制 IF ELSE 语句的书写方式，在下一节语法部分会讲到。
+
+ 
+
+2，BUILD_SHARED_LIBS 
+
+这个开关用来控制默认的库编译方式，如果不进行设置，使用 ADD_LIBRARY 并没有指定库类型的情况下，默认编译生成的库都是静态库。 如果 SET(BUILD_SHARED_LIBS ON)后，默认生成的为动态库。 
+
+
+
+３，CMAKE_C_FLAGS
+
+设置 C 编译选项，也可以通过指令 ADD_DEFINITIONS()添加。 
+
+
+
+4，CMAKE_CXX_FLAGS
+
+设置 C++编译选项，也可以通过指令 ADD_DEFINITIONS()添加。 
+
+
+
+### 7,小结： 
+
+本章介绍了一些较常用的 cmake 变量，这些变量仅仅是所有 cmake 变量的很少一部分，目前 cmake 的英文文档也是比较缺乏的，如果需要了解更多的 cmake 变量，更好的方式是阅读一些成功项目的 cmake 工程文件，比如 KDE4 的代码。
+
+
+
+## 八，**cmake** 常用指令 
+
+前面我们讲到了 cmake 常用的变量，相信“cmake 即编程”的感觉会越来越明显，无论如何，我们仍然可以看到 cmake 比 autotools 要简单很多。接下来我们就要集中的看一看cmake 所提供的常用指令。在前面的章节我们已经讨论了很多指令的用法，如`PROJECT`，`ADD_EXECUTABLE`，`INSTALL`，`ADD_SUBDIRECTORY`，`SUBDIRS`，`INCLUDE_DIRECTORIES`，`LINK_DIRECTORIES`，`TARGET_LINK_LIBRARIES`，`SET `等。 
+
+本节会引入更多的 cmake 指令，为了编写的方便，我们将按照 cmake man page 的顺序来介绍各种指令，不再推荐使用的指令将不再介绍，INSTALL 系列指令在安装部分已经做了非常详细的说明，本节也不在提及。*(*你可以将本章理解成选择性翻译，但是会加入更多的个人理解*)* 
+
+### 1，基本指令 
+
+
+
+1，ADD_DEFINITIONS
+
+向 C/C++编译器添加-D 定义，比如:`ADD_DEFINITIONS(-DENABLE_DEBUG -DABC)`，参数之间用空格分割。 如果你的代码中定义了#ifdef ENABLE_DEBUG #endif，这个代码块就会生效。 如果要添加其他的编译器开关，可以通过 CMAKE_C_FLAGS 变量和MAKE_CXX_FLAGS 变量设置。
+
+ 
+
+２，ADD_DEPENDENCIES
+
+定义 target 依赖的其他 target，确保在编译本 target 之前，其他的 target 已经被构建。
+
+`ADD_DEPENDENCIES(target-name depend-target1 depend-target2 ...)`
+
+
+
+３，ADD_EXECUTABLE、ADD_LIBRARY、ADD_SUBDIRECTORY 前面已经介绍过了，这里不再罗唆。 
+
+
+
+４，ADD_TEST 与 ENABLE_TESTING 指令。
+
+ENABLE_TESTING 指令用来控制 Makefile 是否构建 test 目标，涉及工程所有目录。语法很简单，没有任何参数，ENABLE_TESTING()，一般情况这个指令放在工程的主CMakeLists.txt 中.
+
+ADD_TEST 指令的语法是:
+
+`ADD_TEST(testname Exename arg1 arg2 ...)`
+
+testname 是自定义的 test 名称，Exename 可以是构建的目标文件也可以是外部脚本等等。后面连接传递给可执行文件的参数。如果没有在同一个 CMakeLists.txt 中打开ENABLE_TESTING()指令，任何 ADD_TEST 都是无效的。比如我们前面的 Helloworld 例子，可以在工程主 CMakeLists.txt 中添加
+
+```
+ADD_TEST(mytest ${PROJECT_BINARY_DIR}/bin/main)
+ENABLE_TESTING()
+```
+
+生成 Makefile 后，就可以运行 make test 来执行测试了。 
+
+
+
+
+
+５，AUX_SOURCE_DIRECTORY
+
+基本语法是：
+
+`AUX_SOURCE_DIRECTORY(dir VARIABLE)`
+
+作用是发现一个目录下所有的源代码文件并将列表存储在一个变量中，这个指令临时被用来自动构建源文件列表。因为目前 cmake 还不能自动发现新添加的源文件。 
+
+比如
+
+```
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+ADD_EXECUTABLE(main ${SRC_LIST})
+```
+
+你也可以通过后面提到的 FOREACH 指令来处理这个 LIST
+
+
+
+6，CMAKE_MINIMUM_REQUIRED
+
+其语法为 `CMAKE_MINIMUM_REQUIRED(VERSION versionNumber [FATAL_ERROR]) `
+
+比如 `CMAKE_MINIMUM_REQUIRED(VERSION 2.5 FATAL_ERROR) `如果 cmake 版本小与 2.5，则出现严重错误，整个过程中止。 
+
+
+
+
+
+7，EXEC_PROGRAM
+
+在 CMakeLists.txt 处理过程中执行命令，并不会在生成的 Makefile 中执行。具体语法 
+
+为：
+
+```
+EXEC_PROGRAM(Executable [directory in which to run]
+[ARGS <arguments to executable>]
+[OUTPUT_VARIABLE <var>]
+[RETURN_VALUE <var>]) 
+```
+
+用于在指定的目录运行某个程序，通过 ARGS 添加参数，如果要获取输出和返回值，可通过`OUTPUT_VARIABLE `和` RETURN_VALUE `分别定义两个变量.  这个指令可以帮助你在 CMakeLists.txt 处理过程中支持任何命令，比如根据系统情况去修改代码文件等等。 
+
+举个简单的例子，我们要在 src 目录执行 ls 命令，并把结果和返回值存下来。可以直接在 src/CMakeLists.txt 中添加：
+
+```
+EXEC_PROGRAM(ls ARGS "*.c" OUTPUT_VARIABLE LS_OUTPUT RETURN_VALUE LS_RVALUE)
+IF(not LS_RVALUE)
+MESSAGE(STATUS "ls result: " ${LS_OUTPUT})
+ENDIF(not LS_RVALUE)
+```
+
+在 cmake 生成 Makefile 的过程中，就会执行 ls 命令，如果返回 0，则说明成功执行， 那么就输出` ls *.c `的结果。关于 IF 语句，后面的控制指令会提到。 
+
+
+
+8，FILE 指令 
+
+文件操作指令，基本语法为:
+
+```
+FILE(WRITE filename "message to write"... )
+
+FILE(APPEND filename "message to write"... )
+
+FILE(READ filename variable)
+
+FILE(GLOB variable [RELATIVE path] [globbing expressions]...)
+
+FILE(GLOB_RECURSE variable [RELATIVE path] [globbing expressions]...)
+
+FILE(REMOVE [directory]...)
+
+FILE(REMOVE_RECURSE [directory]...)
+
+FILE(MAKE_DIRECTORY [directory]...)
+
+FILE(RELATIVE_PATH variable directory file)
+
+FILE(TO_CMAKE_PATH path result)
+
+FILE(TO_NATIVE_PATH path result)
+```
+
+这里的语法都比较简单，不在展开介绍了。 
+
+
+
+9，INCLUDE 指令，用来载入 CMakeLists.txt 文件，也用于载入预定义的 cmake 模块.
+
+```
+INCLUDE(file1 [OPTIONAL])
+INCLUDE(module [OPTIONAL])
+```
+
+OPTIONAL 参数的作用是文件不存在也不会产生错误。 你可以指定载入一个文件，如果定义的是一个模块，那么将在 CMAKE_MODULE_PATH 中搜索这个模块并载入。 载入的内容将在处理到 INCLUDE 语句是直接执行。
+
+
+
+### 2，INSTALL 指令
+
+INSTALL 系列指令已经在前面的章节有非常详细的说明，这里不在赘述，可参考前面的安装部分。 
+
+### 3，FIND_指令
+
+FIND_系列指令主要包含一下指令：
+
+```
+FIND_FILE(<VAR> name1 path1 path2 ...)
+VAR 变量代表找到的文件全路径，包含文件名
+
+FIND_LIBRARY(<VAR> name1 path1 path2 ...)
+VAR 变量表示找到的库全路径，包含库文件名
+
+FIND_PATH(<VAR> name1 path1 path2 ...)
+VAR 变量代表包含这个文件的路径。
+
+FIND_PROGRAM(<VAR> name1 path1 path2 ...)
+VAR 变量代表包含这个程序的全路径。
+
+FIND_PACKAGE(<name> [major.minor] [QUIET] [NO_MODULE]
+[[REQUIRED|COMPONENTS] [componets...]])
+```
+
+用来调用预定义在` CMAKE_MODULE_PATH `下的 `Find<name>.cmake `模块，你也可以自己定义` Find<name>`模块，通过 `SET(CMAKE_MODULE_PATH dir)`将其放入工程的某个目录中供工程使用，我们在后面的章节会详细介绍 FIND_PACKAGE 的使用方法和 Find 模块的编写。
+
+FIND_LIBRARY 示例：
+
+```
+FIND_LIBRARY(libX X11 /usr/lib)
+IF(NOT libX)
+MESSAGE(FATAL_ERROR “libX not found”)
+ENDIF(NOT libX) 
+```
+
+
+
+### 4，控制指令：
+
+1,IF 指令，基本语法为：
+
+```
+IF(expression)
+    # THEN section.
+    COMMAND1(ARGS ...)COMMAND2(ARGS ...)
+    ...
+ELSE(expression)
+    # ELSE section.
+    COMMAND1(ARGS ...)
+    COMMAND2(ARGS ...)
+    ...
+ENDIF(expression)
+```
+
+另外一个指令是 ELSEIF，总体把握一个原则，凡是出现 IF 的地方一定要有对应的ENDIF.出现 ELSEIF 的地方，ENDIF 是可选的。 
+
+表达式的使用方法如下:
+
+```
+IF(var)，如果变量不是：空，0，N, NO, OFF, FALSE, NOTFOUND 或<var>_NOTFOUND时，表达式为真。
+
+IF(NOT var )，与上述条件相反。
+
+IF(var1 AND var2)，当两个变量都为真是为真。
+
+IF(var1 OR var2)，当两个变量其中一个为真时为真。
+
+IF(COMMAND cmd)，当给定的 cmd 确实是命令并可以调用是为真。
+
+IF(EXISTS dir)或者 IF(EXISTS file)，当目录名或者文件名存在时为真。
+
+IF(file1 IS_NEWER_THAN file2)，当 file1 比 file2 新，或者 file1/file2 其中有一个不存在时为真，文件名请使用完整路径。
+
+IF(IS_DIRECTORY dirname)，当 dirname 是目录时，为真。
+
+IF(variable MATCHES regex)
+
+IF(string MATCHES regex)
+```
+
+当给定的变量或者字符串能够匹配正则表达式 regex 时为真。比如：
+
+```
+IF("hello" MATCHES "ell")
+MESSAGE("true")
+ENDIF("hello" MATCHES "ell")IF(variable LESS number)
+
+IF(string LESS number)
+IF(variable GREATER number)
+IF(string GREATER number)
+IF(variable EQUAL number)
+IF(string EQUAL number) 
+```
+
+
+
+数字比较表达式
+
+```
+IF(variable STRLESS string)
+IF(string STRLESS string)
+IF(variable STRGREATER string)
+IF(string STRGREATER string)
+IF(variable STREQUAL string)
+IF(string STREQUAL string)
+```
+
+
+
+按照字母序的排列进行比较.
+
+IF(DEFINED variable)，如果变量被定义，为真。 
+
+一个小例子，用来判断平台差异：
+
+```
+IF(WIN32)
+		MESSAGE(STATUS “This is windows.”)#作一些 Windows 相关的操作
+ELSE(WIN32)
+		MESSAGE(STATUS “This is not windows”) #作一些非 Windows 相关的操作
+ENDIF(WIN32)
+```
+
+上述代码用来控制在不同的平台进行不同的控制，但是，阅读起来却并不是那么舒服，ELSE(WIN32)之类的语句很容易引起歧义。 这就用到了我们在“常用变量”一节提到的 CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS 开关。可以` SET(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS ON)`
+
+这时候就可以写成:
+
+```
+IF(WIN32)
+ELSE()
+ENDIF()如果配合 ELSEIF 使用，可能的写法是这样:
+
+IF(WIN32)
+		#do something related to WIN32
+ELSEIF(UNIX)
+		#do something related to UNIX
+ELSEIF(APPLE)
+		#do something related to APPLE
+ENDIF(WIN32)
+```
+
+
+
+2,WHILE
+
+WHILE 指令的语法是：
+
+```
+WHILE(condition)
+    COMMAND1(ARGS ...)
+    COMMAND2(ARGS ...)
+    ...
+ENDWHILE(condition) 
+```
+
+其真假判断条件可以参考 IF 指令。
+
+
+
+
+
+3,FOREACH
+
+FOREACH 指令的使用方法有三种形式： 
+
+```
+1，列表
+FOREACH(loop_var arg1 arg2 ...)
+    COMMAND1(ARGS ...)
+    COMMAND2(ARGS ...)
+    ...
+ENDFOREACH(loop_var)
+
+
+像我们前面使用的 AUX_SOURCE_DIRECTORY 的例子
+AUX_SOURCE_DIRECTORY(. SRC_LIST)
+  FOREACH(F ${SRC_LIST})
+  MESSAGE(${F})
+ENDFOREACH(F)
+
+
+2，范围
+
+FOREACH(loop_var RANGE total)
+ENDFOREACH(loop_var)
+
+从 0 到 total 以１为步进举例如下：
+
+FOREACH(VAR RANGE 10)
+MESSAGE(${VAR})
+ENDFOREACH(VAR) 
+
+最终得到的输出是：
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+３，范围和步进
+FOREACH(loop_var RANGE start stop [step])
+ENDFOREACH(loop_var)
+
+从 start 开始到 stop 结束，以 step 为步进， 
+举例如下
+
+FOREACH(A RANGE 5 15 3)
+MESSAGE(${A})
+ENDFOREACH(A)
+
+最终得到的结果是： 
+5
+8
+11
+14
+```
+
+这个指令需要注意的是，知道遇到 ENDFOREACH 指令，整个语句块才会得到真正的执行。 
+
+### 5, 小结： 
+
+本小节基本涵盖了常用的 cmake 指令，包括基本指令、查找指令、安装指令以及控制语句等，特别需要注意的是，在控制语句条件中使用变量，不能用${}引用，而是直接应用变量 名。掌握了以上的各种控制指令，你应该完全可以通过 cmake 管理复杂的程序了，下一节，我 们将介绍一个比较复杂的例子，通过他来演示本章的一些指令，并介绍模块的概念。
+
+## 九，复杂的例子：模块的使用和自定义模块. 
+
+你现在还会觉得 *cmake* 简单吗？ 
+
+本章我们将着重介绍系统预定义的 Find 模块的使用以及自己编写 Find 模块，系统中提供了其他各种模块，一般情况需要使用 INCLUDE 指令显式的调用，FIND_PACKAGE 指令是一 个特例，可以直接调用预定义的模块。 其实使用纯粹依靠 cmake 本身提供的基本指令来管理工程是一件非常复杂的事情，所以，cmake 设计成了可扩展的架构，可以通过编写一些通用的模块来扩展 cmake.
+
+在本章，我们准备首先介绍一下 cmake 提供的 FindCURL 模块的使用。然后，基于我们前面的 libhello 共享库，编写一个 FindHello.cmake 模块。 
+
+### 1，使用 FindCURL 模块 
+
+在/backup/cmake 目录建立 t5 目录，用于存放我们的 CURL 的例子。 
+
+建立 src 目录，并建立 src/main.c，内容如下：
+
+```
+#include <curl/curl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+FILE *fp;
+int write_data(void *ptr, size_t size, size_t nmemb, void *stream)
+{
+      int written = fwrite(ptr, size, nmemb, (FILE *)fp);
+      return written; 
+}
+
+int main()
+{
+      const char * path = “/tmp/curl-test”;
+      const char * mode = “w”;
+      fp = fopen(path,mode);
+      curl_global_init(CURL_GLOBAL_ALL);
+      CURLcode res;
+      CURL *curl = curl_easy_init();
+      curl_easy_setopt(curl, CURLOPT_URL, “http://www.linux-ren.org”);
+      curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+      curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
+      res = curl_easy_perform(curl);
+      curl_easy_cleanup(curl);
+}
+```
+
+这段代码的作用是通过 curl 取回 www.linux-ren.org 的首页并写入/tmp/curl-test文件中。 
+
+建立主工程文件 CMakeLists.txt
+
+```
+PROJECT(CURLTEST)
+ADD_SUBDIRECTORY(src)
+```
+
+建立 src/CMakeLists.txt
+
+`ADD_EXECUTABLE(curltest main.c) `
+
+
+
+现在自然是没办法编译的，我们需要添加 curl 的头文件路径和库文件。 
+
+方法 1： 
+
+直接通过 INCLUDE_DIRECTORIES 和 TARGET_LINK_LIBRARIES 指令添加： 
+
+我们可以直接在 src/CMakeLists.txt 中添加：
+
+```
+INCLUDE_DIRECTORIES(/usr/include)
+TARGET_LINK_LIBRARIES(curltest curl)
+```
+
+然后建立 build 目录进行外部构建即可。 
+
+现在我们要探讨的是使用 cmake 提供的 FindCURL 模块。 
+
+
+
+方法 2，使用 FindCURL 模块。 
+
+向 src/CMakeLists.txt 中添加：
+
+```
+FIND_PACKAGE(CURL)
+IF(CURL_FOUND)
+      INCLUDE_DIRECTORIES(${CURL_INCLUDE_DIR})
+      TARGET_LINK_LIBRARIES(curltest ${CURL_LIBRARY})
+ELSE(CURL_FOUND)
+			MESSAGE(FATAL_ERROR ”CURL library not found”)	
+ENDIF(CURL_FOUND)
+```
+
+对于系统预定义的 `Find<name>.cmake` 模块，使用方法一般如上例所示： 
+
+每一个模块都会定义以下几个变量 
+
+- ` <name>_FOUND`
+- ` <name>_INCLUDE_DIR `or `<name>_INCLUDES `
+- ` <name>_LIBRARY` or `<name>_LIBRARIES `
+
+你可以通过`<name>_FOUND` 来判断模块是否被找到，如果没有找到，按照工程的需要关闭某些特性、给出提醒或者中止编译，上面的例子就是报出致命错误并终止构建。 如果`<name>_FOUND `为真，则将`<name>_INCLUDE_DIR` 加入 `INCLUDE_DIRECTORIES`，
+
+将`<name>_LIBRARY` 加入 `TARGET_LINK_LIBRARIES` 中。 
+
+
+
+我们再来看一个复杂的例子，通过`<name>_FOUND` 来控制工程特性：
+
+```
+SET(mySources viewer.c)
+
+SET(optionalSources)SET(optionalLibs)
+
+FIND_PACKAGE(JPEG)
+
+IF(JPEG_FOUND)
+
+SET(optionalSources ${optionalSources} jpegview.c)
+
+INCLUDE_DIRECTORIES( ${JPEG_INCLUDE_DIR} )
+
+SET(optionalLibs ${optionalLibs} ${JPEG_LIBRARIES} )
+
+ADD_DEFINITIONS(-DENABLE_JPEG_SUPPORT)
+
+ENDIF(JPEG_FOUND)
+
+IF(PNG_FOUND)
+
+SET(optionalSources ${optionalSources} pngview.c)
+
+INCLUDE_DIRECTORIES( ${PNG_INCLUDE_DIR} )
+
+SET(optionalLibs ${optionalLibs} ${PNG_LIBRARIES} )
+
+ADD_DEFINITIONS(-DENABLE_PNG_SUPPORT)
+
+ENDIF(PNG_FOUND)
+
+ADD_EXECUTABLE(viewer ${mySources} ${optionalSources} )
+
+TARGET_LINK_LIBRARIES(viewer ${optionalLibs} 
+```
+
+通过判断系统是否提供了 JPEG 库来决定程序是否支持 JPEG 功能。 
+
+### 2，编写属于自己的 FindHello 模块。 
+
+我们在此前的 t3 实例中，演示了构建动态库、静态库的过程并进行了安装。 接下来，我们在 t6 示例中演示如何自定义 FindHELLO 模块并使用这个模块构建工程： 
+
+请在建立/backup/cmake/中建立 t6 目录，并在其中建立 cmake 目录用于存放我们自己定义的 FindHELLO.cmake 模块，同时建立 src 目录，用于存放我们的源文件。 
+
+1，定义 cmake/FindHELLO.cmake 模块
+
+```
+FIND_PATH(HELLO_INCLUDE_DIR hello.h /usr/include/hello
+
+/usr/local/include/hello)
+
+FIND_LIBRARY(HELLO_LIBRARY NAMES hello PATH /usr/lib
+
+/usr/local/lib) 
+
+IF (HELLO_INCLUDE_DIR AND HELLO_LIBRARY)
+
+SET(HELLO_FOUND TRUE)
+
+ENDIF (HELLO_INCLUDE_DIR AND HELLO_LIBRARY)
+
+IF (HELLO_FOUND)
+
+IF (NOT HELLO_FIND_QUIETLY)
+
+MESSAGE(STATUS "Found Hello: ${HELLO_LIBRARY}")ENDIF (NOT HELLO_FIND_QUIETLY)
+
+ELSE (HELLO_FOUND)
+
+IF (HELLO_FIND_REQUIRED)
+
+MESSAGE(FATAL_ERROR "Could not find hello library")
+
+ENDIF (HELLO_FIND_REQUIRED)
+
+ENDIF (HELLO_FOUND) 
+```
+
+
+
+针对上面的模块让我们再来回顾一下 FIND_PACKAGE 指令：
+
+```
+FIND_PACKAGE(<name> [major.minor] [QUIET] [NO_MODULE]
+[[REQUIRED|COMPONENTS] [componets...]])
+```
+
+前面的 CURL 例子中我们使用了最简单的 FIND_PACKAGE 指令，其实他可以使用多种参数，QUIET 参数，对应与我们编写的 FindHELLO 中的 HELLO_FIND_QUIETLY，如果不指定这个参数，就会执行：
+
+`MESSAGE(STATUS "Found Hello: ${HELLO_LIBRARY}")`
+
+REQUIRED 参数，其含义是指这个共享库是否是工程必须的，如果使用了这个参数，说明这个链接库是必备库，如果找不到这个链接库，则工程不能编译。对应于`FindHELLO.cmake `模块中的 HELLO_FIND_REQUIRED 变量。 同样，我们在上面的模块中定义了 HELLO_FOUND,HELLO_INCLUDE_DIR,HELLO_LIBRARY 变量供开发者在 FIND_PACKAGE 指令中使用。
+
+OK，下面建立 src/main.c，内容为：
+
+```
+#include <hello.h>
+int main()
+{
+HelloFunc();
+return 0;
+}
+```
+
+建立 src/CMakeLists.txt 文件，内容如下：
+
+```
+FIND_PACKAGE(HELLO)
+IF(HELLO_FOUND)
+    ADD_EXECUTABLE(hello main.c)
+    INCLUDE_DIRECTORIES(${HELLO_INCLUDE_DIR})
+    TARGET_LINK_LIBRARIES(hello ${HELLO_LIBRARY})
+ENDIF(HELLO_FOUND)
+```
+
+为了能够让工程找到 FindHELLO.cmake 模块(存放在工程中的 cmake 目录) 
+
+我们在主工程文件 CMakeLists.txt 中加入：
+
+`SET(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)`
+
+### 3，使用自定义的 FindHELLO 模块构建工程 
+
+仍然采用外部编译的方式，建立 build 目录，进入目录运行：
+
+`cmake ..`
+
+我们可以从输出中看到：
+
+`Found Hello: /usr/lib/libhello.so`
+
+如果我们把上面的 FIND_PACKAGE(HELLO)修改为 FIND_PACKAGE(HELLO QUIET),则不会看到上面的输出。 
+
+接下来就可以使用 make 命令构建工程，运行:
+
+`./src/hello` 可以得到输出
+
+`Hello World`。 
+
+说明工程成功构建。 
+
+### 4，如果没有找到 hello library 呢？ 
+
+我们可以尝试将/usr/lib/libhello.x 移动到/tmp 目录，这样，按照 FindHELLO 模块的定义，就找不到 hello library 了，我们再来看一下构建结果：
+
+`cmake ..`
+
+仍然可以成功进行构建，但是这时候是没有办法编译的。 修改 FIND_PACKAGE(HELLO)为 FIND_PACKAGE(HELLO REQUIRED)，将 hello
+
+library 定义为工程必须的共享库。 这时候再次运行
+
+ `cmake ..`
+
+我们得到如下输出：
+
+`CMake Error: Could not find hello library.`
+
+因为找不到 libhello.x，所以，整个 Makefile 生成过程被出错中止。 
+
+### 5. 小结： 
+
+在本节中，我们学习了如何使用系统提供的` Find<NAME>`模块并学习了自己编写`Find<NAME>`模块以及如何在工程中使用这些模块。 
+
+后面的章节，我们会逐渐学习更多的 cmake 模块使用方法以及用 cmake 来管理 GTK 和 QT4 工程。
 
 
 
