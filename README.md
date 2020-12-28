@@ -46,9 +46,13 @@
 
 #### 🌲视频处理
 
-|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md) 
+|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md)  
 
 ## 👍小项目
+
+1. #### [YOLO Training&Inferencing Tutorials](notes/project_yolov4/README.md)
+
+
 
 #### ❤️教程系列
 
