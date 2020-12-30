@@ -50,7 +50,7 @@
 
 ## 👍小项目
 
-1. #### [YOLO Training&Inferencing Tutorials](notes/project_yolov4/README.md)
+- #### 👌[YOLO Training&Inferencing Tutorials](https://github.com/FelixFu520/yolov4_)
 
 
 
