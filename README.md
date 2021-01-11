@@ -12,7 +12,7 @@
 
 |—🍀[微积分](notes/math/README.md)   |—🍀[概率论](notes/math/README.md)  |—🍀[线性代数](notes/math/README.md)
 
-#### 🌲系统&语言
+#### 🌲系统&[语言](notes/c/python_c.md)
 
 |—🍀[C++](notes/c/README.md)    |—🍀[Python](notes/python/README.md) ｜—🍀[Linux](notes/linux/README.md)
 
@@ -34,7 +34,7 @@
 
 #### 🌲WEB
 
-|—🍀[Flask](https://github.com/FelixFu520/Flask_)  |—🍀️[BS/CS](notes/bs_cs/README.md)  |—🍀️[序列化](notes/serialization/README.md)
+|—🍀️[BS/CS](notes/bs_cs/README.md)  |—🍀️[序列化](notes/serialization/README.md)
 
 #### 🌲[模型部署](notes/infer/infer.md)
 

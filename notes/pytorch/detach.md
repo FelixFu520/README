@@ -25,7 +25,7 @@ tensor([[ 0.9621, -1.0931, -0.8481],
 
 
 
-### 1. 1 item（）
+### 1.1 item（）
 
 item()返回的是tensor中的值，且只能返回单个值（标量），不能返回向量，使用返回loss等。
 
@@ -78,7 +78,7 @@ TypeError   Traceback (most recent call last)
 <ipython-input-12-53aa55b45af2> in <module>()
 ----> 1 gpu_info.detach().numpy()
 TypeError: can't convert CUDA tensor to numpy. Use Tensor.cpu() to copy the tensor to host memory first.
-123456
+
 gpu_info.cpu().numpy()
 
 array([[ 0.9621306 , -1.0930926 , -0.8481391 ],
