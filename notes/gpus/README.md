@@ -5,6 +5,7 @@
 - [深入GPU硬件架构及运行机制](https://www.cnblogs.com/timlly/p/11471507.html)
 - [gpustat](https://github.com/wookayin/gpustat)
 - [nvidia-smi命令介绍](nvidiasmi.md)
+- [NUMA & GPU](numa.md)
 
 ### 👍对应关系
 
