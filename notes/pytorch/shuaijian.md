@@ -42,7 +42,11 @@
 
 PyTorch提供了`torch.optim.lr_scheduler`来帮助用户改变学习率，下边将从`Optimizer`入手，看一下这个类是如何工作的。
 
+
+
 为什么从Optimizer入手，因为无论是Adam还是SGD，都是继承的这个类。同时，scheduler也是给所有的Optimizer服务的，所以需要用的方法都会定义在这个基类里，直接看一下这个类的属性即可。给出Doc中的代码[链接](https://pytorch.org/docs/1.1.0/_modules/torch/optim/optimizer.html#Optimizer)。
+
+
 
 首先是初始化方法`def __init__(self, params, defaults)`，这个方法的params参数，就是我们在初始化优化器的时候传入的网络的参数，如`Alexnet.parameters()`，而后边所有的参数都将合并成dict参数作为这个方法的defaults。
 
@@ -54,6 +58,8 @@ for alex in Alexnet.parameters():
 ```
 
 可以看到，这里边存的就是整个网络的参数。
+
+
 
 有两种定义optimizer的方法：
 
@@ -96,13 +102,9 @@ print([group.keys() for group in optimizer.param_groups])
 
 ```python
 def adjust_learning_rate(optimizer, epoch):
-
     """Sets the learning rate to the initial LR decayed by 10 every 30 epochs"""
-
     lr = args.lr * (0.1 ** (epoch // 30))
-
     for param_group in optimizer.param_groups:
-
         param_group['lr'] = lr
 ```
 
@@ -114,15 +116,10 @@ def adjust_learning_rate(optimizer, epoch):
 optimizer = torch.optim.SGD(model.parameters(),lr = args.lr,momentum = 0.9)
 
 for epoch in range(10):
-
     adjust_learning_rate(optimizer,epoch)
-
     train(...)
-
     validate(...)
 ```
-
-
 
 ### 1.2  针对模型的不同层设置不同的学习率
 
@@ -132,15 +129,11 @@ for epoch in range(10):
 model = torchvision.models.resnet101(pretrained=True)
 
 large_lr_layers = list(map(id,model.fc.parameters()))
-
 small_lr_layers = filter(lambda p:id(p) not in large_lr_layers,model.parameters())
 
 optimizer = torch.optim.SGD([
-
             {"params":large_lr_layers},
-
             {"params":small_lr_layers,"lr":1e-4}
-
             ],lr = 1e-2,momenum=0.9)
 ```
 
@@ -166,13 +159,9 @@ optimizer = torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
 scheduler = ReduceLROnPlateau(optimizer, 'max',verbose=1,patience=3)
 
 for epoch in range(10):
-
     train(...)
-
     val_acc = validate(...)
-
     # 降低学习率需要在给出 val_acc 之后
-
     scheduler.step(val_acc)
 ```
 
@@ -184,32 +173,19 @@ for epoch in range(10):
 
 ```
 def adjust_learning_rate(optimizer, lr):
-
     for param_group in optimizer.param_groups:
-
         param_group['lr'] = lr
 
-
-
 for epoch in range(60):        
-
     lr = 30e-5
     if epoch > 25:
-
         lr = 15e-5
-
     if epoch > 30:
-
         lr = 7.5e-5
-
     if epoch > 35:
-
         lr = 3e-5
-
     if epoch > 40:
-
         lr = 1e-5
-
     adjust_learning_rate(optimizer, lr)
 ```
 

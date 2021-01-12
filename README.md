@@ -10,7 +10,11 @@
 
 #### 🌲数学
 
-|—🍀[微积分](notes/math/README.md)   |—🍀[概率论](notes/math/README.md)  |—🍀[线性代数](notes/math/README.md)
+🍀[微积分](notes/math/README.md) 
+
+🍀[概率论](notes/math/README.md)  
+
+🍀[线性代数](notes/math/README.md)
 
 #### 🌲系统&[语言](notes/c/python_c.md)
 
@@ -20,15 +24,11 @@
 
 |—🍀[环境安装](notes/gpus/README.md) |—🍀[分布式](notes/parallel_computing/README.md)
 
-### 📖模型训练
+### 📖[模型训练](notes/dl_concept/README.md)
 
-#### 🌲概念
+|—🍀[数据读取](notes/dataloader/README.md)  |—🍀[模型](notes/models/README.md)  |—🍀[损失函数](notes/loss/README.md)  |—🍀[优化器](notes/optimizer/README.md)  |—🍀[训练技巧trick](notes/trick/README.md) 
 
-|—🍀[DL常见概念](notes/dl_concept/README.md)   |—🍀[Pytorch](notes/pytorch/README.md) |—🍀[DL面试](notes/interview/README.md) |—🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
-
-#### 🌲训练流程
-
-|—🍀[数据读取](notes/dataloader/README.md)  |—🍀[模型](notes/models/README.md)  |—🍀[损失函数](notes/loss/README.md)  |—🍀[优化器](notes/optimizer/README.md)  |—🍀[训练技巧trick](notes/trick/README.md)
+|—🍀[Pytorch](notes/pytorch/README.md)    |—🍀[DL面试](notes/interview/README.md)   |—🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
 
 ### 📖推理部署
 
