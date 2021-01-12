@@ -16,17 +16,20 @@
 
 #### 🌲系统&[语言](notes/c/python_c.md)
 
-|—🍀[C++](notes/c/README.md)    |—🍀[Python](notes/python/README.md) ｜—🍀[Linux](notes/linux/README.md)
+- 🍀[C++](notes/c/README.md)   
+- 🍀[Python](notes/python/README.md) 
+- 🍀[Linux](notes/linux/README.md)
 
 #### 🌲GPUs
 
-|—🍀[环境安装](notes/gpus/README.md) |—🍀[分布式](notes/parallel_computing/README.md)
+- 🍀[环境安装](notes/gpus/README.md) 
+- 🍀[分布式](notes/parallel_computing/README.md)
 
 ### 📖[模型训练](notes/dl_concept/README.md)
 
-|—🍀[数据读取](notes/dataloader/README.md)  |—🍀[模型](notes/models/README.md)  |—🍀[损失函数](notes/loss/README.md)  |—🍀[优化器](notes/optimizer/README.md)  |—🍀[训练技巧trick](notes/trick/README.md) 
-
-|—🍀[Pytorch](notes/pytorch/README.md)    |—🍀[DL面试](notes/interview/README.md)   |—🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
+- 🍀[数据读取](notes/dataloader/README.md)  -> 🍀[模型](notes/models/README.md)  -> 🍀[损失函数](notes/loss/README.md)  -> 🍀[优化器](notes/optimizer/README.md)  
+- 🍀[训练技巧trick](notes/trick/README.md)  & 🍀[Pytorch](notes/pytorch/README.md)    
+- 🍀[DL面试](notes/interview/README.md)   & 🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
 
 ### 📖推理部署
 
