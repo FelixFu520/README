@@ -1,6 +1,12 @@
 # GPU知识
 
-### 对应关系
+### 👍GPU知识
+
+- [深入GPU硬件架构及运行机制](https://www.cnblogs.com/timlly/p/11471507.html)
+- [gpustat](https://github.com/wookayin/gpustat)
+- [nvidia-smi命令介绍](nvidiasmi.md)
+
+### 👍对应关系
 
 - 显卡、驱动和cuda[对应关系](https://docs.nvidia.com/deploy/cuda-compatibility/index.html#overview)
 

@@ -1,10 +1,6 @@
 # 🏠AI NOTES
 
----
-
-#### TODO
-
-- [detectron](https://github.com/facebookresearch/detectron2)
+#### TODO:[detectron](https://github.com/facebookresearch/detectron2)
 
 ### 📖基础知识
 
@@ -29,19 +25,20 @@
 
 #### 🌲WEB
 
-|—🍀️[BS/CS](notes/bs_cs/README.md)  |—🍀️[序列化](notes/serialization/README.md)
+- 🍀️[BS/CS](notes/bs_cs/README.md)   & 🍀️[序列化](notes/serialization/README.md)
 
 #### 🌲[模型部署](notes/infer/infer.md)
 
-|—🍀[ONNX](notes/onnx/README.md)  |—🍀[TensorRT](notes/tensorrt/README.md)  |—🍀[TVM](notes/tvm/README.md)  |—[模型量化](notes/lianghua/README.md)
+- 🍀[ONNX](notes/onnx/README.md)  & 🍀[TensorRT](notes/tensorrt/README.md)  & 🍀[TVM](notes/tvm/README.md)  & 🍀[模型量化](notes/lianghua/README.md)
 
 #### 🌲嵌入式
 
- |—🍀[Nano](notes/nano/README.md) ｜—🍀[树莓派](notes/pi/README.md)
+-  🍀[Nano](notes/nano/README.md) & 🍀[树莓派](notes/pi/README.md)
+
 
 #### 🌲视频处理
 
-|—🍀[视频编解码](notes/videocodec/README.md)  |—🍀[流媒体](notes/stream/README.md)  
+- 🍀[视频编解码](notes/videocodec/README.md)  & 🍀[流媒体](notes/stream/README.md)  
 
 ## 👍小项目
 
