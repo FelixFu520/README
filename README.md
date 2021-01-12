@@ -10,15 +10,11 @@
 
 #### 🌲数学
 
-- 🍀[微积分](notes/math/README.md) 
-- 🍀[概率论](notes/math/README.md)  
-- 🍀[线性代数](notes/math/README.md)
+- 🍀[微积分](notes/math/README.md)  & 🍀[概率论](notes/math/README.md)  &  🍀[线性代数](notes/math/README.md)
 
 #### 🌲系统&[语言](notes/c/python_c.md)
 
-- 🍀[C++](notes/c/README.md)   
-- 🍀[Python](notes/python/README.md) 
-- 🍀[Linux](notes/linux/README.md)
+- 🍀[C++](notes/c/README.md)   & 🍀[Python](notes/python/README.md) & 🍀[Linux](notes/linux/README.md)
 
 #### 🌲GPUs
 
