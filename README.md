@@ -1,6 +1,6 @@
 # 🏠AI NOTES
 
-#### TODO:[detectron](https://github.com/facebookresearch/detectron2)
+TODO:[detectron](https://github.com/facebookresearch/detectron2)
 
 ### 📖基础知识
 
@@ -42,30 +42,28 @@
 
 ## 👍小项目
 
-- #### 👌[YOLO Training&Inferencing Tutorials](https://github.com/FelixFu520/yolov4_)
+- ##### 👌[YOLO Training&Inferencing Tutorials](https://github.com/FelixFu520/yolov4_)
 
-
-
-#### ❤️教程系列
-
-* 🐘 [MedNIST 数据集医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)[📮alanmathisonturing@163.com]
-* 🐘 [AI训练和部署](https://github.com/FelixFu520/CIMC)
-* 🐘[mAP计算过程](https://github.com/FelixFu520/mAP)—[Docker Image : `docker pull fusimeng/project:mAP`]
-* 🐘[CAM](https://github.com/FelixFu520/CAM) | [CAM2](https://github.com/FelixFu520/CAM-Cifar10)—[Docker Image:`docker pull fusimeng/project:cam`]
-* 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )
-* 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
-* 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed)—[Docker Image:`docker pull fusimeng/project:SegmentatioWithApexMixedPrecisionAndDistributed`]
+- ##### 👌[Unet  Training&Inferencing Tutorials](https://github.com/FelixFu520/CIMC)
 
 #### ❤️YOLO系列
 
 - 🐘 [Yolo V1](https://github.com/FelixFu520/yolov1)——[Docker Image : `docker pull fusimeng/project:yolov1`]
 - 🐘 [Yolo V2](https://github.com/FelixFu520/yolov2)——[Docker Image: `docker pull fusimeng/project:yolov2`]
 - 🐘 [Yolo V3](https://github.com/FelixFu520/yolov3)——[Docker Image : `docker pull fusimeng/project:yolov3`]   *
-- 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`]   *
-  - ​			——[Docker Image : `docker pull fusimeng/project:yolov4-v2`]   *
-- 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]   *
-  - 备注：简易版，学习代码使用。[代码解释](https://cloud.tencent.com/developer/article/1649322)
+- 🐘 [Yolo V4](https://github.com/FelixFu520/yolov4)——[Docker Image : `docker pull fusimeng/project:yolov4`,  `docker pull fusimeng/project:yolov4-v2`]   *
+- 🐘 [Yolo V4(2)](https://github.com/FelixFu520/yolov4_)—[Docker Image : `docker pull fusimeng/project:yolov4_v2`]  `备注：简易版，学习代码使用`,[代码解释](https://cloud.tencent.com/developer/article/1649322)
 - 🐘 [Yolo_nano](https://github.com/FelixFu520/Yolo_nano)—[Docker Image: `docker pull fusimeng/project:yolo_nano`]
+
+#### ❤️教程系列
+
+* 🐘 [MedNIST 数据集医学图像分类（私有）](https://github.com/FelixFu520/DLI_MedNIST)[📮alanmathisonturing@163.com]
+
+* 🐘[mAP计算过程](https://github.com/FelixFu520/mAP)—[Docker Image : `docker pull fusimeng/project:mAP`]
+* 🐘[CAM](https://github.com/FelixFu520/CAM) | [CAM2](https://github.com/FelixFu520/CAM-Cifar10)—[Docker Image:`docker pull fusimeng/project:cam`]
+* 🐘 [风格迁移](https://github.com/FelixFu520/Neural-Transfer )
+* 🐘 [手动实现MLP、CNN、RNN、LSTM](https://github.com/FelixFu520/dl-by-hand)
+* 🐘[图像分割-APEX-多机多卡](https://github.com/FelixFu520/SegmentatioWithApexMixedPrecisionAndDistributed)—[Docker Image:`docker pull fusimeng/project:SegmentatioWithApexMixedPrecisionAndDistributed`]
 
 #### ❤️UNet系列
 
