@@ -6,6 +6,7 @@
 - [gpustat](https://github.com/wookayin/gpustat)
 - [nvidia-smi命令介绍](nvidiasmi.md)
 - [NUMA & GPU](numa.md)
+- [GPU Direct](gpudirect.md)
 
 ### 👍对应关系
 
