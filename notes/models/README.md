@@ -17,6 +17,8 @@
 - 🍀[零基础入门深度学习(3) - 神经网络和反向传播算法](dlbyhand/bp.md)
 - 🍀[零基础入门深度学习(4) - 卷积神经网络](dlbyhand/cnn_.md)
 - 🍀[零基础入门深度学习(5) - 循环神经网络](dlbyhand/hrnn.md)
+- 🍀[零基础入门深度学习(6) - 长短时记忆网络(LSTM)](https://zybuluo.com/hanbingtao/note/581764)
+- 🍀[零基础入门深度学习(7) - 递归神经网络](https://zybuluo.com/hanbingtao/note/626300)
 - 🍀[代码](https://github.com/FelixFu520/dl-by-hand)
 - 🍀[参考](https://www.zybuluo.com/hanbingtao/note/485480)
 
