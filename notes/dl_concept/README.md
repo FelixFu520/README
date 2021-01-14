@@ -1,9 +1,5 @@
 # 深度学习常用概念
 
-#### TODO
-
-- [深度学习应用](apply.md)
-
 [![](imgs/HW.png)](http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html)
 
 ### 🍀[训练注意事项⚠️](note.md)
@@ -46,7 +42,8 @@
 - dropout
 - ……
 
-##### 4⃣️微调
+##### 4⃣️ 微调
 
-##### 5⃣️压缩
+##### 5⃣️ 压缩
 
+6⃣️ [深度学习应用](apply.md)
