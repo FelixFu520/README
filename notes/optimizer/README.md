@@ -12,16 +12,41 @@
 
 
 
-## 👍优化器
-
-🍀[优化方法总结](opt.md)
-
-🍀[梯度下降算法](sgd.md)
+## 👍[优化器](opt.md)
 
 🍀[梯度衰减](../pytorch/shuaijian.md)
 
-![image-20210112133308415](imgs/image-20210112133308415.png)
+#### 👋[一阶优化算法](sgd.md)
 
-![image-20210112133456200](imgs/image-20210112133456200.png)
+- Team SGD(Slow;Better convergence; stable;Smaller generalization gap)【advices:Computer vision(image classification;segmentation;object detection;)】
 
-![image-20210112133529476](imgs/image-20210112133529476.png)
+  - SGD
+  - SGDM
+  - NAG
+  - 
+  - Learning rate scheduling
+
+  - SGDWM
+
+- Team Adam(Fast;Possibly non-convergence;unstable;larger generalization gap;)【advices:NLP(QA;machine translation; summary;)、 Speech synthesis、GAN、Reinforcement learning】
+
+  - Adagrad
+  - RMSProp
+  - Adam
+  - AMSGrad
+  - AdaBound
+  - Learning rate scheduling
+  - RAdam
+  - Nadam
+  - AdamW
+
+- SWATS
+
+- Lookahead
+
+
+
+
+
+
+

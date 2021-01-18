@@ -6,15 +6,15 @@
 
 ##### 1⃣️ 检查数据
 
-##### 2⃣️训练模型 On Train DataSet， and select one
+##### 2⃣️训练模型 On Train DataSet， and select one——减小训练误差
 
 - [特征缩放--Feature Scaling for input data](featurescale.md)**【1.[输入预处理](../dataloader/README.md)】**
 - Networks(Functions)**【2.[网络模型](../models/README.md)，前向传播】**
   - [Vanishing Gradient & Exploding Gradient](tidu.md)【如何解决梯度消失爆炸】
     1. 预训练加微调
-    2. 权重[初始化](init.md)
+    2. 权重[初始化1](init.md) [2](../models/dl/notes/network-init.md)
     3. 梯度剪切、权重正则（针对梯度爆炸）
-    4. 🍀New Activation Function(使用不同的激活函数)
+    4. 🍀New Activation Function(使用不同的[激活函数1](../models/activation.md)|[2](../models/dl/notes/network-activationfunction.md))
     5. 使用[BN/LN/IN/GN/SN](bn.md) 
        - [BN](bn2.md)|[BN案例TensorFlow](bn3.md)
        - [LN](ln.md)【TODO】
@@ -34,9 +34,9 @@
   - 🍀[DeepDream实现代码](https://github.com/FelixFu520/DeepDream)
   - 🍀[Netron](https://github.com/lutzroeder/netron)
 
-##### 3⃣️测试模型 On Test  Dataset【解决[过拟合](overfitting.md)】
+##### 3⃣️测试模型 On Test  Dataset【解决[过拟合1](../models/dl/notes/network-fitting.md) [2](overfitting.md)】——缩小训练误差和测试误差的距离
 
-- [正则化](regularization.md)
+- [正则化1](regularization.md) [2](../models/dl/notes/network-bn.md) [3](../models/dl/notes/network-dnnnorm.md)
 - early stop
 - 数据增强
 - dropout

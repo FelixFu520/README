@@ -1,6 +1,6 @@
 # 🏠AI NOTES
 
-TODO:[detectron](https://github.com/facebookresearch/detectron2)
+TODO:[detectron](https://github.com/facebookresearch/detectron2) | [其他人📒](https://github.com/Mikoto10032/DeepLearning)
 
 ### 📖基础知识
 
@@ -19,7 +19,7 @@ TODO:[detectron](https://github.com/facebookresearch/detectron2)
 ### 📖[模型训练](notes/dl_concept/README.md)
 
 - 🍀[数据读取](notes/dataloader/README.md)  -> 🍀[模型](notes/models/README.md)  -> 🍀[损失函数](notes/loss/README.md)  -> 🍀[优化器](notes/optimizer/README.md)  
-- 🍀[训练技巧trick](notes/trick/README.md)  & 🍀[Pytorch](notes/pytorch/README.md)   & 🍀[DL面试](notes/interview/README.md)   & 🍀[其他人📒](https://github.com/Mikoto10032/DeepLearning)
+- 🍀[训练技巧trick](notes/trick/README.md)  & 🍀[Pytorch](notes/pytorch/README.md)   & 🍀[DL面试](notes/interview/README.md)  
 
 ### 📖推理部署
 
