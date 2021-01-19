@@ -44,7 +44,6 @@ target_link_libraries(test_s util_s)    # 链接可执行文件和动态库
 add_library(util_a STATIC utils.cpp)    # 生成静态库libutils_a.a
 add_executable(test_a hello.cpp)        # 生成可执行文件test_a
 target_link_libraries(test_a util_a)    # 链接可执行文件和动态库
-123456789
 ```
 
 库名称不需要写全，make时会自动根据当前系统补全前/后缀，如libutil_s.so/libutil_sa.s。

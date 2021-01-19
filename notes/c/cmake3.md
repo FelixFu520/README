@@ -125,7 +125,7 @@ project (Tutorial)
 # 版本号信息
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
- 
+
 # 配置一个头文件，从而将CMake的一些设置传递到源文件中。
 # 以TutorialConfig.h.in为模板，生成TutorialConfig.h
 configure_file (
