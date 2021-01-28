@@ -219,7 +219,7 @@ export PKG_CONFIG_PATH
 
 如下：
 
-![img](https:////upload-images.jianshu.io/upload_images/22192996-4fde1ccde9a6e7e8.png?imageMogr2/auto-orient/strip|imageView2/2/w/731)
+![img](imgs/731a.png)
 
 bash.bashrc
 

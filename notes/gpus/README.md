@@ -45,6 +45,8 @@
 
 - 🍀[Matlab安装](matlab.md)
 
+- 🍀[xrdp安装](xrdp.md)
+
   ---
 
   
