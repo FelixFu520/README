@@ -7,7 +7,7 @@
 - **详细笔记**
   - 🍀[入门视频](https://github.com/FelixFu520/Cpp-0-1-Resource) ｜[结构图](arch.md)
 - 🍀[C、C++和C#区别](butong.md)
-  - 🍀[C++](cpp.md)
+  - 🍀[C++](cpp.md)｜[Python](python.md)
 
 - **编译**
   - 🍀编译过程：[C编译链接执行过程](clink.md)|[编译器工作过程](complier.md) | [静态链接和动态链接](link.md)

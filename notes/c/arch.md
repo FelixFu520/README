@@ -4,10 +4,6 @@
 
 [C++ Standard Library headers](https://en.cppreference.com/w/cpp/header)− C++ 标准库
 
-
-
-
-
 ---
 
 对应语法
