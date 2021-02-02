@@ -1,0 +1,682 @@
+# Python总结
+
+2021年2月2日
+
+```
+1 运算符
+2 控制结构
+3 函数
+4 基本类型
+5 复合类型
+
+Python中每个东西都是对象，包括函数。
+
+Python是弱类型， 因此Python对于一个类型数据，不会有声明->赋值->调用/使用这些步骤，只有个赋值->使用.  
+Python中的变量、对象和引用的概念。类型属于对象，而不是变量
+
+多使用dir(string);help(string.replace);
+
+
+```
+
+| 对象类型  | 分类 | 是否可变 |
+| --------- | ---- | -------- |
+| 数字      | 数值 | 否       |
+| 字符串    | 序列 | 否       |
+| 列表      | 序列 | 是       |
+| 字典      | 对应 | 是       |
+| 元组      | 序列 | 否       |
+| 文件      | 扩展 | N/A      |
+| Sets      | 集合 | 是       |
+| frozenset | 集合 | 否       |
+| bytearray | 序列 | 是       |
+
+```
+Collections
+	*Sequences
+		-Immutable
+			+String
+			+Unicode
+			+Bytes
+			+Tuple
+		-Mutable
+			+List
+			+Bytearray
+	*Mappings
+		-Dictionary
+	*Sets
+		-Set
+		-Frozenset
+
+-------------------------	
+Numbers
+	*Integers
+		-Integer
+		-Long
+		-Boolean
+	*Float
+		-Complex
+		-Decimal
+		-Fraction
+		
+-------------------------
+Callables
+	*Function
+	*Generator
+	*Class
+	*Method
+		-Bound
+		-Unbound
+		
+-------------------------
+Other
+	*Module
+	*Instance
+	*File
+	*None
+	*View
+
+-------------------------
+Internals
+	*Type
+	*Code
+	*Frame
+	*Traceback
+
+```
+
+
+
+## 1 运算符
+
+运算符优先级；运算符重载；
+
+**算术运算符**
+
+`+，-，*,**，/，//,%`
+
+**赋值运算符**
+
+`=，+=，-=，*=，/=，%=`
+
+**比较运算符**
+
+`<, <=, >, >=, ==, !=`
+
+**位运算符**
+
+`|, ^,&,<<,>>, ~`
+
+**逻辑运算符**
+
+` or, and, not`
+
+**集合操作**
+
+`+（合集），-（差集）, &, | ,`
+
+**其他**
+
+`x in y, x not in y` 成员关系（可迭代对象、集合）
+
+`x is y, x is not y`对象实体测试
+
+`isinstance(True int)`
+
+## 2 控制结构
+
+### 顺序
+
+
+
+### 分支
+
+```
+x if y else z # 三目运算符
+
+if/elif/else	
+```
+
+
+
+### 循环
+
+```
+#序列迭代
+for/else
+
+#一般循环
+while/else
+
+pass/break/continue
+```
+
+
+
+## 3 函数
+
+##### 匿名函数
+
+`lambda args:expression`
+
+
+
+```
+
+```
+
+
+
+## 4 基本类型
+
+### 动态类型
+
+**变量、对象和引用**
+
+```
+Python是弱类型， 因此Python对于一个类型数据，不会有声明->赋值->调用/使用这些步骤，只有个赋值->使用.  
+
+1、变量创建
+2、变量类型
+3、变量使用
+Python中的变量、对象和引用的概念。
+```
+
+**类型属于对象，而不是变量**
+
+**对象的垃圾收集**
+
+**共享引用**
+
+```
+拷贝
+浅拷贝
+深拷贝
+```
+
+### 数字(数值，不可变)
+
+`1、定义=赋值，  2、使用。 name = value`
+
+- 整型 `1234, -24,0, 9999999999`  `0o16, 0x9ff, 0b101010`
+- 浮点型 `1.23, 1. , 3.14e-10, 4.0e+210`
+- 复数 `3+4j, 3.0+4.0j, 3J`
+- 固定精度的十进制数
+- 有理分数
+- 集合
+- 布尔类型
+- 无穷的整数精度
+- 各种数字内置函数和模块
+
+
+
+### 其他
+
+类型
+
+```
+Type也是一个对象，在python中类型本身也是对象类型。
+
+type(list)
+```
+
+
+
+None
+
+```
+None也是一个对象
+```
+
+
+
+布尔
+
+```
+定义
+非零为True
+空或者None为False
+or
+bool(1)
+```
+
+
+
+## 5 复合类型
+
+### 字符串(序列，不可变)
+
+##### 定义
+
+```
+s = ''
+s = "spam's"
+S = 's\np\ta\x00m' #转义序列
+s = """..."""
+s = r"\temp\spam"
+S = b"spam"
+s = u"spam"
+
+name = "value"
+or 
+name = str(other type)
+```
+
+
+
+##### 使用
+
+```
+使用变量名即可
+```
+
+
+
+##### 索引&切片—**序列操作**
+
+```
+S = "Spam"
+len(S)
+
+S[-1]
+
+S[10:2:-1]
+
+```
+
+##### 拼接—序列操作
+
+```
+s1 + s2
+s * 3
+```
+
+
+
+##### 迭代—**序列操作**
+
+```
+[c*2 for c in S]
+
+'spam' in S # 成员操作
+```
+
+
+
+##### 不可变性
+
+```
+不可修改字符串中的内容，只能重新创建。
+```
+
+
+
+##### 表示输出
+
+```
+"%s, eggs, and %s"  % ("spam", "SPAM")
+
+'{0},eggs, and {1}'.format("spam", "SPAM")
+```
+
+
+
+##### 类型方法
+
+```
+S.find('pa')
+
+S.replace('pa', 'XYZ') # 不管如何操作，S的值不变，只会产生新的值
+
+S.split(',')
+
+S.upper()
+
+S.isalpha()
+
+S.rstrip()
+
+S.isdigit()
+
+S.lower()
+
+S.endswith("spam")
+
+'spam'.join(strlist)
+
+S.encode("latin-1")
+
+
+
+
+```
+
+
+
+### 列表（序列，可变）
+
+- 任意对象的有序集合
+- 通过偏移读取（索引&切片）
+- 可变长度、异构以及任意嵌套
+- 属于可变序列的分类
+- **对象引用数组**
+
+
+
+##### **定义**
+
+```
+L = [123, "spam", 1.23]  or  L = list("spam"/other type) # 无固定类型约束
+
+
+L = []
+L = [0,1,2,3]
+L = ['abc', ['def','gihi']]	#嵌套
+L = list("spam") # 可迭代项目的列表，连续证书的列表
+L = list(range(-4,4))
+
+
+```
+
+##### **使用**
+
+```
+通过偏移读取——索引和切片
+```
+
+
+
+##### 索引&切片—**序列操作**
+
+```
+索引返回对象，切片返回新的列表。
+索引和切片 主要为了获取、赋值、删除。
+
+len(L)
+
+L[i]	# 索引
+	
+L[i:j:k] # 切片
+
+L[i][j]  # 多次索引
+
+```
+
+
+
+##### 拼接—序列操作
+
+```
+L1 + L2 #拼接
+
+L * 3	#重复
+```
+
+
+
+##### 迭代&解析—**序列操作**
+
+```
+for x in L :print(x)
+
+col2 = [row[1] for row in M]
+
+3 in L # 成员操作
+```
+
+
+
+##### 类型操作(增删改查+)
+
+```
+L.append("NI")
+
+L.extend([5,6,7]) //尾端加入
+
+L.insert(I,X)
+
+L.index(1)
+
+L.Count(X)
+
+L.sort(key=str.lower, reverse=True) / sorted(L,key=str.lower, reverse=True)
+
+L.reverse()
+
+delL[k]
+
+del L[i:j]
+
+L.pop() / L.pop(2)
+
+L.remove(2)
+
+L[i:j] = []
+
+2 in L
+```
+
+
+
+##### 列表嵌套
+
+```
+
+```
+
+
+
+### 字典（对应，可变）
+
+- 通过键而不是偏移量来读取
+- 任意对象的无序集合
+- 可变长、异构、任意嵌套
+- 属于可变映射类型
+- 对象引用表
+
+
+
+##### **定义**
+
+```
+D = {}
+
+D = {'food':"Spam", 'quanitity':4, ...}
+
+D = dict.fromkeys(['a','b'])
+
+D = dict(zip(keyslist, valslist))
+
+D = dict(name='Bob', age=42)
+
+字典嵌套
+rec = {'name':{'first':'Bob', 'last':"Smith"},
+			 'job':['dev', 'mgr'],
+			 'age':40.5}
+			 
+```
+
+
+
+##### **使用**（增删改查+）
+
+```
+name = D["name"]["first"]
+```
+
+
+
+##### **迭代和解析**
+
+```
+D = {x: x*2 for x in range(10)}
+
+D = {k:v for (k,v) in zip(['a', 'b', 'c'], [1,2,3])}
+```
+
+
+
+##### 类型操作（增删改查+）
+
+```
+D.keys()	# 键
+D.values()	#值
+D.items()	#键+值
+
+D["one"] = “asdf“ # 增加、修改
+D.copy()	#副本
+D.get(key,default)
+D.update(D2)	#合并
+D.pop(key)	#删除
+len(D)
+D[key] = 42 # 新增/修改、删除键
+
+del D[key]
+list(D.keys())
+
+D1.keys() & D2.keys()
+
+"ham" in D
+```
+
+
+
+### 元组（序列，不可变）
+
+- 任意对象的有序集合
+- 通过偏移存取
+- 属于不可变序列类型
+- 固定长度、异构、任意嵌套
+- 对象引用的数组
+
+##### 定义
+
+```
+()
+T = (9,) # 如果T = （9）则表示T是个整型
+T = (0, "Ni", 1.2 , 3)
+T = o, "Ni", 1.2, 3
+T = ('abc',('def', 'ghi')) #嵌套元组
+T = tuple('spam') # 一个可迭代对象的项的元组
+```
+
+##### 使用
+
+```
+T[i]
+T[i][j]
+```
+
+##### 索引&切片—序列操作
+
+```
+len(T)
+T[i:j]
+
+```
+
+##### 拼接—序列操作
+
+```
+T1 + T2
+T1 * 3
+```
+
+##### 迭代—序列操作
+
+```
+for x in T:print(x)
+
+[x**2 for x in T]
+
+'spam' in T # 成员关系
+```
+
+
+
+##### 类型操作
+
+```
+T.index（‘Ni')
+T.count("ni")
+```
+
+
+
+
+
+### 集合（集合，可变）
+
+##### 定义
+
+```
+s = 
+```
+
+
+
+### 文件（扩展）
+
+```
+output = open(r"/root/test.txt", 'w') # 创建输出文件
+input = open(r"path", 'r') 	# 创建输入文件
+
+aString = input.read()	# 把整个文件读进单一字符串
+aString = input.read(N)  # 读取之后的N个字节到一个字符串
+aString = input.readline()	# 读取下一行到一个字符串
+aList = input.readlines()	# 读取整个文件到字符串列表
+
+output.write(aString) # 写入字节到文件
+output.writelines(aList) # 把列表内所有字符串写入文件
+ouput.close()	# 手动关闭
+output.flush() # 把输出缓冲区刷到硬盘中，但不关闭文件
+
+anyFile.seek(N)	# 修改文件位置到偏移量N处以便进行下一个操作
+
+for line in open('data'):use line 	# 文件迭代器一行一行地读取
+
+open('f.txt', encoding='latin-1')	# Python3.0 Unicode文本文件（str字符串）
+open('f.bin', 'rb')	# Python3.0二进制byte文件（bytes字符串）
+```
+
+
+
+### 编程单元
+
+函数
+
+
+
+模块
+
+
+
+类
+
+### 三大器
+
+生成器
+
+Yield x
+
+## 6 其他
+
+### 引用VS拷贝
+
+```
+赋值操作总是存储对象的引用，而不是这些对象的拷贝。
+
+明确的拷贝操作
+1、没有限制条件的分片表达式(L[:])能够复制序列
+2、字典copy方法（X.copy()）能够复制字典
+3、有些内置函数（例如，list）能够生成拷贝（list(L)）
+4、copy标准库模块能够生成完成拷贝
+```
+
+### 比较、相等性和真值
+
+```
+"=="操作符测试值的相等性。Python运行相等测试，递归地比较所有内嵌对象。
+"is"表达式测试对象的一致性。 Python测试两者是否是同一个对象（也就是说，在同一个内存地址中）。
+```
+

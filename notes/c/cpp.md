@@ -150,7 +150,29 @@ do{ 循环语句 } while(循环条件);
 **for each**
 
 ```
+double prices[5] = {4.99, ...};
+for(double x: prices)
+		std::cout << x << std::endl;
+```
 
+### 异常
+
+[异常类结构树&自定义异常](https://www.runoob.com/cplusplus/cpp-exceptions-handling.html)
+
+```
+try
+{
+   // 保护代码
+}catch( ExceptionName e1 )
+{
+   // catch 块
+}catch( ExceptionName e2 )
+{
+   // catch 块
+}catch( ExceptionName eN )
+{
+   // catch 块
+}
 ```
 
 
@@ -1539,6 +1561,15 @@ using namespace std::string；//使用
 
 ## 7 STL类型
 
+STL大体分为六大组件，分别是:**容器、算法、迭代器、仿函数、适配器（配接器）、空间配置器**
+
+1. 容器：各种数据结构，如vector、list、deque、set、map等,用来存放数据。
+2. 算法：各种常用的算法，如sort、find、copy、for_each等
+3. 迭代器：扮演了容器与算法之间的胶合剂。
+4. 仿函数：行为类似函数，可作为算法的某种策略。
+5. 适配器：一种用来修饰容器或者仿函数或迭代器接口的东西。
+6. 空间配置器：负责空间的配置与管理。
+
 ### STL-常用容器
 
 #### string容器
@@ -1592,7 +1623,7 @@ using namespace std::string；//使用
 
 #### vector容器
 
-- 概念
+- [概念](https://www.runoob.com/w3cnote/cpp-vector-container-analysis.html)
 - 构造
   - `vector<T> v; `//采用模板实现类实现，默认构造函数
   - `vector(v.begin(), v.end()); `//将v[begin(), end())区间中的元素拷贝给本身。
