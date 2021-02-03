@@ -99,6 +99,18 @@ Internals
 
 `=，+=，-=，*=，/=，%=`
 
+```
+赋值语句
+
+spam = "Spam" # 基本形式
+spam,ham = 'yum','YUM' 	# 元组赋值运算（位置性）
+[spam,ham] = ['yum','YUM'] # 列表赋值运算（位置性）
+a,b,c,d = 'spam'	# 序列赋值运算，通用性
+a,*b = 'spam' # 扩展的序列解包
+spam = ham = 'lunch' # 多目标赋值运算
+spams += 43	# 增强赋值运算
+```
+
 **比较运算符**
 
 `<, <=, >, >=, ==, !=`
@@ -125,44 +137,154 @@ Internals
 
 ## 2 控制结构
 
-### 顺序
-
-
-
-### 分支
+#### 分支
 
 ```
-x if y else z # 三目运算符
+expression1 if y else expression2 # 三目运算符
 
-if/elif/else	
+if <test1>:
+		<statements1>
+elif<test2>:
+		<statements2>
+else:
+		<statements3> 
+		
 ```
 
+#### 循环
 
-
-### 循环
+while循环
 
 ```
-#序列迭代
-for/else
+while <test>:
+		<statements1>
+		pass/break/continue
+else:
+		<statements> # 没有碰到break时
+```
 
-#一般循环
-while/else
+for循环
 
-pass/break/continue
+```
+for <target> in <object>:
+		<statements>
+else:
+		<statements>
+	
+	
+	
+for x in range(5,-5,-1):
+		pass
+		
+S = 'abcdefghijk'
+for c in S[::2]:
+		pass
+```
+
+zip&map
+
+```
+L1 = [1,2,3,4]
+L2 = [5,6,7,8]
+L3 = [9,10,11,12]
+
+zip(L1,L2,L3)	# 压缩
+
+list(map(ord,'spam'))	# 映射
+
+# 产生偏移和元素
+S = 'spam'
+for (offset,item) in enumerate(S):
+		print(item, 'appears at offset', offset)
+		
 ```
 
 
 
 ## 3 函数
 
-##### 匿名函数
+- def是可执行的代码，def语句是实时执行的
+- def创建了一个对象并将其赋值给某一个变量名：函数名是函数的引用
+- lambda创建一个对象但将其作为结果返回
+- return将一个结果对象发送给调用者
+- yield向调用者发回一个结果对象，但是记住它离开的地方
+- global声明了一个模块级的变量并被赋值
+- nonlocal声明了将要赋值的一个封闭的函数变量
+- 函数是通过赋值（对象引用）传递的
+- 参数、返回值以及变量并不是声明
 
-`lambda args:expression`
-
-
+#### 定义
 
 ```
+def <name>(arg1,arg2,...,argN):
+		<statements>
+```
 
+#### 调用
+
+```
+funName(arg1,...)
+```
+
+#### 参数
+
+```
+传递参数
+1、参数的传递 是 通过自动将对象赋值给本地变量名来实现的
+2、在函数内部的参数名的赋值不会影响调用者
+3、改变函数的可变对象参数的值也许会对调用者有影响
+
+4、不可变参数“通过值传递”进行传递
+5、可变对象是通过“指针”进行传递的
+
+
+参数匹配
+语法								位置					解释
+func(value)				调用者				常规参数：通过位置进行匹配
+func(name=value)	调用者				关键字参数：通过变量名匹配
+func(*sequence)		调用者				以name传递所有的对象，并作为独立的基于位置的参数
+func(**dict)			调用者				以name成对的传递所有的关键字/值，并作为独立的关键字参数
+
+def func(name)		函数				常规参数：通过位置或变量名进行匹配
+def func(name=value)	函数		默认参数值，如果没有在调用中传递的话
+def func(*name)		函数				匹配并收集（在元组中）所有包含位置的参数
+def func(**name)	函数				匹配并收集（在字典中）所有包含位置的参数
+def func(*args,name)	函数		参数必须在调用中按照关键字传递
+def func(*,name=value)				(python3.0)
+```
+
+#### 匿名函数
+
+```
+由lambda表达式所返回的函数对象与由def创建并赋值后的函数对象工作起来是完全一样的，但是lambda特点如下：
+1、lambda是一个表达式，而不是一个语句
+2、lambda的主体是一个单个表达式，而不是一个代码块
+
+
+lambda args1,args2:expression
+```
+
+#### 递归函数
+
+```
+def mysum(L):
+		print(L)
+		if not L:
+				return 0
+		else:
+				return L[0] + mysum(L[1:])
+```
+
+#### 其他
+
+```
+在序列中映射函数:map
+list(map((lambda x: return x + 10), [1,2,3,4]))
+
+函数式编程工具：filter和reduce
+list(filter((lambda x : x > 0), range(-5,5)))
+
+reduce((lambda x,y:x+y), [1,2,3,4]) # 10
 ```
 
 
@@ -615,6 +737,48 @@ s =
 
 
 
+
+
+### 类
+
+#### 封装/定义
+
+```
+class className(Object):
+		def __init__():
+				pass
+				
+		def funcs():
+				pass
+```
+
+#### 多态
+
+**运算符重载**
+
+```
+方法						重载							调用
+__init__				构造函数					对象建立：X = Class(args)
+__del__					析构函数					X对象回收
+__add__					运算符+					 如果没有_iadd_，X+Y，X+=Y
+
+....
+
+
+```
+
+**函数重载**
+
+```
+
+```
+
+
+
+#### 继承
+
+
+
 ### 文件（扩展）
 
 ```
@@ -641,27 +805,147 @@ open('f.bin', 'rb')	# Python3.0二进制byte文件（bytes字符串）
 
 
 
-### 编程单元
+### 迭代器
 
-函数
+##### [概念](https://juejin.cn/post/6844903834381189127)
+
+```
+1、可迭代对象
+简单的说，一个对象(在Python里面一切都是对象)只要实现了只要实现了__iter__()方法，那么用isinstance()函数检查就是Iterable对象;
+
+常见的可迭代对象
+    集合或序列类型（如list、tuple、set、dict、str）
+    文件对象
+    在类中定义了__iter__()方法的对象，可以被认为是 Iterable对象，但自定义的可迭代对象要能在for循环中正确使用，就需要保证__iter__()实现必须是正确的（即可以通过内置iter()函数转成Iterator对象。关于Iterator下文还会说明，这里留下一个坑，只是记住iter()函数是能够将一个可迭代对象转成迭代器对象，然后在for中使用）。要在for循环中使用，就必须满足iter()的调用(即调用这个函数不会出错，能够正确转成一个Iterator对象)
+    在类中实现了如果只实现__getitem__()的对象可以通过iter()函数转化成迭代器但其本身不是可迭代对象。所以当一个对象能够在for循环中运行，但不一定是Iterable对象。
+
+
+2、迭代器
+当我们对可迭代的概念了解后，对于迭代器就比较好理解了。 一个对象实现了__iter__()和__next__()方法，那么它就是一个迭代器对象。一个迭代器(Iterator)对象不仅可以在for循环中使用，还可以通过内置函数next()函数进行调用
+
+集合和序列对象是可迭代的但不是迭代器
+文件对象是迭代器
+```
 
 
 
-模块
+##### 格式
+
+```
+for x in iterable：
+		<statements>
+		
+L = [x + 10 for x in L if ...]
+
+for line in open('test.txt').readlines():
+		pass
+		
+		
+		
+
+		
+iterable:序列类型（列表、元组、字符串）、文件、
+iterator:range、map、zip、filter
+
+		
+```
+
+##### 迭代对象和迭代器
+
+```
+python提供了一个内置对象next，他会自动调用一个对象的__next__方法，即next(X) 等价于X.__next()__，X是可迭代对象。
+
+iter可以将一个可迭代对象生成一个迭代器
+
+L = [1,2,3]
+I = iter(L)
+I.next() # 1
+I.next() # 2
+I.next() # 3
+```
 
 
 
-类
 
-### 三大器
 
-生成器
+### 生成器
 
-Yield x
+##### 概念
+
+```
+一个生成器既是可迭代的也是迭代器
+
+定义生成器有两种方式：
+    列表生成器
+    使用yield定义生成器函数
+    
+    
+列表生成器
+		g = (x * 2 for x in range(10)) # 0～18的偶数生成器 
+    print(isinstance(g, Iterable)) # true
+    print(isinstance(g, Iterator)) # true
+    print(isinstance(g, Generator)) # true
+    print(hasattr(g, "__iter__")) # true
+    print(hasattr(g, "__next__")) # true
+    print(next(g)) # 0
+    print(next(g)) # 2
+    列表生成器可以不需要消耗大量的内存来生成一个巨大的列表，只有在需要数据的时候才会进行计算。
+    
+使用yield定义生成器函数
+    def gen():
+        for i in range(10):
+            yield i 
+		当程序遇到yield关键字时，这个生成器函数就返回了，直到再次执行了next()函数，它就会从上次函数返回的执行点继续执行，即yield退出时保存了函数执行的位置、变量等信息，再次执行时，就从这个yield退出的地方继续往下执行。
+```
+
+
+
+### 装饰器
+
+#### 概念
+
+```
+装饰是为函数和类制定管理代码的一种方式。装饰器本身的形式是处理其他的可调用对象的对象（如函数）。
+```
+
+
+
+### 模块
+
+```
+import *.*
+from * import *
+
+为什么使用模块
+1、代码重用
+2、系统命名空间的划分
+3、实现共享服务和数据
+
+模块搜索路径
+1、程序的主目录
+2、PYTHONPATH目录（如果已经进行了设置）
+3、标准链接库目录
+4、任何.pth文件的内容（如果存在的话）
+
+sys.path列表
+
+```
+
+
+
+### 文档
+
+```
+dir函数								对象中可用属性的列表
+文档字符串:__doc__			附在对象上的文件中的文档
+PyDoc：help函数			 对象的交互帮助
+```
+
+
 
 ## 6 其他
 
-### 引用VS拷贝
+#### 引用VS拷贝
 
 ```
 赋值操作总是存储对象的引用，而不是这些对象的拷贝。
@@ -673,10 +957,65 @@ Yield x
 4、copy标准库模块能够生成完成拷贝
 ```
 
-### 比较、相等性和真值
+#### 比较、相等性和真值
 
 ```
 "=="操作符测试值的相等性。Python运行相等测试，递归地比较所有内嵌对象。
 "is"表达式测试对象的一致性。 Python测试两者是否是同一个对象（也就是说，在同一个内存地址中）。
+```
+
+#### 作用域
+
+```
+变量名解析：LEGB原则
+当发现变量时，LEGB范围去搜索
+Local(function)：本地作用域
+Enclosing function locals：上一层结构中def或lambda的本地作用域
+Global(module)：全局作用域
+Built-in(Python)：内置作用域
+
+
+X = 00
+def func():
+		global X
+		X = 88
+		
+		
+def tester(start):
+		state = start
+		def nested(label):
+				nonlocal state
+				print(label, state)
+				state += 1
+		return nested
+F = tester(0)
+F('spam') # spam 0
+F('ham')  # ham 1
+F('eggs') # eggs 2
+```
+
+#### 异常
+
+```
+try:
+	pass
+except name1,name2:
+	pass
+except:
+	pass
+else:
+	pass
+finally:
+	pass
+	
+
+raise 	IndexError
+
+
+assert
+
+
+with expression [as variable]:
+		with-block
 ```
 
