@@ -59,7 +59,7 @@
 
 将一幅图像分成SxS个网格(grid cell)，如果某个object的中心 落在这个网格中，则这个网格就负责预测这个object。
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-59bb649ad4cd304f0fb98303414572bc_720w.png)
+![img](imgs/v2-59bb649ad4cd304f0fb98303414572bc_720w.png)
 
 
 
@@ -67,7 +67,7 @@
 
 
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-fa1bd4707f44d9c542aa4e29267f3978_720w.png)
+![img](imgs/v2-fa1bd4707f44d9c542aa4e29267f3978_720w.png)
 
 
 
@@ -79,7 +79,7 @@
 
 
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-563f60701e6572b530b7675eabd0cf47_720w.png)
+![img](imgs/v2-563f60701e6572b530b7675eabd0cf47_720w.png)
 
 
 
@@ -109,7 +109,7 @@
 
 在test的时候，每个网格预测的class信息和bounding box预测的confidence信息相乘，就得到每个bounding box的class-specific confidence score:
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-80ac96115524cf3112a33de739623ac5_720w.png)
+![img](imgs/v2-80ac96115524cf3112a33de739623ac5_720w.png)
 
 等式左边第一项就是每个网格预测的类别信息，第二三项就是每个bounding box预测的confidence。这个乘积即encode了预测的box属于某一类的概率，也有该box准确度的信息。
 
@@ -119,7 +119,7 @@
 
 看到这里读者或许会有疑问，Yolo里的每个格点，是怎么知道该预测哪个物体的？这就是神经网络算法的能力。首先拿到一批标注好的图片数据集，按照规则打好标签，之后让神经网络去拟合训练数据集。训练数据集中的标签是通过人工标注获得，当神经网络对数据集拟合的足够好时，那么就相当于神经网络具备了一定的和人一样的识别能力。
 
-神经网络结构确定之后，训练效果好坏，由Loss函数和优化器决定。Yolo v1使用普通的梯度下降法作为优化器。这里重点解读一下Yolo v1使用的Loss函数。
+神经网络结构确定之后，**训练效果好坏，由Loss函数和优化器决定**。Yolo v1使用普通的梯度下降法作为优化器。这里重点解读一下Yolo v1使用的Loss函数。
 
 在实现中，最主要的就是怎么设计损失函数，让这个**三个方面**（那三个方面？见损失函数公式）得到很好的平衡。作者简单粗暴的全部采用了**sum-squared error loss**来做这件事。
 
@@ -138,7 +138,7 @@
 
 为了缓和这个问题，作者用了一个比较取巧的办法，就是将box的width和height取平方根代替原本的height和width。这个参考下面的图很容易理解，小box的横轴值较小，发生偏移时，反应到y轴上相比大box要大。（也是个近似逼近方式）
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-7aeeff7fd4f08ad7ab56b4995bf486d8_720w.png)
+![img](imgs/v2-7aeeff7fd4f08ad7ab56b4995bf486d8_720w.png)
 
 一个网格预测多个box，希望的是每个box predictor专门负责预测某个object。具体做法就是看当前预测的box与ground truth box中哪个IoU大，就负责哪个。这种做法称作box predictor的specialization。
 
@@ -149,7 +149,7 @@
 论文中Loss函数，密密麻麻的公式初看可能比较难懂。其实论文中给出了比较详细的解释。所有的损失都是使用平方和误差公式，暂时先不看公式中的 ![[公式]](https://www.zhihu.com/equation?tex=%5Clambda_%7Bcoord%7D+) 与 ![[公式]](https://www.zhihu.com/equation?tex=%5Clambda_%7Bnoobj%7D+) ，输出的预测数值以及所造成的损失有:
 
 1. **预测框的中心点**![[公式]](https://www.zhihu.com/equation?tex=%28x%2C+y%29) 。造成的损失是图中的第一行。其中 ![[公式]](https://www.zhihu.com/equation?tex=1%5E%7Bobj%7D_%7Bij%7D) 为控制函数，在标签中包含物体的那些格点处，该值为 1 ；若格点不含有物体，该值为 0。也就是只对那些有真实物体所属的格点进行损失计算，若该格点不包含物体，那么预测数值不对损失函数造成影响。![[公式]](https://www.zhihu.com/equation?tex=%28x%2C+y%29) 数值与标签用简单的平方和误差。
-2. **预测框的宽高**![[公式]](https://www.zhihu.com/equation?tex=%28w%2C+h%29) 。造成的损失是图的第二行。![[公式]](https://www.zhihu.com/equation?tex=1%5E%7Bobj%7D_%7Bij%7D)的含义一样，也是使得只有真实物体所属的格点才会造成损失。这里对 ![[公式]](https://www.zhihu.com/equation?tex=%28w%2C+h%29) 在损失函数中的处理分别取了**根号**，原因在于，如果不取根号，损失函数往往更倾向于调整尺寸比较大的预测框。例如，20个像素点的偏差，对于800\*600的预测框几乎没有影响，此时的IOU数值还是很大，但是对于30\*40的预测框影响就很大。取根号是为了尽可能的消除大尺寸框与小尺寸框之间的差异。
+2. **预测框的宽高**![[公式]](https://www.zhihu.com/equation?tex=%28w%2C+h%29) 。造成的损失是图的第二行。![[公式]](https://www.zhihu.com/equation?tex=1%5E%7Bobj%7D_%7Bij%7D)的含义一样，也是使得只有真实物体所属的格点才会造成损失。这里对 ![[公式]](https://www.zhihu.com/equation?tex=%28w%2C+h%29) 在损失函数中的处理分别取了**根号**，原因在于，如果不取根号，**损失函数往往更倾向于调整尺寸比较大的预测框**。例如，20个像素点的偏差，对于800\*600的预测框几乎没有影响，此时的IOU数值还是很大，但是对于30\*40的预测框影响就很大。**取根号是为了尽可能的消除大尺寸框与小尺寸框之间的差异**。
 3. 第三行与第四行，都是**预测框的置信度**C。当该格点不含有物体时，该置信度的标签为0；若含有物体时，该置信度的标签为预测框与真实物体框的IOU数值（IOU计算公式为：两个框交集的面积除以并集的面积）。
 4. 第五行为**物体类别概率**P，对应的类别位置，该标签数值为1，其余位置为0，与分类网络相同。
 

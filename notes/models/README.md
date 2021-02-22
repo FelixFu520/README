@@ -30,7 +30,7 @@
 
 - 🍀[RNN 1](rnn1.md) [2](rnn.md) ｜ 🍀[LSTM](lstm.md) ｜ 🍀[GRU](gru.md)
 
-## 7⃣️ Yolo系列【todo】
+## 7⃣️ Yolo系列
 
 - 🍀[YOLO系列简介](yolos.md)
 - 🍀Yolo_v1  ：[blog](yolov1.md) | [code](https://github.com/FelixFu520/yolov1) | [代码解读](yolov1_code.md)
