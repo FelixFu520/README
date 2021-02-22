@@ -337,7 +337,7 @@ YOLOv3的损失函数主要分为三个部分：目标定位偏移量损失![\sm
 
 目标置信度可以理解为**预测目标矩形框内存在目标的概率**，目标置信度损失![\small L_{conf}(o,c)](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20L_%7Bconf%7D%28o%2Cc%29)采用的是二值交叉熵损失(Binary Cross Entropy)，其中![\small o_{i}\in \{0,1\}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20o_%7Bi%7D%5Cin%20%5C%7B0%2C1%5C%7D),表示预测目标边界框i中是否真实存在目标，0表示不存在，1表示存在。![\small \hat{c_{i}}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%5Chat%7Bc_%7Bi%7D%7D)表示预测目标矩形框i内是否存在目标的Sigmoid概率（将预测值![\small c_{i}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20c_%7Bi%7D)通过sigmoid函数得到）。
 
-![img](https://img-blog.csdnimg.cn/20190714105742653.png)
+![img](imgs/20190714105742653.png)
 
 #### 3.3.2 目标类别损失
 
@@ -347,7 +347,19 @@ YOLOv3的损失函数主要分为三个部分：目标定位偏移量损失![\sm
 
 #### 3.3.3目标定位损失
 
-目标定位损失![\small L_{loc}(l,g)](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20L_%7Bloc%7D%28l%2Cg%29)采用的是真实偏差值与预测偏差值差的平方和，其中![\small \hat{l}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%5Chat%7Bl%7D)表示预测矩形框坐标偏移量（注意网络预测的是偏移量，不是直接预测坐标），![\small \hat{g}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%5Chat%7Bg%7D)表示与之匹配的GTbox与默认框之间的坐标偏移量，![\small (b^{x},b^{y},b^{w},b^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28b%5E%7Bx%7D%2Cb%5E%7By%7D%2Cb%5E%7Bw%7D%2Cb%5E%7Bh%7D%29)为预测的目标矩形框参数,![\small (c^{x},c^{y},p^{w},p^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28c%5E%7Bx%7D%2Cc%5E%7By%7D%2Cp%5E%7Bw%7D%2Cp%5E%7Bh%7D%29)为默认矩形框参数,![\small (g^{x},g^{y},g^{w},g^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28g%5E%7Bx%7D%2Cg%5E%7By%7D%2Cg%5E%7Bw%7D%2Cg%5E%7Bh%7D%29)为与之匹配的真实目标矩形框参数，这些参数都是映射在预测特征图上的。
+目标定位损失![\small L_{loc}(l,g)](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20L_%7Bloc%7D%28l%2Cg%29)采用的是真实偏差值与预测偏差值差的平方和，
+
+其中![\small \hat{l}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%5Chat%7Bl%7D)表示预测矩形框坐标偏移量（注意网络预测的是偏移量，不是直接预测坐标），
+
+![\small \hat{g}](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%5Chat%7Bg%7D)表示与之匹配的GTbox与默认框之间的坐标偏移量，
+
+![\small (b^{x},b^{y},b^{w},b^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28b%5E%7Bx%7D%2Cb%5E%7By%7D%2Cb%5E%7Bw%7D%2Cb%5E%7Bh%7D%29)为预测的目标矩形框参数,
+
+![\small (c^{x},c^{y},p^{w},p^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28c%5E%7Bx%7D%2Cc%5E%7By%7D%2Cp%5E%7Bw%7D%2Cp%5E%7Bh%7D%29)为默认矩形框参数,
+
+![\small (g^{x},g^{y},g^{w},g^{h})](https://private.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Csmall%20%28g%5E%7Bx%7D%2Cg%5E%7By%7D%2Cg%5E%7Bw%7D%2Cg%5E%7Bh%7D%29)为与之匹配的真实目标矩形框参数，
+
+这些参数都是映射在预测特征图上的。
 
 ![img](imgs/111.png)
 
