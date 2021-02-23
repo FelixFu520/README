@@ -144,7 +144,7 @@
 
 最后整个的损失函数如下所示：
 
-![img](/Users/fusimeng/README/notes/models/imgs/v2-aad10d0978fe7bc62704a767eabd0b54_720w.png)
+![img](imgs/v2-aad10d0978fe7bc62704a767eabd0b54_720w.png)
 
 论文中Loss函数，密密麻麻的公式初看可能比较难懂。其实论文中给出了比较详细的解释。所有的损失都是使用平方和误差公式，暂时先不看公式中的 ![[公式]](https://www.zhihu.com/equation?tex=%5Clambda_%7Bcoord%7D+) 与 ![[公式]](https://www.zhihu.com/equation?tex=%5Clambda_%7Bnoobj%7D+) ，输出的预测数值以及所造成的损失有:
 
