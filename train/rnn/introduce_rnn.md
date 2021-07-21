@@ -2,7 +2,17 @@
 
 ⌚️: 2021-07-21
 
-📚: [参考视频-1](https://www.bilibili.com/video/BV1Zz4y127h1?from=search&seid=11406671236303556995);[参考视频-2]()
+📚参考
+
+- [什么是transformer？【知多少】](https://www.bilibili.com/video/BV1Zz4y127h1)
+
+- [什么是循环神经网络RNN？【知多少】](https://www.bilibili.com/video/BV1Zi4y1L7LL/?spm_id_from=333.788.recommend_more_video.-1)
+- [什么是长短时记忆网络LSTM？【知多少】](https://www.bilibili.com/video/BV1gy4y1q7M5/?spm_id_from=333.788.recommend_more_video.0)
+- [什么是 BERT？【知多少】](https://www.bilibili.com/video/BV11N41197nq/?spm_id_from=trigger_reload)
+- [什么是 GPT？【知多少】](https://www.bilibili.com/video/BV1Jv411a7RB/?spm_id_from=trigger_reload)
+- [什么是 Attention（注意力机制）？【知多少】](https://www.bilibili.com/video/BV1G64y1S7bc)
+
+
 
 ---
 
