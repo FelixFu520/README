@@ -35,7 +35,8 @@
   - 🐾 [Inception](train/cnn/inception.md)
   - 🐾 [ResNet](train/cnn/resnet.md)
   - 🐾 [DenseNet](train/cnn/densenet.md)
-  - 🐾 [MobileNet]
+  - 🐾 [MobileNet](train/cnn/mobilenet.md)
+  - 🐾 [SENet](train/cnn/senet.md)
 
 - #### 🎋RNN/NLP
 
