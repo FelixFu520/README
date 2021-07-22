@@ -28,8 +28,8 @@
   - 🐾 [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
   - 🐾 [DSC理解](train/cnn/dsc.md)
   - 🐾 [Inception](train/cnn/inception.md)
-  - 🐾 [ResNet]()
-  - 🐾 [DesNet]()
+  - 🐾 [ResNet](train/cnn/resnet.md)
+  - 🐾 [DenseNet](train/cnn/densenet.md)
   - 🐾 
 
 - #### 🎋RNN/NLP
