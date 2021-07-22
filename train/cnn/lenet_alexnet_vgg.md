@@ -10,7 +10,7 @@
 
 > 论文链接：[Gradient-based learning applied to document recognition](https://link.zhihu.com/?target=http%3A//202.116.81.74/cache/7/03/yann.lecun.com/b1a1c4acb57f1b447bfe36e103910875/lecun-01a.pdf), 发表时间：1998 年
 
-![img](imgs\v2-e5539ed222a20cdb9c7ebfca5c640a5d_720w.jpg)
+![img](imgs/v2-e5539ed222a20cdb9c7ebfca5c640a5d_720w.jpg)
 
 
 
