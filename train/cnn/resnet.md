@@ -133,3 +133,15 @@ layer1的3个block结构完全相同，所以图中以“×3 ”代替。
 layer3和layer4结构和layer2相同，无非就是通道数变多，输出尺寸变小，就不再赘述。
 
 ResNet50、101和152都是基于Bottleneck，结构非常相似，差别只在于每个layer的block数。
+
+## **3. 关于 Residual Network 中 Identity Mapping 的讨论**
+
+> 论文链接：[Identity Mappings in Deep Residual Networks](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1603.05027v3.pdf)，发表时间：2016.03
+
+![img](imgs/v2-092f1fafe1525578325e6c9c9de6b093_720w.jpg)
+
+Kaiming 在这篇论文中对 ResNet 中的 Identity Mapping 进行了详细的讨论（前向传导、后向传导的分析），并且设计并尝试了多种不同的 Shortcut Connection 设计（如上图所示），并在最后对激活函数做了讨论，从而提出了新的 Residual Block（为与原版结构区分，Kaiming 称其为 full pre-activateion Residual Block）。
+
+我个人是比较喜欢这篇论文的，不仅对照实验设置的很详细，也对各类实验现象进行了分析，尤其是最后关于激活函数的讨论（到现在为止，这应该都还是开放问题，大家并没有一个统一的观点）。总的来说，Kaiming 在这篇论文中做出了两处改动：移除了 Short Connection 中的 ReLU，并将 Residual Mapping 中的 BN 和 ReLU 提前至对应的神经网络层前。
+
+**PS:** 阅读 PyTorch 所提供的源码，可以发现 PyTorch 中的 [TORCHVISION.MODELS](https://link.zhihu.com/?target=https%3A//pytorch.org/docs/stable/torchvision/models.html) 所提供的 ResNet 模型，都是按照之前文章所述实现的，即 original Residual Block 版本。
