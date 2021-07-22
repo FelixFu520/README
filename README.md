@@ -20,18 +20,23 @@
 
 - 特征缩放
 
-
-
 ### 🍀网络模型
 
 - #### 🎋CNN
 
-  - 
+  - 🐾 [CNN介绍](train/cnn/introduce_cnn.md)
+  - 🐾 [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
+  - 🐾 [DSC理解](train/cnn/dsc.md)
+  - 🐾 [Inception](train/cnn/inception.md)
+  - 🐾 [ResNet]()
+  - 🐾 [DesNet]()
+  - 🐾 
 
-- #### 🎋RNN
+- #### 🎋RNN/NLP
 
-  - 🐾 [RNN学习路线](train/rnn/introduce_rnn.md)
-  - 🐾
+  - 🐾 [NLP学习路线](train/rnn/introduce_rnn.md)
+  - 🐾 [Attention]()
+  - 🐾 [Transformer]()
 
 - #### 🎋GAN
 
@@ -45,6 +50,11 @@
 
 ### 🍀优化器
 
+### 🍀评价指标
+
+- mAP
+- IOU
+
 ### 🍀网络可视化
 
 ### 🍀梯度消失与爆炸/欠拟合
@@ -54,14 +64,10 @@
 - BN
 - 残差结构
 
-- 评价指标
-  - mAP
-  - IOU
 
 ### 🍀Tips
 
 - 固定种子
-- 
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
