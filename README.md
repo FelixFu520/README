@@ -24,7 +24,7 @@
 
 - #### 🎋 NN
 
-  - 🐾 [NN发展史]()
+  - 🐾 [NN发展史]
   - 🐾 [45分钟理解深度神经网络和深度学习-拟合角度](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html) 
 
 - #### 🎋CNN

@@ -36,7 +36,7 @@
 
 ### 1.1DSC的详细结构
 
-![img](imgs\v2-c8e2ab6758468adc146bbd9bd1a620af_720w.jpg)
+![img](imgs/v2-c8e2ab6758468adc146bbd9bd1a620af_720w.jpg)
 
 图1.1 DSC详细结构示意图
 
@@ -46,7 +46,7 @@
 
 因为卷积操作的输出通道数等于卷积核的数量，而Depthwise Convolution中对每个通道只使用一个卷积核，所以单个通道在卷积操作之后的输出通道数也为1。那么如果输入feature map的通道数为N（如图1.1所示），对N个通道分别单独使用一个卷积核之后便得到N个通道为1的feature map。再将这N个feature map按顺序拼接便得到一个通道为N的输出feature map。可以将Depthwise Convolution与普通卷积做一下对比，如图1.2所示。
 
-![img](imgs\v2-0d8c4b890b6b4fe92700979979a9b0ab_720w.jpg)
+![img](imgs/v2-0d8c4b890b6b4fe92700979979a9b0ab_720w.jpg)
 
 图1.2 普通卷积与Depthwise Convolution对比示意图
 
@@ -90,13 +90,13 @@ Pointwise Convolution的计算总量为：
 
 > 不感兴趣的同学可以跳过这一部分
 
-![img](imgs\v2-8709a97054c74e808e57c877c3174780_720w.jpg)
+![img](imgs/v2-8709a97054c74e808e57c877c3174780_720w.jpg)
 
 图1.3 Inception的典型结构示意图
 
 
 
-![img](imgs\v2-b0804630feb66715d4707edf31538bcf_720w.jpg)图1.4 简化版Inception结构示意图
+![img](imgs/v2-b0804630feb66715d4707edf31538bcf_720w.jpg)图1.4 简化版Inception结构示意图
 
 
 
@@ -104,7 +104,7 @@ Inception是Google早期用于图像分类的网络结构，但它同时也指�
 
 Inception的典型结构如图1.3所示。直观理解Inception的方式是将它看作是普通卷积的替代品，它的主要目的是希望能够提取比普通卷积更加复杂、有效的特征。为了达到这样的目的，Inception采取的是使用多条分支提取不同的特征，然后再融合的策略。如果我们假设Inception各条分支采用的卷积相同（例如都只包含一个1×1卷积和一个3×3卷积），那么可以得到图1.4的结构，我们将其称为简化版的Inception。简化版的Inception提供了一种有趣的视角，如图1.5所示。
 
-![img](imgs\v2-3dce3d39d7c0cb15c45cfa178b121b5a_720w.jpg)
+![img](imgs/v2-3dce3d39d7c0cb15c45cfa178b121b5a_720w.jpg)
 
 图1.5 对简化版的Inception的另一种视角
 
@@ -112,7 +112,7 @@ Inception的典型结构如图1.3所示。直观理解Inception的方式是将�
 
 在图1.5的新视角下，我们人为地将这三个1×1卷积的输入映射为一个输出，且该输出的通道被分为三组，每一组对应于一个1×1卷积的输出。更进一步，我们可以将三个1×1卷积合并为一个1×1卷积，然后把1×1卷积后的输出通道进行分组，再分别送进三条分支，如图1.6所示。
 
-![img](imgs\v2-63a38b07b8c247dccd69fc08e9f6309c_720w.jpg)图1.6 将图1.5中三个1×1卷积合并为一个1×1卷积示意图
+![img](imgs/v2-63a38b07b8c247dccd69fc08e9f6309c_720w.jpg)图1.6 将图1.5中三个1×1卷积合并为一个1×1卷积示意图
 
 
 
@@ -144,7 +144,7 @@ Inception和DSC在研究动机上的关系是：
 
 [Chollet F. Xception: Deep learning with depthwise separable convolutions. Proceedings of the IEEE conference on computer vision and pattern recognition. 2017: 1251-1258.openaccess.thecvf.com](https://link.zhihu.com/?target=https%3A//openaccess.thecvf.com/content_cvpr_2017/papers/Chollet_Xception_Deep_Learning_CVPR_2017_paper.pdf)
 
-![img](imgs\v2-2013e2c157b98f79949fc9517d17fe5d_720w.jpg)
+![img](imgs/v2-2013e2c157b98f79949fc9517d17fe5d_720w.jpg)
 
 图2.1 Xception网络结构示意图
 
@@ -160,17 +160,17 @@ Xception的实验主要验证了以下三点：
 
 3）在Depthwise Convolution和Pointwise Convolution之间引入激活函数对网络没有任何帮助，如图2.3的结果所示。
 
-![img](imgs\v2-200720e90b9c3af287d16b39211d2661_720w.jpg)表2.1 Xception在ImageNet验证集上的实验结果
+![img](imgs/v2-200720e90b9c3af287d16b39211d2661_720w.jpg)表2.1 Xception在ImageNet验证集上的实验结果
 
 
 
-![img](imgs\v2-03c694d7ea557454dae87603f23df140_720w.jpg)
+![img](imgs/v2-03c694d7ea557454dae87603f23df140_720w.jpg)
 
 图2.2 跳跃连接对Xception精度影响
 
 
 
-![img](imgs\v2-db3905ad06ee1b828f42f3d969b18962_720w.jpg)
+![img](imgs/v2-db3905ad06ee1b828f42f3d969b18962_720w.jpg)
 
 图2.3 Depthwise Convolution和Pointwise Convolution之间增加（改变）激活函数对模型精度的影响
 
@@ -180,7 +180,7 @@ Xception的实验主要验证了以下三点：
 
 [Howard A G, Zhu M, Chen B, et al. Mobilenets: Efficient convolutional neural networks for mobile vision applications. arXiv preprint arXiv:1704.04861, 2017.arxiv.org](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1704.04861.pdf)
 
-![img](imgs\v2-c829695797146ee0030c0ce03f70320d_720w.jpg)
+![img](imgs/v2-c829695797146ee0030c0ce03f70320d_720w.jpg)
 
 表2.2 MobileNet网络结构示意图
 
@@ -194,7 +194,7 @@ MobileNet的实验结果实际上非常中规中矩。在几乎所有的MobileNe
 
 [Guo Y, Li Y, Wang L, et al. Depthwise convolution is all you need for learning multiple visual domains. Proceedings of the AAAI Conference on Artificial Intelligence. 2019, 33: 8368-8375.www.aaai.org](https://link.zhihu.com/?target=https%3A//www.aaai.org/ojs/index.php/AAAI/article/download/4851/4724)
 
-![img](imgs\v2-b4a807be7a00ef38bac84860d710b33f_720w.jpg)
+![img](imgs/v2-b4a807be7a00ef38bac84860d710b33f_720w.jpg)
 
 图2.4 ResNet with DSC
 
@@ -216,7 +216,7 @@ ResDSC被设计用来解决multi-domain learning的图像分类问题。简单�
 
 除了标准的DSC，作者们还抛出了另外一个问题：有没有可能让Depthwise Convolution与Pointwise Convolution的参数在不同domain的模型上都共享，而不仅仅是共享Pointwise Convolution的参数。为此，他们设计了一种称为soft sharing的结构，如图2.5所示。
 
-![img](imgs\v2-04e498df93d66917382a7e1b967669bc_720w.jpg)
+![img](imgs/v2-04e498df93d66917382a7e1b967669bc_720w.jpg)
 
 图2.5 soft sharing结构示意图
 
@@ -234,7 +234,7 @@ soft sharing将DSC中的Depthwise Convolution部分作了修改，所以它本�
 
 [Hoang V T, Jo K H. PydMobileNet: Pyramid Depthwise Separable Convolution Networks for Image Classification. 2019 IEEE 28th International Symposium on Industrial Electronics (ISIE). IEEE, 2019: 1430-1434.arxiv.org](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1811.07083.pdf)
 
-![img](imgs\v2-c7aeb13987356deb75f9191fe8985704_720w.jpg)图3.1 左图：基于“特征相加”的PydMobileBlock示意图；右图：基于“特征拼接”的PydMobileBlock示意图
+![img](imgs/v2-c7aeb13987356deb75f9191fe8985704_720w.jpg)图3.1 左图：基于“特征相加”的PydMobileBlock示意图；右图：基于“特征拼接”的PydMobileBlock示意图
 
 
 
@@ -252,7 +252,7 @@ PydMobileBlock的结构非常直观。首先使用1×1卷积对通道降维，�
 
 [Mehta S, Rastegari M, Caspi A, et al. Espnet: Efficient spatial pyramid of dilated convolutions for semantic segmentation. Proceedings of the european conference on computer vision (ECCV). 2018: 552-568.openaccess.thecvf.com](https://link.zhihu.com/?target=https%3A//openaccess.thecvf.com/content_ECCV_2018/papers/Sachin_Mehta_ESPNet_Efficient_Spatial_ECCV_2018_paper.pdf)
 
-![img](imgs\v2-834c7be3d839e890da1d9ed4f6b5ce09_720w.jpg)
+![img](imgs/v2-834c7be3d839e890da1d9ed4f6b5ce09_720w.jpg)
 
 图3.2 ESP结构示意图
 
@@ -266,7 +266,7 @@ ESP是一种轻量级语义分割网络的building block，它的设计核心目
 
 ESP的实验比较平淡，有点像yolo单纯地追求快，而放弃了精度。
 
-![img](imgs\v2-017399a234f69bbae392fecd1dedf915_720w.jpg)
+![img](imgs/v2-017399a234f69bbae392fecd1dedf915_720w.jpg)
 
 图3.3 gridding artifact（中图）示意图
 
@@ -276,7 +276,7 @@ ESP的实验比较平淡，有点像yolo单纯地追求快，而放弃了精度�
 
 [Haase D, Amthor M. Rethinking Depthwise Separable Convolutions: How Intra-Kernel Correlations Lead to Improved MobileNets. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 2020: 14600-14609.openaccess.thecvf.com](https://link.zhihu.com/?target=https%3A//openaccess.thecvf.com/content_CVPR_2020/papers/Haase_Rethinking_Depthwise_Separable_Convolutions_How_Intra-Kernel_Correlations_Lead_to_Improved_CVPR_2020_paper.pdf)
 
-![img](imgs\v2-4bf5b05baa154857ada1f5c7336bba04_720w.jpg)
+![img](imgs/v2-4bf5b05baa154857ada1f5c7336bba04_720w.jpg)
 
 图3.4卷积核可视化示意图
 
@@ -292,25 +292,25 @@ Blueprint Separable Convolution（BSC）的设计出发点是基于卷积核在�
 
 BSC与普通卷积的对比可以由图3.5更加直观地看出。
 
-![img](imgs\v2-0049d8e646f36a81047a9c8bdeb392c8_720w.jpg)
+![img](imgs/v2-0049d8e646f36a81047a9c8bdeb392c8_720w.jpg)
 
 图3.5 普通卷积与BSC对比示意图
 
 结合图3.5，我们可以看到单个普通卷积核的参数量为 ![[公式]](https://www.zhihu.com/equation?tex=M+%5Ctimes+K+%5Ctimes+K+) ，而单个BSC的参数量则仅为 ![[公式]](https://www.zhihu.com/equation?tex=K+%5Ctimes+K+%2B+M) 。接下来我们推导一个有趣的结论。我们首先将公式（7）进一步展开如下：
 
-![img](imgs\v2-025947bdab03c4fe1504e95987a3bf7b_720w.png)
+![img](imgs/v2-025947bdab03c4fe1504e95987a3bf7b_720w.png)
 
 公式（9）实际上是将卷积核的每个通道的计算进行了展开，可以这样理解：输出V的第n个通道由一个求和项计算得到，这个求和项中的每一项为输入的某个通道（m）与卷积核对应通道的计算结果。简而言之，就是在公式（7）的基础上把卷积计算进一步略微说详细了一点。在公式（9）的展开结果中，我们可以将公式（7）代入公式（9），得到：
 
-![img](imgs\v2-cc3def89be391c202ccc5b6a6ab20e85_720w.png)
+![img](imgs/v2-cc3def89be391c202ccc5b6a6ab20e85_720w.png)
 
 注意到 ![[公式]](https://www.zhihu.com/equation?tex=B%5E%7B%28n%29%7D) 与M无关，且 ![[公式]](https://www.zhihu.com/equation?tex=w_%7Bn%2Cm%7D) 是一个标量，因此公式（10）可进一步改写为：
 
-![img](imgs\v2-4e82f1ef60a895988feb220a9319925e_720w.jpg)
+![img](imgs/v2-4e82f1ef60a895988feb220a9319925e_720w.jpg)
 
 抛开 ![[公式]](https://www.zhihu.com/equation?tex=B%5E%7B%28n%29%7D) 部分，仔细观察公式（11）中括号内的部分，我们可以将其描述为：输出 ![[公式]](https://www.zhihu.com/equation?tex=V_%7Bn%2C%3A%2C%3A%7D%27) 的第n个通道是由输入U的所有通道加权求和得到，这个权重由 ![[公式]](https://www.zhihu.com/equation?tex=w_%7Bn%2C1%7D%2Cw_%7Bn%2C2%7D%2C...%2Cw_%7Bn%2CM%7D) 构成。而这恰好等价于对输入U使用一个1×1卷积，该卷积的输入通道数是M，输出通道数是N。对于 ![[公式]](https://www.zhihu.com/equation?tex=B%5E%7B%28n%29%7D) ，它的尺寸实际是 ![[公式]](https://www.zhihu.com/equation?tex=%281%2C1%2CK%2CK%29) ，因此它等价于一个Depthwise卷积。由此，我们看到一个BSC实际上是由一个Pointwise卷积和一个Depthwise卷积构成，它的Pointwise卷积和Depthwise卷积的顺序正好与DSC相反，如图3.6所示。
 
-![img](imgs\v2-d376d02abc30aa464a8279d68f9281d8_720w.jpg)
+![img](imgs/v2-d376d02abc30aa464a8279d68f9281d8_720w.jpg)
 
 图3.6 DSC与BSC结构示意图
 
@@ -322,11 +322,11 @@ BSC与普通卷积的对比可以由图3.5更加直观地看出。
 
 其中矩阵 ![[公式]](https://www.zhihu.com/equation?tex=W%5EA) 的大小为 ![[公式]](https://www.zhihu.com/equation?tex=N+%5Ctimes+M%27) ，矩阵 ![[公式]](https://www.zhihu.com/equation?tex=W%5EB) 的大小为 ![[公式]](https://www.zhihu.com/equation?tex=M%27+%5Ctimes+M) , ![[公式]](https://www.zhihu.com/equation?tex=M%27+%3C+M) 。如果以线性变换的角度来理解公式（12），那么 ![[公式]](https://www.zhihu.com/equation?tex=W) 定义了一个复合变换，由 ![[公式]](https://www.zhihu.com/equation?tex=W%5EA) 和 ![[公式]](https://www.zhihu.com/equation?tex=W%5EB) 构成，且 ![[公式]](https://www.zhihu.com/equation?tex=W%5EB) 可以看作为一个基。对于基而言，我们通常希望它的坐标轴是正交的，因此可以引入一个正则项：
 
-![img](imgs\v2-3741535ce448236f2bec323182728ae5_720w.png)
+![img](imgs/v2-3741535ce448236f2bec323182728ae5_720w.png)
 
 最后采用类似于推导BSC实现方式的方法，可以得到改进后的BSC，为了区分，将原始的BSC称为BSC-U，改进后的称为BSC-S，U表示Unconstrained，S表示Subspace。Unconstrained可以理解为对BSC中的参数没有任何限制，而Subspace可以理解为将BSC中的 ![[公式]](https://www.zhihu.com/equation?tex=W) 映射至了一个新的空间，并对这个空间进行了一定的限制（坐标轴正交）。示意如图3.7所示。
 
-![img](imgs\v2-027f5fe2b459f79bcaa671c13516f673_720w.jpg)
+![img](imgs/v2-027f5fe2b459f79bcaa671c13516f673_720w.jpg)
 
 图3.7 BSC-U与BSC-S结构示意图
 

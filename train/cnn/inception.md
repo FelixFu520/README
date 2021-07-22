@@ -14,7 +14,7 @@
 
 与 VGG 不同，Inception 结构虽然也倾向于加“深”网络结构，从而提高模型的表达能力，但是作者充分考虑到现实中计算资源的限制，所以对模型中局部结构进行了精心设计，并且抛弃全连接层（虽然 GoogLeNet 最后加了一层全连接层，但这是作者为了其他人能更方便的利用模型进行微调（Finetune））。
 
-![img](imgs\v2-7694e6d9a0d20d6c0da53bc81d6a2e34_720w.jpg)
+![img](imgs/v2-7694e6d9a0d20d6c0da53bc81d6a2e34_720w.jpg)
 
 作者在文中指出，提高模型表达能力的最直接的办法就是增加模型的“大小”，而这又会导致两个问题的产生：
 
@@ -23,7 +23,7 @@
 
 而作者认为解决这两个问题的基本方法是**将全连接层，甚至是卷积层改为稀疏的网络结构**。（作者还在文中指出，GoogLeNet 的参数仅有 AlexNet 的 1/12，而 AlexNet 的全连接层的参数量甚至占到了自身参数量的 90% 以上）
 
-![img](imgs\v2-efdcd0a43a6ae33a27d8c3238df0f8c7_720w.jpg)
+![img](imgs/v2-efdcd0a43a6ae33a27d8c3238df0f8c7_720w.jpg)
 
 受到 [Network In Network](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1312.4400.pdf) 以及 HeHebbian Principle 的启发，**作者通过增加网络的宽度，从而提高网络的表达能力，并尝试找到卷积神经网络中的最优局部稀疏结构，即 Inception Module（如上图所示）**。
 
@@ -31,7 +31,7 @@
 
 之所以 Inception Module 由上图左侧发展被改进为上图右侧，是因为：作者希望希望模型中深层的 Inception Module 可以捕捉到 Higher Abstraction，所以作者认为深层的 Inception Module中的卷积层的空间集中度应该逐渐降低，以此捕捉更大面积的特征。故，作者令越深层的 Inception Module 中，卷积核大小为 3 × 3 和 5 × 5 这两个卷积层的输出通道数占比越多。但这又将导致计算量增加，所以为了解决这个问题，作者在原有 Inception Module 的基础上，利用卷积核大小为 1 × 1 的卷积层进行降维操作，从而减小计算量（这建立在一个假设之上：即使是低维的映射也可能包含关于相关图像区域的大量信息）。
 
-![img](imgs\v2-668d760126735d2e61542e78864ea1b0_720w.jpg)
+![img](imgs/v2-668d760126735d2e61542e78864ea1b0_720w.jpg)
 
 由于 Inception Module 保持了输入输出的尺寸一致，故 GoogLeNet 可以由 Inception Module 进行模块化搭建。仔细观察 GoogLeNet 的结构，你会发现作者在 Inception Module (4a) 和 (4d) 设置了额外的辅助 Loss，用以增加向后传导的梯度，缓解梯度消失问题，同时增加额外的正则化操作。在文章中，作者指出这样操作的目的主要是使得模型中低层的特征也具备很好的区分能力。（文章中，这两个额外的 Loss 会乘上衰减系数 0.3，与最后的 Loss 相加，作为整个模型的 Loss）
 
@@ -39,13 +39,13 @@
 
 > 论文链接：[Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1502.03167.pdf), 发表时间：2015.02
 
-2015 年，谷歌提出了 Batch Normalization 操作，将其添加在之前的 GoogLeNet，并修改了一定的结构与实验设置，得到了 Inception Net V2，在 ImageNet 上达到分类任务超过 GoogLeNet。（关于 BN 的详细笔记，可以参考这篇博文：[[笔记\] 神经网络中 Normalization 的发展历程](https://link.zhihu.com/?target=https%3A//blog.csdn.net/Code_Mart/article/details/92715180)）
+2015 年，谷歌提出了 Batch Normalization 操作，将其添加在之前的 GoogLeNet，并修改了一定的结构与实验设置，得到了 Inception Net V2，在 ImageNet 上达到分类任务超过 GoogLeNet。（关于 BN 的详细笔记，可以参考这篇博文：[[笔记/] 神经网络中 Normalization 的发展历程](https://link.zhihu.com/?target=https%3A//blog.csdn.net/Code_Mart/article/details/92715180)）
 
-![img](imgs\v2-0d338ef9828cdb5f5663612579383873_720w.jpg)
+![img](imgs/v2-0d338ef9828cdb5f5663612579383873_720w.jpg)
 
 
 
-![img](imgs\v2-88a558d30837860a5fb4210473533091_720w.jpg)
+![img](imgs/v2-88a558d30837860a5fb4210473533091_720w.jpg)
 
 **网络结构：**
 
@@ -59,7 +59,7 @@
 
 - 作者在文中指出，他们并不是直接简单的将 BN 添加到网络中的，还做了如下的改动：增大学习率，移除 Dropout，减小 L2 正则化项，加速学习率衰减，移除 LRN，更彻底的打乱训练数据，减少光学畸变（ Photometric Distortion，关于这个概念，可以参考这篇文章：[SSD中的数据增强细节](https://link.zhihu.com/?target=https%3A//nicehuster.github.io/2019/05/11/ssd-dataaug/)）。下图为作者关于学习率的对比实验：
 
-![img](imgs\v2-218e2b57587b0988fea27eed4100eaa9_720w.jpg)
+![img](imgs/v2-218e2b57587b0988fea27eed4100eaa9_720w.jpg)
 
 ![img](F:/GitHub/README-1/notes/models/imgs/v2-016ecefaf217771b75b2f74eb959b518_720w.jpg)
 
@@ -69,7 +69,7 @@
 
 时隔将近一年，谷歌又发了篇论文对之前提出的 Inception Module 进行了思考。在这篇论文中，作者首先四条设计神经网络的原则，接着提出如何分解大卷积核的卷积层，接着反思辅助分类器（Auxiliary Classifier）的作用，接着按照自己所提的第一条原则对常见的 Size Reduction 做了改进，最后将以上改进添加进之前的网络结构中。
 
-![img](imgs\v2-7694e6d9a0d20d6c0da53bc81d6a2e34_as720w.jpg)
+![img](imgs/v2-7694e6d9a0d20d6c0da53bc81d6a2e34_as720w.jpg)
 
 **关于四条设计神经网络的原则：**（没能完全理解，直接放原文吧）
 
@@ -86,9 +86,9 @@
 
 
 
-![img](imgs\v2-3109834abbe28b9978c887950d096e7f_720w.jpg)
+![img](imgs/v2-3109834abbe28b9978c887950d096e7f_720w.jpg)
 
-![img](imgs\v2-efa22aa4fbe717387cf9f32395228d3c_720w.jpg)
+![img](imgs/v2-efa22aa4fbe717387cf9f32395228d3c_720w.jpg)
 
 **关于辅助分类器的作用：**
 
@@ -104,28 +104,27 @@ GoogLeNet 曾在 Inception Module (4a) 和 (4d) 设置了额外的辅助 Loss，
 
 
 
-![img](imgs\v2-0dbde0fed06f948df5ec85c74917b336_720w.jpg)
+![img](imgs/v2-0dbde0fed06f948df5ec85c74917b336_720w.jpg)
 
 ## **Inception Net V4**
 
 > 论文链接：[Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1602.07261.pdf), 发表时间：2016.02
 
-![img](imgs\v2-6d8ec104636817b5ea155714d92ea3f6_720w.jpg)
+![img](imgs/v2-6d8ec104636817b5ea155714d92ea3f6_720w.jpg)
 
 在 Inception-v4 中，作者将 Inception 和 ResNet 结合在一起，推出了 Inception-ResNet-v1，Inception-ResNet-v2，Inception-v4。其中，Inception-v4 的总体结构如上图所示，各个模块细节如下图所示。
 
-![img](imgs\v2-b9ad008a91ecfebf2e1c7b6296f74af7_720w.jpg)
+![img](imgs/v2-b9ad008a91ecfebf2e1c7b6296f74af7_720w.jpg)
 
 可以看得出来，Inception-v4 的结构设计非常复杂，需要大量的实验验证以及工程经验，一般只有大厂才有能力做这样的工作，这也是为什么最近 NAS 这么火的原因吧。
 
 ## **Xception**
 
 > 论文链接：[Xception: Deep Learning with Depthwise Separable Convolutions ](https://link.zhihu.com/?target=https%3A//arxiv.org/pdf/1610.02357.pdf), 发表时间：2016.10
->
 
 在这篇论文中，Google 利用 Depthwise Separable Convolution 对 Inception V3 进行了改进，并结合 Residual Connection 设计了新的网络：Xception（含有 Extreme Inception 的意味）。
 
-![image-20210331163506463](imgs\image-20210331163506463.png)
+![image-20210331163506463](imgs/image-20210331163506463.png)
 
 ## 总结
 
@@ -165,7 +164,7 @@ Inception 最初提出的版本，其核心思想就是**使用多尺寸卷积�
 
 举个例子，我们看某个景象由于远近不同，同一个物体的大小也会有所不同，那么不同尺度的卷积核观察的特征就会有这样的效果。于是就有了如下的网络结构图：
 
-![640?wx_fmt=png](imgs\12s.png)
+![640?wx_fmt=png](imgs/12s.png)
 
 于是我们的网络就变胖了，增加了网络的宽度，同时也提高了对于不同尺度的适应程度。
 
@@ -173,7 +172,7 @@ Inception 最初提出的版本，其核心思想就是**使用多尺寸卷积�
 
 但是我们的网络变胖了的同时，计算量也变大了，所以我们就要想办法减少参数量来减少计算量，于是在 Inception v1 中的最终版本加上了 1x1 卷积核。
 
-![640?wx_fmt=png](imgs\11a.png)
+![640?wx_fmt=png](imgs/11a.png)
 
 **使用 1x1 卷积核对输入的特征图进行降维处理，这样就会极大地减少参数量，从而减少计算。**
 
@@ -192,13 +191,13 @@ Inception 最初提出的版本，其核心思想就是**使用多尺寸卷积�
 
 人类的智慧是无穷的，于是就想出了 使用多个小卷积核替代大卷积核 的方法，这就是 Inception v3，如图所示：
 
-![640?wx_fmt=png](imgs\12a.png)
+![640?wx_fmt=png](imgs/12a.png)
 
 使用两个 3x3 卷积核来代替 5x5 卷积，效果上差不多，但参数量减少很多，达到了优化的目的。不仅参数量少，层数也多了，深度也变深了。
 
 除了规整的的正方形，我们还有分解版本的 3x3 = 3x1 + 1x3，这个效果在深度较深的情况下比规整的卷积核更好。
 
-![640?wx_fmt=png](imgs\13a.png)
+![640?wx_fmt=png](imgs/13a.png)
 
 我们假设输入 256 维，输出 512 维，计算一下参数量：
 
@@ -223,7 +222,7 @@ Inception 最初提出的版本，其核心思想就是**使用多尺寸卷积�
 
 Bottleneck 三步走是先 PW 对数据进行降维，再进行常规卷积核的卷积，最后 PW 对数据进行升维。我们举个例子，方便我们了解：
 
-![640?wx_fmt=jpeg](imgs\14a.png)
+![640?wx_fmt=jpeg](imgs/14a.png)
 
 根据上图，我们来做个对比计算，假设输入 feature map 的维度为 256 维，要求输出维度也是 256 维。有以下两种操作：
 
@@ -240,7 +239,7 @@ Bottleneck 三步走是先 PW 对数据进行降维，再进行常规卷积核�
 
 这个卷积的的大致意思是对每一个深度图分别进行卷积再融合，步骤是先 Depthwise Conv 再 Pointwise Conv，大大减少了参数量。下图是 Xception 模块的结构：
 
-![640?wx_fmt=png](imgs\15a.png)
+![640?wx_fmt=png](imgs/15a.png)
 
 大致的步骤是这样的：
 

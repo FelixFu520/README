@@ -39,9 +39,9 @@
 
 
 
-![img](imgs\v2-81a3c33b787e44f91d61c3c912c3f81e_720w.jpg)
+![img](imgs/v2-81a3c33b787e44f91d61c3c912c3f81e_720w.jpg)
 
-![image-20210331150534887](imgs\image-20210331150534887.png)
+![image-20210331150534887](imgs/image-20210331150534887.png)
 
 2012 年，Krizhevsky 与 Hinton 推出了 AlexNet，并在当年的 ILSVRC（ImageNet Large-Scale Visual Recognition Challenge）中以超过第二名10.9个百分点的绝对优势一举夺冠，引起了许多学者对深度学习的研究，可以算是深度学习的热潮的起始标志吧。
 
@@ -55,7 +55,7 @@
 
 - 采用双 GPU 网络结构，从而可以设计出更“大”、更“深”的网络（相较于当时的算力来说）
 - 采用 ReLU 代替 Tanh，稍微解决梯度消失问题（Gradient Vanishing Problem），加快网络收敛速度。（关于常见激活函数的比较，可以看这篇：[常用激活函数的比较 - 徐小贱民的文章 - 知乎](https://zhuanlan.zhihu.com/p/32610035)）
-- 提出局部相应归一化（LRN, Local Response Normalization），据作者所言，该操作能减少指标 Top-1/Top-5 Error Rate 1.4%/1.2%。（我个人不喜欢 LRN，因为我觉得它的超参数太多了，不具备很好的泛化能力。关于 Normalization 的发展历程可以看这篇：[[笔记\] 神经网络中 Normalization 的发展历程](https://link.zhihu.com/?target=https%3A//blog.csdn.net/Code_Mart/article/details/92715180)）
+- 提出局部相应归一化（LRN, Local Response Normalization），据作者所言，该操作能减少指标 Top-1/Top-5 Error Rate 1.4%/1.2%。（我个人不喜欢 LRN，因为我觉得它的超参数太多了，不具备很好的泛化能力。关于 Normalization 的发展历程可以看这篇：[[笔记/] 神经网络中 Normalization 的发展历程](https://link.zhihu.com/?target=https%3A//blog.csdn.net/Code_Mart/article/details/92715180)）
 - 令 Pooling 操作中的 stride 小于池化核的大小，从而使相邻的池化区域存在重叠部分，这一操作称为 Overlapping Pooling。据作者所言，这一操作能减少指标 Top-1/Top-5 Error Rate 0.4%/0.3%，并且减少过拟合现象。
 - 对训练数据进行随机裁剪（Random Crop），将训练图像由 256 × 256 裁剪为 224 × 224，并做随机的镜像翻转（Horizontal Reflection）。并在测试时，从图像的四个角以及中心进行裁剪，并进行镜像翻转，这样可以得到 10 个 Patch，将这些 Patch 的结果进行平均，从而得到最终预测结果。（之前在一个人脸识别比赛中，我师兄用这样的操作直接提高了４~5个点，算是一种简单的集成操作吧）
 - 对训练图像做 PCA（主成分分析），利用服从 (0,0.1) 的高斯分布的随机变量对主成分进行扰动。作者指出，这一操作能减少指标 Top-1 Error Rate 1%。
