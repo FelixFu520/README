@@ -22,6 +22,11 @@
 
 ### 🍀网络模型
 
+- #### 🎋 NN
+
+  - 🐾 [NN发展史]()
+  - 🐾 [45分钟理解深度神经网络和深度学习-拟合角度](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html) 
+
 - #### 🎋CNN
 
   - 🐾 [CNN介绍](train/cnn/introduce_cnn.md)
@@ -30,13 +35,13 @@
   - 🐾 [Inception](train/cnn/inception.md)
   - 🐾 [ResNet](train/cnn/resnet.md)
   - 🐾 [DenseNet](train/cnn/densenet.md)
-  - 🐾 
+  - 🐾 [MobileNet]
 
 - #### 🎋RNN/NLP
 
   - 🐾 [NLP学习路线](train/rnn/introduce_rnn.md)
-  - 🐾 [Attention]()
-  - 🐾 [Transformer]()
+  - 🐾 [Attention]
+  - 🐾 [Transformer]
 
 - #### 🎋GAN
 
