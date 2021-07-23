@@ -101,12 +101,11 @@
 
 ### 🍀过拟合[🐾](train/overfitting/introduce_overfitting.md)
 
-- 
-- [正则化1](regularization.md) [2](../models/dl/notes/network-bn.md) [3](../models/dl/notes/network-dnnnorm.md)
+- [正则化](train/overfitting/regularization.md)
 - early stop
 - 数据增强
 - dropout
-- ……
+- ...
 
 ## 4⃣️ 微调/迁移学习
 
