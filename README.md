@@ -32,6 +32,10 @@
   
 - #### 🎋Python读取图片
 
+  - 🐾 [计算图片均值](train/preprocess/mean_cal.md)
+  - 🐾[opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
+  - 🐾[直方图处理](train/preprocess/histogram.md)
+
 ### 🍀网络模型
 
 - #### 🎋 NN
