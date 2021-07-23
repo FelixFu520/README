@@ -99,8 +99,9 @@
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
-### 🍀过拟合
+### 🍀过拟合[🐾](train/overfitting/introduce_overfitting.md)
 
+- 
 - [正则化1](regularization.md) [2](../models/dl/notes/network-bn.md) [3](../models/dl/notes/network-dnnnorm.md)
 - early stop
 - 数据增强
