@@ -42,7 +42,7 @@ torch.FatalError: cuda runtime error (2) : out of memory at /opt/conda/conda-bld
 
 然后我们说一下我们平常使用的向量所占的空间大小，以Pytorch官方的数据格式为例（所有的深度学习框架数据格式都遵循同一个标准）：
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\4.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/4.png)
 
 我们只需要看左边的信息，在平常的训练中，我们经常使用的一般是这两种类型：
 
@@ -73,7 +73,7 @@ ps：消费级显卡对单精度计算有优化，服务器级别显卡对双精
 
   
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\5.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/5.png)
 
 图片来自cs231n，这是一个典型的sequential-net，自上而下很顺畅，我们可以看到我们输入的是一张224x224x3的三通道图像，可以看到一张图像只占用`150x4k`，但上面标注的是`150k`，这是因为上图中在计算的时候默认的数据格式是8-bit而不是32-bit，所以最后的结果要乘上一个4。
 
@@ -81,7 +81,7 @@ ps：消费级显卡对单精度计算有优化，服务器级别显卡对双精
 
 
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\6.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/6.png)
 
 图片从3通道变为64 –> 128 –> 256 –> 512 …. 这些都是卷积层，而我们的显存也主要是他们占用了。
 
@@ -93,11 +93,11 @@ ps：消费级显卡对单精度计算有优化，服务器级别显卡对双精
 
 
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\7.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/7.png)
 
 我们在backward的时候需要保存下来的中间值。输出是`L`，然后输入`x`，我们在backward的时候要求`L`对`x`的梯度，这个时候就需要在计算链`L`和`x`中间的`z`：
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\8.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/8.png)
 
 `dz/dx`这个中间值当然要保留下来以用于计算，所以粗略估计，`backward`的时候中间变量的占用了是`forward`的两倍！
 
@@ -107,7 +107,7 @@ ps：消费级显卡对单精度计算有优化，服务器级别显卡对双精
 
 为什么,看这个式子:
 
-![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs\9.png)
+![《浅谈深度学习:如何计算模型以及中间变量的显存占用大小》](imgs/9.png)
 
 
 
@@ -301,7 +301,7 @@ def modelsize(model, input, type_size=4):
 
 
 
-![《如何在Pytorch中精细化利用显存》](imgs\relu.png)
+![《如何在Pytorch中精细化利用显存》](imgs/relu.png)
 
 ### 2.3 牺牲计算速度减少显存使用量
 
@@ -499,7 +499,7 @@ def get_tensors():
 
 一种可能的情况是这些引用不在Python代码中，而是在神经网络层的运行中为了backward被保存为gradient，这些引用都在计算图中，我们在程序中是无法看到的：
 
-![《如何在Pytorch中精细化利用显存》](imgs\10.png)
+![《如何在Pytorch中精细化利用显存》](imgs/10.png)
 
 
 
@@ -841,7 +841,7 @@ $ pip install -v --no-cache-dir --global-option="--pyprof" --global-option="--cp
 
 
 
-![img](imgs\16.png)
+![img](imgs/16.png)
 
 **问题**: 如图, 大部分的显存都被 `feature_map` 占用用来 `back prop`, 说明 input 的大小和模型的大小基本上就能决定显存的占用. 但是 `forward` 计算过程中能不能偷工减料?
 
@@ -931,7 +931,7 @@ prediction = net(image)
 
 训练 CNN 时，Memory 主要的开销来自于储存用于计算 backward 的 activation，一般的 workflow 是这样的 
 
-![img](imgs\12.gif)
+![img](imgs/12.gif)
 
 Vanilla backprop
 
@@ -939,7 +939,7 @@ Vanilla backprop
 
 对于一个长度为 N 的 CNN，需要 O(N) 的内存。这篇论文给出了一个思路，每隔 sqrt(N) 个 node 存一个 activation，中需要的时候再算，这样显存就从 O(N) 降到了 O(sqrt(N))。
 
-![](imgs\13.gif)
+![](imgs/13.gif)
 
 Checkpointed backprop
 
@@ -947,7 +947,7 @@ Checkpointed backprop
 
 对于越深的模型，这个方法省的显存就越多，且速度不会明显变慢。
 
-![img](imgs\14.png)
+![img](imgs/14.png)
 
 
 
@@ -982,7 +982,7 @@ model.apply(inplace_relu)
 
 
 
-![img](imgs\s.png)
+![img](imgs/s.png)
 
 ### 5.4 混合精度
 
