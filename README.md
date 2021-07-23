@@ -10,6 +10,8 @@
 
 
 
+
+
 # 🍭训练篇&部署篇
 
 ## 1⃣️ 检查数据
@@ -79,6 +81,17 @@
 - IOU
 
 ### 🍀网络可视化
+
+- #### 🎋权重、梯度、特征图可视化
+
+  - 🐾[网络中间层显示工具CAM](https://github.com/frgfm/torch-cam)  🐾[blog](https://cloud.tencent.com/developer/article/1674200)
+  - 🐾[模型权重理解DeepDream](https://github.com/TD-4/Pytorch-Deep-Dream)
+  - 🐾[网络结构显示工具权重/梯度/特征图/混淆矩阵tensorboard](https://github.com/TD-4/PyTorch_Tutorial)
+
+- #### 🎋网络结构
+
+  - 🐾[网络结构显示工具torchsuammary](https://github.com/sksq96/pytorch-summary)  🐾[debug](train/visual/torchsummary.md)
+  - 🐾[网络结构显示工具Netron](https://github.com/lutzroeder/netron)
 
 ### 🍀梯度消失与爆炸/欠拟合[🐾](train/fit/grad.md)
 
