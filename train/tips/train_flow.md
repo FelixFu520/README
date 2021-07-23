@@ -6,9 +6,9 @@
 
 ---
 
-<img src="imgs\image-20210111112319410.png" alt="image-20210111112319410" style="zoom: 50%;" />
+<img src="imgs/image-20210111112319410.png" alt="image-20210111112319410" style="zoom: 50%;" />
 
-<img src="imgs\image-20210111132656762.png" alt="image-20210111132656762" style="zoom:50%;" />
+<img src="imgs/image-20210111132656762.png" alt="image-20210111132656762" style="zoom:50%;" />
 
 ## **1. 好好检查数据**
 
@@ -79,5 +79,5 @@
 2. 简单CNN模型的损失会比较大，尝试增加模型复杂度，并观察验证集精度。
 3. 在增加模型复杂度的同时增加数据扩增方法，直至验证集精度不变。
 
-![img](imgs\5.png)
+![img](imgs/5.png)
 
