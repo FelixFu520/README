@@ -18,12 +18,19 @@
 
 ### 🍀数据预处理
 
-- #### 🐾[特征缩放](train/preprocess/featurescale.md)
+- #### 🎋数据集介绍
+  - 🐾[VOC](train/preprocess/voc.md)
+  - 🐾[COCO](train/preprocess/coco.md)
+  - 🐾[Cityscapaces](https://github.com/mcordts/cityscapesScripts)
 
-- #### Pytorch数据读取
+- #### 🎋特征缩放[🐾](train/preprocess/featurescale.md)
+
+- #### 🎋Pytorch数据读取
 
   - 🐾[加速训练 —提高 GPU 利用率](train/preprocess/loaddata.md)
   - 🐾[加速训练—节约显存](train/preprocess/save_mem.md)
+  
+- #### 🎋Python读取图片
 
 ### 🍀网络模型
 
