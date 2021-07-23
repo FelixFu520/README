@@ -77,7 +77,8 @@
 ### 🍀Tips
 
 - 🐾 [深度学习训练流程](tips/train_flow.md)
-- [固定种子](train/tips/random_seed.md)
+- 🐾 [提高性能的4个角度](train/tips/improve_performence.md)
+- 🐾 [固定种子](train/tips/random_seed.md)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
