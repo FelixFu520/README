@@ -22,6 +22,7 @@
 - #### 🎋Pytorch函数学习
 
   - [clone、detached、copy](envs/pytorch/clone_detache.md)
+  - [expand & repeat](envs/pytorch/expand_repeat.md)
 
 ### 🍀工具
 
