@@ -112,18 +112,19 @@
 2. 🐾[权重初始化](train/fit/init.md)
 3. 梯度剪切、权重正则（针对梯度爆炸）
 4. 🐾使用不同的[激活函数](train/fit/activation.md)
-5. 使用batchnorm
+5. 🐾使用[batchnorm](train/fit/batchnorm.md)
 6. 使用残差结构
 7. 使用LSTM网络
 
 
 ### 🍀Tips
 
-- 🐾 [深度学习训练流程](tips/train_flow.md)
+- 🐾 [深度学习训练流程](train/tips/train_flow.md)
 - 🐾 [提高性能的4个角度](train/tips/improve_performence.md)
 - 🐾 [固定种子](train/tips/random_seed.md)
 - 🐾[混合精度训练](train/tips/apex.md), 🐾[apex](https://github.com/NVIDIA/apex) 🐾[apex+tensorcore+ngc](https://developer.nvidia.com/automatic-mixed-precision)
 - 🐾[TensorCore](train/tips/tensorcore.md)
+- 🐾[DeepLearningExamples NVIDIA-各种加速和demo](https://github.com/NVIDIA/DeepLearningExamples)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
