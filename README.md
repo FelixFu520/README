@@ -21,9 +21,9 @@
 ### 🍀工具
 
 - 图像预处理
-  - [图像标注工具labelme](https://github.com/wkentaro/labelme)
-  - [图像去重工具imagededup](https://github.com/idealo/imagededup)
-  - [图像增强工具imgaug](https://github.com/aleju/imgaug)
+  - 🐾[图像标注工具labelme](https://github.com/wkentaro/labelme)
+  - 🐾[图像去重工具imagededup](https://github.com/idealo/imagededup)
+  - 🐾[图像增强工具imgaug](https://github.com/aleju/imgaug)
 
 # 🍭训练篇&部署篇
 
@@ -109,9 +109,9 @@
 ### 🍀梯度消失与爆炸/欠拟合[🐾](train/fit/grad.md)
 
 1. 预训练加微调
-2. [权重初始化](train/fit/init.md)
+2. 🐾[权重初始化](train/fit/init.md)
 3. 梯度剪切、权重正则（针对梯度爆炸）
-4. 使用不同的[激活函数](train/fit/activation.md)
+4. 🐾使用不同的[激活函数](train/fit/activation.md)
 5. 使用batchnorm
 6. 使用残差结构
 7. 使用LSTM网络
@@ -122,12 +122,14 @@
 - 🐾 [深度学习训练流程](tips/train_flow.md)
 - 🐾 [提高性能的4个角度](train/tips/improve_performence.md)
 - 🐾 [固定种子](train/tips/random_seed.md)
+- 🐾[混合精度训练](train/tips/apex.md), 🐾[apex](https://github.com/NVIDIA/apex) 🐾[apex+tensorcore+ngc](https://developer.nvidia.com/automatic-mixed-precision)
+- 🐾[TensorCore](train/tips/tensorcore.md)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
 ### 🍀过拟合[🐾](train/overfitting/introduce_overfitting.md)
 
-- [正则化](train/overfitting/regularization.md)
+- 🐾[正则化](train/overfitting/regularization.md)
 - early stop
 - 数据增强
 - dropout
