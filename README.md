@@ -69,6 +69,7 @@
 
 - 机器学习
   - 🐾 [最小二乘法](train/ml/least_square.md)
+  - 🐾 [kmeans](train/ml/kmeans.md)
 
 - #### 🎋 NN
 
