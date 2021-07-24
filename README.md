@@ -30,6 +30,7 @@
   - 🐾[max, argmax, size, clamp, sum, topk](envs/pytorch/max_argmax.md)
   - 🐾[train、eval](envs/pytorch/train_eval.md)
   - 🐾[权重加载修改名称](envs/pytorch/load_weights.md)
+  - 🐾[上采样：interpolate、PixelShuffle](envs/pytorch/upsample.md)
 
 ### 🍀工具
 
