@@ -15,8 +15,13 @@
 
 ### 🍀Pytorch
 
-- 🎋分布式
-- 🎋库学习
+- #### 🎋Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
+
+- #### 🎋Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
+
+- #### 🎋Pytorch函数学习
+
+  - [clone、detached、copy](envs/pytorch/clone_detache.md)
 
 ### 🍀工具
 
