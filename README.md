@@ -130,6 +130,7 @@
 - 🐾[混合精度训练](train/tips/apex.md), 🐾[apex](https://github.com/NVIDIA/apex) 🐾[apex+tensorcore+ngc](https://developer.nvidia.com/automatic-mixed-precision)
 - 🐾[TensorCore](train/tips/tensorcore.md)
 - 🐾[DeepLearningExamples NVIDIA-各种加速和demo](https://github.com/NVIDIA/DeepLearningExamples)
+- 🐾[学习率调整策略](train/tips/scheduler.md)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
