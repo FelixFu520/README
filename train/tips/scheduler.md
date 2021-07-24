@@ -759,9 +759,3 @@ return [base_lr * lmbda(self.last_epoch)
 
 学习率初始值一般设置较小的数，例如0.01、0.001、0.0001等等，当模型finetune的时候一般设置最小的情况，例如0.0001，当随机初始化直接训练的时候一般设置较大的数，例如0.01。
 最大的学习率要怎么找呢？有关如何搜索最大学习率的问题，这篇文章给出了解答《Cyclical Learning Rates for Training Neural Networks》
-
-## 参考
-
-> 
->
-> [【PyTorch】优化器 torch.optim.Optimizer](
