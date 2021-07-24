@@ -21,8 +21,10 @@
 
 - #### 🎋Pytorch函数学习
 
-  - [clone、detached、copy](envs/pytorch/clone_detache.md)
-  - [expand & repeat](envs/pytorch/expand_repeat.md)
+  - 🐾[clone、detached、copy](envs/pytorch/clone_detache.md)
+  - 🐾[expand & repeat](envs/pytorch/expand_repeat.md)
+  - 🐾[cat & stack](envs/pytorch/cat_stack.md)
+  - 🐾[transpose & permute](envs/pytorch/transpose_permute.md)
 
 ### 🍀工具
 
