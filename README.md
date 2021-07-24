@@ -27,6 +27,9 @@
   - 🐾[transpose & permute](envs/pytorch/transpose_permute.md)
   - 🐾[contiguous](envs/pytorch/contiguous.md)
   - 🐾[squeeze & unsqueeze](envs/pytorch/squeeze_unsqueeze.md)
+  - 🐾[max, argmax, size, clamp, sum, topk](envs/pytorch/max_argmax.md)
+  - 🐾[train、eval](envs/pytorch/train_eval.md)
+  - 🐾[权重加载修改名称](envs/pytorch/load_weights.md)
 
 ### 🍀工具
 
