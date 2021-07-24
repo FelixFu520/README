@@ -67,10 +67,14 @@
 
 ### 🍀网络模型
 
+- 机器学习
+  - 🐾 [最小二乘法](train/ml/least_square.md)
+
 - #### 🎋 NN
 
   - 🐾  [NN发展史](train/nn/history.md)
   - 🐾  [45分钟理解深度神经网络和深度学习-拟合角度](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html) 
+  - 🐾 零基础入门深度学习- [感知器](https://www.zybuluo.com/hanbingtao/note/433855)-[线性单元和梯度下降](https://www.zybuluo.com/hanbingtao/note/448086)-[神经网络和反向传播算法](https://www.zybuluo.com/hanbingtao/note/476663)-[卷积神经网络](https://www.zybuluo.com/hanbingtao/note/485480)-[循环神经网络](https://zybuluo.com/hanbingtao/note/541458)-[长短时记忆网络(LSTM)](https://zybuluo.com/hanbingtao/note/581764)-[递归神经网络](https://zybuluo.com/hanbingtao/note/626300)
 
 - #### 🎋CNN
 
