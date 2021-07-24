@@ -117,19 +117,19 @@ tanh函数图像：在 0 附近很短一段区域内可看做线性的。由于t
 
 
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-a57293261942576b2ff76832ee32dee7_720w.png)
+![img](imgs/v2-a57293261942576b2ff76832ee32dee7_720w.png)
 
 Relu函数公式
 
 
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-3edb6345df16de27885be3867e7c6078_720w.png)
+![img](imgs/v2-3edb6345df16de27885be3867e7c6078_720w.png)
 
 Relu函数图像
 
 对于ReLU函数的求导为：
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-6fbe50023a01b53fe525ed6a0fb85629_720w.png)
+![img](imgs/v2-6fbe50023a01b53fe525ed6a0fb85629_720w.png)
 
 > **ReLU函数的优点：**
 >
@@ -148,19 +148,19 @@ Relu函数图像
 
 
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-395fa7dc6b1c9b4fe083d3434ff4cc33_720w.png)
+![img](imgs/v2-395fa7dc6b1c9b4fe083d3434ff4cc33_720w.png)
 
 PReLU函数公式，其中 a 取值在 (0,1) 之间。
 
 
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-baba6eb8baae9ee12b8b5ffc46e4e2b7_720w.png)
+![img](imgs/v2-baba6eb8baae9ee12b8b5ffc46e4e2b7_720w.png)
 
 PReLU函数图像
 
 Leaky ReLU函数的导数为：
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-3027c269309757487948c4a7264bfea8_720w.png)
+![img](imgs/v2-3027c269309757487948c4a7264bfea8_720w.png)
 
 > Leaky ReLU函数解决了ReLU函数在**输入为负的情况下产生的梯度消失问题**。
 
@@ -174,7 +174,7 @@ Swish 在深层模型上的效果优于 ReLU。可以看做是**介于线性函�
 
 
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-b3f1d39717e8d02a1a56a20b543abd45_720w.png)
+![img](imgs/v2-b3f1d39717e8d02a1a56a20b543abd45_720w.png)
 
 Swish函数图像
 
@@ -188,7 +188,7 @@ Swish函数图像
 
 函数图像：
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-fc22b992e5a24df294b5d40211e33ecc_720w.png)
+![img](imgs/v2-fc22b992e5a24df294b5d40211e33ecc_720w.png)
 
 Mish函数图像
 
@@ -214,7 +214,7 @@ class Mish(nn.Module):
 
 这种通过Mish激活曲线平滑性来推送信息的能力如下图所示，在本文的一个简单测试中，越来越多的层被添加到一个测试神经网络中，而没有一个统一的函数。随着层深的增加，ReLU精度迅速下降，其次是Swish。相比之下，Mish能更好地保持准确性，这可能是因为它能更好地传播信息：
 
-![img](/Users/fusimeng/README_/train/fit/imgs/v2-fb151041e88bb617782649283e15e3d5_720w.png)
+![img](imgs/v2-fb151041e88bb617782649283e15e3d5_720w.png)
 
 更平滑的激活功能允许信息更深入地流动……注意，随着层数的增加，ReLU快速下降。
 
