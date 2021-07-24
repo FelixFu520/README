@@ -41,7 +41,7 @@ x.transpose(0,1)
 [torch.FloatTensor of size 3x2]
 ```
 
-## permute
+## tpermute
 
 多个维度互换，更灵活的transpose
 
