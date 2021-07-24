@@ -25,6 +25,7 @@
   - 🐾[expand & repeat](envs/pytorch/expand_repeat.md)
   - 🐾[cat & stack](envs/pytorch/cat_stack.md)
   - 🐾[transpose & permute](envs/pytorch/transpose_permute.md)
+  - 🐾[contiguous](envs/pytorch/contiguous.md)
 
 ### 🍀工具
 
