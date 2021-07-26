@@ -124,8 +124,19 @@
 
 - 🐾 [交叉墒](train/loss/entropy.md)
 - 🐾 [Pytorch的损失函数](train/loss/losses_pytorch.md)
+- Lovasz-Softmax Loss
+- Exponential Logarithmic loss
+- Focal Loss + Dice Loss
+- BCE + Dice Loss
+- Generalized Dice loss
+- Tversky Loss
+- IOU Loss
+- Dice Loss
+- Focal Loss
 
 ### 🍀优化器
+
+- [优化器整理](train/optim/introduce.md)
 
 ### 🍀评价指标
 
