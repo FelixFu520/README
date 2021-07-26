@@ -92,7 +92,7 @@
   - 🐾  [SENet](train/cnn/senet.md)
   - 🐾 [EfficientNet](train/cnn/efficientnet.md)
   - 🐾  [conv 1* 1的作用](train/cnn/conv1.md)
-  - [上采样](train/cnn/up.md)
+  - 🐾 [上采样](train/cnn/up.md)
 
 - #### 🎋RNN/NLP
 
@@ -104,7 +104,10 @@
 
 - #### 🎋Detection
 
-  - [RCNNs](train/detection/rcnns.md)
+  - 🐾 [RCNNs](train/detection/rcnns.md)
+  - 🐾 YOLO
+    - [yolo v1](train/detection/yolov1.md)
+    - [yolo v2](train/detection/yolov2.md)
 
 - #### 🎋Segmentation
 
