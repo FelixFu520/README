@@ -123,6 +123,7 @@
 ### 🍀损失函数
 
 - 🐾 [交叉墒](train/loss/entropy.md)
+- 🐾 [Pytorch的损失函数](train/loss/losses_pytorch.md)
 
 ### 🍀优化器
 
