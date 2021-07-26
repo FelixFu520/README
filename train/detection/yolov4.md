@@ -16,7 +16,9 @@
 
 ![yolov4-3](imgs/yolov4-3.png)
 
-## 1 网络结构
+## 1 网络结构[🔗](arch_yolov4.md)
+
+
 
 ![img](imgs/agsas.png)
 
