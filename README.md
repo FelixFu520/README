@@ -101,8 +101,10 @@
 
 - #### 🎋Segmentation
 
-  - 🐾[分割综述(2020)](train/segmentation/introduce.md)
-  - UNet
+  - 🐾 [分割综述(2020)](train/segmentation/introduce.md)
+  - 🐾 [UNet Family](https://github.com/ShawnBIT/UNet-family)
+    - [unet](train/segmentation/unet.md)
+    - [UNet++](train/segmentation/unetpp.md)https://zhuanlan.zhihu.com/p/44958351
 
 ### 🍀损失函数
 
@@ -120,6 +122,7 @@
   - 🐾 [网络中间层显示工具CAM](https://github.com/frgfm/torch-cam)  🐾 [blog](https://cloud.tencent.com/developer/article/1674200)
   - 🐾 [模型权重理解DeepDream](https://github.com/TD-4/Pytorch-Deep-Dream)
   - 🐾 [网络结构显示工具权重/梯度/特征图/混淆矩阵tensorboard](https://github.com/TD-4/PyTorch_Tutorial)
+  - 🐾 [网络显示工具visdon](https://github.com/fossasia/visdom)
 
 - #### 🎋网络结构
 
