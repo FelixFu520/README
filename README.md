@@ -82,7 +82,7 @@
 
 - #### 🎋CNN
 
-  - 🐾  [CNN介绍](train/cnn/introduce_cnn.md)
+  - 🐾  [CNN介绍](train/cnn/introduce_cnn.md) --[🐾CNN网络代码讲解](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
   - 🐾  [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
   - 🐾  [DSC理解](train/cnn/dsc.md)
   - 🐾  [Inception](train/cnn/inception.md)
@@ -90,8 +90,9 @@
   - 🐾  [DenseNet](train/cnn/densenet.md)
   - 🐾  [MobileNet](train/cnn/mobilenet.md)
   - 🐾  [SENet](train/cnn/senet.md)
-  -  🐾  [conv 1* 1的作用](train/cnn/conv1.md)
-  -  [上采样](train/cnn/up.md)
+  - 🐾 [EfficientNet](train/cnn/efficientnet.md)
+  - 🐾  [conv 1* 1的作用](train/cnn/conv1.md)
+  - [上采样](train/cnn/up.md)
 
 - #### 🎋RNN/NLP
 
