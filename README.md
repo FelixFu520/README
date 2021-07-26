@@ -109,6 +109,7 @@
     - [yolo v1](train/detection/yolov1.md)
     - [yolo v2](train/detection/yolov2.md)
     - [yolo v3](train/detection/yolov3.md)
+    - [yolo v4](train/detection/yolov4.md)
 
 - #### 🎋Segmentation
 
