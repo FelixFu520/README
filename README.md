@@ -108,6 +108,7 @@
   - 🐾 [UNet Family](https://github.com/ShawnBIT/UNet-family)
     - [unet](train/segmentation/unet.md)
     - [UNet++](train/segmentation/unetpp.md)
+  - 🐾 [PSPNet](train/segmetation/pspnet.md)
 
 ### 🍀损失函数
 
