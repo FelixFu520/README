@@ -101,7 +101,8 @@
 
 - #### 🎋Segmentation
 
-  - 🐾UNet
+  - 🐾[分割综述(2020)](train/segmentation/introduce.md)
+  - UNet
 
 ### 🍀损失函数
 
