@@ -104,7 +104,7 @@
   - 🐾 [分割综述(2020)](train/segmentation/introduce.md)
   - 🐾 [UNet Family](https://github.com/ShawnBIT/UNet-family)
     - [unet](train/segmentation/unet.md)
-    - [UNet++](train/segmentation/unetpp.md)https://zhuanlan.zhihu.com/p/44958351
+    - [UNet++](train/segmentation/unetpp.md)
 
 ### 🍀损失函数
 
