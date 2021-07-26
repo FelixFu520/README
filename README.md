@@ -4,8 +4,11 @@
 
 ### 🍀语言
 
-- 🎋C++
-- 🎋Python
+- ### 🎋C++
+
+- ### 🎋Python
+
+  - 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇
 
