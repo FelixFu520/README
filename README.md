@@ -148,7 +148,8 @@
 
 ### 🍀评价指标
 
-- mAP
+- [语义分割评价指标](train/assessment/seg_metris.md)
+- [mAP](train/assessment/map.md)
 - IOU
 
 ### 🍀网络可视化
