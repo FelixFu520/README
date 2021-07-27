@@ -4,9 +4,11 @@
 
 ### 🍀语言
 
-- ### 🎋C++
+- ### 🎋C++[🐾](theory/cpp/README.md)
 
-- ### 🎋Python
+  - 
+
+- ### 🎋Python[🐾](theory/python/README.md)
 
   - 🐾 深度之眼👀
     - [第二章  Python基本语法元素.ipynb](theory/python/eyes/02.ipynb)
