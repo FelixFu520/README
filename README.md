@@ -64,7 +64,7 @@
 
 ### 🎋 GPUs训练环境安装
 
-- [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) --> [CUDA、cuDNN安装](envs/gpus/install_cuda.md) --> 
+- 🐾 [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) -------> [CUDA、cuDNN安装 Ubuntu16.04](envs/gpus/install_cuda.md) | [Windows10](envs/gpus/install_cuda_win10.md)--> 
 
 ### 🎋 推理环境安装
 
