@@ -59,8 +59,12 @@
 - 🐾 [nvidia-smi命令](envs/gpus/nvidia_smi.md)
 - 🐾 [NUMA & GPU](envs/gpus/numa.md)
 - 🐾 [GPU Direct](envs/gpus/gpudirect.md)
+- 🐾 [GPU-Driver-Cuda](https://docs.nvidia.com/deploy/cuda-compatibility/index.html#overview)- [pytorch](https://pytorch.org/get-started/previous-versions/)-[tensorflow](https://www.tensorflow.org/install/source#common_installation_problems) 对应关系
+- 🐾 [CUDA Samples](envs/gpus/cuda_samples.md)
 
 ### 🎋 GPUs训练环境安装
+
+- [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) --> [CUDA、cuDNN安装](envs/gpus/install_cuda.md) --> 
 
 ### 🎋 推理环境安装
 
