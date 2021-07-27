@@ -25,12 +25,23 @@
     - [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
   - 🐾 Numpy
     - [Axis](theory/python/numpy_axis.md)
-    - [argmax、](theory/python/numpy_funs.md)
+    - [argmax、...、11个函数](theory/python/numpy_funs.md)
     - [控制流程](theory/python/numpy_control.md)
   
   - Python函数
     - [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
-    - [查看类型、内存地址、占用空间大小；](theory/python/funs.md)
+    - [查看类型、内存地址、占用空间大小；...;等15个函数](theory/python/funs.md)
+    - [Python 类](theory/python/class.md)
+    - [pdb调试工具](theory/python/pdb.md)
+    - [OS模块](theory/python/os.md)
+    - [SYS模块](theory/python/sys.md)
+    - [Argparse模块](theory/python/argparse.md)
+    - [logging 模块](theory/python/logging.md)
+    - [多进程&多线程](theory/python/multi_proccess.md) --> [处理库futures](theory/python/futures.md)
+    - [类型转换](theory/python/change_type.md)
+    - [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
+    - [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
+    
   - 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇
@@ -91,6 +102,7 @@
   - 🐾 [计算图片均值](train/preprocess/mean_cal.md)
   - 🐾 [opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
   - 🐾 [直方图处理](train/preprocess/histogram.md)
+  - 🐾 [python读取图片的几种方式](train/preprocess/open_image.md)
 
 ### 🍀网络模型
 
