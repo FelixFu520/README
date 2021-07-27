@@ -57,6 +57,7 @@
 - 🐾 [深入GPU硬件架构及运行机制](https://www.cnblogs.com/timlly/p/11471507.html)
 - 🐾 [gpustat](https://github.com/wookayin/gpustat)
 - 🐾 [nvidia-smi命令](envs/gpus/nvidia_smi.md)
+- 🐾 [NUMA & GPU](envs/gpus/numa.md)
 
 ### 🎋 GPUs训练环境安装
 
