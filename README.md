@@ -1,6 +1,20 @@
+# 1. asdf
+
+## 1.1 asdf
+
+### 1.1.1 asdf
+
+# 2. asdf
+
+### 2.1 asdf
+
+
+
 # 🍭理论篇
 
 ### 🍀数学
+
+
 
 ### 🍀语言
 
@@ -23,6 +37,8 @@
     - [第十三章 Matplotlib库.ipynb](theory/python/eyes/13.ipynb)
     - [第十四章 scikit-learn 库.ipynb](theory/python/eyes/14.ipynb)
     - [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
+  - 🐾 Numpy
+    - [Axis](theory/python/numpy_axis.md)
   
 - 
 
