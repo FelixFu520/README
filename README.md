@@ -1,67 +1,76 @@
 # 🍭理论篇
 
-### 🍀数学
+## 🍀数学
 
-### 🍀语言
+## 🍀语言
 
-- ### 🎋C++[🐾](theory/cpp/README.md)
+### 🎋C++[🐾](theory/cpp/README.md)
 
-  - 
+### 🎋Python[🐾](theory/python/README.md)
 
-- ### 🎋Python[🐾](theory/python/README.md)
+#### 🐾 深度之眼👀
 
-  - 🐾 深度之眼👀
-    - [第二章  Python基本语法元素.ipynb](theory/python/eyes/02.ipynb)
-    - [第三章 基本数据类型.ipynb](theory/python/eyes/3.ipynb)
-    - [第四章 组合数据类型.ipynb](theory/python/eyes/4.ipynb)
-    - [第五章 程序控制结构.ipynb](theory/python/eyes/5.ipynb)
-    - [第六章 函数.ipynb](theory/python/eyes/6.ipynb)
-    - [第七章 类——面向对象的编程.ipynb](theory/python/eyes/7.ipynb)
-    - [第八章 文件、异常和模块.ipynb](theory/python/eyes/8.ipynb)
-    - [第九章 有益的探索.ipynb](theory/python/eyes/9.ipynb)
-    - [第十章   Python标准库.ipynb](theory/python/eyes/10.ipynb)
-    - [第十一章 Numpy库.ipynb](theory/python/eyes/11.ipynb)
-    - [第十二章   Pandas 库.ipynb](theory/python/eyes/12.ipynb)
-    - [第十三章 Matplotlib库.ipynb](theory/python/eyes/13.ipynb)
-    - [第十四章 scikit-learn 库.ipynb](theory/python/eyes/14.ipynb)
-    - [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
-  - 🐾 Numpy
-    - [Axis](theory/python/numpy_axis.md)
-    - [argmax、...、11个函数](theory/python/numpy_funs.md)
-    - [控制流程](theory/python/numpy_control.md)
-  
-  - Python函数
-    - [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
-    - [查看类型、内存地址、占用空间大小；...;等15个函数](theory/python/funs.md)
-    - [Python 类](theory/python/class.md)
-    - [pdb调试工具](theory/python/pdb.md)
-    - [OS模块](theory/python/os.md)
-    - [SYS模块](theory/python/sys.md)
-    - [Argparse模块](theory/python/argparse.md)
-    - [logging 模块](theory/python/logging.md)
-    - [多进程&多线程](theory/python/multi_proccess.md) --> [处理库futures](theory/python/futures.md)
-    - [类型转换](theory/python/change_type.md)
-    - [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
-    - [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
-    
-  - 🐾 [如何计算topk](theory/python/topk.md)
+- [第二章  Python基本语法元素.ipynb](theory/python/eyes/02.ipynb)
+- [第三章 基本数据类型.ipynb](theory/python/eyes/3.ipynb)
+- [第四章 组合数据类型.ipynb](theory/python/eyes/4.ipynb)
+- [第五章 程序控制结构.ipynb](theory/python/eyes/5.ipynb)
+- [第六章 函数.ipynb](theory/python/eyes/6.ipynb)
+- [第七章 类——面向对象的编程.ipynb](theory/python/eyes/7.ipynb)
+- [第八章 文件、异常和模块.ipynb](theory/python/eyes/8.ipynb)
+- [第九章 有益的探索.ipynb](theory/python/eyes/9.ipynb)
+- [第十章   Python标准库.ipynb](theory/python/eyes/10.ipynb)
+- [第十一章 Numpy库.ipynb](theory/python/eyes/11.ipynb)
+- [第十二章   Pandas 库.ipynb](theory/python/eyes/12.ipynb)
+- [第十三章 Matplotlib库.ipynb](theory/python/eyes/13.ipynb)
+- [第十四章 scikit-learn 库.ipynb](theory/python/eyes/14.ipynb)
+- [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
+
+#### 🐾 Numpy
+
+- [Axis](theory/python/numpy_axis.md)
+- [argmax、...、11个函数](theory/python/numpy_funs.md)
+- [控制流程](theory/python/numpy_control.md)
+
+#### 🐾 Python函数
+
+- [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
+- [查看类型、内存地址、占用空间大小；...;等15个函数](theory/python/funs.md)
+- [Python 类](theory/python/class.md)
+- [pdb调试工具](theory/python/pdb.md)
+- [OS模块](theory/python/os.md)
+- [SYS模块](theory/python/sys.md)
+- [Argparse模块](theory/python/argparse.md)
+- [logging 模块](theory/python/logging.md)
+- [多进程&多线程](theory/python/multi_proccess.md) --> [处理库futures](theory/python/futures.md)
+- [类型转换](theory/python/change_type.md)
+- [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
+- [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
+
+- 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇
 
-### 🍀安装篇
+## 🍀安装篇
 
-- GPU知识
-- GPUs训练环境安装
-- 推理环境安装
-- IDE&Tools安装
+### 🎋 GPU知识
 
-### 🍀Pytorch
+- [深入GPU硬件架构及运行机制](https://www.cnblogs.com/timlly/p/11471507.html)
+- [gpustat](https://github.com/wookayin/gpustat)
+- 
 
-- #### 🎋Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
+- #### 🎋 GPUs训练环境安装
 
-- #### 🎋Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
+- #### 🎋 推理环境安装
 
-- #### 🎋Pytorch函数学习
+- #### 🎋 IDE&Tools安装
+
+## 🍀Pytorch
+
+- ### 🎋Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
+
+- ### 🎋Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
+
+- ### 🎋Pytorch函数学习
 
   - 🐾 [clone、detached、copy](envs/pytorch/clone_detache.md)
   - 🐾 [expand & repeat](envs/pytorch/expand_repeat.md)
