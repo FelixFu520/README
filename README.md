@@ -206,9 +206,13 @@
 
 ### 🍀 数据后处理
 
-### 🍀 部署框架
+### 🍀 部署框架 [🐾](infer/README.md)
 
 - ####  🎋ONNX
+
+  - [ONNX介绍](infer/onnx/introduce.md) 
+  - [ONNX API Python](infer/onnx/python_api.md) | [ONNX Tutorials](https://github.com/TD-4/onnx-tutorial)
+  - [ONNX支持框架有哪些](https://onnx.ai/supported-tools.html)
 
 - ####  🎋 TVM
 
@@ -216,5 +220,25 @@
 
 # 🍭项目篇
 
+- #### 🎋分类
 
+  - #### 🐾 [classification](https://github.com/FelixFu520/classification)
+
+- #### 🎋语义分割
+
+  - #### 🐾 [segmentation](https://github.com/FelixFu520/segmentation)
+
+- #### 🎋目标检测
+
+  - #### 🐾 [detection](https://github.com/FelixFu520/detection)
+
+- #### 🎋[小样本](notes/fsl/README.md)
+
+  - 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒](notes/fsl/panet.md)
+
+- #### 🎋[图像质量评价](notes/iqa/README.md)
+
+  - 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)[📒](notes/iqa/hypernet.md)
+
+  
 
