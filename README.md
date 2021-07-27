@@ -58,6 +58,7 @@
 - 🐾 [gpustat](https://github.com/wookayin/gpustat)
 - 🐾 [nvidia-smi命令](envs/gpus/nvidia_smi.md)
 - 🐾 [NUMA & GPU](envs/gpus/numa.md)
+- 🐾 [GPU Direct](envs/gpus/gpudirect.md)
 
 ### 🎋 GPUs训练环境安装
 
