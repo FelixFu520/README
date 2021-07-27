@@ -8,6 +8,24 @@
 
 - ### 🎋Python
 
+  - 🐾 深度之眼👀
+    - [第二章  Python基本语法元素.ipynb](theory/eyes/02.ipynb)
+    - [第三章 基本数据类型.ipynb](theory/eyes/3.ipynb)
+    - [第四章 组合数据类型.ipynb](theory/eyes/4.ipynb)
+    - [第五章 程序控制结构.ipynb](theory/eyes/5.ipynb)
+    - [第六章 函数.ipynb](theory/eyes/6.ipynb)
+    - [第七章 类——面向对象的编程.ipynb](theory/eyes/7.ipynb)
+    - [第八章 文件、异常和模块.ipynb](theory/eyes/8.ipynb)
+    - [第九章 有益的探索.ipynb](theory/eyes/9.ipynb)
+    - [第十章   Python标准库.ipynb](theory/eyes/10.ipynb)
+    - [第十一章 Numpy库.ipynb](theory/eyes/11.ipynb)
+    - [第十二章   Pandas 库.ipynb](theory/eyes/12.ipynb)
+    - [第十三章 Matplotlib库.ipynb](theory/eyes/13.ipynb)
+    - [第十四章 scikit-learn 库.ipynb](theory/eyes/14.ipynb)
+    - [第十五章 再谈编程.ipynb](theory/eyes/15.ipynb)
+  
+- 
+
   - 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇

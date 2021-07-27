@@ -1,0 +1,14 @@
+{
+    "Petter": {
+        "math": 96,
+        "physics": 98
+    },
+    "Paul": {
+        "math": 92,
+        "physics": 99
+    },
+    "Mary": {
+        "math": 98,
+        "physics": 97
+    }
+}
