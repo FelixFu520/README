@@ -26,9 +26,8 @@
   - 🐾 Numpy
     - [Axis](theory/python/numpy_axis.md)
     - [argmax、](theory/python/numpy_funs.md)
+    - [控制流程](theory/python/numpy_control.md)
   
-- 
-
   - 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇
@@ -55,6 +54,7 @@
   - 🐾 [train、eval](envs/pytorch/train_eval.md)
   - 🐾 [权重加载修改名称](envs/pytorch/load_weights.md)
   - 🐾 [上采样：interpolate、PixelShuffle](envs/pytorch/upsample.md)
+  - [scatter](envs/pytorch/scatter.md)
 
 ### 🍀工具
 
