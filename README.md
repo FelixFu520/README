@@ -28,6 +28,9 @@
     - [argmax、](theory/python/numpy_funs.md)
     - [控制流程](theory/python/numpy_control.md)
   
+  - Python函数
+    - [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
+    - [查看类型、内存地址、占用空间大小；](theory/python/funs.md)
   - 🐾 [如何计算topk](theory/python/topk.md)
 
 # 🍭环境篇
