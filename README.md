@@ -97,7 +97,10 @@
 - 🐾 [图像标注工具labelme](https://github.com/wkentaro/labelme)
 - 🐾 [图像去重工具imagededup](https://github.com/idealo/imagededup)
 - 🐾 [图像增强工具imgaug](https://github.com/aleju/imgaug)
-- 🐾 [实验管理工具sacred](envs/tools/scared.md)
+
+### 🎋 工具
+
+🐾  [实验管理工具sacred](envs/tools/scared.md)
 
 # 🍭训练篇&部署篇
 
