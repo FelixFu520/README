@@ -11,13 +11,40 @@
 - [cpp编译过程](theory/cpp/complier.md)
 - [C++静态库与动态库](theory/cpp/lib.md)
 - [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm)
-- [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html)
-- [cmake手册](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.txt)
+- [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
+- [why make --> cmake](theory/cpp/make2cmake.md)
+- [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.txt) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo)
 
 #### 🐾 代码学习
 
 - [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
+
+#### 🐾 函数
+
+- [atof、...](theory/cpp/atof_soon.md)
+- [C++11 std::chrono库详解](https://www.cnblogs.com/zlshmily/p/10058427.html)
+- [详解C++11智能指针](https://www.cnblogs.com/WindSun/p/11444429.html)
+- [static_cast、dynamic_cast、const_cast和reinterpret_cast](http://c.biancheng.net/cpp/biancheng/view/3297.html)
+- [库的导入（系统介绍）](https://blog.csdn.net/weixin_39793576/article/details/111546012)
+- [mutable](https://liam.page/2017/05/25/the-mutable-keyword-in-Cxx/)
+- [Lambda](https://www.cnblogs.com/DswCnblog/p/5629165.html)
+- [函数指针与指针函数](http://yulingtianxia.com/blog/2014/04/17/han-shu-zhi-zhen-yu-zhi-zhen-han-shu/)
+- [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
+- [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
+
+#### 🐾 算法&数据结构
+
+- 链表：
+  - [反转链表、链表操作、合并链表](theory/cpp/reverselist.md) 
+- 堆
+  - [最小K个数](theory/cpp/topk.md)
+- 操作
+  - 增：
+  - 删：
+  - 改：
+  - 查：
+  - [排序](theory/cpp/sort.md) 
 
 ### 🍬Python[🐾](theory/python/README.md)
 
