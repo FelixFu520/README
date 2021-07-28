@@ -111,6 +111,8 @@
 
 ### 🍬 IDE&Tools安装
 
+- [JupyterLab安装](envs/tools/jupyterlab.md)
+
 ## 2⃣️ Pytorch
 
 ### 🍬Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
@@ -359,6 +361,10 @@
 - [《REST，GraphQL，Webhooks & gRPC 如何选型》](infer/bs/select_.md)
 - [浅谈 RPC 和 REST: SOAP, gRPC, REST](infer/bs/soap.md)
 - [理解RESTful](infer/bs/restful.md)
+
+### 🍬 嵌入式设备
+
+- [Nano](https://github.com/TD-4/Nano_DLI)
 
 # 🍭项目篇
 
