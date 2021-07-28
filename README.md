@@ -357,6 +357,8 @@
 - [HTTP协议](infer/bs/https.md)
 - [为什么web会前后端分离？](infer/bs/split.md)
 - [《REST，GraphQL，Webhooks & gRPC 如何选型》](infer/bs/select_.md)
+- [浅谈 RPC 和 REST: SOAP, gRPC, REST](infer/bs/soap.md)
+- [理解RESTful](infer/bs/restful.md)
 
 # 🍭项目篇
 
