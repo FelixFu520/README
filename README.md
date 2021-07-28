@@ -104,14 +104,23 @@
 
 ### 🍬 GPUs训练环境安装
 
-- 🐾 [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) -------> [CUDA、cuDNN安装 Ubuntu16.04](envs/gpus/install_cuda.md) | [Windows10](envs/gpus/install_cuda_win10.md)--> 
-- [Horovod安装]
+- 🐾 [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) -------> [CUDA、cuDNN安装 Ubuntu16.04](envs/gpus/install_cuda.md) | [Windows10](envs/gpus/install_cuda_win10.md)--> Docker-->NVDocker
+- [Horovod安装]()
 
 ### 🍬 推理环境安装
 
+- [TensorRT Ubuntu](envs/tools/tensorrt.md) -- [Windows10](envs/tools/tensorrt_win10.md)
+
 ### 🍬 IDE&Tools安装
 
-- [JupyterLab安装](envs/tools/jupyterlab.md)
+- [JupyterLab安装 Ubuntu](envs/tools/jupyterlab.md)
+- [Matlab安装 Ubuntu](envs/tools/matlab.md)
+- [xrdp Ubuntu](envs/tools/xrdp.md)
+- [VS2019 Windows](envs/tools/vs2019.md)
+- [CLion 安装与调试 Mac](envs/tools/clion.md)
+- [cmake 安装](envs/tools/cmake.md)
+- [pycuda安装](envs/tools/pycuda.md)
+- OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
 
 ## 2⃣️ Pytorch
 
@@ -122,7 +131,7 @@
 
 #### 🍃 Horovod搭建过程
 
-- ️[整体日志](envs/parallel_computing/all.md)
+- [整体日志](envs/parallel_computing/all.md)
 - [IPMI配置](envs/parallel_computing/ipmi.md)  
 
 - [Ubuntu16.04 Server安装](envs/parallel_computing/serverinstall.md)
