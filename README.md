@@ -6,7 +6,7 @@
 
 ### 🍬C++[🐾](theory/cpp/README.md)
 
-#### 🐾 编译相关
+#### 🍃 编译相关
 
 - [cpp编译过程](theory/cpp/complier.md)
 - [C++静态库与动态库](theory/cpp/lib.md)
@@ -15,12 +15,12 @@
 - [why make --> cmake](theory/cpp/make2cmake.md)
 - [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.txt) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo)
 
-#### 🐾 代码学习
+#### 🍃 代码学习
 
 - [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
 
-#### 🐾 函数
+#### 🍃 函数
 
 - [atof、...](theory/cpp/atof_soon.md)
 - [C++11 std::chrono库详解](https://www.cnblogs.com/zlshmily/p/10058427.html)
@@ -33,7 +33,7 @@
 - [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
 - [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
 
-#### 🐾 算法&数据结构
+#### 🍃 算法&数据结构
 
 - 链表：
   - [反转链表、链表操作、合并链表](theory/cpp/reverselist.md) 
@@ -48,7 +48,7 @@
 
 ### 🍬Python[🐾](theory/python/README.md)
 
-#### 🐾 深度之眼👀
+#### 🍃 深度之眼👀
 
 - [第二章  Python基本语法元素.ipynb](theory/python/eyes/02.ipynb)
 - [第三章 基本数据类型.ipynb](theory/python/eyes/3.ipynb)
@@ -65,13 +65,13 @@
 - [第十四章 scikit-learn 库.ipynb](theory/python/eyes/14.ipynb)
 - [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
 
-#### 🐾 Numpy
+#### 🍃 Numpy
 
 - [Axis](theory/python/numpy_axis.md)
 - [argmax、...、11个函数](theory/python/numpy_funs.md)
 - [控制流程](theory/python/numpy_control.md)
 
-#### 🐾 Python函数
+#### 🍃 Python函数
 
 - [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
 - [查看类型、内存地址、占用空间大小；...;等15个函数](theory/python/funs.md)
@@ -105,6 +105,7 @@
 ### 🍬 GPUs训练环境安装
 
 - 🐾 [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) -------> [CUDA、cuDNN安装 Ubuntu16.04](envs/gpus/install_cuda.md) | [Windows10](envs/gpus/install_cuda_win10.md)--> 
+- [Horovod安装]
 
 ### 🍬 推理环境安装
 
@@ -113,6 +114,9 @@
 ## 2⃣️ Pytorch
 
 ### 🍬Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
+
+- [分布式概念介绍-MPI](envs/pytorch/parallel.md)
+- [GPU&CUDA多机通信-硬件、库、框架三个层次](envs/pytorch/cuda_gpu.md)
 
 ### 🍬Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
 
@@ -128,7 +132,7 @@
 - 🐾 [train、eval](envs/pytorch/train_eval.md)
 - 🐾 [权重加载修改名称](envs/pytorch/load_weights.md)
 - 🐾 [上采样：interpolate、PixelShuffle](envs/pytorch/upsample.md)
-- [scatter](envs/pytorch/scatter.md)
+- 🐾 [scatter](envs/pytorch/scatter.md)
 
 ## 3⃣️ 工具
 
