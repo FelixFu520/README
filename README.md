@@ -116,7 +116,44 @@
 ### 🍬Pytorch分布式[🐾](https://github.com/FelixFu-TD/Parallel-Pytorch)
 
 - [分布式概念介绍-MPI](envs/pytorch/parallel.md)
-- [GPU&CUDA多机通信-硬件、库、框架三个层次](envs/pytorch/cuda_gpu.md)
+- [GPU&CUDA多机通信-硬件、库、框架三个层次](envs/pytorch/cuda_gpu.md) | [学习代码-需整理](https://github.com/TD-4/Parallel-Pytorch) | [distributed + apex - 需整理](https://github.com/TD-4/SegmentatioWithApexMixedPrecisionAndDistributed)
+
+#### 🍃 Horovod搭建过程
+
+- ️[整体日志](envs/parallel_computing/all.md)
+  - [IPMI配置](envs/parallel_computing/ipmi.md)  
+
+  - [Ubuntu16.04 Server安装](envs/parallel_computing/serverinstall.md)
+
+  - [Ubuntu16.04 配置IP](envs/parallel_computing/ip.md)
+
+  - [Ubuntu16.04 修改APT源](envs/parallel_computing/apt.md)
+
+  - [Ubuntu16.04 安装NVIDIA驱动](envs/parallel_computing/driverinstall.md) 【一、安装440版本，可根据需求调换版本】
+
+  - [Ubuntu16.04 安装CUDA，cuDNN](envs/parallel_computing/cudainstall.md)【二、安装cuda10.2 和cudnn7.6.5，可根据需求调换版本】
+
+  - [Ubuntu16.04安装nccl](https://docs.nvidia.com/deeplearning/nccl/install-guide/index.html#debian) & [测试](https://github.com/NVIDIA/nccl-tests)【三、安装nccl 2.6.4，可根据需求调换版本，apt-cache madison】
+
+  - [Pytorch多机多卡](https://github.com/FelixFu520/Parallel-Pytorch)【四、测试多机多卡，先测试无RDMA的。需安装torch 1.2   torchvision0.4.0】
+
+  - [装安IB驱动](envs/parallel_computing/ib.md)【五、装IB，加速IB卡之间的RDMA】
+
+  - [Pytorch多机多卡](https://github.com/FelixFu520/Parallel-Pytorch)【六、再次跑多机多卡程序，与四的效果对比】
+
+  - [安装NV_Peer_Memory](envs/parallel_computing/nv_peer_memory.md)【七、安装nv_peer_memory, 加速GPURDMA】
+
+  - [Pytorch多机多卡](https://github.com/FelixFu520/Parallel-Pytorch)【八、再次跑多机多卡程序与四、六对比】
+
+  - [安装OpenMPI](envs/parallel_computing/openmpi.md)【九、安装OpenMPI，为Horovod做准备】
+
+  - [安装Horovod](envs/parallel_computing/horovod.md)【十、安装Horovod，并测试程序，与四、六、八对比】
+
+  - [Ubuntu16.04 安装Docker](envs/parallel_computing/docker.md)【十一、安装Docker】
+
+  - [Ubuntu16.04 安装NVIDIA Docker](envs/parallel_computing/nvdocker.md)【十二、安装NV-Docker】
+
+  - [在Docker中运行Horovod](envs/parallel_computing/all.md)【十三、在Docker中运行Horovod】
 
 ### 🍬Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
 
