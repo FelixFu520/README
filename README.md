@@ -393,9 +393,9 @@
 
 - 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒](notes/fsl/panet.md)
 
-### 🍬[图像质量评价](notes/iqa/README.md)
+### 🍬图像质量评价
 
-- 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)[📒](notes/iqa/hypernet.md)
+- 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)[📒](train/iqa/hypernet.md)
 
 
 
