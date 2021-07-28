@@ -334,6 +334,9 @@
 ### 🍬 压缩
 
 - [序列化](infer/serialization/introduce.md)
+  - [yaml](infer/serialization/yaml.md)
+  - [protobuf](infer/serialization/protobuf.md)
+  - [grpc](infer/serialization/grpc.md)
 
 ### 🍬 数据后处理
 
