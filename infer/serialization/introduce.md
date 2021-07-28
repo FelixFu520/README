@@ -25,9 +25,9 @@
 
 ### 1.2 序列化和反序列化基础
 
-![](F:\GitHub\README_\infer\serialization\imgs\1.png)
+![](imgs/1.png)
 
-![img](F:\GitHub\README_\infer\serialization\imgs\2.png)
+![img](imgs/2.png)
 
 **序列化和反序列化概念**
 
@@ -95,7 +95,7 @@
 
 ### 2.3 MessagePack
 
-![](F:\GitHub\README_\infer\serialization\imgs\3.png)
+![](imgs/3.png)
 
 **优点**
 
@@ -199,7 +199,7 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 ### 2.8 XML VS JSON VS Protobuf
 
-![img](F:\GitHub\README_\infer\serialization\imgs\4.png)
+![img](imgs/4.png)
 
 **名词解释：**
 
@@ -219,7 +219,7 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 
 
-![img](F:\GitHub\README_\infer\serialization\imgs\6.png)
+![img](imgs/6.png)
 
 
 
@@ -227,7 +227,7 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 
 
-![img](F:\GitHub\README_\infer\serialization\imgs\7.png)
+![img](imgs/7.png)
 
 
 
@@ -247,6 +247,6 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 
 
-![img](F:\GitHub\README_\infer\serialization\imgs\9.png)
+![img](imgs/9.png)
 
 
