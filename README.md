@@ -175,9 +175,13 @@
 - 🐾 [图像去重工具imagededup](https://github.com/idealo/imagededup)
 - 🐾 [图像增强工具imgaug](https://github.com/aleju/imgaug)
 
-### 🍬 工具
+### 🍬 实验管理工具
 
 🐾  [实验管理工具sacred](envs/tools/scared.md)
+
+## 4⃣️ OpenCV
+
+- [Python 读取视频](envs/opencv/read_video.md)
 
 # 🍭训练篇&部署篇
 
