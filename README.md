@@ -352,6 +352,12 @@
 
 ####  🍃TensorRT
 
+### 🍬 网站部署-BS
+
+- [HTTP协议](infer/bs/https.md)
+- [为什么web会前后端分离？](infer/bs/split.md)
+- [《REST，GraphQL，Webhooks & gRPC 如何选型》](infer/bs/select_.md)
+
 # 🍭项目篇
 
 ### 🍬分类
