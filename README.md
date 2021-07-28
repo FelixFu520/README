@@ -6,6 +6,19 @@
 
 ### 🍬C++[🐾](theory/cpp/README.md)
 
+#### 🐾 编译相关
+
+- [cpp编译过程](theory/cpp/complier.md)
+- [C++静态库与动态库](theory/cpp/lib.md)
+- [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm)
+- [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html)
+- [cmake手册](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.txt)
+
+#### 🐾 代码学习
+
+- [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
+- [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
+
 ### 🍬Python[🐾](theory/python/README.md)
 
 #### 🐾 深度之眼👀
