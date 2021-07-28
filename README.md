@@ -374,6 +374,8 @@
 ### 🍬 嵌入式设备
 
 - [Nano](https://github.com/TD-4/Nano_DLI)
+- 树莓派 
+  - [安装系统](infer/embedded/pi_install.md)
 
 # 🍭项目篇
 
@@ -389,9 +391,9 @@
 
 - #### 🐾 [detection](https://github.com/FelixFu520/detection)
 
-### 🍬[小样本](notes/fsl/README.md)
+### 🍬小样本
 
-- 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒](notes/fsl/panet.md)
+- 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒]
 
 ### 🍬图像质量评价
 
