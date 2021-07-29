@@ -182,6 +182,8 @@
 ## 4⃣️ OpenCV
 
 - 🐾   [Python 读取视频](envs/opencv/read_video.md)
+- 🐾   [C++ Opencv学习笔记](envs/opencv/opencv_cpp.md)
+- 🐾   [opencv中CPU指令集优化、GPU](https://blog.csdn.net/weixin_41484240/article/details/80711295)
 
 # 🍭训练篇&部署篇
 
@@ -273,7 +275,7 @@
 - 🐾   [小样本与元学习](train/fsl/fsl_metalearning.md)
 - 🐾   [综述---《Generalizing from a Few Examples: A Survey on Few-Shot Learning》学习](train/fsl/introduce.md)|[小样本论文收集-GitHub](https://github.com/tata1661/FewShotPapers) |[视频](https://www.bilibili.com/video/BV1Jh411X7FG?from=search&seid=4539837598698253223)
 - 🐾   [元学习的方法实现小样本分类](fsl_metalearning2.md)
-- [meta-learning系列](metalearning.md)
+- 🐾   [meta-learning系列](metalearning.md)
   - 元学习系列（零）：小样本学习与元学习综述
   - 元学习系列（一）：Siamese Network（孪生网络）[1](https://zhuanlan.zhihu.com/p/35040994)|[2](https://www.cnblogs.com/wj-1314/p/11556107.html)|[3](https://zhuanlan.zhihu.com/p/142381922)
   - 元学习系列（二）：Prototypical Networks（原型网络）
@@ -403,6 +405,10 @@
 - 🐾   树莓派 
   - [安装系统](infer/embedded/pi_install.md)
 
+### 🍬 视频处理与流媒体
+
+- [协议]()
+
 # 🍭项目篇
 
 ## 1⃣️ 分类
@@ -427,15 +433,7 @@
 
 
 
-[![img](https://profile.csdnimg.cn/8/1/F/3_fusimeng)](https://blog.csdn.net/Fusimeng)
 
-![img](https://csdnimg.cn/release/blogv2/dist/pc/img/commentFlag@2x.png) 
-
-![表情包](https://csdnimg.cn/release/blogv2/dist/pc/img/emoticon.png)
-
-插入表情
 
 ![img](https://g.csdnimg.cn/static/face/emoji/001.png) ![img](https://g.csdnimg.cn/static/face/emoji/002.png) ![img](https://g.csdnimg.cn/static/face/emoji/003.png) ![img](https://g.csdnimg.cn/static/face/emoji/004.png) ![img](https://g.csdnimg.cn/static/face/emoji/005.png) ![img](https://g.csdnimg.cn/static/face/emoji/006.png) ![img](https://g.csdnimg.cn/static/face/emoji/007.png) ![img](https://g.csdnimg.cn/static/face/emoji/008.png) ![img](https://g.csdnimg.cn/static/face/emoji/009.png) ![img](https://g.csdnimg.cn/static/face/emoji/010.png) ![img](https://g.csdnimg.cn/static/face/emoji/011.png) ![img](https://g.csdnimg.cn/static/face/emoji/012.png) ![img](https://g.csdnimg.cn/static/face/emoji/013.png) ![img](https://g.csdnimg.cn/static/face/emoji/014.png) ![img](https://g.csdnimg.cn/static/face/emoji/015.png) ![img](https://g.csdnimg.cn/static/face/emoji/016.png) ![img](https://g.csdnimg.cn/static/face/emoji/017.png) ![img](https://g.csdnimg.cn/static/face/emoji/018.png) ![img](https://g.csdnimg.cn/static/face/emoji/019.png) ![img](https://g.csdnimg.cn/static/face/emoji/020.png) ![img](https://g.csdnimg.cn/static/face/emoji/021.png) ![img](https://g.csdnimg.cn/static/face/emoji/022.png) ![img](https://g.csdnimg.cn/static/face/emoji/023.png) ![img](https://g.csdnimg.cn/static/face/emoji/024.png) ![img](https://g.csdnimg.cn/static/face/emoji/025.png) ![img](https://g.csdnimg.cn/static/face/emoji/026.png) ![img](https://g.csdnimg.cn/static/face/emoji/027.png) ![img](https://g.csdnimg.cn/static/face/emoji/028.png) ![img](https://g.csdnimg.cn/static/face/emoji/029.png) ![img](https://g.csdnimg.cn/static/face/emoji/030.png) ![img](https://g.csdnimg.cn/static/face/emoji/031.png) ![img](https://g.csdnimg.cn/static/face/emoji/032.png) ![img](https://g.csdnimg.cn/static/face/emoji/033.png) ![img](https://g.csdnimg.cn/static/face/emoji/034.png) ![img](https://g.csdnimg.cn/static/face/emoji/035.png) ![img](https://g.csdnimg.cn/static/face/emoji/036.png) ![img](https://g.csdnimg.cn/static/face/emoji/037.png) ![img](https://g.csdnimg.cn/static/face/emoji/038.png) ![img](https://g.csdnimg.cn/static/face/emoji/039.png) ![img](https://g.csdnimg.cn/static/face/emoji/040.png) ![img](https://g.csdnimg.cn/static/face/emoji/041.png) ![img](https://g.csdnimg.cn/static/face/emoji/042.png) ![img](https://g.csdnimg.cn/static/face/emoji/043.png) ![img](https://g.csdnimg.cn/static/face/emoji/044.png) ![img](https://g.csdnimg.cn/static/face/emoji/045.png) ![img](https://g.csdnimg.cn/static/face/emoji/046.png) ![img](https://g.csdnimg.cn/static/face/emoji/047.png) ![img](https://g.csdnimg.cn/static/face/emoji/048.png) ![img](https://g.csdnimg.cn/static/face/emoji/049.png) ![img](https://g.csdnimg.cn/static/face/emoji/050.png) ![img](https://g.csdnimg.cn/static/face/emoji/051.png) ![img](https://g.csdnimg.cn/static/face/emoji/052.png) ![img](https://g.csdnimg.cn/static/face/emoji/053.png) ![img](https://g.csdnimg.cn/static/face/emoji/054.png) ![img](https://g.csdnimg.cn/static/face/emoji/055.png) ![img](https://g.csdnimg.cn/static/face/emoji/056.png) ![img](https://g.csdnimg.cn/static/face/emoji/057.png) ![img](https://g.csdnimg.cn/static/face/emoji/058.png) ![img](https://g.csdnimg.cn/static/face/emoji/059.png) ![img](https://g.csdnimg.cn/static/face/emoji/060.png) ![img](https://g.csdnimg.cn/static/face/emoji/061.png) ![img](https://g.csdnimg.cn/static/face/emoji/062.png) ![img](https://g.csdnimg.cn/static/face/emoji/063.png) ![img](https://g.csdnimg.cn/static/face/emoji/064.png) ![img](https://g.csdnimg.cn/static/face/emoji/065.png) ![img](https://g.csdnimg.cn/static/face/emoji/066.png) ![img](https://g.csdnimg.cn/static/face/emoji/067.png) ![img](https://g.csdnimg.cn/static/face/emoji/068.png) ![img](https://g.csdnimg.cn/static/face/emoji/069.png) ![img](https://g.csdnimg.cn/static/face/emoji/070.png) ![img](https://g.csdnimg.cn/static/face/emoji/071.png) ![img](https://g.csdnimg.cn/static/face/emoji/072.png)
-
-添加代码片
 
