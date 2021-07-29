@@ -269,10 +269,21 @@
 
 #### 🍃 FSL(小样本)
 
+- 🐾   [入门学习视频](https://www.bilibili.com/video/BV1Et4y1i7pu?p=2) ｜ [PPT](https://github.com/wangshusen/DeepLearning)
 - 🐾   [小样本与元学习](train/fsl/fsl_metalearning.md)
-- 
-- [综述---《Generalizing from a Few Examples: A Survey on Few-Shot Learning》学习](train/fsl/introduce.md)|[小样本论文收集-GitHub](https://github.com/tata1661/FewShotPapers)
-- 
+- 🐾   [综述---《Generalizing from a Few Examples: A Survey on Few-Shot Learning》学习](train/fsl/introduce.md)|[小样本论文收集-GitHub](https://github.com/tata1661/FewShotPapers) |[视频](https://www.bilibili.com/video/BV1Jh411X7FG?from=search&seid=4539837598698253223)
+- 🐾   [元学习的方法实现小样本分类](fsl_metalearning2.md)
+- [meta-learning系列](metalearning.md)
+  - 元学习系列（零）：小样本学习与元学习综述
+  - 元学习系列（一）：Siamese Network（孪生网络）[1](https://zhuanlan.zhihu.com/p/35040994)|[2](https://www.cnblogs.com/wj-1314/p/11556107.html)|[3](https://zhuanlan.zhihu.com/p/142381922)
+  - 元学习系列（二）：Prototypical Networks（原型网络）
+  - 元学习系列（三）:   Relation Network（关系网络）
+  - 元学习系列（四）:   Matching Network（匹配网络）
+  - 元学习系列（五）:   GRU模型
+  - 元学习系列（六）:   神经图灵机详细分析
+  - 元学习系列（七）:   [MAML](train/fsl/maml.md)与Meta-SGD
+  - 元学习系列（八）:   Reptile
+- 🐾   [PANet](train/fsl/panet.md)
 
 ### 🍬 损失函数
 
