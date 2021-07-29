@@ -270,6 +270,9 @@
 #### 🍃 FSL(小样本)
 
 - 🐾   [小样本与元学习](train/fsl/fsl_metalearning.md)
+- 
+- [综述---《Generalizing from a Few Examples: A Survey on Few-Shot Learning》学习](train/fsl/introduce.md)|[小样本论文收集-GitHub](https://github.com/tata1661/FewShotPapers)
+- 
 
 ### 🍬 损失函数
 

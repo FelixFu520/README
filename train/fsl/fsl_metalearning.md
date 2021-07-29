@@ -17,7 +17,7 @@
 众所周知，现在的主流的传统深度学习技术需要大量的数据来训练一个好的模型。例如典型的 MNIST 分类问题，一共有 10 个类，训练集一共有 6000 个样本，平均下来每个类大约 600 个样本，但是我们想一下我们人类自己，我们区分 0 到 9 的数字图片的时候需要看 6000 张图片才知道怎么区分吗？很显然，不需要！这表明当前的深度学习技术和我们人类智能差距还是很大的，要想弥补这一差距，少样本学习是一个很关键的问题。另外还有一个重要原因是如果想要构建新的数据集，还是举分类数据集为例，我们需要标记大量的数据，但是有的时候标记数据集需要某些领域的专家（例如医学图像的标记），这费时又费力，因此如果我们可以解决少样本学习问题，只需要每个类标记几张图片就可以高准确率的给剩余大量图片自动标记。这两方面的原因都让少样本学习问题很吸引人。
 
 在 few-shot learning 中有一个术语叫做 N-way K-shot 问题，简单的说就是我们需要分类的样本属于 N 个类中一种，但是我们每个类训练集中的样本只有 K个，即一共只有 N ∗ K个样本的类别是已知的。
-![在这里插入图片描述](F:\GitHub\README_\train\fsl\imgs\20190618212512646.png)
+![在这里插入图片描述](imgs/20190618212512646.png)
 图片来自论文《Optimization as a Model for Few-Shot Learning.》，这是一个 5-way 1-shot 的图示，左边是训练集一共 5 张图片来自 5 个类，每个类只有一张图片。右边是测试集，理论上可以有任意多个图片用于测试，图中只给出了两张实例。
 
 Few-shot learning 问题的关键是解决过拟合 (overfitting) 的问题，因为训练的样本太少了，训练出的模型可能在训练集上效果还行，但是在测试集上面会遭遇灾难性的崩塌。
@@ -35,7 +35,7 @@ Few-shot learning 问题的关键是解决过拟合 (overfitting) 的问题，�
 
 元学习的核心想法是先学习一个先验知识（prior），这个先验知识对解决 few-shot learning 问题特别有帮助。Meta-learning 中有 task 的概念，比如上面图片讲的 5-way 1-shot 问题就是一个 task，我们需要先学习很多很多这样的 task，然后再来解决这个新的 task 。最最最重要的一点，这是一个新的 task。分类问题中，这个新的 task 中的类别是之前我们学习过的 task 中没有见过的！ 在 Meta-learning 中之前学习的 task 我们称为 meta-training task，我们遇到的新的 task 称为 meta-testing task。因为每一个 task 都有自己的训练集和测试集，因此为了不引起混淆，我们把 task 内部的训练集和测试集一般称为 support set 和 query set
 
-![在这里插入图片描述](F:\GitHub\README_\train\fsl\imgs\3.png)
+![在这里插入图片描述](imgs/3.png)
 简单画了一个示意图，前面三个是三个 meta-training task （当然实际需要很多这样的 meta-training task 才能学到我们需要的先验知识)，最后一个就是 meta-testing task。我们最后评价我们的 meta-learning 方法的好坏就是在红色标记部分上的 performance。
 
 方法 2.1 和方法 2.2 之间有个明显的差异就是 meta-learning 需要一些类来构建 meta-training task。由于 meta-testing 的类别要和 meta-training 完全不同，因此如果我们只有 MNIST 数据集，没法使用 meat-learning 来解决 MNIST 上的 10-way few-shot learning 问题，但是方法 2.1 可以。不过我们可以使用 meta-learning 解决 MNIST 上的 N-way (N < 6) 的 few-shot learning 问题。那么如果我们非要解决 MNIST 上的 10-way few-shot learning 问题怎么办呢，可以在另外一个数据集，例如 Omniglot ，上面进行 meta-training，然后学到的先验知识用来解决这个问题。《Siamese neural networks for one-shot image recognition.》 和 《Matching networks for one shot learning.》都在论文中做过这样子实验（这一种情况和迁移学习（transfer learning）有相似的地方）。
