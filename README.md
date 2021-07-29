@@ -85,8 +85,8 @@
 - 🐾   [类型转换](theory/python/change_type.md)
 - 🐾   [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
 - 🐾   [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
-
 - 🐾   [如何计算topk](theory/python/topk.md)
+- 🐾   [Python程序封装为exe等](theory/python/pyinstaller.md)
 
 # 🍭环境篇
 
