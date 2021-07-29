@@ -391,6 +391,12 @@
 
 ####  🍃TensorRT
 
+- [了解什么是TensorRT?](infer/tensorrt/Introduce.md)
+- [案例和讲解（C++）](infer/tensorrt/tensorrtcpp.md)
+- [使用TensorRT遇到的问题](infer/tensorrt/problem.md)
+- [入门案例代码解析(python)](infer/tensorrt/Code.md)
+- [自己收集的案例1(python)](https://github.com/FelixFu-TD/TensorRT) | [2(python)](https://github.com/FelixFu-TD/TensorRT2)
+
 ### 🍬 网站部署-BS
 
 - 🐾   [HTTP协议](infer/bs/https.md)
