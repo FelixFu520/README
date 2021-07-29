@@ -389,6 +389,15 @@
 
 ####  🍃 TVM
 
+- [介绍](infer/tvm/introduce.md)
+- [编译安装](infer/tvm/install.md)
+- [TVM架构设计](infer/tvm/arch.md)
+- [TVM部署](infer/tvm/TVMB.md)
+- [TVM原理](infer/tvm/TVMY.md)
+- [TVM源码学习](infer/tvm/src.md)
+- [Relay学习](infer/tvm/relay.md)`TODO`
+- [学习笔记-代码](infer/tvm/pytorch2onnx2tvm.md) | [Github](https://github.com/TD-4/pytorch2onnx2tvm) | [DockerHub:`dockerhub:docker pull fusimeng/project:tvm-deploy-cpp`]
+
 ####  🍃TensorRT
 
 - [了解什么是TensorRT?](infer/tensorrt/Introduce.md)
