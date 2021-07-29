@@ -414,6 +414,23 @@
 - [视频基本概念与多媒体概念](infer/video/introduce1.md)
 - [视频编解码与GPU](infer/video/gpu_codec.md)
 
+#### 🍃 视频编解码理论基础
+
+- [第一章 介绍](infer/VideoCodecTheoryBasis/notes/introduce.md)
+- [第二章 数字视频](infer/VideoCodecTheoryBasis/notes/digitalvideo.md)
+- [第三章 信息论基础](infer/VideoCodecTheoryBasis/notes/base.md)
+- [第四章 视频编解码理论基础](infer/VideoCodecTheoryBasis/notes/codec.md)
+
+#### 🍃 信息论与编码基础（雷菁）
+
+* [第一章 绪论](infer/VideoCodecTheoryBasis/info/introduce.md)
+* [第二章 离散信源](infer/VideoCodecTheoryBasis/info/source.md)
+* [第三章 离散信道](infer/VideoCodecTheoryBasis/info/xindao.md)
+
+#### DeepStream
+
+- [DeepStream介绍](infer/deepstream/introduce.md)
+
 # 🍭项目篇
 
 ## 1⃣️ 分类
