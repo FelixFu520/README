@@ -13,7 +13,7 @@
 - 🐾   [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm)
 - 🐾   [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
 - 🐾   [why make --> cmake](theory/cpp/make2cmake.md)
-- 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.txt) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo)
+- 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo)
 
 #### 🍃 代码学习
 

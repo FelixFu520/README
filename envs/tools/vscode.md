@@ -6,6 +6,7 @@
 
 - [在 vscode 中使用 cmake 一键运行 c++ 项目](https://zhuanlan.zhihu.com/p/144376188)
 - [【宇宙最强编辑器VS Code】（十）使用VS Code + SSH进行远程开发](https://blog.csdn.net/Mculover666/article/details/90439669)
+- https://zhuanlan.zhihu.com/p/141344165
 
 ---
 
@@ -256,3 +257,197 @@ SSH启动的方式有两种：
 ## 四、Mac + VS Code + C++ +远程调试
 
 C++与Python类似，主要是在远程也要添加个c++内容，现在vscode用起来很方便。不需要配置太多内容
+
+
+
+## 五、VS Code配置文件说明
+
+VScode对C/C++程序的编译、允许和调试都只是做了一层包装，底层都是基于GCC编译器、GDB调试器来完成，所以使用VScode操作C/C++之前，请确保操作系统中已下载GCC/GDB。
+
+```bash
+# install GCC/GDB
+sudo apt-get update
+sudo apt-get install build-essential gdb
+
+# check if GCC/GDB installed
+gcc -v
+```
+
+VScode通过C/C++ Extension支持C/C++程序，所以需要在左侧工具栏的Extensions里下载该包；
+
+VScode通过CMake Extension支持cmake，若需要使用camke集成编译过程，需要下载该包和cmake命令；
+
+### **1, 配置文件**
+
+每个项目都有一套配置文件集合，放置在.vscode目录下，其中有：
+
+```haxeml
+tasks.json：编译相关配置
+launch.json：debug相关配置
+c_cpp_properties.json：c/c++程序相关配置
+```
+
+若希望把一个项目的配置拷贝过来，直接复制.vscode目录即可。
+
+### **2, 自定义c_cpp_properties.json**
+
+```json
+{
+  //env自定义变量，通过${variableName}来复用
+  "env": {
+    "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include"],
+    "myCompilerPath": "/usr/local/bin/gcc-7"
+  },
+  //自定义一些公共配置，覆盖默认配置C_Cpp.default.*
+  "configurations": [
+    {
+      "name": "Linux/Max/Win32",
+      //编译器的路径，当设置后，会生成includePath和默认的intelliSenseMode
+      "compilerPath": "/usr/bin/clang",
+      //编译参数
+      "compilerArgs": "",
+      //不同操作系统的默认值不同，maxOs为clang-x64、Linux为gcc-x64、Windows为msvc-x64
+      "intelliSenseMode": "clang-x64",
+      //检索头文件的目录，不会递归搜索，除非路径里含有**
+      "includePath": ["${myDefaultIncludePath}", "/another/path"],
+      //预处理器定义列表
+      "defines": ["FOO", "BAR=100"],
+      //c语言的版本
+      "cStandard": "c11",
+      //c++语言的版本
+      "cppStandard": "c++17"
+    }
+  ],
+  //c_cpp_properties.json的版本，用于匹配configurations里的配置，不建议更改
+  "version": 4
+}
+```
+
+### **3, 编辑C/C++程序**
+
+```todotxt
+1. 头文件
+默认只会去该目录和其子目录下搜索头文件[1]，若需要额外指定头文件目录，可以修改c_cpp_properties.json。
+
+2. 自动补全和quick info
+下载C/C++ Extension后就会自动补全和提示一些对象的quick info[2]。
+
+3. 代码格式化
+C/C++ Extension自带clang-format[3]。
+Ctrl+Shift+I可以格式化整个文件;
+Ctrl+K Ctrl+F可以格式化选中的代码;
+editor.formatOnSave参数支持在保存文件时自动格式化文件;
+editor.formatOnType参数支持输入完分号后自动格式化文件；
+clang-format的配置默认使用c_cpp_properties.json里的，若需要自定义clang-format，可以建.clang-format文件覆盖；
+
+4.快速查看定义
+F12/Ctrl+左击：跳到定义处
+Ctrl+鼠标指向/Ctrl+Shift+F10：不用跳转直接在本页面创建一个子窗口显示定义
+Ctrl+Alt+左击：打开一个多窗口显示定义文件
+
+5.概阅源码
+C/C++ Extension支持搜索所有源码，快速查阅已有的类、方法，不同的命令搜索范围不一样，Ctrl+Shift+O可以查本文件内的，Ctrl+T可以查工作空间内的，Ctrl+P后加@查本件内的，Ctrl+P后加#查工作空间内的。
+```
+
+### **4，编译源文件和运行**
+
+点击**Terminal**栏里的**Configure Default Build Task**选项会自动生成tasks.json文件[[4\]](https://zhuanlan.zhihu.com/p/367909032#ref_4)，用于配置如何把源文件编译成可执行文件，举例：
+
+```json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      //自定义任意字符串
+      "label": "g++ build active file",
+      //编译器路径，这里用的g++
+      "command": "/usr/bin/g++",
+      //编译参数，这里是把${file}里的源文件编译到${fileDirname}目录里
+      "args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+      "group": {
+        "kind": "build",
+         //设置为true时，可以通过Ctrl+Shift+B命令快速编译
+        "isDefault": true
+      }
+    }
+  ]
+}
+其他可自定义的参数：
+workspaceFolder：打开Vscode的目录
+workspaceFolderBasename：workspaceFolder的根目录，即没有/
+file：当前VScode打开的文件，若想编译多个文件，可以自定义为"${workspaceFolder}:/*.cpp"
+fileDirname：当前VScode打开文件的目录
+fileBasenameNoExtension：file里每个文件不带后缀
+```
+
+通过**Ctrl+Shift+B**命令快速编译或者点击**Terminal**栏里的**Run Build Task**触发编译，编译完之后在**Terminal**面板里生成编译结果，然后在**TERMINAL**面板里选择bash允许可执行文件。
+
+### **5，debug源文件**
+
+点击**Run**栏里的**Add Configuration**选项，自动生成**launch.json**文件，用于配置VScode如何使用GDB/LLDB来debug C/C++可执行程序，举例：
+
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "g++ build and debug active file",
+      "type": "cppdbg",
+      //debug的模式，分位launch和attch两种
+      "request": "launch",
+      //指定debug的可执行程序
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      //在windows上debug时必须设置为gdb可执行文件的路径
+      "miDebuggerPath": "/usr/bin/gdb"
+      //debug时传给可执行程序的参数
+      "args": [],
+      //debug时传给可执行程序的环境变量
+      "environment": [],
+      //发生内存dump的linux目录，若是windows则为dumpPath
+      "coreDumpPath": "",
+      //GDB的可执行文件所在目录
+      "cwd": "${workspaceFolder}",
+      //是否另开窗口输出debug信息
+      "externalConsole": false,
+      //是否在main函数处打断点
+      "stopAtEntry": false,
+      //默认根据操作系统选择，也可以自定义为gdb或lldb
+      "MIMode": "gdb"
+    }
+  ]
+}
+```
+
+点击**Run**栏里的**Start Debugging**选项开始debug，会在断点处停止[[5\]](https://zhuanlan.zhihu.com/p/367909032#ref_5)，可以在左侧**Run**工具栏里查看断点时刻一些debug信息，在底部的**DEBUG CONSOLE**面板里输入需确认的表达式的值。
+
+除了最基本的断点，还可以通过点击断点给断电设置条件，仅在条件满足时才在断电处停止，即设置条件断点，在VScode中普通断点和条件断点的区别是后者中间有等号。
+
+设置Watch点，通过左侧**Run**工具栏里的**WATCH**框里给特定表达式设置watch，每当遇到断点停止后，就会输出watch点的值。
+
+除此之外**Run**工具栏里的**Call Stack**框还可以在多线程时显示各个线程的情况。
+
+### **7，cmake**
+
+1. CMakeLists.txt
+   通过**CMake: Quick Start**命令自动生成CMakeLists.txt或者自创建。
+
+2. 选择Kit
+   Kit是涵盖编译器、链接器等所有用于构建程序的工具的集成，通过**CMake: Select a Kit**命令选择需要的编译器，若没有想要的，可以自建cmake-tools-kits.json来生成自己需要的编译器，cmake-tools-kits.json文件可以通过**CMake: Edit User-Local CMake Kits**命令自动生成，一旦选择成功，在底部的状态栏里会有选择的编译器信息。
+
+3. 选择variant
+   variant决定如何构建cmake，通过**CMake: Select Variant**命令来选择，构建模式分为:
+
+4. 1. Debug:不优化但可调试
+   2. Release:优化但不可调试
+   3. MinRelSize:优化大小但不可调试
+   4. RelWithDebInfo:优化速度且可调试
+
+5. camke命令构建
+   通过**CMake: Configure**命令完成cmake的构建。
+
+6. 编译
+   通过**CMake: Build**命令完成所有target的编译，若只想定向选择target，可以使用**CMake: Set Build Target**命令来选择特定的target。
+
+7. debug
+   通过**CMake: Debug**命令实现debug模式运行可执行程序。
