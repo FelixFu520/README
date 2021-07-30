@@ -120,7 +120,8 @@
 - 🐾   [CLion 安装与调试 Mac](envs/tools/clion.md)
 - 🐾   [cmake 安装](envs/tools/cmake.md)
 - 🐾   [pycuda安装](envs/tools/pycuda.md)
-- 🐾 OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
+- 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
+- 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
 
 ## 2⃣️ Pytorch
 
