@@ -106,3 +106,34 @@ def main():
 if __name__ == '__main__':
     main()
 ```
+
+
+
+```
+# # -*- coding:utf-8 -*-
+# # author:
+# from bypy import ByPy
+# # 获取一个bypy对象，封装了所有百度云文件操作的方法
+# bp = ByPy()
+# # 百度网盘创建文件夹zhoulong
+# # bp.mkdir(remotepath = 'zhoulong')
+# #上传文件至文件夹
+# # upload中参数代表复制文件，默认值为'overwrite'，指定'newcopy'不会覆盖重复文件
+# # bp.upload(localpath= r'上传文件绝对路径', remotepath= 'zhoulong', ondup='newcopy')
+# # print('上传完成！！')
+# bp.download(remotepath = 'zhoulong', localpath = r'下载文件输出文件夹')
+# print('下载完成！！')
+
+from bypy import ByPy
+
+
+def main():
+    bp = ByPy()
+    bp.list()
+    bp.download(remotepath="ssd.onnx", localpath=r'./ssd.onnx')
+
+
+if __name__ == '__main__':
+    main()
+```
+
