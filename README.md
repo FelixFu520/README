@@ -33,6 +33,13 @@
 - 🐾   [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
 - 🐾   [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
 
+#### 🍃 C++工具
+
+- [VS Code + UML](theory/cpp/vscode_uml.md) ｜ [类图语法参考](https://plantuml.com/zh/class-diagram)
+- [UML类关系](theory/cpp/uml_relation.md)
+
+
+
 #### 🍃 算法&数据结构
 
 - 🐾   链表：
