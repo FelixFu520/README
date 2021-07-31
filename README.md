@@ -193,6 +193,7 @@
 - 🐾   [Python 读取视频](envs/opencv/read_video.md)
 - 🐾   [C++ Opencv学习笔记](envs/opencv/opencv_cpp.md)
 - 🐾   [opencv中CPU指令集优化、GPU](https://blog.csdn.net/weixin_41484240/article/details/80711295)
+- 🐾   [Opencv GPU系列笔记 CSDN](https://blog.csdn.net/DumpDoctorWang/article/details/81032914)
 
 # 🍭训练篇&部署篇
 
