@@ -13,7 +13,7 @@
 - 🐾   [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm)
 - 🐾   [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
 - 🐾   [why make --> cmake](theory/cpp/make2cmake.md)
-- 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo)
+- 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo) | [Cmake Demo github2](https://github.com/TD-4/CMakePractice)
 
 #### 🍃 代码学习
 
@@ -97,7 +97,7 @@
 
 # 🍭环境篇
 
-## 1⃣️ 安装篇
+## 1⃣️ GPUs
 
 ### 🍬 GPU知识
 
@@ -117,18 +117,6 @@
 ### 🍬 推理环境安装
 
 - 🐾   [TensorRT Ubuntu](envs/tools/tensorrt.md) -- [Windows10](envs/tools/tensorrt_win10.md)
-
-### 🍬 IDE&Tools安装
-
-- 🐾   [JupyterLab安装 Ubuntu](envs/tools/jupyterlab.md)
-- 🐾   [Matlab安装 Ubuntu](envs/tools/matlab.md)
-- 🐾   [xrdp Ubuntu](envs/tools/xrdp.md)
-- 🐾   [VS2019 Windows](envs/tools/vs2019.md)
-- 🐾   [CLion 安装与调试 Mac](envs/tools/clion.md)
-- 🐾   [cmake 安装](envs/tools/cmake.md)
-- 🐾   [pycuda安装](envs/tools/pycuda.md)
-- 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
-- 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
 
 ## 2⃣️ Pytorch
 
@@ -187,6 +175,18 @@
 
 - 🐾    [实验管理工具sacred](envs/tools/scared.md)
 - 🐾   [bypy 百度云下载python](envs/tools/bypy.md)
+
+### 🍬 IDE&Tools安装
+
+- 🐾   [JupyterLab安装 Ubuntu](envs/tools/jupyterlab.md)
+- 🐾   [Matlab安装 Ubuntu](envs/tools/matlab.md)
+- 🐾   [xrdp Ubuntu](envs/tools/xrdp.md)
+- 🐾   [VS2019 Windows](envs/tools/vs2019.md)
+- 🐾   [CLion 安装与调试 Mac](envs/tools/clion.md)
+- 🐾   [cmake 安装](envs/tools/cmake.md)
+- 🐾   [pycuda安装](envs/tools/pycuda.md)
+- 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
+- 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
 
 ## 4⃣️ OpenCV
 
@@ -252,7 +252,7 @@
 #### 🍃RNN/NLP
 
 - 🐾    [NLP学习路线](train/rnn/introduce_rnn.md)
-- 🐾    [Attention]
+- 🐾    [Attention](train/rnn/introduce_attention.md)
 - 🐾    [Transformer]
 
 #### 🍃GAN
@@ -414,7 +414,7 @@
 - [案例和讲解（C++）](infer/tensorrt/tensorrtcpp.md)
 - [使用TensorRT遇到的问题](infer/tensorrt/problem.md)
 - [入门案例代码解析(python)](infer/tensorrt/Code.md)
-- [自己收集的案例1(python)](https://github.com/FelixFu-TD/TensorRT) | [2(python)](https://github.com/FelixFu-TD/TensorRT2)
+- [自己收集的案例1(python)](https://github.com/TD-4/TensorRT) | [2(python)](https://github.com/TD-4/TensorRT2)
 
 ### 🍬 网站部署-BS
 
