@@ -12,11 +12,11 @@
 
 刚准备好数据集开始测试，等了半天还没有开始训练，一看gpustat发现竟然卡住了，分批加载而且数据集也没那么大。
 
-![img](imgs\v2-da768b9293465f5d17e67b958ac3941f_720w.jpg)
+![img](imgs/v2-da768b9293465f5d17e67b958ac3941f_720w.jpg)
 
 那就F5调试看看到底卡在哪了，结果直接一通开幕雷击：
 
-![img](imgs\v2-d116bab25d49b1c4b4bd0d41d8809b55_720w.jpg)
+![img](imgs/v2-d116bab25d49b1c4b4bd0d41d8809b55_720w.jpg)
 
 既然是dataloader worker报的问题，那就禁用多线程num_worker=0，运行就正常了。后果就是GPU利用率极低，几乎都在等图片加载。又只能开启多线程继续调试。
 
