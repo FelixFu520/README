@@ -187,6 +187,7 @@
 - 🐾   [pycuda安装](envs/tools/pycuda.md)
 - 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
 - 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
+- 🐾  [Pycharm手册](https://pycharm.iswbm.com/index.html)
 
 ## 4⃣️ OpenCV
 
@@ -362,6 +363,7 @@
 - 🐾   [TensorCore](train/tips/tensorcore.md)
 - 🐾   [DeepLearningExamples NVIDIA-各种加速和demo](https://github.com/NVIDIA/DeepLearningExamples)
 - 🐾   [学习率调整策略](train/tips/scheduler.md)
+- 🐾  [学习率与batchsize](train/tips/lr_batchsize.md)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
