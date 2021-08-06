@@ -93,7 +93,13 @@
 - 🐾   [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
 - 🐾   [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
 - 🐾   [如何计算topk](theory/python/topk.md)
+- [按比例切分数据集](theory/python/splitdataset.md)
+- [获取当前文件的路径](https://blog.csdn.net/py_tester/article/details/78954034)
+
+#### 🍃 Python封装工具
+
 - 🐾   [Python程序封装为exe等](theory/python/pyinstaller.md)
+- 🐾   [Python程序封装成wheel、setuptools](theory/python/setuptools.md)
 
 # 🍭环境篇
 
