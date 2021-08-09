@@ -15,7 +15,7 @@
 
 loguru，第三方库，轻松记日志，一个函数搞定。
 
-![在这里插入图片描述](F:\GitHub\README\envs\tools\imgs\20200722160117356.gif)
+![在这里插入图片描述](imgs/20200722160117356.gif)
 
 **Loguru** 一个能彻底解放你的日志记录器。
 
@@ -50,7 +50,7 @@ logger.critical('严重错误消息')
 logger.success('成功调用')
 ```
 
-![在这里插入图片描述](F:\GitHub\README\envs\tools\imgs\20200722160924493.png)
+![在这里插入图片描述](imgs/20200722160924493.png)
 
 
 
@@ -84,7 +84,7 @@ logger.critical('严重错误消息')
 
 产生了新日志文件
 
-![在这里插入图片描述](F:\GitHub\README\envs\tools\imgs\20200722162650332.png)
+![在这里插入图片描述](imgs/20200722162650332.png)
 
 
 
@@ -147,7 +147,7 @@ with logger.catch():
 
 输出
 
-![在这里插入图片描述](F:\GitHub\README\envs\tools\imgs\20200722164213499.png)
+![在这里插入图片描述](imgs/20200722164213499.png)
 
 
 
@@ -176,7 +176,7 @@ def nested(c):
 nested(0)
 ```
 
-![在这里插入图片描述](F:\GitHub\README\envs\tools\imgs\20200722165610228.png)
+![在这里插入图片描述](imgs/20200722165610228.png)
 
 
 
@@ -331,9 +331,9 @@ CRITICAL:root:严重错误信息
 
 设置格式
 
-![image-20210809173221439](F:\GitHub\README\envs\tools\imgs\image-20210809173221439.png)
+![image-20210809173221439](imgs/image-20210809173221439.png)
 
-![image-20210809173240003](F:\GitHub\README\envs\tools\imgs\image-20210809173240003.png)
+![image-20210809173240003](imgs/image-20210809173240003.png)
 
 
 
