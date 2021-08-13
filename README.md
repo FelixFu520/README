@@ -97,6 +97,7 @@
 - 🐾  [按比例切分数据集](theory/python/splitdataset.md)
 - 🐾  [获取当前文件的路径](https://blog.csdn.net/py_tester/article/details/78954034)
 - 🐾  [Python模块搜索路径](theory/python/search_path.md)
+- 🐾  [Python glob](theory/python/glob.md)
 
 #### 🍃 Python封装工具
 
@@ -107,6 +108,10 @@
 #### 🍃 Python GUI
 
 - 🐾  [QT5](http://code.py40.com/pyqt5/)
+
+#### 🍃 Python 报错
+
+- 🐾  [docker容器python中文乱码](theory/python/zh_error.md)
 
 # 🍭环境篇
 
@@ -188,6 +193,7 @@
 
 - 🐾    [实验管理工具sacred](envs/tools/scared.md)
 - 🐾   [bypy 百度云下载python](envs/tools/bypy.md)
+- 🐾   [Python日志库loguru](envs/tools/loguru.md)
 
 ### 🍬 IDE&Tools安装
 
@@ -279,6 +285,7 @@
   - [yolo v2](train/detection/yolov2.md)
   - [yolo v3](train/detection/yolov3.md)
   - [yolo v4](train/detection/yolov4.md)
+  - [Yolox](train/detection/yolox.md) | [Github](https://github.com/Megvii-BaseDetection/YOLOX)
 
 #### 🍃Segmentation
 
@@ -473,6 +480,14 @@
 
 # 🍭项目篇
 
+> 项目结构
+>
+> 1、config.json格式：参考segmentation
+>
+> 2、scared格式：参考PANet
+>
+> 3、Exp自定义格式：参考YoloX
+
 ## 1⃣️ 分类
 
 - #### 🐾   [classification](https://github.com/FelixFu520/classification)
@@ -483,7 +498,7 @@
 
 ## 3⃣️ 目标检测
 
-- #### 🐾   [detection](https://github.com/FelixFu520/detection)
+- #### 🐾   [YoloX](https://github.com/FelixFu520/YOLOX)
 
 ## 4⃣️ 小样本
 
