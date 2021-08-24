@@ -488,25 +488,29 @@
 >
 > 3、Exp自定义格式：参考YoloX
 
-## 1⃣️ 分类
+## 1⃣️ 分类/Classification
 
 - #### 🐾   [classification](https://github.com/FelixFu520/classification)
 
-## 2⃣️ 语义分割
+## 2⃣️ 语义分割/Segmentation
 
 - #### 🐾   [segmentation](https://github.com/FelixFu520/segmentation)
 
-## 3⃣️ 目标检测
+## 3⃣️ 目标检测/Detection
 
 - #### 🐾   [YoloX](https://github.com/FelixFu520/YOLOX)
 
-## 4⃣️ 小样本
+## 4⃣️ 小样本/Few Shot Learning
 
-- 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒]
+- 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒](train/fsl/panet.md)
 
-## 5⃣️ 图像质量评价
+## 5⃣️ 图像质量评价/Image Quality Assessment
 
 - 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)[📒](train/iqa/hypernet.md)
+
+## 5⃣️  异常检测/Anomaly Detection
+
+- [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master)
 
 ## 5⃣️  部署
 
