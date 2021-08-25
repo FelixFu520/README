@@ -79,6 +79,18 @@
 - 🐾   [argmax、...、11个函数](theory/python/numpy_funs.md)
 - 🐾   [控制流程](theory/python/numpy_control.md)
 
+#### 🍃 Matplotlib
+
+- Matplotlib 唐宇迪
+  - [Matplotlib基本操作](theory/python/matplotlib/1.ipynb)
+  - [风格设置](theory/python/matplotlib/2.ipynb)
+  - [3]((theory/python/matplotlib/3.ipynb))
+  - [4](theory/python/matplotlib/4.ipynb)
+  - [直方图and散点图](theory/python/matplotlib/5.ipynb)
+  - [6](theory/python/matplotlib/6.ipynb)
+  - [7](theory/python/matplotlib/7.ipynb)
+  - [Pandas与sklearn结合实例](theory/python/matplotlib/8.ipynb)
+
 #### 🍃 Python函数
 
 - 🐾   [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
