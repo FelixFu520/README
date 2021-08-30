@@ -289,10 +289,10 @@
 
 #### 🍃GAN
 
-- 🐾 [入门介绍](train/gan/introduce.md) | [龙良曲 入门视频](https://www.bilibili.com/video/BV1RU4y1h74n?p=1) [GAN原理](https://www.bilibili.com/video/BV16a4y157sC?from=search&seid=11723640036137669478) | [GAN综述2019](https://www.jiqizhixin.com/articles/2019-03-19-12)
+- 🐾 [入门介绍](train/gan/introduce.md) | [GAN综述2019](https://www.jiqizhixin.com/articles/2019-03-19-12)
 - 🐾 [GAN ZOO](https://github.com/hindupuravinash/the-gan-zoo) | [ZOO for beginner](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner) | [StyleGAN-Zoo](https://github.com/oovm/StyleGAN-Zoo)
 - 🐾 [GAN学习路线笔记](train/gan/route.md)
-  - GAN：生成对抗网络
+  - GAN(生成对抗网络):[笔记](train/gan/gan.md) | [入门CODE](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner)
   - DCGAN：深度卷积生成对抗网络
   - CGAN：条件生成对抗网络
   - CycleGAN
