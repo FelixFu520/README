@@ -536,7 +536,7 @@
 
 ## 5⃣️  异常检测/Anomaly Detection
 
-- [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master)
+- [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
 
 ## 5⃣️  部署
 
