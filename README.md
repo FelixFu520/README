@@ -537,6 +537,8 @@
 ## 5⃣️  异常检测/Anomaly Detection
 
 - [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
+- [SPADE](https://github.com/TD-4/SPADE-pytorch)
+- [PaDim & PatchCore ](https://github.com/TD-4/anodet)
 
 ## 5⃣️  部署
 
