@@ -293,12 +293,12 @@
 - 🐾 [GAN ZOO](https://github.com/hindupuravinash/the-gan-zoo) | [ZOO for beginner](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner) | [StyleGAN-Zoo](https://github.com/oovm/StyleGAN-Zoo)
 - 🐾 [GAN学习路线笔记](train/gan/route.md)
   - GAN(生成对抗网络):[笔记](train/gan/gan.md) | [入门CODE](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner)
-  - DCGAN：深度卷积生成对抗网络
-  - CGAN：条件生成对抗网络
+  - DCGAN(深度卷积生成对抗网络): 原理同GAN相同，只是全连接神经网络换成Deep Conv | [入门CODE](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner)
+  - CGAN(条件生成对抗网络): [笔记](train/gan/cgan.md) | [入门CODE](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner)
   - CycleGAN
   - CoGAN：耦合生成对抗网络
   - ProGAN：生成对抗网络的渐进式增长
-  - WGAN：Wasserstein 生成对抗网络
+  - WGAN(Wasserstein 生成对抗网络): [笔记](train/gan/wgan.md)| [入门CODE](https://github.com/TD-4/CVAE-GAN-zoos-PyTorch-Beginner)
   - SAGAN：自注意力生成对抗网络
   - BigGAN：大生成对抗性网络
   - StyleGAN：基于风格的生成对抗网络
