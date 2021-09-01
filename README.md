@@ -302,6 +302,7 @@
   - SAGAN：自注意力生成对抗网络
   - BigGAN：大生成对抗性网络
   - StyleGAN：基于风格的生成对抗网络
+- [GAN Pytorch实现](https://github.com/FelixFu520/PyTorch-GAN)
 
 #### 🍃Detection
 
