@@ -517,15 +517,18 @@
 
 ## 1⃣️ 分类/Classification
 
-- #### 🐾   [classification](https://github.com/FelixFu520/classification)
+- 🐾   [classification](https://github.com/FelixFu520/classification)
+- 🐾   [classification](https://github.com/FelixFu520/LCD-luster)
 
 ## 2⃣️ 语义分割/Segmentation
 
-- #### 🐾   [segmentation](https://github.com/FelixFu520/segmentation)
+- 🐾   [segmentation](https://github.com/FelixFu520/segmentation)
 
 ## 3⃣️ 目标检测/Detection
 
-- #### 🐾   [YoloX](https://github.com/FelixFu520/YOLOX)
+- 🐾   [Yolo v1](https://github.com/TD-4/yolov1) | [notes](train/detection/yolov1.md)
+- 🐾   [Yolo v4](https://github.com/FelixFu520/YOLOX)
+- 🐾   [YoloX](https://github.com/FelixFu520/YOLOX)
 
 ## 4⃣️ 小样本/Few Shot Learning
 
@@ -537,9 +540,11 @@
 
 ## 5⃣️  异常检测/Anomaly Detection
 
-- [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
-- [SPADE](https://github.com/TD-4/SPADE-pytorch)
-- [PaDim & PatchCore ](https://github.com/TD-4/anodet)
+- 🐾 [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
+- 🐾 [SPADE](https://github.com/TD-4/SPADE-pytorch)
+- 🐾 [PaDim & PatchCore ](https://github.com/TD-4/anodet)
+
+## 5⃣️  图像生成/Image Generative
 
 ## 5⃣️  部署
 
