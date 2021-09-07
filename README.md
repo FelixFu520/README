@@ -527,8 +527,10 @@
 ## 3⃣️ 目标检测/Detection
 
 - 🐾   [Yolo v1](https://github.com/TD-4/yolov1) | [notes](train/detection/yolov1.md)
-- 🐾   [Yolo v4](https://github.com/FelixFu520/YOLOX)
-- 🐾   [YoloX](https://github.com/FelixFu520/YOLOX)
+- 🐾   [Yolo v2](https://github.com/TD-4/yolov2) | [notes](train/detection/yolov2.md)
+- 🐾   [Yolo v3](https://github.com/TD-4/yolov3) | [notes](train/detection/yolov3.md)
+- 🐾   [Yolo v4](https://github.com/TD-4/yolov4) | [Yolov4](https://github.com/TD-4/yolov4_) | [notes](train/detection/yolov4.md)
+- 🐾   [YoloX](https://github.com/FelixFu520/YOLOX) |  [notes](train/detection/yolov4.md)
 
 ## 4⃣️ 小样本/Few Shot Learning
 
