@@ -38,7 +38,9 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib
 
 推理与演示
 
-TensorRT的加载模型执行推理的步骤基本上跟OpenVINO与OpenCV DNN很相似，唯一区别的地方在于使用tensorRT做推理，首先需要把数据从内存搬到显存，处理完之后再重新搬回内存，然后解析输出。基本步骤与代码如下：**创建网络**
+TensorRT的加载模型执行推理的步骤基本上跟OpenVINO与OpenCV DNN很相似，唯一区别的地方在于使用tensorRT做推理，首先需要把数据从内存搬到显存，处理完之后再重新搬回内存，然后解析输出。基本步骤与代码如下：
+
+### **创建网络**
 
 ```javascript
 IBuilder* builder = createInferBuilder(gLogger);

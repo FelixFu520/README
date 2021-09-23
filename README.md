@@ -20,6 +20,7 @@
 
 - 🐾   [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
+- [C++设计模式](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [2](https://github.com/TD-4/Cpp-Design-Patterns-1)
 
 #### 🍃 函数
 
@@ -33,6 +34,13 @@
 - 🐾   [函数指针与指针函数](http://yulingtianxia.com/blog/2014/04/17/han-shu-zhi-zhen-yu-zhi-zhen-han-shu/)
 - 🐾   [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
 - 🐾   [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
+- [C++ Vector遍历的几种方式](https://blog.csdn.net/HW140701/article/details/78833486)
+- [C++ unordered_map的使用](https://www.cnblogs.com/wanghui-garcia/p/11683668.html)
+- [C++string类如何判断字符串为空](https://blog.csdn.net/Xuebing_han/article/details/78143560)
+- [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
+- [noexcept 运算符](https://veitchkyrie.github.io/2020/02/24/C++-noexcept-%E8%BF%90%E7%AE%97%E7%AC%A6/)
+- [C++ 中的 Lambda 表达式](https://docs.microsoft.com/zh-cn/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)
+- [C++11新特性之十一：emplace](https://blog.csdn.net/f110300641/article/details/83416411)
 
 #### 🍃 C++工具
 
@@ -125,6 +133,12 @@
 
 - 🐾  [docker容器python中文乱码](theory/python/zh_error.md)
 
+### 🍬Linux
+
+- [ubuntu后台运行程序](https://www.jianshu.com/p/09d86aad9fa4)
+- [Windows路由表详解](https://cloud.tencent.com/developer/article/1493985)
+- 
+
 # 🍭环境篇
 
 ## 1⃣️ GPUs
@@ -138,13 +152,14 @@
 - 🐾   [GPU Direct](envs/gpus/gpudirect.md)
 - 🐾   [GPU-Driver-Cuda](https://docs.nvidia.com/deploy/cuda-compatibility/index.html#overview)- [pytorch](https://pytorch.org/get-started/previous-versions/)-[tensorflow](https://www.tensorflow.org/install/source#common_installation_problems) 对应关系
 - 🐾   [CUDA Samples](envs/gpus/cuda_samples.md)
+- [cuda和cudatoolkit](https://iter01.com/561967.html)
+- [windows下同一个显卡配置多个CUDA工具包以及它们之间的切换](https://blog.csdn.net/qq_27825451/article/details/89135592)
+- [Linux 和 Windows 查看 CUDA 和 cuDNN 版本](https://www.cnblogs.com/wuliytTaotao/p/11453265.html)
 
 ### 🍬 GPUs训练环境安装
 
 - 🐾   [Driver安装 Ubuntu16.04](envs/gpus/install_driver.md) -------> [CUDA、cuDNN安装 Ubuntu16.04](envs/gpus/install_cuda.md) | [Windows10](envs/gpus/install_cuda_win10.md)--> Docker-->NVDocker
 - 🐾 Horovod安装--见pytorch分布式小节
-
-### 🍬 推理环境安装
 
 - 🐾   [TensorRT Ubuntu](envs/tools/tensorrt.md) -- [Windows10](envs/tools/tensorrt_win10.md)
 
@@ -213,12 +228,20 @@
 - 🐾   [Matlab安装 Ubuntu](envs/tools/matlab.md)
 - 🐾   [xrdp Ubuntu](envs/tools/xrdp.md)
 - 🐾   [VS2019 Windows](envs/tools/vs2019.md)
+  - [VS之调试断点无效](https://blog.csdn.net/qq_35097289/article/details/104944521)
 - 🐾   [CLion 安装与调试 Mac](envs/tools/clion.md)
 - 🐾   [cmake 安装](envs/tools/cmake.md)
 - 🐾   [pycuda安装](envs/tools/pycuda.md)
 - 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
 - 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
 - 🐾  [Pycharm手册](https://pycharm.iswbm.com/index.html)
+- Conda
+  - [conda 安装报错　specified in the package manifest cannot be found.](https://blog.csdn.net/lxfHaHaHa/article/details/99640419)
+  - [修改conda环境和缓存默认路径](https://blog.csdn.net/javastart/article/details/102563461)
+  - [Anaconda 换源更改镜像，删源](https://blog.csdn.net/weixin_40871455/article/details/90071122)
+  - [conda常用命令](https://blog.csdn.net/zhayushui/article/details/80433768)
+
+### 🍬 推理环境安装
 
 ## 4⃣️ OpenCV
 
@@ -226,6 +249,11 @@
 - 🐾   [C++ Opencv学习笔记](envs/opencv/opencv_cpp.md)
 - 🐾   [opencv中CPU指令集优化、GPU](https://blog.csdn.net/weixin_41484240/article/details/80711295)
 - 🐾   [Opencv GPU系列笔记 CSDN](https://blog.csdn.net/DumpDoctorWang/article/details/81032914)
+- [opencv 找不到opencv_world320.dll解决办法](https://blog.csdn.net/HY_JT/article/details/81217832)
+- [split函数提取多通道图像的单通道图像](https://blog.csdn.net/SuperWe/article/details/51253887)
+- [cv::Vec3d](https://blog.csdn.net/qq_36955294/article/details/110951995)
+- [OpenCV的jpg到ppm图片格式转换](https://blog.csdn.net/zxlstudio/article/details/10067585)
+- [BMP与PPM格式的转换](https://blog.csdn.net/lingdexixixi/article/details/52354772)
 
 # 🍭训练篇&部署篇
 
@@ -464,6 +492,7 @@
 - [使用TensorRT遇到的问题](infer/tensorrt/problem.md)
 - [入门案例代码解析(python)](infer/tensorrt/Code.md)
 - [自己收集的案例1(python)](https://github.com/TD-4/TensorRT) | [2(python)](https://github.com/TD-4/TensorRT2)
+- [TensorRT8.0API学习](infer/tensorrt/api.md)
 
 ### 🍬 网站部署-BS
 

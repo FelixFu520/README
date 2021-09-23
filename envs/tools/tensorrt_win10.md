@@ -7,17 +7,29 @@
 ---
 
 > \1. 去这个地方下载对应的版本[https://developer.nvidia.com/nvidia-tensorrt-7x-download](https://link.zhihu.com/?target=https%3A//developer.nvidia.com/nvidia-tensorrt-7x-download)
+>
 > \2. 下载完成后，解压。
+>
 > \3. 将 TensorRT-7.0.0.11\include中头文件 copy 到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\include
+>
 > \4. 将TensorRT-7.0.0.11\lib 中所有lib文件 copy 到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\lib\x64
+>
 > \5. 将TensorRT-7.0.0.11\lib 中所有dll文件copy 到C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin
+>
 > \6. 用VS2015 打开 TensorRT-7.0.0.11\samples\sampleMNIST\sample_mnist.sln
+>
 > \7. 在VS2015中，右键工程，选择属性-》配置属性-》常规-》目标平台版本-》8.1
+>
 > \8. 在VS2015中，右键工程，选择属性-》配置属性-》常规-》平台工具集-》vs2015(v140)
+>
 > \9. 右键工程-》重新生成
+>
 > \10. 用anaconda 进入TensorRT-7.0.0.11\data\mnist 目录，执行python download_pgms.py
+>
 > \11. 如果提示没有PIL，执行conda install pillow
+>
 > \12. 进入TensorRT-7.0.0.11\bin，用cmd执行，sample_mnist.exe --datadir=d:\path\to\TensorRT-7.0.0.11\data\mnist\
+>
 > \13. 执行成功则说明tensorRT 配置成功
 
 ## 一、下载TensorRT
