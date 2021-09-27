@@ -20,7 +20,7 @@
 
 - 🐾   [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
-- [C++设计模式](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [2](https://github.com/TD-4/Cpp-Design-Patterns-1)
+- 🐾   [C++设计模式](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [2](https://github.com/TD-4/Cpp-Design-Patterns-1)
 
 #### 🍃 函数
 
@@ -372,6 +372,14 @@
   - 元学习系列（七）:   [MAML](train/fsl/maml.md)与Meta-SGD
   - 元学习系列（八）:   Reptile
 - 🐾   [PANet](train/fsl/panet.md)
+
+#### 🍃 3D
+
+- [3D学习路线-1](https://zhuanlan.zhihu.com/p/97299116)、[2](https://github.com/qxiaofan/awesome_slam_computer_vision_resources)
+- [3D图像的表示-1](https://www.cnblogs.com/geeksongs/p/13498145.html) 、[2](https://zhuanlan.zhihu.com/p/42772630)、[3](https://www.linkresearcher.com/information/ed62a994-a3e5-4d9a-987e-2b2a67748a14)
+- [3D成像-1](https://www.sohu.com/a/309203564_100166336)、[2](https://bbs.huaweicloud.com/blogs/180872)
+- [3D历史-1](https://www.pianshen.com/article/10101195970/)、
+- [PointNet 视频B站](https://www.bilibili.com/video/BV1Pp4y1473K?from=search&seid=4936235752772443171&spm_id_from=333.337.0.0)
 
 ### 🍬 损失函数
 
