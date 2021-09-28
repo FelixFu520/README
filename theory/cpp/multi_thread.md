@@ -626,21 +626,45 @@ unique_lock<mutex> myUniLock(myMutex);
 #### 2.1 std::adopt_lock：
 
 表示这个互斥量已经被lock()，即不需要在构造函数中lock这个互斥量了。
+
 前提：必须提前lock
+
 lock_guard中也可以用这个参数
+
+`my_mutex1.lock()`
+
+`std::lock_guard<std::mutex> sbguard1(my_mutex1, std::adopt_lock)`
 
 #### 2.2 std::try_to_lock：
 
 尝试用mutex的lock()去锁定这个mutex，但如果没有锁定成功，会立即返回，不会阻塞在那里；
 使用try_to_lock的原因是防止其他的线程锁定mutex太长时间，导致本线程一直阻塞在lock这个地方
+
 前提：不能提前lock();
+
 owns_locks()方法判断是否拿到锁，如拿到返回true
+
+```
+// my_mutex1.lock()  不能提前lock
+std::lock_guard<std::mutex> sbguard1(my_mutex1, std::try_to_lock)
+if(sbguard1.owns_lock()){
+//拿到了锁，可以操作共享数据
+}
+else{
+// 没有拿到锁干些别的事
+}
+```
+
+
 
 #### 2.3 std::defer_lock：
 
 如果没有第二个参数就对mutex进行加锁，加上defer_lock是始化了一个没有加锁的mutex
 不给它加锁的目的是以后可以调用unique_lock的一些方法
+
 前提：不能提前lock
+
+
 
 ### 3.unique_lock的成员函数（前三个与std::defer_lock联合使用）
 
@@ -660,7 +684,7 @@ myUniLock.lock();
 unique_lock<mutex> myUniLock(myMutex， defer_lock);
 myUniLock.lock();
 //处理一些共享代码
-myUniLock.unlock();
+myUniLock.unlock(); // 临时处理非共享代码
 //处理一些非共享代码
 myUniLock.lock();
 //处理一些共享代码
@@ -673,15 +697,32 @@ myUniLock.lock();
 
 如果拿不到锁，返回false，否则返回true。
 
+```
+if(sbguard1.try_lock()==true){
+
+}else{
+
+}
+```
+
+
+
 #### 3.4 release()：
 
-unique_lock<mutex>
-myUniLock(myMutex);相当于把myMutex和myUniLock绑定在了一起，release()就是解除绑定，返回它所管理的mutex对象的指针，并释放所有权
-mutex* ptx =
-myUniLock.release();所有权由ptx接管，如果原来mutex对象处理加锁状态，就需要ptx在以后进行解锁了。
+`unique_lock<mutex> myUniLock(myMutex);`
+
+相当于把myMutex和myUniLock绑定在了一起，release()就是解除绑定，返回它所管理的mutex对象的指针，并释放所有权
+
+`mutex* ptx = myUniLock.release();`
+
+所有权由ptx接管，如果原来mutex对象处理加锁状态，就需要ptx在以后进行解锁了。
 lock的代码段越少，执行越快，整个程序的运行效率越高。
+
 a.锁住的代码少，叫做粒度细，执行效率高；
+
 b.锁住的代码多，叫做粒度粗，执行效率低；
+
+
 
 ### 4.unique_lock所有权的传递
 
