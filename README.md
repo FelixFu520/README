@@ -21,7 +21,7 @@
 - 🐾   [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
 - 🐾   [C++设计模式-代码1](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [代码2](https://github.com/TD-4/Cpp-Design-Patterns-1)
-- 🐾  [C++并发与多线程--笔记](theory/cpp/multi_thread.md)、[视频 王建伟](https://www.bilibili.com/video/BV1Yb411L7ak?p=2&spm_id_from=pageDriver)|
+- 🐾   [C++并发与多线程--笔记](theory/cpp/multi_thread.md)、[视频 王建伟](https://www.bilibili.com/video/BV1Yb411L7ak?p=2&spm_id_from=pageDriver)|
 
 #### 🍃 函数
 
