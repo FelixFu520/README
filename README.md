@@ -1,5 +1,8 @@
 # 🍭理论篇
 
+- [200+本计算机书籍](https://github.com/imarvinle/awesome-cs-books)
+- 
+
 ## 1⃣️ 数学
 
 ## 2⃣️ 语言
@@ -22,6 +25,9 @@
 - 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
 - 🐾   [C++设计模式-代码1](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [代码2](https://github.com/TD-4/Cpp-Design-Patterns-1)
 - 🐾   [C++并发与多线程--笔记](theory/cpp/multi_thread.md)、[视频 王建伟](https://www.bilibili.com/video/BV1Yb411L7ak?p=2&spm_id_from=pageDriver)|
+  - [1、线程C语言-苏丙榅](https://subingwen.cn/linux/thread/)|[C++](https://subingwen.cn/cpp/thread/)
+  - [2、文件描述符](https://subingwen.cn/linux/file-descriptor/)
+  - [3、线程池C语言](https://subingwen.cn/linux/threadpool/)|[C++](https://subingwen.cn/linux/threadpool-cpp/) | [自己](https://github.com/TD-4/thread-pool)
 
 #### 🍃 函数
 
@@ -42,6 +48,7 @@
 - [noexcept 运算符](https://veitchkyrie.github.io/2020/02/24/C++-noexcept-%E8%BF%90%E7%AE%97%E7%AC%A6/)
 - [C++ 中的 Lambda 表达式](https://docs.microsoft.com/zh-cn/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)
 - [C++11新特性之十一：emplace](https://blog.csdn.net/f110300641/article/details/83416411)
+- [C++ explicit](https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html)
 
 #### 🍃 C++工具
 

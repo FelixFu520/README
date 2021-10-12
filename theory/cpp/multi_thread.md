@@ -10,8 +10,6 @@
 
 ## 1. 并发基本概念及实现，进程、线程基本概念
 
-**一 并发基本概念及实现，进程、线程基本概念**
-
 ![在这里插入图片描述](imgs/fcbdaeb87cd5a8987afd06a2c650e7b9.png)
 
 
@@ -97,9 +95,7 @@ b）在单独的进程中，写代码创建除了主线程之外的其他线程�
 
 - 从C++11新标准，C++语言本身增加对多线程的支持，意味着可移植性（跨平台），这大大减少开发人员的工作量
 
-# 2. 线程启动、结束，创建线程多法、join，detach
-
-**第二节 线程启动、结束，创建线程多法、join，detach**
+## 2. 线程启动、结束，创建线程多法、join，detach
 
 ![在这里插入图片描述](imgs/asdfasdfasdfasdf)
 
@@ -242,9 +238,7 @@ public:
 
 ```
 
-#  3. 线程传参详解，detach()大坑，成员函数做线程函数
-
-**第三节 线程传参详解，detach()大坑，成员函数做线程函数**
+##  3. 线程传参详解，detach()大坑，成员函数做线程函数
 
 ![在这里插入图片描述](imgs/hgsf.png)
 
@@ -437,8 +431,6 @@ int main()
 
 ## 4. 创建多个线程、数据共享问题分析、案例代码
 
-**第四节 创建多个线程、数据共享问题分析、案例代码**
-
 ![在这里插入图片描述](imgs/hgf)
 
 ### **一、创建和等待多个线程**
@@ -477,9 +469,7 @@ void TextThread()
 - 最简单的防止崩溃方法：读的时候不能写，写的时候不能读。
 - 写的动作分10小步，由于任务切换，导致各种诡异的事情发生（最可能的还是崩溃）
 
-# 5. 互斥量概念、用法、死锁演示及解决详解
-
-## 第五节 互斥量概念、用法、死锁演示及解决详解
+## 5. 互斥量概念、用法、死锁演示及解决详解
 
 ![在这里插入图片描述](imgs/fff.png)
 
@@ -493,13 +483,13 @@ void TextThread()
 
 包含#include <mutex>头文件
 
-#### 2.1 lock()，unlock()
+##### 2.1 lock()，unlock()
 
 步骤：1.lock()，2.操作共享数据，3.unlock()。
 
 lock()和unlock()要成对使用
 
-#### 2.2 lock_guard类模板
+##### 2.2 lock_guard类模板
 
 lock_guard<mutex> sbguard(myMutex);取代lock()和unlock()
 
@@ -509,7 +499,7 @@ lock_guard构造函数执行了mutex::lock();
 
 ### 三、死锁
 
-#### 3.1 死锁演示
+##### 3.1 死锁演示
 
 死锁至少有两个互斥量mutex1，mutex2。
 
@@ -519,18 +509,18 @@ b.线程B执行，这个线程先锁mutex2，因为mutex2没有被锁，即mutex
 
 c.此时，死锁产生了，A锁着mutex1，需要锁mutex2，B锁着mutex2，需要锁mutex1，两个线程没办法继续运行下去。。。
 
-#### 3.2 死锁的一般解决方案：
+##### 3.2 死锁的一般解决方案：
 
 只要保证多个互斥量上锁的顺序一样就不会造成死锁。
 
-#### 3.3 std::lock()函数模板
+##### 3.3 std::lock()函数模板
 
 std::lock(mutex1,mutex2……); 一次锁定多个互斥量（一般这种情况很少），用于处理多个互斥量。
 如果互斥量中一个没锁住，它就等着，等所有互斥量都锁住，才能继续执行。如果有一个没锁住，就会把已经锁住的释放掉（要么互斥量都锁住，要么都没锁住，防止死锁）
 
-#### 3.4 std::lock_guard的std::adopt_lock参数
+##### 3.4 std::lock_guard的std::adopt_lock参数
 
-std::lock_guardstd::mutex my_guard(my_mutex,std::adopt_lock);
+`std::lock_guard<std::mutex> my_guard(my_mutex,std::adopt_lock);`
 加入adopt_lock后，在调用lock_guard的构造函数时，不再进行lock();
 adopt_guard为结构体对象，起一个标记作用，表示这个互斥量已经lock()，不需要在lock()。
 
@@ -609,21 +599,19 @@ int main()
 
 ```
 
-# 6. unique_lock（类模板）详解
-
-**第六节 unique_lock（类模板）详解**
+## 6. unique_lock（类模板）详解
 
 ![在这里插入图片描述](imgs/fd.png)
 
-### 1.unique_lock取代lock_guard
+#### 1.unique_lock取代lock_guard
 
 unique_lock比lock_guard灵活很多（多出来很多用法），效率差一点。
 
 unique_lock<mutex> myUniLock(myMutex);
 
-### 2.unique_lock的第二个参数
+#### 2.unique_lock的第二个参数
 
-#### 2.1 std::adopt_lock：
+##### 2.1 std::adopt_lock：
 
 表示这个互斥量已经被lock()，即不需要在构造函数中lock这个互斥量了。
 
@@ -635,7 +623,7 @@ lock_guard中也可以用这个参数
 
 `std::lock_guard<std::mutex> sbguard1(my_mutex1, std::adopt_lock)`
 
-#### 2.2 std::try_to_lock：
+##### 2.2 std::try_to_lock：
 
 尝试用mutex的lock()去锁定这个mutex，但如果没有锁定成功，会立即返回，不会阻塞在那里；
 使用try_to_lock的原因是防止其他的线程锁定mutex太长时间，导致本线程一直阻塞在lock这个地方
@@ -655,9 +643,7 @@ else{
 }
 ```
 
-
-
-#### 2.3 std::defer_lock：
+##### 2.3 std::defer_lock：
 
 如果没有第二个参数就对mutex进行加锁，加上defer_lock是始化了一个没有加锁的mutex
 不给它加锁的目的是以后可以调用unique_lock的一些方法
@@ -666,9 +652,9 @@ else{
 
 
 
-### 3.unique_lock的成员函数（前三个与std::defer_lock联合使用）
+#### 3.unique_lock的成员函数（前三个与std::defer_lock联合使用）
 
-#### 3.1 lock()：加锁。
+##### 3.1 lock()：加锁。
 
 ```
 unique_lock<mutex> myUniLock(myMutex， defer_lock);
@@ -678,7 +664,7 @@ myUniLock.lock();
 
 不用自己unlock();
 
-#### *3.2 unlock()：解锁。*
+##### *3.2 unlock()：解锁。*
 
 ```
 unique_lock<mutex> myUniLock(myMutex， defer_lock);
@@ -693,7 +679,7 @@ myUniLock.lock();
 
 因为一些非共享代码要处理，可以暂时先unlock()，用其他线程把它们处理了，处理完后再lock()。
 
-#### 3.3 try_lock()：尝试给互斥量加锁
+##### 3.3 try_lock()：尝试给互斥量加锁
 
 如果拿不到锁，返回false，否则返回true。
 
@@ -707,7 +693,7 @@ if(sbguard1.try_lock()==true){
 
 
 
-#### 3.4 release()：
+##### 3.4 release()：
 
 `unique_lock<mutex> myUniLock(myMutex);`
 
@@ -724,16 +710,16 @@ b.锁住的代码多，叫做粒度粗，执行效率低；
 
 
 
-### 4.unique_lock所有权的传递
+#### 4.unique_lock所有权的传递
 
 unique_lock<mutex> myUniLock(myMutex);把myMutex和myUniLock绑定在了一起，也就是myUniLock拥有myMutex的所有权
 
-1. #### 使用move转移
+1. ##### 使用move转移
 
 myUniLock拥有myMutex的所有权，myUniLock可以把自己对myMutex的所有权转移，但是不能复制。
 unique_lock<mutex> myUniLock2(std::move(myUniLock));
 现在myUniLock2拥有myMutex的所有权。
-2. #### 在函数中return一个临时变量，即可以实现转移
+2. ##### 在函数中return一个临时变量，即可以实现转移
 
   ```
   unique_lock<mutex> aFunction()
@@ -750,7 +736,7 @@ unique_lock<mutex> myUniLock2(std::move(myUniLock));
 
 
 
-# 7. 单例设计模式共享数据分析、解决，call_once
+## 7. 单例设计模式共享数据分析、解决，call_once
 
 ### 1.设计模式
 
@@ -1932,3 +1918,7 @@ a、采用某些计数开发程序提供的建议，遵照建议和指示来确�
 b、创建多线程完成业务；考虑可能被阻塞的线程数量，创建多余最大被阻塞线程数量的线程，如100个线程被阻塞再充值业务，开110个线程就是很合适的
 
 c、线程创建数量尽量不要超过500个，尽量控制在200个之内；
+
+
+### 四、C++11多线程总结
+
