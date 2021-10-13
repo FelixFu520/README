@@ -19,7 +19,7 @@
 - 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo) | [Cmake Demo github2](https://github.com/TD-4/CMakePractice)
 - 🐾   [CMake 教程中文版](https://www.bookstack.cn/read/CMake-Cookbook/README.md)
 
-#### 🍃 代码学习
+#### 🍃 C++学习
 
 - 🐾   [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
 - 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
@@ -29,7 +29,7 @@
   - [2、文件描述符](https://subingwen.cn/linux/file-descriptor/)
   - [3、线程池C语言](https://subingwen.cn/linux/threadpool/)|[C++](https://subingwen.cn/linux/threadpool-cpp/) | [自己](https://github.com/TD-4/thread-pool)
 
-#### 🍃 函数
+#### 🍃 函数/库
 
 - 🐾   [atof、...](theory/cpp/atof_soon.md)
 - 🐾   [C++11 std::chrono库详解](https://www.cnblogs.com/zlshmily/p/10058427.html)
@@ -41,19 +41,22 @@
 - 🐾   [函数指针与指针函数](http://yulingtianxia.com/blog/2014/04/17/han-shu-zhi-zhen-yu-zhi-zhen-han-shu/)
 - 🐾   [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
 - 🐾   [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
-- [C++ Vector遍历的几种方式](https://blog.csdn.net/HW140701/article/details/78833486)
-- [C++ unordered_map的使用](https://www.cnblogs.com/wanghui-garcia/p/11683668.html)
-- [C++string类如何判断字符串为空](https://blog.csdn.net/Xuebing_han/article/details/78143560)
-- [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
-- [noexcept 运算符](https://veitchkyrie.github.io/2020/02/24/C++-noexcept-%E8%BF%90%E7%AE%97%E7%AC%A6/)
-- [C++ 中的 Lambda 表达式](https://docs.microsoft.com/zh-cn/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)
-- [C++11新特性之十一：emplace](https://blog.csdn.net/f110300641/article/details/83416411)
-- [C++ explicit](https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html)
+- 🐾  [C++ Vector遍历的几种方式](https://blog.csdn.net/HW140701/article/details/78833486)
+- 🐾  [C++ unordered_map的使用](https://www.cnblogs.com/wanghui-garcia/p/11683668.html)
+- 🐾  [C++string类如何判断字符串为空](https://blog.csdn.net/Xuebing_han/article/details/78143560)
+- 🐾  [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
+- 🐾  [noexcept 运算符](https://veitchkyrie.github.io/2020/02/24/C++-noexcept-%E8%BF%90%E7%AE%97%E7%AC%A6/)
+- 🐾  [C++ 中的 Lambda 表达式](https://docs.microsoft.com/zh-cn/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)
+- 🐾  [C++11新特性之十一：emplace](https://blog.csdn.net/f110300641/article/details/83416411)
+- 🐾  [C++ explicit](https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html)
+- 🐾  [C++11特性：decltype关键字](https://www.cnblogs.com/QG-whz/p/4952980.html)
+- 🐾  [how? std::function in C++](https://zhuanlan.zhihu.com/p/142175297)
+- 🐾  [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
 
 #### 🍃 C++工具
 
-- [VS Code + UML](theory/cpp/vscode_uml.md) ｜ [类图语法参考](https://plantuml.com/zh/class-diagram)
-- [UML类关系](theory/cpp/uml_relation.md)
+- 🐾  [VS Code + UML](theory/cpp/vscode_uml.md) ｜ [类图语法参考](https://plantuml.com/zh/class-diagram)
+- 🐾  [UML类关系](theory/cpp/uml_relation.md)
 
 
 
@@ -97,7 +100,7 @@
 
 #### 🍃 Matplotlib
 
-- Matplotlib 唐宇迪
+- 🐾  Matplotlib 唐宇迪
   - [Matplotlib基本操作](theory/python/matplotlib/1.ipynb)
   - [风格设置](theory/python/matplotlib/2.ipynb)
   - [条形图](theory/python/matplotlib/3.ipynb)
@@ -143,9 +146,12 @@
 
 ### 🍬Linux
 
-- [ubuntu后台运行程序](https://www.jianshu.com/p/09d86aad9fa4)
-- [Windows路由表详解](https://cloud.tencent.com/developer/article/1493985)
-- 
+- 🐾  [ubuntu后台运行程序](https://www.jianshu.com/p/09d86aad9fa4)
+- 🐾  [Windows路由表详解](https://cloud.tencent.com/developer/article/1493985)
+
+### 🍬Git
+
+- 🐾  [GitHub不再支持密码验证解决方案：SSH免密与Token登录配置](https://cloud.tencent.com/developer/article/1861466)
 
 # 🍭环境篇
 
@@ -160,9 +166,9 @@
 - 🐾   [GPU Direct](envs/gpus/gpudirect.md)
 - 🐾   [GPU-Driver-Cuda](https://docs.nvidia.com/deploy/cuda-compatibility/index.html#overview)- [pytorch](https://pytorch.org/get-started/previous-versions/)-[tensorflow](https://www.tensorflow.org/install/source#common_installation_problems) 对应关系
 - 🐾   [CUDA Samples](envs/gpus/cuda_samples.md)
-- [cuda和cudatoolkit](https://iter01.com/561967.html)
-- [windows下同一个显卡配置多个CUDA工具包以及它们之间的切换](https://blog.csdn.net/qq_27825451/article/details/89135592)
-- [Linux 和 Windows 查看 CUDA 和 cuDNN 版本](https://www.cnblogs.com/wuliytTaotao/p/11453265.html)
+- 🐾  [cuda和cudatoolkit](https://iter01.com/561967.html)
+- 🐾  [windows下同一个显卡配置多个CUDA工具包以及它们之间的切换](https://blog.csdn.net/qq_27825451/article/details/89135592)
+- 🐾  [Linux 和 Windows 查看 CUDA 和 cuDNN 版本](https://www.cnblogs.com/wuliytTaotao/p/11453265.html)
 
 ### 🍬 GPUs训练环境安装
 
@@ -243,7 +249,7 @@
 - 🐾   OpenCV [GPU-Ubuntu](envs/tools/opencv_gpu.md) -- [CPU-Ubuntu](envs/tools/opencv_cpu.md)
 - 🐾   [VS Code 使用笔记](envs/tools/vscode.md)
 - 🐾  [Pycharm手册](https://pycharm.iswbm.com/index.html)
-- Conda
+- 🐾  Conda
   - [conda 安装报错　specified in the package manifest cannot be found.](https://blog.csdn.net/lxfHaHaHa/article/details/99640419)
   - [修改conda环境和缓存默认路径](https://blog.csdn.net/javastart/article/details/102563461)
   - [Anaconda 换源更改镜像，删源](https://blog.csdn.net/weixin_40871455/article/details/90071122)
@@ -257,11 +263,11 @@
 - 🐾   [C++ Opencv学习笔记](envs/opencv/opencv_cpp.md)
 - 🐾   [opencv中CPU指令集优化、GPU](https://blog.csdn.net/weixin_41484240/article/details/80711295)
 - 🐾   [Opencv GPU系列笔记 CSDN](https://blog.csdn.net/DumpDoctorWang/article/details/81032914)
-- [opencv 找不到opencv_world320.dll解决办法](https://blog.csdn.net/HY_JT/article/details/81217832)
-- [split函数提取多通道图像的单通道图像](https://blog.csdn.net/SuperWe/article/details/51253887)
-- [cv::Vec3d](https://blog.csdn.net/qq_36955294/article/details/110951995)
-- [OpenCV的jpg到ppm图片格式转换](https://blog.csdn.net/zxlstudio/article/details/10067585)
-- [BMP与PPM格式的转换](https://blog.csdn.net/lingdexixixi/article/details/52354772)
+- 🐾  [opencv 找不到opencv_world320.dll解决办法](https://blog.csdn.net/HY_JT/article/details/81217832)
+- 🐾  [split函数提取多通道图像的单通道图像](https://blog.csdn.net/SuperWe/article/details/51253887)
+- 🐾  [cv::Vec3d](https://blog.csdn.net/qq_36955294/article/details/110951995)
+- 🐾  [OpenCV的jpg到ppm图片格式转换](https://blog.csdn.net/zxlstudio/article/details/10067585)
+- 🐾  [BMP与PPM格式的转换](https://blog.csdn.net/lingdexixixi/article/details/52354772)
 
 # 🍭训练篇&部署篇
 
