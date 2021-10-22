@@ -589,7 +589,7 @@
 
 ## 5⃣️ 图像质量评价/Image Quality Assessment
 
-- 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)[📒](train/iqa/hypernet.md)
+- 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)| [🐙-v2回归](https://github.com/TD-4/ScreenCheck) [V2-分类](https://github.com/TD-4/ScreenCheck_cls)|[📒](train/iqa/hypernet.md)
 
 ## 5⃣️  异常检测/Anomaly Detection
 
