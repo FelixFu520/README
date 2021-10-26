@@ -1,7 +1,9 @@
 # 🍭理论篇
 
 - [200+本计算机书籍](https://github.com/imarvinle/awesome-cs-books)
-- 
+- [CUDA](https://docs.nvidia.com/cuda/index.html#)
+- [TRT](https://docs.nvidia.com/deeplearning/tensorrt/index.html)
+- [CVPR](https://github.com/extreme-assistant/CVPR2021-Paper-Code-Interpretation)
 
 ## 1⃣️ 数学
 
@@ -52,6 +54,10 @@
 - 🐾  [C++11特性：decltype关键字](https://www.cnblogs.com/QG-whz/p/4952980.html)
 - 🐾  [how? std::function in C++](https://zhuanlan.zhihu.com/p/142175297)
 - 🐾  [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
+- [c++11之函数参数包展开](https://www.cnblogs.com/pandamohist/p/13856489.html)
+- [extern “C”的作用详解](https://www.cnblogs.com/xiangtingshen/p/10980055.html)
+- [C++程序利用std::cout打印到日志文件方法](https://blog.csdn.net/weixin_42096202/article/details/109364061)
+- [C/C++ 获取文件夹下所有文件名 windows和linux通用](https://blog.csdn.net/u012005313/article/details/50687297)
 
 #### 🍃 C++工具
 
@@ -140,9 +146,10 @@
 
 - 🐾  [QT5](http://code.py40.com/pyqt5/)
 
-#### 🍃 Python 报错
+#### 🍃 Python 报错&库学习
 
 - 🐾  [docker容器python中文乱码](theory/python/zh_error.md)
+- [list 排列组合](https://blog.csdn.net/vitaminc4/article/details/78922612)
 
 ### 🍬Linux
 
@@ -268,6 +275,8 @@
 - 🐾  [cv::Vec3d](https://blog.csdn.net/qq_36955294/article/details/110951995)
 - 🐾  [OpenCV的jpg到ppm图片格式转换](https://blog.csdn.net/zxlstudio/article/details/10067585)
 - 🐾  [BMP与PPM格式的转换](https://blog.csdn.net/lingdexixixi/article/details/52354772)
+- [Opencv Mat::data](https://blog.csdn.net/Kelvin_Yan/article/details/48315175)
+- [Opencv Mat构造函数](https://blog.csdn.net/qq_37406130/article/details/78725406)
 
 # 🍭训练篇&部署篇
 
@@ -302,6 +311,7 @@
 
 - 🐾   [最小二乘法](train/ml/least_square.md)
 - 🐾   [kmeans](train/ml/kmeans.md)
+- [分类和回归的区别](https://www.cnblogs.com/anovana/p/8031724.html)
 
 #### 🍃 NN
 
