@@ -1,9 +1,6 @@
 # 🍭理论篇
 
-- [200+本计算机书籍](https://github.com/imarvinle/awesome-cs-books)
-- [CUDA](https://docs.nvidia.com/cuda/index.html#)
-- [TRT](https://docs.nvidia.com/deeplearning/tensorrt/index.html)
-- [CVPR](https://github.com/extreme-assistant/CVPR2021-Paper-Code-Interpretation)
+- 
 
 ## 1⃣️ 数学
 
@@ -58,6 +55,9 @@
 - [extern “C”的作用详解](https://www.cnblogs.com/xiangtingshen/p/10980055.html)
 - [C++程序利用std::cout打印到日志文件方法](https://blog.csdn.net/weixin_42096202/article/details/109364061)
 - [C/C++ 获取文件夹下所有文件名 windows和linux通用](https://blog.csdn.net/u012005313/article/details/50687297)
+- [std::string 与 char* 之间的转换](https://blog.csdn.net/u010023457/article/details/41855007)
+- [文件复制和移动](https://www.cnblogs.com/mfryf/archive/2013/03/17/2964207.html)| [2](https://blog.csdn.net/u012750702/article/details/52738859)|[3](https://blog.csdn.net/yc461515457/article/details/57432680)|[4](https://www.jianshu.com/p/a8cc836d5dff)
+- [字符串操作](https://blog.csdn.net/xjw532881071/article/details/49154911)|[2](https://blog.csdn.net/yuejisuo1948/article/details/88643491)|[3](https://blog.csdn.net/dcrmg/article/details/99650783)|[4](https://blog.csdn.net/man_sion/article/details/54847573)|[5](https://blog.csdn.net/guowenyan001/article/details/11231927)
 
 #### 🍃 C++工具
 
@@ -150,6 +150,36 @@
 
 - 🐾  [docker容器python中文乱码](theory/python/zh_error.md)
 - [list 排列组合](https://blog.csdn.net/vitaminc4/article/details/78922612)
+- [Python中下划线的5种含义](https://zhuanlan.zhihu.com/p/36173202)
+- [numpy: np.logical_and/or/not (逻辑与/或/非)](https://blog.csdn.net/JNingWei/article/details/78651535)
+- [np.where](https://www.cnblogs.com/massquantity/p/8908859.html)
+- [np.vstack, np.hstack](https://blog.csdn.net/u012609509/article/details/70319293)
+- [Opencv实现多幅图像显示在同一窗口（基于Python）](https://www.codenong.com/cs105613611/)
+- [opencv读中文图片](https://blog.csdn.net/PanYHHH/article/details/111561477)
+- [pytorch计算余弦相似度](https://blog.csdn.net/tszupup/article/details/100711874)
+- [(torch.full()、torch.full_like())创造全value的矩阵](https://blog.csdn.net/Fluid_ray/article/details/109855155)
+- [torch.cat 和 torch.stack的区别](https://blog.csdn.net/wukong999/article/details/89284055)
+- [ToTensor 到底做了什么？](http://spytensor.com/index.php/archives/42/)
+- [named_children()和named_modules()的区别](https://blog.csdn.net/watermelon1123/article/details/98036360)
+- [transforms的二十二个方法](https://zhuanlan.zhihu.com/p/53367135)
+- [pytorch手动实现滑动窗口操作，论fold和unfold函数的使用](https://blog.csdn.net/LoseInVain/article/details/88139435) | [2](https://blog.csdn.net/qq_34914551/article/details/102940368)
+- [Pytorch中index_select() 函数的理解](https://blog.csdn.net/kdongyi/article/details/103099589)
+- [pytorch:torch.clamp()](https://blog.csdn.net/u013230189/article/details/82627375)
+- [torch.nonzero的理解](https://blog.csdn.net/monchin/article/details/79750216)
+- [Pytorch中index_select() 函数的理解](https://blog.csdn.net/kdongyi/article/details/103099589)
+- [PIL读入图片转为BGR](https://blog.csdn.net/zicai_jiayou/article/details/115541307)
+- [np.random.randint、np.random.choice、random.sample三种随机函数的用法案例](https://blog.csdn.net/zsc201825/article/details/80918450)
+- [Python——自定义排序 sort() / list.sort()](https://blog.csdn.net/Eternity666/article/details/108301177)
+- [如何直观地理解「协方差矩阵」？](https://zhuanlan.zhihu.com/p/37609917)
+- [pprint的用法](https://blog.csdn.net/u013061183/article/details/79094460)
+- [python dir()和vars()的区别](https://blog.csdn.net/sxingming/article/details/52116157)
+- [Python装饰器abstractmethod、property、classmethod、staticmethod及自定义装饰器](https://www.jianshu.com/p/a340ffb231a0)
+- [python 获取当前日期的前n天或后n天](https://blog.csdn.net/qq_15058425/article/details/90268190)
+- [Python计数器collections.Counter用法详解](https://blog.csdn.net/sinat_28576553/article/details/99131954)
+- [python读写json文件](https://www.cnblogs.com/bigberg/p/6430095.html)
+- [python限定方法参数类型、返回值类型、变量类型等](https://www.cnblogs.com/xxpythonxx/p/12198876.html)
+- [【python】错误解决经历](https://www.cnblogs.com/ytxwzqin/p/12012025.html) |[2](https://www.cnblogs.com/henuliulei/p/13258297.html)
+- 
 
 ### 🍬Linux
 
@@ -242,6 +272,8 @@
 - 🐾    [实验管理工具sacred](envs/tools/scared.md)
 - 🐾   [bypy 百度云下载python](envs/tools/bypy.md)
 - 🐾   [Python日志库loguru](envs/tools/loguru.md)
+- [字典2dot--dotmap](https://github.com/drgrib/dotmap)
+- 
 
 ### 🍬 IDE&Tools安装
 
@@ -321,7 +353,7 @@
 
 #### 🍃CNN
 
-- 🐾    [CNN介绍](train/cnn/introduce_cnn.md) --[🐾CNN网络代码讲解](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
+- 🐾    [CNN介绍](train/cnn/introduce_cnn.md) --[🐾CNN网络代码讲解加部署 ⭐](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
 - 🐾    [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
 - 🐾    [DSC理解](train/cnn/dsc.md)
 - 🐾    [Inception](train/cnn/inception.md)
@@ -409,6 +441,9 @@
 
 - 🐾   [交叉墒](train/loss/entropy.md)
 - 🐾   [Pytorch的损失函数](train/loss/losses_pytorch.md)
+- [三个相关系数](https://www.cnblogs.com/yjd_hycf_space/p/11537153.html)
+- [机器学习-距离度量](https://blog.csdn.net/xjp_xujiping/article/details/108576496)|[2](https://zhuanlan.zhihu.com/p/46626607)
+- [方差](https://blog.csdn.net/lijinxiu123/article/details/52450858)|[2](https://geek.digiasset.org/pages/mathbasic/correlation-co-variances-variance-coeffi_21Mar07115144053588/#%E4%B8%89%E5%8D%8F%E6%96%B9%E5%B7%AE)|[3](https://zhuanlan.zhihu.com/p/86181679)|[4](https://zhuanlan.zhihu.com/p/68967565)|[5](https://blog.csdn.net/lilong117194/article/details/78399568)
 - Lovasz-Softmax Loss
 - Exponential Logarithmic loss
 - Focal Loss + Dice Loss
@@ -613,3 +648,49 @@
 
 - 🐾  [onnxruntime, tensorrt, tvm, ...](https://github.com/FelixFu520/deploy_demo)
 
+# 🍭书签
+
+- [200+本计算机书籍](https://github.com/imarvinle/awesome-cs-books)
+- [CUDA](https://docs.nvidia.com/cuda/index.html#)
+- [TRT](https://docs.nvidia.com/deeplearning/tensorrt/index.html)
+- [CVPR](https://github.com/extreme-assistant/CVPR2021-Paper-Code-Interpretation)
+
+### Language
+
+#### C++
+
+- **[C++中文网](http://c.biancheng.net/cpp/)**
+- [C++ reference - cppreference.com](https://en.cppreference.com/w/cpp)
+
+- [Boost C++](https://wizardforcel.gitbooks.io/the-boost-cpp-libraries/content/0.html)
+- [cplusplus](http://www.cplusplus.com/)
+- [C++官方](https://isocpp.org/)
+- [GCC参数](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
+
+#### Python
+
+- [Python教程](http://www.coolpython.net/python_senior/index.html)|[2](https://www.liaoxuefeng.com/wiki/1016959663602400)
+
+- [Python官方](https://docs.python.org/zh-cn/3/index.html)
+- [PYPI](https://pypi.org/manage/projects/)
+- [PyGObject](https://pygobject.readthedocs.io/en/latest/getting_started.html)
+- [GTK+](https://python-gtk-3-tutorial.readthedocs.io/en/latest/index.html#)
+- [pycuda](https://documen.tician.de/pycuda/driver.html)
+- [pandas中文教程](https://www.w3cschool.cn/hyspo/)
+- [numpy](https://www.numpy.org.cn/reference/) | [2](https://www.numpy.org.cn/about/)
+- [matplotlib](https://www.yiibai.com/matplotlib/pyplot-tutorial.html)|[2](https://matplotlib.org/)
+- [scikit-image](https://scikit-image.org/docs/stable/)
+
+#### 其他
+
+- [git](https://www.liaoxuefeng.com/wiki/896043488029600) | [2](https://backlog.com/git-tutorial/cn/)
+
+#### 读图
+
+- [数字图像处理](http://www.vue5.com/dip/histogram_stretching.html)
+- [Opencv-python教程](https://www.osgeo.cn/opencv-python/index.html)
+- [Opencv-c++](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) |[2](https://docs.opencv.org/3.4.3/d9/df8/tutorial_root.html) |[3](https://www.yiibai.com/opencv/)
+- [Pillow]()
+- 
+
+- https://pycharm.iswbm.com/
