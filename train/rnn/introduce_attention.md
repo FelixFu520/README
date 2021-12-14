@@ -1,24 +1,93 @@
-## 李宏毅机器学习2021笔记—self-attention
+# self-attention
 
 ⌚️: 2021-07-21
 
 📚参考
 
-- https://blog.csdn.net/zghnwsc/article/details/115982794
-- https://blog.csdn.net/zghnwsc/article/details/115985091
-- 视频：https://www.bilibili.com/video/BV1G64y1D78j?p=10
-- https://www.cnblogs.com/sykline/p/14730088.html
-- [必看](https://www.bilibili.com/video/BV1a5411j7Sw/?spm_id_from=333.788.recommend_more_video.1)
+1. [毕成 讲解Transformer视频](https://www.bilibili.com/video/BV1a5411j7Sw/?spm_id_from=333.788.recommend_more_video.1) | [Attention](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) | [Transformer](http://jalammar.github.io/illustrated-transformer/)
+2. [李宏毅 Transformer视频](https://www.bilibili.com/video/BV1G64y1D78j?p=10) -->对应笔记 [1](https://blog.csdn.net/zghnwsc/article/details/115985091) | [2](https://blog.csdn.net/zghnwsc/article/details/115985091)| [3](https://www.cnblogs.com/sykline/p/14730088.html)
+
+
 
 ---
 
 > 本文为李宏毅老师机器学习2021的self attention一节的学习笔记，接在CNN之后。学习本节之前，需要有一定的基础知识。
 
-## 一、整理内容
+## 1. Recap of RNN
 
-本文作为自己学习李宏毅老师2021春机器学习课程所做笔记，记录自己身为入门阶段小白的学习理解，如果错漏、建议，还请各位博友不吝指教，感谢！！
+![image-20211214150100488](imgs/image-20211214150100488.png)
 
-------
+## 2. Attention
+
+![image-20211214150411059](imgs/image-20211214150411059.png)
+
+![image-20211214150449535](imgs/image-20211214150449535.png)
+
+![image-20211214150526073](imgs/image-20211214150526073.png)
+
+![image-20211214150718268](imgs/image-20211214150718268.png)
+
+![image-20211214154246362](imgs/image-20211214154246362.png)
+
+## 3. Mechaics of Seq2Seq Model with Attention
+
+[Attention](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) 
+
+
+
+## 4. Transformer
+
+[Transformer](http://jalammar.github.io/illustrated-transformer/)
+
+以下是李宏毅学习内容。
+
+### Encoder
+
+![image-20211214164619376](imgs/image-20211214164619376.png)
+
+#### self-attention
+
+![image-20211214160518863](imgs/image-20211214160518863.png)
+
+![image-20211214160610405](imgs/image-20211214160610405.png)
+
+![image-20211214160628697](imgs/image-20211214160628697.png)
+
+![image-20211214160727671](imgs/image-20211214160727671.png)
+
+
+
+
+
+#### multi-head attention
+
+Multi-head Attention 每个头看到不同的信息
+
+
+
+#### positional encoding
+
+
+
+#### the Residuals
+
+![image-20211214163935727](imgs/image-20211214163935727.png)
+
+#### layer normalization
+
+![12](imgs/12534.png)
+
+![13](imgs/asdf13.png)
+
+### Decoder
+
+![15](imgs/asfdff15.png)
+
+![16](imgs/1dsfv.png)
+
+
+
+## 附加
 
 全连接网络的输入是一个向量，但是**当输入是一个变长的向量序列时**，就不能再使用全连接网络了。这种情况**通常可以使用卷积网络或循环网络进行编码来得到一个相同长度的输出向量序列**。
 
@@ -163,7 +232,7 @@ Self-Attention有一个使用非常广泛的的进阶版Multi-head Self-Attentio
 
 
 
-## 二、原生内容
+## 附加2
 
 ### 1. **self attention解决的问题**
 

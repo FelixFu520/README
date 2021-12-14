@@ -12,8 +12,6 @@
 - [什么是 GPT？【知多少】](https://www.bilibili.com/video/BV1Jv411a7RB/?spm_id_from=trigger_reload)
 - [什么是 Attention（注意力机制）？【知多少】](https://www.bilibili.com/video/BV1G64y1S7bc)
 
-
-
 ---
 
 ## 0、NLP-学习路线
