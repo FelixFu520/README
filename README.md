@@ -355,19 +355,20 @@
 
 - 🐾    [CNN介绍](train/cnn/introduce_cnn.md) --[🐾CNN网络代码讲解加部署 ⭐](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
 - 🐾    [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
-- 🐾    [DSC理解](train/cnn/dsc.md)
+- 🐾    [DSC理解](train/cnn/dsc.md) 
 - 🐾    [Inception](train/cnn/inception.md)
 - 🐾    [ResNet](train/cnn/resnet.md)
 - 🐾    [DenseNet](train/cnn/densenet.md)
 - 🐾    [MobileNet](train/cnn/mobilenet.md)
 - 🐾    [SENet](train/cnn/senet.md)
-- 🐾   [EfficientNet](train/cnn/efficientnet.md)
+-  [EfficientNet](train/cnn/efficientnet.md) 🐾
 - 🐾    [conv 1* 1的作用](train/cnn/conv1.md)
 - 🐾   [上采样](train/cnn/up.md)
 
-#### 🍃RNN/NLP
+#### 🍃[RNN/NLP](train/rnn/route.md)
 
-- 🐾    [NLP学习路线](train/rnn/introduce_rnn.md)
+- [RNN/LSTM/GRU](train/rnn/introduce_rnn.md)
+
 - 🐾    [Attention](train/rnn/introduce_attention.md)
 - 🐾    [Transformer]
 
