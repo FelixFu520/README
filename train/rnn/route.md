@@ -10,11 +10,12 @@
 - [巩固知识的博客-3](https://www.cnblogs.com/jiangxinyang/p/11114993.html)
 - [巩固知识的博客-4](https://blog.csdn.net/golfbears/article/details/109074901)
 - [巩固知识的博客-5](https://zhuanlan.zhihu.com/p/54743941)
-- 
+- [Transformer & CNN](https://www.163.com/dy/article/FVTM8E540511ABV6.html)
+- [Word Embedding->ELMO->GPT->Bert](https://zhuanlan.zhihu.com/p/49271699)
 
 ---
 
-NLP学习路线是参考[王树森视频](https://github.com/TD-4/DeepLearning)整理的，以NLP(Natural Language Processing)为例，介绍了从RNN->LSTM->Attention->Self-Attention->Transformer->BERT内容，然后再简单介绍ViT(Vision Transformer).
+NLP学习路线是参考[王树森视频](https://github.com/TD-4/DeepLearning)整理的，以NLP(Natural Language Processing)为例，介绍了从RNN->LSTM->Attention->Self-Attention->Transformer->BERT、GPT、...等内容，然后再简单介绍ViT(Vision Transformer).
 
 
 
@@ -161,6 +162,8 @@ Seq2Seq的缺点：
 
 ## 8. BERT
 
+Bidirectional Encoder Representations from Transformers.用来预训练Transformer中的Encoder模型。
+
 [![image-20210721203146931](imgs/image-20210721203146931.png)](https://www.bilibili.com/video/BV11N41197nq/?spm_id_from=trigger_reload)
 
 
@@ -169,5 +172,10 @@ Seq2Seq的缺点：
 
 [![image-20210721203426655](imgs/image-20210721203426655.png)](https://www.bilibili.com/video/BV1Jv411a7RB/?spm_id_from=trigger_reload)
 
+[ELMO, Bert, GPT李宏毅视频](https://www.youtube.com/watch?v=UYPa347-DdE)
+
+
+
 ## 10. ViT
 
+[王树森ViT视频](https://www.youtube.com/watch?v=BbzOZ9THriY)

@@ -135,6 +135,7 @@
 - 🐾  [获取当前文件的路径](https://blog.csdn.net/py_tester/article/details/78954034)
 - 🐾  [Python模块搜索路径](theory/python/search_path.md)
 - 🐾  [Python glob](theory/python/glob.md)
+- [python注册器](https://applenob.github.io/python/register/)
 
 #### 🍃 Python封装工具
 
@@ -369,8 +370,8 @@
 
 - [RNN/LSTM/GRU](train/rnn/introduce_rnn.md)
 
-- 🐾    [Attention](train/rnn/introduce_attention.md)
-- 🐾    [Transformer]
+-  [Attention&Transformer](train/rnn/introduce_attention.md)
+- [Bert]()
 
 #### 🍃GAN
 
@@ -437,6 +438,10 @@
 - [3D成像-1](https://www.sohu.com/a/309203564_100166336)、[2](https://bbs.huaweicloud.com/blogs/180872)
 - [3D历史-1](https://www.pianshen.com/article/10101195970/)、
 - [PointNet 视频B站](https://www.bilibili.com/video/BV1Pp4y1473K?from=search&seid=4936235752772443171&spm_id_from=333.337.0.0)
+
+#### 🍃 Anomaly Detection
+
+- 综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
 
 ### 🍬 损失函数
 

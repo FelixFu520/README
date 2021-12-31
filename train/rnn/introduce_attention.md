@@ -6,6 +6,7 @@
 
 1. [毕成 讲解Transformer视频](https://www.bilibili.com/video/BV1a5411j7Sw/?spm_id_from=333.788.recommend_more_video.1) | [Attention](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) | [Transformer](http://jalammar.github.io/illustrated-transformer/)
 2. [李宏毅 Transformer视频](https://www.bilibili.com/video/BV1G64y1D78j?p=10) -->对应笔记 [1](https://blog.csdn.net/zghnwsc/article/details/115985091) | [2](https://blog.csdn.net/zghnwsc/article/details/115985091)| [3](https://www.cnblogs.com/sykline/p/14730088.html)
+2. [【Attention九层塔】注意力机制的九重理解](https://cloud.tencent.com/developer/article/1832457)
 
 
 
