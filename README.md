@@ -442,8 +442,13 @@
 #### 🍃 Anomaly Detection
 
 - 综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
+  - [CFLOW-AD: Real-Time Unsupervised Anomaly Detection with Localization via Conditional Normalizing Flows]()
+  - [PaDiM]()
+
 
 ### 🍬 损失函数
+
+- [距离计算方法总结](train/loss/distance.md) (2022-01-06)
 
 - 🐾   [交叉墒](train/loss/entropy.md)
 - 🐾   [Pytorch的损失函数](train/loss/losses_pytorch.md)
