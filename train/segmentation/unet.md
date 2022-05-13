@@ -32,13 +32,13 @@ Unet已经是非常老的分割模型了，是2015年《U-Net: Convolutional Net
 
 ### 1.2 网络结构
 
-![img](imgs/\872c56a9fa2d45fe8eab030c57b3a2f3~tplv-k3u1fbpfcp-watermark.image.png)
+![img](imgs/872c56a9fa2d45fe8eab030c57b3a2f3~tplv-k3u1fbpfcp-watermark.image.png)
 
 这个结构就是先对图片进行卷积和池化，在Unet论文中是池化4次，比方说一开始的图片是224x224的，那么就会变成112x112，56x56,28x28,14x14四个不同尺寸的特征。**然后我们对14x14的特征图做上采样或者反卷积，得到28x28的特征图，这个28x28的特征图与之前的28x28的特征图进行通道伤的拼接concat，然后再对拼接之后的特征图做卷积和上采样，得到56x56的特征图，再与之前的56x56的特征拼接，卷积，再上采样，经过四次上采样可以得到一个与输入图像尺寸相同的224x224的预测结果。**
 
 其实整体来看，这个也是一个Encoder-Decoder的结构：
 
-![img](imgs/\16aa4d6044d3400091235103458a2baa~tplv-k3u1fbpfcp-watermark.image.png)
+![img](imgs/16aa4d6044d3400091235103458a2baa~tplv-k3u1fbpfcp-watermark.image.png)
 Unet网络非常的简单，前半部分就是特征提取，后半部分是上采样。在一些文献中把这种结构叫做**编码器-解码器结构**，由于网络的整体结构是一个大些的英文字母U，所以叫做U-net。
 
 - Encoder：左半部分，由两个3x3的卷积层（RELU）再加上一个2x2的maxpooling层组成一个下采样的模块（后面代码可以看出）；
@@ -55,7 +55,7 @@ Unet网络非常的简单，前半部分就是特征提取，后半部分是上�
 
 ISBI数据集的一个非常严峻的挑战是紧密相邻的物体之间的分割问题。如图3所示，(a)是输入数据，(b)是Ground Truth，(c)是基于Ground Truth生成的分割掩码，(d)是U-Net使用的用于分离边界的损失权值。
 
-![img](imgs/\v2-d9e6e12deff8265aa17399d0b1701d0e_720w.jpg)图3：ISBI数据集样本示例
+![img](imgs/v2-d9e6e12deff8265aa17399d0b1701d0e_720w.jpg)图3：ISBI数据集样本示例
 
 那么该怎样设计损失函数来让模型有分离边界的能力呢？U-Net使用的是带边界权值的损失函数：
 

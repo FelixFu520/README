@@ -275,29 +275,29 @@ FLOPS:floating-point operations per second
 
 ### 第5章 源码解析篇1-YOLOX项目结构
 
-![image-20211103091739092](E:\GitHub\README\train\detection\imgs\image-20211103091739092.png)
+![image-20211103091739092](imgs\image-20211103091739092.png)
 
-![image-20211103091857006](E:\GitHub\README\train\detection\imgs\image-20211103091857006.png)
+![image-20211103091857006](imgs\image-20211103091857006.png)
 
-![image-20211103092015059](E:\GitHub\README\train\detection\imgs\image-20211103092015059.png)
+![image-20211103092015059](imgs\image-20211103092015059.png)
 
-![image-20211103092107485](E:\GitHub\README\train\detection\imgs\image-20211103092107485.png)
+![image-20211103092107485](imgs\image-20211103092107485.png)
 
-![image-20211103092157974](E:\GitHub\README\train\detection\imgs\image-20211103092157974.png)
+![image-20211103092157974](imgs\image-20211103092157974.png)
 
 ### 第6章 源码解析篇2-模型构建
 
 #### 1. 激活函数及代码
 
-![image-20211103092300300](E:\GitHub\README\train\detection\imgs\image-20211103092300300.png)
+![image-20211103092300300](imgs\image-20211103092300300.png)
 
-![image-20211103092331800](E:\GitHub\README\train\detection\imgs\image-20211103092331800.png)
+![image-20211103092331800](imgs\image-20211103092331800.png)
 
-![image-20211103092345322](E:\GitHub\README\train\detection\imgs\image-20211103092345322.png)
+![image-20211103092345322](imgs\image-20211103092345322.png)
 
-![image-20211103092445258](E:\GitHub\README\train\detection\imgs\image-20211103092445258.png)
+![image-20211103092445258](imgs\image-20211103092445258.png)
 
-![image-20211103092510238](E:\GitHub\README\train\detection\imgs\image-20211103092510238.png)
+![image-20211103092510238](imgs\image-20211103092510238.png)
 
 接下来看代码`models->network_blocks.py`
 
@@ -305,7 +305,7 @@ FLOPS:floating-point operations per second
 
 代码位置在`models`包中
 
-![360截图173211286862106](E:\GitHub\README\train\detection\imgs\archyolox.png)
+![360截图173211286862106](imgs\archyolox.png)
 
 - BaseConv（函数名）-->CBL（图中简称）
 - DWConv：深度可分离卷积
@@ -330,7 +330,7 @@ FLOPS:floating-point operations per second
 
 ### 第7章 源码解析篇3-数据集创建
 
-![image-20211103100429566](E:\GitHub\README\train\detection\imgs\image-20211103100429566.png)
+![image-20211103100429566](imgs\image-20211103100429566.png)
 
 #### 1. dataset代码
 
@@ -354,21 +354,21 @@ FLOPS:floating-point operations per second
 
 #### 1. 分布式训练代码
 
-![image-20211103150312573](E:\GitHub\README\train\detection\imgs\image-20211103150312573.png)
+![image-20211103150312573](imgs\image-20211103150312573.png)
 
-![image-20211103150330904](E:\GitHub\README\train\detection\imgs\image-20211103150330904.png)
+![image-20211103150330904](imgs\image-20211103150330904.png)
 
-![image-20211103150420587](E:\GitHub\README\train\detection\imgs\image-20211103150420587.png)
+![image-20211103150420587](imgs\image-20211103150420587.png)
 
-![image-20211103150533012](E:\GitHub\README\train\detection\imgs\image-20211103150533012.png)
+![image-20211103150533012](imgs\image-20211103150533012.png)
 
-![image-20211103150906492](E:\GitHub\README\train\detection\imgs\image-20211103150906492.png)
+![image-20211103150906492](imgs\image-20211103150906492.png)
 
-![image-20211103151030621](E:\GitHub\README\train\detection\imgs\image-20211103151030621.png)
+![image-20211103151030621](imgs\image-20211103151030621.png)
 
-![image-20211103151120232](E:\GitHub\README\train\detection\imgs\image-20211103151120232.png)
+![image-20211103151120232](imgs\image-20211103151120232.png)
 
-![image-20211103151203972](E:\GitHub\README\train\detection\imgs\image-20211103151203972.png)
+![image-20211103151203972](imgs\image-20211103151203972.png)
 
 看代码`dist.py, launch.py, setup_env.py, allreduce_norm.py`
 
@@ -376,11 +376,11 @@ FLOPS:floating-point operations per second
 
 #### 2. 非极大值抑制
 
-![image-20211103153011474](E:\GitHub\README\train\detection\imgs\image-20211103153011474.png)
+![image-20211103153011474](imgs\image-20211103153011474.png)
 
-![image-20211103153042227](E:\GitHub\README\train\detection\imgs\image-20211103153042227.png)
+![image-20211103153042227](imgs\image-20211103153042227.png)
 
-![image-20211103153234637](E:\GitHub\README\train\detection\imgs\image-20211103153234637.png)
+![image-20211103153234637](imgs\image-20211103153234637.png)
 
 所以建议所有类别同时做NMS，而不是每个类别做NMS
 
@@ -388,13 +388,13 @@ FLOPS:floating-point operations per second
 
 #### 3. 其他utils代码
 
-![image-20211103155611553](E:\GitHub\README\train\detection\imgs\image-20211103155611553.png)
+![image-20211103155611553](imgs\image-20211103155611553.png)
 
-![image-20211103155644582](E:\GitHub\README\train\detection\imgs\image-20211103155644582.png)
+![image-20211103155644582](imgs\image-20211103155644582.png)
 
-![image-20211103155701931](E:\GitHub\README\train\detection\imgs\image-20211103155701931.png)
+![image-20211103155701931](imgs\image-20211103155701931.png)
 
-![image-20211103155811906](E:\GitHub\README\train\detection\imgs\image-20211103155811906.png)
+![image-20211103155811906](imgs\image-20211103155811906.png)
 
 `lr_scheduler.py`
 

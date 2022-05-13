@@ -404,7 +404,7 @@
 
 - 🐾   [分割综述(2020)](train/segmentation/introduce.md)
 - 🐾   [UNet Family](https://github.com/ShawnBIT/UNet-family)
-  - [unet](train/segmentation/unet.md)
+  - [UNet](train/segmentation/unet.md)
   - [UNet++](train/segmentation/unetpp.md)
 - 🐾   [PSPNet](train/segmentation/pspnet.md)
 - 🐾   [DUC & HDC](train/segmentation/duc_hdc.md)
