@@ -1,8 +1,14 @@
 # 🍭理论篇
 
-- 
-
 ## 1⃣️ 数学
+
+张宇的考研数学：
+
+- 高数
+- 线性代数
+- 概率
+
+链接: https://pan.baidu.com/s/1E7FbAw94QcoaobBcgHXa1g 提取码: 7jm4 
 
 ## 2⃣️ 语言
 
@@ -10,74 +16,31 @@
 
 #### 🍃 编译相关
 
-- 🐾   [cpp编译过程](theory/cpp/complier.md)
-- 🐾   [C++静态库与动态库](theory/cpp/lib.md)
-- 🐾   [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm)
-- 🐾   [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
-- 🐾   [why make --> cmake](theory/cpp/make2cmake.md)
-- 🐾   [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo) | [Cmake Demo github2](https://github.com/TD-4/CMakePractice)
+- 🐾 [cpp编译过程](theory/cpp/complier.md) --> [C++静态库与动态库](theory/cpp/lib.md) -->  [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm) -->  [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
+- 🐾 [why make --> cmake](theory/cpp/make2cmake.md)
+- 🐾 [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo) | [Cmake Demo github2](https://github.com/TD-4/CMakePractice)
 - 🐾   [CMake 教程中文版](https://www.bookstack.cn/read/CMake-Cookbook/README.md)
 
 #### 🍃 C++学习
 
-- 🐾   [C++黑马视频--语法为主](https://github.com/TD-4/Cpp-0-1-Resource)
-- 🐾   [侯杰C++学习教程](https://github.com/TD-4/Bilibili-plus)
-- 🐾   [C++设计模式-代码1](https://github.com/TD-4/CPP-Design-Patterns)  、[视频](https://www.bilibili.com/video/BV1Eb4y1m7Uj?from=search&seid=17226351057292842857&spm_id_from=333.337.0.0)| [代码2](https://github.com/TD-4/Cpp-Design-Patterns-1)
-- 🐾   [C++并发与多线程--笔记](theory/cpp/multi_thread.md)、[视频 王建伟](https://www.bilibili.com/video/BV1Yb411L7ak?p=2&spm_id_from=pageDriver)|
+- 🐾   [C++入门(语法为主)—黑马](https://github.com/AICoreRef/Cpp-0-1-Resource)
+- 🐾   [侯杰C++系列](https://github.com/AICoreRef/Bilibili-plus)
+- 🐾   [C++设计模式—李建忠](https://github.com/AICoreRef/CPP-Design-Patterns)
+- 🐾   [C++并发与多线程--笔记](theory/cpp/multi_thread.md)、[视频 王建伟](https://www.bilibili.com/video/BV1Yb411L7ak?p=2&spm_id_from=pageDriver)
   - [1、线程C语言-苏丙榅](https://subingwen.cn/linux/thread/)|[C++](https://subingwen.cn/cpp/thread/)
   - [2、文件描述符](https://subingwen.cn/linux/file-descriptor/)
   - [3、线程池C语言](https://subingwen.cn/linux/threadpool/)|[C++](https://subingwen.cn/linux/threadpool-cpp/) | [自己](https://github.com/TD-4/thread-pool)
-
-#### 🍃 函数/库
-
-- 🐾   [atof、...](theory/cpp/atof_soon.md)
-- 🐾   [C++11 std::chrono库详解](https://www.cnblogs.com/zlshmily/p/10058427.html)
-- 🐾   [详解C++11智能指针](https://www.cnblogs.com/WindSun/p/11444429.html)
-- 🐾   [static_cast、dynamic_cast、const_cast和reinterpret_cast](http://c.biancheng.net/cpp/biancheng/view/3297.html)
-- 🐾   [库的导入（系统介绍）](https://blog.csdn.net/weixin_39793576/article/details/111546012)
-- 🐾   [mutable](https://liam.page/2017/05/25/the-mutable-keyword-in-Cxx/)
-- 🐾   [Lambda](https://www.cnblogs.com/DswCnblog/p/5629165.html)
-- 🐾   [函数指针与指针函数](http://yulingtianxia.com/blog/2014/04/17/han-shu-zhi-zhen-yu-zhi-zhen-han-shu/)
-- 🐾   [C\C++中函数后面加const](https://blog.csdn.net/SMF0504/article/details/52311207)
-- 🐾   [unique_ptr的使用和陷阱](https://blog.csdn.net/qq_33266987/article/details/78784286)
-- 🐾  [C++ Vector遍历的几种方式](https://blog.csdn.net/HW140701/article/details/78833486)
-- 🐾  [C++ unordered_map的使用](https://www.cnblogs.com/wanghui-garcia/p/11683668.html)
-- 🐾  [C++string类如何判断字符串为空](https://blog.csdn.net/Xuebing_han/article/details/78143560)
-- 🐾  [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
-- 🐾  [noexcept 运算符](https://veitchkyrie.github.io/2020/02/24/C++-noexcept-%E8%BF%90%E7%AE%97%E7%AC%A6/)
-- 🐾  [C++ 中的 Lambda 表达式](https://docs.microsoft.com/zh-cn/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)
-- 🐾  [C++11新特性之十一：emplace](https://blog.csdn.net/f110300641/article/details/83416411)
-- 🐾  [C++ explicit](https://www.cnblogs.com/this-543273659/archive/2011/08/02/2124596.html)
-- 🐾  [C++11特性：decltype关键字](https://www.cnblogs.com/QG-whz/p/4952980.html)
-- 🐾  [how? std::function in C++](https://zhuanlan.zhihu.com/p/142175297)
-- 🐾  [C++中的&和&&](https://segmentfault.com/a/1190000017434150)
-- [c++11之函数参数包展开](https://www.cnblogs.com/pandamohist/p/13856489.html)
-- [extern “C”的作用详解](https://www.cnblogs.com/xiangtingshen/p/10980055.html)
-- [C++程序利用std::cout打印到日志文件方法](https://blog.csdn.net/weixin_42096202/article/details/109364061)
-- [C/C++ 获取文件夹下所有文件名 windows和linux通用](https://blog.csdn.net/u012005313/article/details/50687297)
-- [std::string 与 char* 之间的转换](https://blog.csdn.net/u010023457/article/details/41855007)
-- [文件复制和移动](https://www.cnblogs.com/mfryf/archive/2013/03/17/2964207.html)| [2](https://blog.csdn.net/u012750702/article/details/52738859)|[3](https://blog.csdn.net/yc461515457/article/details/57432680)|[4](https://www.jianshu.com/p/a8cc836d5dff)
-- [字符串操作](https://blog.csdn.net/xjw532881071/article/details/49154911)|[2](https://blog.csdn.net/yuejisuo1948/article/details/88643491)|[3](https://blog.csdn.net/dcrmg/article/details/99650783)|[4](https://blog.csdn.net/man_sion/article/details/54847573)|[5](https://blog.csdn.net/guowenyan001/article/details/11231927)
 
 #### 🍃 C++工具
 
 - 🐾  [VS Code + UML](theory/cpp/vscode_uml.md) ｜ [类图语法参考](https://plantuml.com/zh/class-diagram)
 - 🐾  [UML类关系](theory/cpp/uml_relation.md)
 
-
-
 #### 🍃 算法&数据结构
 
-- 🐾   链表：
-  - 🐾   [反转链表、链表操作、合并链表](theory/cpp/reverselist.md) 
-- 🐾   堆
-  - 🐾   [最小K个数](theory/cpp/topk.md)
-- 🐾   操作
-  - 增：
-  - 删：
-  - 改：
-  - 查：
-  - [排序](theory/cpp/sort.md) 
+- 🐾  [反转链表、链表操作、合并链表](theory/cpp/reverselist.md) 
+- 🐾  [最小K个数](theory/cpp/topk.md)
+- 🐾  [排序](theory/cpp/sort.md) 
 
 ### 🍬Python[🐾](theory/python/README.md)
 
@@ -98,98 +61,20 @@
 - 🐾   [第十四章 scikit-learn 库.ipynb](theory/python/eyes/14.ipynb)
 - 🐾   [第十五章 再谈编程.ipynb](theory/python/eyes/15.ipynb)
 
-#### 🍃 Numpy
+#### 🍃 Numpy&Matplotlib
 
-- 🐾   [Axis](theory/python/numpy_axis.md)
-- 🐾   [argmax、...、11个函数](theory/python/numpy_funs.md)
-- 🐾   [控制流程](theory/python/numpy_control.md)
-
-#### 🍃 Matplotlib
+- 🐾   [Ndarray数组轴的解释](theory/python/numpy_axis.md)
 
 - 🐾  Matplotlib 唐宇迪
-  - [Matplotlib基本操作](theory/python/matplotlib/1.ipynb)
-  - [风格设置](theory/python/matplotlib/2.ipynb)
-  - [条形图](theory/python/matplotlib/3.ipynb)
-  - [盒图](theory/python/matplotlib/4.ipynb)
-  - [直方图and散点图](theory/python/matplotlib/5.ipynb)
-  - [3D图](theory/python/matplotlib/6.ipynb)
-  - [pie图和子图布局](theory/python/matplotlib/7.ipynb)
-  - [Pandas与sklearn结合实例](theory/python/matplotlib/8.ipynb)
+  - [Matplotlib基本操作](theory/python/matplotlib/1.ipynb) ｜[风格设置](theory/python/matplotlib/2.ipynb) ｜[条形图](theory/python/matplotlib/3.ipynb) ｜[盒图](theory/python/matplotlib/4.ipynb)｜[直方图and散点图](theory/python/matplotlib/5.ipynb)｜[3D图](theory/python/matplotlib/6.ipynb)｜[pie图和子图布局](theory/python/matplotlib/7.ipynb)｜[Pandas与sklearn结合实例](theory/python/matplotlib/8.ipynb)
 
-#### 🍃 Python函数
-
-- 🐾   [Python下划线](https://blog.spoock.com/2016/09/23/python-underline-note/)
-- 🐾   [查看类型、内存地址、占用空间大小；...;等15个函数](theory/python/funs.md)
-- 🐾   [Python 类](theory/python/class.md)
-- 🐾   [pdb调试工具](theory/python/pdb.md)
-- 🐾   [OS模块](theory/python/os.md)
-- 🐾   [SYS模块](theory/python/sys.md)
-- 🐾   [Argparse模块](theory/python/argparse.md)
-- 🐾   [logging 模块](theory/python/logging.md)
-- 🐾   [多进程&多线程](theory/python/multi_proccess.md) --> [处理库futures](theory/python/futures.md)
-- 🐾   [类型转换](theory/python/change_type.md)
-- 🐾   [collections模块](https://www.liaoxuefeng.com/wiki/1016959663602400/1017681679479008)
-- 🐾   [Map | Reduce](https://www.liaoxuefeng.com/wiki/1016959663602400/1017329367486080)
 - 🐾   [如何计算topk](theory/python/topk.md)
-- 🐾  [按比例切分数据集](theory/python/splitdataset.md)
-- 🐾  [获取当前文件的路径](https://blog.csdn.net/py_tester/article/details/78954034)
-- 🐾  [Python模块搜索路径](theory/python/search_path.md)
-- 🐾  [Python glob](theory/python/glob.md)
-- [python注册器](https://applenob.github.io/python/register/)
 
 #### 🍃 Python封装工具
 
 - 🐾   [Python程序封装为exe等](theory/python/pyinstaller.md)
 - 🐾   [Python程序封装成wheel、setuptools](theory/python/setuptools.md)
 - 🐾  [Python pybind11](theory/python/pybind11.md)
-
-#### 🍃 Python GUI
-
-- 🐾  [QT5](http://code.py40.com/pyqt5/)
-
-#### 🍃 Python 报错&库学习
-
-- 🐾  [docker容器python中文乱码](theory/python/zh_error.md)
-- [list 排列组合](https://blog.csdn.net/vitaminc4/article/details/78922612)
-- [Python中下划线的5种含义](https://zhuanlan.zhihu.com/p/36173202)
-- [numpy: np.logical_and/or/not (逻辑与/或/非)](https://blog.csdn.net/JNingWei/article/details/78651535)
-- [np.where](https://www.cnblogs.com/massquantity/p/8908859.html)
-- [np.vstack, np.hstack](https://blog.csdn.net/u012609509/article/details/70319293)
-- [Opencv实现多幅图像显示在同一窗口（基于Python）](https://www.codenong.com/cs105613611/)
-- [opencv读中文图片](https://blog.csdn.net/PanYHHH/article/details/111561477)
-- [pytorch计算余弦相似度](https://blog.csdn.net/tszupup/article/details/100711874)
-- [(torch.full()、torch.full_like())创造全value的矩阵](https://blog.csdn.net/Fluid_ray/article/details/109855155)
-- [torch.cat 和 torch.stack的区别](https://blog.csdn.net/wukong999/article/details/89284055)
-- [ToTensor 到底做了什么？](http://spytensor.com/index.php/archives/42/)
-- [named_children()和named_modules()的区别](https://blog.csdn.net/watermelon1123/article/details/98036360)
-- [transforms的二十二个方法](https://zhuanlan.zhihu.com/p/53367135)
-- [pytorch手动实现滑动窗口操作，论fold和unfold函数的使用](https://blog.csdn.net/LoseInVain/article/details/88139435) | [2](https://blog.csdn.net/qq_34914551/article/details/102940368)
-- [Pytorch中index_select() 函数的理解](https://blog.csdn.net/kdongyi/article/details/103099589)
-- [pytorch:torch.clamp()](https://blog.csdn.net/u013230189/article/details/82627375)
-- [torch.nonzero的理解](https://blog.csdn.net/monchin/article/details/79750216)
-- [Pytorch中index_select() 函数的理解](https://blog.csdn.net/kdongyi/article/details/103099589)
-- [PIL读入图片转为BGR](https://blog.csdn.net/zicai_jiayou/article/details/115541307)
-- [np.random.randint、np.random.choice、random.sample三种随机函数的用法案例](https://blog.csdn.net/zsc201825/article/details/80918450)
-- [Python——自定义排序 sort() / list.sort()](https://blog.csdn.net/Eternity666/article/details/108301177)
-- [如何直观地理解「协方差矩阵」？](https://zhuanlan.zhihu.com/p/37609917)
-- [pprint的用法](https://blog.csdn.net/u013061183/article/details/79094460)
-- [python dir()和vars()的区别](https://blog.csdn.net/sxingming/article/details/52116157)
-- [Python装饰器abstractmethod、property、classmethod、staticmethod及自定义装饰器](https://www.jianshu.com/p/a340ffb231a0)
-- [python 获取当前日期的前n天或后n天](https://blog.csdn.net/qq_15058425/article/details/90268190)
-- [Python计数器collections.Counter用法详解](https://blog.csdn.net/sinat_28576553/article/details/99131954)
-- [python读写json文件](https://www.cnblogs.com/bigberg/p/6430095.html)
-- [python限定方法参数类型、返回值类型、变量类型等](https://www.cnblogs.com/xxpythonxx/p/12198876.html)
-- [【python】错误解决经历](https://www.cnblogs.com/ytxwzqin/p/12012025.html) |[2](https://www.cnblogs.com/henuliulei/p/13258297.html)
-- 
-
-### 🍬Linux
-
-- 🐾  [ubuntu后台运行程序](https://www.jianshu.com/p/09d86aad9fa4)
-- 🐾  [Windows路由表详解](https://cloud.tencent.com/developer/article/1493985)
-
-### 🍬Git
-
-- 🐾  [GitHub不再支持密码验证解决方案：SSH免密与Token登录配置](https://cloud.tencent.com/developer/article/1861466)
 
 # 🍭环境篇
 
@@ -244,7 +129,7 @@
 - 🐾   [Ubuntu16.04 安装NVIDIA Docker](envs/parallel_computing/nvdocker.md)【十二、安装NV-Docker】
 - 🐾   [在Docker中运行Horovod](envs/parallel_computing/all.md)【十三、在Docker中运行Horovod】
 
-### 🍬Pytorch1.4学习[📒](https://github.com/TD-4/Pytorch1.4)
+### 🍬Pytorch1.4学习[📒](https://github.com/AICoreRef/Pytorch1.4)
 
 ### 🍬Pytorch函数学习
 
@@ -614,23 +499,6 @@
 
 # 🍭项目篇
 
-> 项目结构
->
-> 1、config.json格式：参考segmentation
->
-> 2、scared格式：参考PANet
->
-> 3、Exp自定义格式：参考YoloX
-
-## 1⃣️ 分类/Classification
-
-- 🐾   [classification](https://github.com/FelixFu520/classification)
-- 🐾   [classification](https://github.com/FelixFu520/LCD-luster)
-
-## 2⃣️ 语义分割/Segmentation
-
-- 🐾   [segmentation](https://github.com/FelixFu520/segmentation)
-
 ## 3⃣️ 目标检测/Detection
 
 - 🐾   [Yolo v1](https://github.com/TD-4/yolov1) | [notes](train/detection/yolov1.md)
@@ -652,56 +520,3 @@
 - 🐾 [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
 - 🐾 [SPADE](https://github.com/TD-4/SPADE-pytorch)
 - 🐾 [PaDim & PatchCore ](https://github.com/TD-4/anodet)
-
-## 5⃣️  图像生成/Image Generative
-
-## 5⃣️  部署
-
-- 🐾  [onnxruntime, tensorrt, tvm, ...](https://github.com/FelixFu520/deploy_demo)
-
-# 🍭书签
-
-- [200+本计算机书籍](https://github.com/imarvinle/awesome-cs-books)
-- [CUDA](https://docs.nvidia.com/cuda/index.html#)
-- [TRT](https://docs.nvidia.com/deeplearning/tensorrt/index.html)
-- [CVPR](https://github.com/extreme-assistant/CVPR2021-Paper-Code-Interpretation)
-
-### Language
-
-#### C++
-
-- **[C++中文网](http://c.biancheng.net/cpp/)**
-- [C++ reference - cppreference.com](https://en.cppreference.com/w/cpp)
-
-- [Boost C++](https://wizardforcel.gitbooks.io/the-boost-cpp-libraries/content/0.html)
-- [cplusplus](http://www.cplusplus.com/)
-- [C++官方](https://isocpp.org/)
-- [GCC参数](https://www.runoob.com/w3cnote/gcc-parameter-detail.html)
-
-#### Python
-
-- [Python教程](http://www.coolpython.net/python_senior/index.html)|[2](https://www.liaoxuefeng.com/wiki/1016959663602400)
-
-- [Python官方](https://docs.python.org/zh-cn/3/index.html)
-- [PYPI](https://pypi.org/manage/projects/)
-- [PyGObject](https://pygobject.readthedocs.io/en/latest/getting_started.html)
-- [GTK+](https://python-gtk-3-tutorial.readthedocs.io/en/latest/index.html#)
-- [pycuda](https://documen.tician.de/pycuda/driver.html)
-- [pandas中文教程](https://www.w3cschool.cn/hyspo/)
-- [numpy](https://www.numpy.org.cn/reference/) | [2](https://www.numpy.org.cn/about/)
-- [matplotlib](https://www.yiibai.com/matplotlib/pyplot-tutorial.html)|[2](https://matplotlib.org/)
-- [scikit-image](https://scikit-image.org/docs/stable/)
-
-#### 其他
-
-- [git](https://www.liaoxuefeng.com/wiki/896043488029600) | [2](https://backlog.com/git-tutorial/cn/)
-
-#### 读图
-
-- [数字图像处理](http://www.vue5.com/dip/histogram_stretching.html)
-- [Opencv-python教程](https://www.osgeo.cn/opencv-python/index.html)
-- [Opencv-c++](https://docs.opencv.org/master/d2/d96/tutorial_py_table_of_contents_imgproc.html) |[2](https://docs.opencv.org/3.4.3/d9/df8/tutorial_root.html) |[3](https://www.yiibai.com/opencv/)
-- [Pillow]()
-- 
-
-- https://pycharm.iswbm.com/

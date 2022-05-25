@@ -14,7 +14,7 @@
 
 这里写错了，axis=0应该是axis=1，反之。
 
-![](F:\GitHub\README_\theory\python\imgs\01.png)
+![](imgs/01.png)
 
 ```python
 arr = np.arange(1, 19).reshape(3, 2, 3)
@@ -81,7 +81,7 @@ array([[1, 2, 3],
 
    其轴0、1如下图所示：
 
-![image](F:\GitHub\README_\theory\python\imgs\4.png)
+![image](imgs/4.png)
 
 图1-1　　二维数组的轴示意图
 
@@ -126,7 +126,7 @@ arr = [[A, B],
 
 可以看出通过这种变换，我们就把原数组从形式上转化成了一个二维数组，但是一定要注意**这里的A、B、C、D均为一维数组，对它们进行操作时，要按照向量而非标量的运算法则进行。**降维后的轴方向如下图所示：
 
-![image](F:\GitHub\README_\theory\python\imgs\20.png)
+![image](imgs/20.png)
 
 图1-2　　降维后轴方向示意图
 
@@ -150,7 +150,7 @@ array([[ 4,  6,  8, 10],
 
 那么2轴方向呢？由于A、B、C、D均为一维数组，因此第三个周（轴2）即为最内层数组的行方向，如下图所示：
 
-![image](F:\GitHub\README_\theory\python\imgs\21.png)
+![image](imgs/21.png)
 
 图1-3　　轴2方向示意图
 
@@ -228,11 +228,11 @@ arr2 = [[A, B],
 
 降维后可知，对0、1轴求和的结果为：
 
-![](F:\GitHub\README_\theory\python\imgs\22.png)
+![](imgs/22.png)
 
  因为A~H均为二维数组，因此其求和受向量运算法则约束，即有：
 
-![](F:\GitHub\README_\theory\python\imgs\23.png)
+![](imgs/23.png)
 
 
 
@@ -244,7 +244,7 @@ B+D+F+H=[[64 , 68] , [72 , 76]]
 
  这与代码运行的结果完全一致，如下图所示：
 
-![image](F:\GitHub\README_\theory\python\imgs\24.png)
+![image](imgs/24.png)
 
 图1-4　　四维数组0轴求和代码运行结果
 
@@ -377,7 +377,7 @@ transpose()函数接受的是一个由**`轴编号`**组成的**有序元组**�
 
 则变换后矩阵的形式为：4（轴2） * 2（轴0） * 2（轴1），矩阵写出来的形式如下：
 
-![](F:\GitHub\README_\theory\python\imgs\26.png)
+![](imgs/26.png)
 
  其中的◻代表原数组中的任意一个数字。
 
@@ -385,7 +385,8 @@ transpose()函数接受的是一个由**`轴编号`**组成的**有序元组**�
 
   
 
-  ![](F:\GitHub\README_\theory\python\imgs\27.png)
+
+  ![](imgs/27.png)
 
   
 
@@ -393,7 +394,8 @@ transpose()函数接受的是一个由**`轴编号`**组成的**有序元组**�
 
   
 
-  ![](F:\GitHub\README_\theory\python\imgs\28.png)
+
+  ![](imgs/28.png)
 
   
 
@@ -405,7 +407,7 @@ transpose()函数接受的是一个由**`轴编号`**组成的**有序元组**�
 
   
 
-  ![](F:\GitHub\README_\theory\python\imgs\29.png)
+  ![](imgs/29.png)
 
   
 
