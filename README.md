@@ -129,9 +129,9 @@
 - 🐾   [Ubuntu16.04 安装NVIDIA Docker](envs/parallel_computing/nvdocker.md)【十二、安装NV-Docker】
 - 🐾   [在Docker中运行Horovod](envs/parallel_computing/all.md)【十三、在Docker中运行Horovod】
 
-### 🍬Pytorch1.4学习[📒](https://github.com/AICoreRef/Pytorch1.4)
-
 ### 🍬Pytorch函数学习
+
+- 🐾   Pytorch1.4学习[📒](https://github.com/AICoreRef/Pytorch1.4)
 
 - 🐾   [clone、detached、copy](envs/pytorch/clone_detache.md)
 - 🐾   [expand & repeat](envs/pytorch/expand_repeat.md)
@@ -158,8 +158,7 @@
 - 🐾    [实验管理工具sacred](envs/tools/scared.md)
 - 🐾   [bypy 百度云下载python](envs/tools/bypy.md)
 - 🐾   [Python日志库loguru](envs/tools/loguru.md)
-- [字典2dot--dotmap](https://github.com/drgrib/dotmap)
-- 
+- 🐾  [字典2dot--dotmap](https://github.com/drgrib/dotmap)
 
 ### 🍬 IDE&Tools安装
 
@@ -179,22 +178,6 @@
   - [修改conda环境和缓存默认路径](https://blog.csdn.net/javastart/article/details/102563461)
   - [Anaconda 换源更改镜像，删源](https://blog.csdn.net/weixin_40871455/article/details/90071122)
   - [conda常用命令](https://blog.csdn.net/zhayushui/article/details/80433768)
-
-### 🍬 推理环境安装
-
-## 4⃣️ OpenCV
-
-- 🐾   [Python 读取视频](envs/opencv/read_video.md)
-- 🐾   [C++ Opencv学习笔记](envs/opencv/opencv_cpp.md)
-- 🐾   [opencv中CPU指令集优化、GPU](https://blog.csdn.net/weixin_41484240/article/details/80711295)
-- 🐾   [Opencv GPU系列笔记 CSDN](https://blog.csdn.net/DumpDoctorWang/article/details/81032914)
-- 🐾  [opencv 找不到opencv_world320.dll解决办法](https://blog.csdn.net/HY_JT/article/details/81217832)
-- 🐾  [split函数提取多通道图像的单通道图像](https://blog.csdn.net/SuperWe/article/details/51253887)
-- 🐾  [cv::Vec3d](https://blog.csdn.net/qq_36955294/article/details/110951995)
-- 🐾  [OpenCV的jpg到ppm图片格式转换](https://blog.csdn.net/zxlstudio/article/details/10067585)
-- 🐾  [BMP与PPM格式的转换](https://blog.csdn.net/lingdexixixi/article/details/52354772)
-- [Opencv Mat::data](https://blog.csdn.net/Kelvin_Yan/article/details/48315175)
-- [Opencv Mat构造函数](https://blog.csdn.net/qq_37406130/article/details/78725406)
 
 # 🍭训练篇&部署篇
 
@@ -229,7 +212,7 @@
 
 - 🐾   [最小二乘法](train/ml/least_square.md)
 - 🐾   [kmeans](train/ml/kmeans.md)
-- [分类和回归的区别](https://www.cnblogs.com/anovana/p/8031724.html)
+- 🐾   [分类和回归的区别](https://www.cnblogs.com/anovana/p/8031724.html)
 
 #### 🍃 NN
 
@@ -247,7 +230,7 @@
 - 🐾    [DenseNet](train/cnn/densenet.md)
 - 🐾    [MobileNet](train/cnn/mobilenet.md)
 - 🐾    [SENet](train/cnn/senet.md)
--  [EfficientNet](train/cnn/efficientnet.md) 🐾
+-  🐾   [EfficientNet](train/cnn/efficientnet.md) 🐾
 - 🐾    [conv 1* 1的作用](train/cnn/conv1.md)
 - 🐾   [上采样](train/cnn/up.md)
 
@@ -328,7 +311,7 @@
 
 - 综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
   - [CFLOW-AD: Real-Time Unsupervised Anomaly Detection with Localization via Conditional Normalizing Flows]()
-  - [PaDiM]()
+  -  [PaDiM](train/anomalydetection/padim.md)  
 
 
 ### 🍬 损失函数
@@ -493,30 +476,6 @@
 * [第二章 离散信源](infer/VideoCodecTheoryBasis/info/source.md)
 * [第三章 离散信道](infer/VideoCodecTheoryBasis/info/xindao.md)
 
-#### DeepStream
+### 🍬  DeepStream
 
 - [DeepStream介绍](infer/deepstream/introduce.md)
-
-# 🍭项目篇
-
-## 3⃣️ 目标检测/Detection
-
-- 🐾   [Yolo v1](https://github.com/TD-4/yolov1) | [notes](train/detection/yolov1.md)
-- 🐾   [Yolo v2](https://github.com/TD-4/yolov2) | [notes](train/detection/yolov2.md)
-- 🐾   [Yolo v3](https://github.com/TD-4/yolov3) | [notes](train/detection/yolov3.md)
-- 🐾   [Yolo v4](https://github.com/TD-4/yolov4) | [Yolov4](https://github.com/TD-4/yolov4_) | [notes](train/detection/yolov4.md)
-- 🐾   [YoloX](https://github.com/FelixFu520/YOLOX) |  [notes](train/detection/yolov4.md)
-
-## 4⃣️ 小样本/Few Shot Learning
-
-- 🐾 PANet-[🐙](https://github.com/FelixFu520/PANet) [📒](train/fsl/panet.md)
-
-## 5⃣️ 图像质量评价/Image Quality Assessment
-
-- 🐾 hyperIQA-[🐙](https://github.com/FelixFu520/hyperIQA)| [🐙-v2回归](https://github.com/TD-4/ScreenCheck) [V2-分类](https://github.com/TD-4/ScreenCheck_cls)|[📒](train/iqa/hypernet.md)
-
-## 5⃣️  异常检测/Anomaly Detection
-
-- 🐾 [PaDiM Anomaly Detection](https://github.com/FelixFu520/PaDiM-Anomaly-Detection-Localization-master) | [notes](train/anomalydetection/padim.md)
-- 🐾 [SPADE](https://github.com/TD-4/SPADE-pytorch)
-- 🐾 [PaDim & PatchCore ](https://github.com/TD-4/anodet)
