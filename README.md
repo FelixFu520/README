@@ -284,11 +284,8 @@
 
 #### 🍃 3D
 
-- 🐾   [3D学习路线-1](https://zhuanlan.zhihu.com/p/97299116)、[2](https://github.com/qxiaofan/awesome_slam_computer_vision_resources)
-- 🐾   [3D图像的表示-1](https://www.cnblogs.com/geeksongs/p/13498145.html) 、[2](https://zhuanlan.zhihu.com/p/42772630)、[3](https://www.linkresearcher.com/information/ed62a994-a3e5-4d9a-987e-2b2a67748a14)
-- 🐾   [3D成像-1](https://www.sohu.com/a/309203564_100166336)、[2](https://bbs.huaweicloud.com/blogs/180872)
-- 🐾   [3D历史-1](https://www.pianshen.com/article/10101195970/)
-- 🐾   [PointNet 视频B站](https://www.bilibili.com/video/BV1Pp4y1473K?from=search&seid=4936235752772443171&spm_id_from=333.337.0.0)
+- 🐾   [3D学习路线](https://zhuanlan.zhihu.com/p/97299116)->[3D视觉GitHub](https://github.com/qxiaofan/awesome_slam_computer_vision_resources)
+- 🐾   [3D图像的表示](https://www.cnblogs.com/geeksongs/p/13498145.html) ->  [3D成像](https://bbs.huaweicloud.com/blogs/180872)
 
 #### 🍃 Anomaly Detection
 
