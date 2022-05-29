@@ -186,11 +186,22 @@ tmpfs /tmp tmpfs size=30G 0 0
 1. 尽量简化预处理的操作，使用 numpy、opencv 等优化过的库，多多利用向量化代码，提升代码运行效率；
 2. 尽量缩减数据大小，不要传输无用信息。
 
+### 2.6 把数据弄成缓存文件
+
+参考链接：https://github.com/Megvii-BaseDetection/YOLOX/blob/main/yolox/data/datasets/coco.py
+
+### 2.7 DALI库
+
+将数据预处理部分放到GPU上执行：
+
+- github：https://github.com/NVIDIA/DALI
+- docs：https://docs.nvidia.com/deeplearning/dali/user-guide/docs/index.html
+- 博客：https://www.aiuai.cn/aifarm1755.html
+
 ### 2.6 其他
 
 1. 使用 `TFRecord` 或者 `LMDB` 等，减少小文件的读写；
 2. 使用 `apex.DistributedDataParallel` 替代 `torch.DataParallel`，使用 `apex` 进行加速；
-3. 使用 `dali` 库，在 gpu 上直接进行数据预处理。
 
 ## 3. 实验
 

@@ -181,6 +181,10 @@
 
 # 🍭训练篇&部署篇
 
+## 0⃣️ 常见报错
+
+- 🐾   [opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
+
 ## 1⃣️ 检查数据
 
 ## 2⃣️训练模型--train e ↓
@@ -188,23 +192,20 @@
 ### 🍬数据预处理
 
 #### 🍃 数据集介绍
-- 🐾   [VOC](train/preprocess/voc.md)
+- 🐾   [VOC](train/preprocess/voc.md) 
 - 🐾   [COCO](train/preprocess/coco.md)
-- 🐾   [Cityscapaces](https://github.com/mcordts/cityscapesScripts)
+- 🐾   [Cityscapaces](https://github.com/mcordts/cityscapesScripts) 
 
-#### 🍃 特征缩放[🐾](train/preprocess/featurescale.md)
+#### 🍃 特征缩放
 
-#### 🍃 Pytorch数据读取
+- 🐾 [归一化和标准化](train/preprocess/featurescale.md)
+
+#### 🍃 数据读取
 
 - 🐾   [加速训练 —提高 GPU 利用率](train/preprocess/loaddata.md)
-- 🐾   [加速训练—节约显存](train/preprocess/save_mem.md)
+- 🐾   [加速训练—NN如何占用GPU显存以及如何节约显存](train/preprocess/save_mem.md)
 
-#### 🍃 Python读取图片
-
-- 🐾   [计算图片均值](train/preprocess/mean_cal.md)
-- 🐾   [opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
-- 🐾   [直方图处理](train/preprocess/histogram.md)
-- 🐾   [python读取图片的几种方式](train/preprocess/open_image.md)
+- 🐾   [使用不同的库读取图片](train/preprocess/open_image.md)
 
 ### 🍬 网络模型
 
@@ -212,34 +213,23 @@
 
 - 🐾   [最小二乘法](train/ml/least_square.md)
 - 🐾   [kmeans](train/ml/kmeans.md)
-- 🐾   [分类和回归的区别](https://www.cnblogs.com/anovana/p/8031724.html)
 
 #### 🍃 NN
 
-- 🐾    [NN发展史](train/nn/history.md)
-- 🐾    [45分钟理解深度神经网络和深度学习-拟合角度](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html) 
-- 🐾   零基础入门深度学习- [感知器](https://www.zybuluo.com/hanbingtao/note/433855)-[线性单元和梯度下降](https://www.zybuluo.com/hanbingtao/note/448086)-[神经网络和反向传播算法](https://www.zybuluo.com/hanbingtao/note/476663)-[卷积神经网络](https://www.zybuluo.com/hanbingtao/note/485480)-[循环神经网络](https://zybuluo.com/hanbingtao/note/541458)-[长短时记忆网络(LSTM)](https://zybuluo.com/hanbingtao/note/581764)-[递归神经网络](https://zybuluo.com/hanbingtao/note/626300)
+- 🐾    [NN发展史](train/nn/history.md) ｜ [45分钟理解深度神经网络和深度学习-拟合角度](http://staff.ustc.edu.cn/~lgliu/Resources/DL/What_is_DeepLearning.html) 
+- 🐾   零基础入门深度学习： [感知器](https://www.zybuluo.com/hanbingtao/note/433855)->[线性单元和梯度下降](https://www.zybuluo.com/hanbingtao/note/448086)->[神经网络和反向传播算法](https://www.zybuluo.com/hanbingtao/note/476663)->[卷积神经网络](https://www.zybuluo.com/hanbingtao/note/485480)->[循环神经网络](https://zybuluo.com/hanbingtao/note/541458)->[长短时记忆网络(LSTM)](https://zybuluo.com/hanbingtao/note/581764)->[递归神经网络](https://zybuluo.com/hanbingtao/note/626300)
 
 #### 🍃CNN
 
-- 🐾    [CNN介绍](train/cnn/introduce_cnn.md) --[🐾CNN网络代码讲解加部署 ⭐](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
-- 🐾    [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)
-- 🐾    [DSC理解](train/cnn/dsc.md) 
-- 🐾    [Inception](train/cnn/inception.md)
-- 🐾    [ResNet](train/cnn/resnet.md)
-- 🐾    [DenseNet](train/cnn/densenet.md)
-- 🐾    [MobileNet](train/cnn/mobilenet.md)
-- 🐾    [SENet](train/cnn/senet.md)
--  🐾   [EfficientNet](train/cnn/efficientnet.md) 🐾
-- 🐾    [conv 1* 1的作用](train/cnn/conv1.md)
+- 🐾    [CNN介绍](train/cnn/introduce_cnn.md) ->[CNN网络代码讲解加部署 ⭐](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing)
+- 🐾    [LeNet, AlexNet, VGG](train/cnn/lenet_alexnet_vgg.md)->  [Inception](train/cnn/inception.md) -> [ResNet](train/cnn/resnet.md) ->  [DSC理解](train/cnn/dsc.md)  ->->[SENet](train/cnn/senet.md) [DenseNet](train/cnn/densenet.md)-> [MobileNet](train/cnn/mobilenet.md) ->[EfficientNet](train/cnn/efficientnet.md)
+- 🐾.   [conv 1* 1的作用](train/cnn/conv1.md)
 - 🐾   [上采样](train/cnn/up.md)
 
 #### 🍃[RNN/NLP](train/rnn/route.md)
 
-- [RNN/LSTM/GRU](train/rnn/introduce_rnn.md)
-
--  [Attention&Transformer](train/rnn/introduce_attention.md)
-- [Bert]()
+- 🐾   [RNN/LSTM/GRU](train/rnn/introduce_rnn.md)
+-  🐾   [Attention&Transformer](train/rnn/introduce_attention.md)
 
 #### 🍃GAN
 
@@ -261,19 +251,12 @@
 #### 🍃Detection
 
 - 🐾   [RCNNs](train/detection/rcnns.md)
-- 🐾 YOLO
-  - [yolo v1](train/detection/yolov1.md)
-  - [yolo v2](train/detection/yolov2.md)
-  - [yolo v3](train/detection/yolov3.md)
-  - [yolo v4](train/detection/yolov4.md)
-  - [Yolox](train/detection/yolox.md) | [Github](https://github.com/Megvii-BaseDetection/YOLOX)
+- 🐾 YOLO:[v1](train/detection/yolov1.md)->[yolo v2](train/detection/yolov2.md)->[yolo v3](train/detection/yolov3.md)->[yolo v4](train/detection/yolov4.md)->[Yolox](train/detection/yolox.md)
 
 #### 🍃Segmentation
 
 - 🐾   [分割综述(2020)](train/segmentation/introduce.md)
-- 🐾   [UNet Family](https://github.com/ShawnBIT/UNet-family)
-  - [UNet](train/segmentation/unet.md)
-  - [UNet++](train/segmentation/unetpp.md)
+- 🐾   [UNet Family](https://github.com/ShawnBIT/UNet-family):[UNet](train/segmentation/unet.md)->[UNet++](train/segmentation/unetpp.md)
 - 🐾   [PSPNet](train/segmentation/pspnet.md)
 - 🐾   [DUC & HDC](train/segmentation/duc_hdc.md)
 
@@ -287,7 +270,7 @@
 - 🐾   [小样本与元学习](train/fsl/fsl_metalearning.md)
 - 🐾   [综述---《Generalizing from a Few Examples: A Survey on Few-Shot Learning》学习](train/fsl/introduce.md)|[小样本论文收集-GitHub](https://github.com/tata1661/FewShotPapers) |[视频](https://www.bilibili.com/video/BV1Jh411X7FG?from=search&seid=4539837598698253223)
 - 🐾   [元学习的方法实现小样本分类](fsl_metalearning2.md)
-- 🐾   [meta-learning系列](metalearning.md)
+- 🐾   meta-learning系列
   - 元学习系列（零）：小样本学习与元学习综述
   - 元学习系列（一）：Siamese Network（孪生网络）[1](https://zhuanlan.zhihu.com/p/35040994)|[2](https://www.cnblogs.com/wj-1314/p/11556107.html)|[3](https://zhuanlan.zhihu.com/p/142381922)
   - 元学习系列（二）：Prototypical Networks（原型网络）
@@ -301,22 +284,22 @@
 
 #### 🍃 3D
 
-- [3D学习路线-1](https://zhuanlan.zhihu.com/p/97299116)、[2](https://github.com/qxiaofan/awesome_slam_computer_vision_resources)
-- [3D图像的表示-1](https://www.cnblogs.com/geeksongs/p/13498145.html) 、[2](https://zhuanlan.zhihu.com/p/42772630)、[3](https://www.linkresearcher.com/information/ed62a994-a3e5-4d9a-987e-2b2a67748a14)
-- [3D成像-1](https://www.sohu.com/a/309203564_100166336)、[2](https://bbs.huaweicloud.com/blogs/180872)
-- [3D历史-1](https://www.pianshen.com/article/10101195970/)、
-- [PointNet 视频B站](https://www.bilibili.com/video/BV1Pp4y1473K?from=search&seid=4936235752772443171&spm_id_from=333.337.0.0)
+- 🐾   [3D学习路线-1](https://zhuanlan.zhihu.com/p/97299116)、[2](https://github.com/qxiaofan/awesome_slam_computer_vision_resources)
+- 🐾   [3D图像的表示-1](https://www.cnblogs.com/geeksongs/p/13498145.html) 、[2](https://zhuanlan.zhihu.com/p/42772630)、[3](https://www.linkresearcher.com/information/ed62a994-a3e5-4d9a-987e-2b2a67748a14)
+- 🐾   [3D成像-1](https://www.sohu.com/a/309203564_100166336)、[2](https://bbs.huaweicloud.com/blogs/180872)
+- 🐾   [3D历史-1](https://www.pianshen.com/article/10101195970/)
+- 🐾   [PointNet 视频B站](https://www.bilibili.com/video/BV1Pp4y1473K?from=search&seid=4936235752772443171&spm_id_from=333.337.0.0)
 
 #### 🍃 Anomaly Detection
 
-- 综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
+- 🐾   综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
   - [CFLOW-AD: Real-Time Unsupervised Anomaly Detection with Localization via Conditional Normalizing Flows]()
   -  [PaDiM](train/anomalydetection/padim.md)  
 
 
 ### 🍬 损失函数
 
-- [距离计算方法总结](train/loss/distance.md) (2022-01-06)
+- 🐾   [距离计算方法总结](train/loss/distance.md) (2022-01-06)
 
 - 🐾   [交叉墒](train/loss/entropy.md)
 - 🐾   [Pytorch的损失函数](train/loss/losses_pytorch.md)
@@ -348,13 +331,12 @@
 
 - 🐾   [语义分割评价指标](train/assessment/seg_metris.md)
 - 🐾   [mAP](train/assessment/map.md) [code](https://github.com/TD-4/mAP)
-- 🐾 IOU
 
 ### 🍬 网络可视化
 
 #### 🍃权重、梯度、特征图可视化
 
-- 🐾   [网络中间层显示工具CAM](https://github.com/frgfm/torch-cam)  🐾   [blog](https://cloud.tencent.com/developer/article/1674200)
+- 🐾   [网络中间层显示工具CAM](https://github.com/frgfm/torch-cam)  ->   [blog](https://cloud.tencent.com/developer/article/1674200)
 - 🐾   [模型权重理解DeepDream](https://github.com/TD-4/Pytorch-Deep-Dream)
 - 🐾   [网络结构显示工具权重/梯度/特征图/混淆矩阵tensorboard](https://github.com/TD-4/PyTorch_Tutorial)
 - 🐾   [网络显示工具visdon](https://github.com/fossasia/visdom)
@@ -392,7 +374,7 @@
 
 - 🐾   [正则化](train/overfitting/regularization.md)
 - 🐾 early stop
-- 🐾   数据增强
+- 🐾  数据增强
 - 🐾 dropout
 - ...
 
@@ -405,10 +387,7 @@
 
 ### 🍬 压缩
 
-- 🐾   [序列化](infer/serialization/introduce.md)
-  - [yaml](infer/serialization/yaml.md)
-  - [protobuf](infer/serialization/protobuf.md)
-  - [grpc](infer/serialization/grpc.md)
+- 🐾   [序列化](infer/serialization/introduce.md)->[yaml](infer/serialization/yaml.md)->[protobuf](infer/serialization/protobuf.md)->[grpc](infer/serialization/grpc.md)
 
 ### 🍬 数据后处理
 
