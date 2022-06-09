@@ -205,9 +205,7 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 - **通用：协议是标准的，不同的第三方软件都可以相互进行序列化和反序列化，比如使用cjson序列化后的数据，可以使用jsoncpp反序列化。**
 - **独立：标准是私有的，比如protocol buffer协议，目前只有Google自家支持。**
-- **文本格式：可以看出内容的具体文字含义，比如**
-
-![img](F:/GitHub/README-1/notes/serialization/imgs/5.png)
+- **文本格式：可以看出内容的具体文字含义，**
 
 - **二进制格式：纯数值的数据，可读性不强。比如protobuf序列化后的数据。**
 
@@ -233,20 +231,9 @@ StackOverflow上MessagePack的原作者也给出了自己的看法，客观的�
 
 #### 2.8.2 带宽计算对比
 
-
-
-**以腾讯云带宽成本进行核算**
-
-
-
-![img](F:/GitHub/README-1/notes/serialization/imgs/8.png)
-
-
-
 **以QPS 1万计算**
 
 
 
 ![img](imgs/9.png)
-
 

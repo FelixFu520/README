@@ -201,7 +201,6 @@
 
 #### 🍃 Python读取图片
 
-- 🐾   [计算图片均值](train/preprocess/mean_cal.md)
 - 🐾   [opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
 - 🐾   [直方图处理](train/preprocess/histogram.md)
 - 🐾   [python读取图片的几种方式](train/preprocess/open_image.md)
@@ -309,29 +308,10 @@
 
 #### 🍃 Anomaly Detection
 
-- 综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
-  - [CFLOW-AD: Real-Time Unsupervised Anomaly Detection with Localization via Conditional Normalizing Flows]()
-  -  [PaDiM](train/anomalydetection/padim.md)  
+- [综述与研究进展](https://blog.csdn.net/qq_36560894/article/details/120698709)
 
 
-### 🍬 损失函数
-
-- [距离计算方法总结](train/loss/distance.md) (2022-01-06)
-
-- 🐾   [交叉墒](train/loss/entropy.md)
-- 🐾   [Pytorch的损失函数](train/loss/losses_pytorch.md)
-- [三个相关系数](https://www.cnblogs.com/yjd_hycf_space/p/11537153.html)
-- [机器学习-距离度量](https://blog.csdn.net/xjp_xujiping/article/details/108576496)|[2](https://zhuanlan.zhihu.com/p/46626607)
-- [方差](https://blog.csdn.net/lijinxiu123/article/details/52450858)|[2](https://geek.digiasset.org/pages/mathbasic/correlation-co-variances-variance-coeffi_21Mar07115144053588/#%E4%B8%89%E5%8D%8F%E6%96%B9%E5%B7%AE)|[3](https://zhuanlan.zhihu.com/p/86181679)|[4](https://zhuanlan.zhihu.com/p/68967565)|[5](https://blog.csdn.net/lilong117194/article/details/78399568)
-- Lovasz-Softmax Loss
-- Exponential Logarithmic loss
-- Focal Loss + Dice Loss
-- BCE + Dice Loss
-- Generalized Dice loss
-- Tversky Loss
-- IOU Loss
-- Dice Loss
-- Focal Loss
+### 🍬 损失函数：[详细见AICore中的loss](https://github.com/FelixFu520/AICore/blob/main/dao/losses/__init__.py)
 
 ### 🍬 优化器
 
@@ -346,9 +326,8 @@
 
 ### 🍬 评价指标
 
-- 🐾   [语义分割评价指标](train/assessment/seg_metris.md)
-- 🐾   [mAP](train/assessment/map.md) [code](https://github.com/TD-4/mAP)
-- 🐾 IOU
+- 🐾   [分割评价指标](train/assessment/seg_metris.md)
+- 🐾   [目标检测评价指标-mAP](train/assessment/map.md) [code](https://github.com/TD-4/mAP)
 
 ### 🍬 网络可视化
 
@@ -361,40 +340,24 @@
 
 #### 🍃网络结构
 
-- 🐾   [网络结构显示工具torchsuammary](https://github.com/sksq96/pytorch-summary)  🐾   [debug](train/visual/torchsummary.md)
+- 🐾   [网络结构显示工具torchsuammary](https://github.com/sksq96/pytorch-summary)  | [debug](train/visual/torchsummary.md)
 - 🐾   [网络结构显示工具Netron](https://github.com/lutzroeder/netron)
 
-### 🍬 梯度消失与爆炸/欠拟合[🐾](train/fit/grad.md)
-
-1. 预训练加微调
-2. 🐾   [权重初始化](train/fit/init.md)
-3. 🐾   梯度剪切、权重正则（针对梯度爆炸）
-4. 🐾   使用不同的[激活函数](train/fit/activation.md)
-5. 🐾   使用[batchnorm](train/fit/batchnorm.md)
-6. 🐾   使用残差结构
-7. 🐾   使用LSTM网络
+### 🍬 [梯度消失与爆炸](train/fit/grad.md)
 
 
 ### 🍬 Tips
 
-- 🐾    [深度学习训练流程](train/tips/train_flow.md)
-- 🐾    [提高性能的4个角度](train/tips/improve_performence.md)
-- 🐾    [固定种子](train/tips/random_seed.md)
-- 🐾   [混合精度训练](train/tips/apex.md), 🐾   [apex](https://github.com/NVIDIA/apex) 🐾   [apex+tensorcore+ngc](https://developer.nvidia.com/automatic-mixed-precision)
-- 🐾   [TensorCore](train/tips/tensorcore.md)
-- 🐾   [DeepLearningExamples NVIDIA-各种加速和demo](https://github.com/NVIDIA/DeepLearningExamples)
+- 🐾   [深度学习训练流程](train/tips/train_flow.md)
+- 🐾   [提高性能的4个角度](train/tips/improve_performence.md) |  [固定种子](train/tips/random_seed.md)
+- 🐾   [混合精度训练](train/tips/apex.md) |  [apex](https://github.com/NVIDIA/apex) | [apex+tensorcore+ngc](https://developer.nvidia.com/automatic-mixed-precision)
+- 🐾   [TensorCore](train/tips/tensorcore.md) | [DeepLearningExamples NVIDIA-各种加速和demo](https://github.com/NVIDIA/DeepLearningExamples)
 - 🐾   [学习率调整策略](train/tips/scheduler.md)
-- 🐾  [学习率与batchsize](train/tips/lr_batchsize.md)
+- 🐾   [学习率与batchsize](train/tips/lr_batchsize.md)
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
-### 🍬 过拟合[🐾](train/overfitting/introduce_overfitting.md)
-
-- 🐾   [正则化](train/overfitting/regularization.md)
-- 🐾 early stop
-- 🐾   数据增强
-- 🐾 dropout
-- ...
+### 🍬 [欠拟合&过拟合](train/overfitting/introduce_overfitting.md)
 
 ## 4⃣️ 微调/迁移学习
 
@@ -405,40 +368,26 @@
 
 ### 🍬 压缩
 
-- 🐾   [序列化](infer/serialization/introduce.md)
-  - [yaml](infer/serialization/yaml.md)
-  - [protobuf](infer/serialization/protobuf.md)
-  - [grpc](infer/serialization/grpc.md)
+- 🐾   [序列化](infer/serialization/introduce.md) -{[yaml](infer/serialization/yaml.md)|[protobuf](infer/serialization/protobuf.md)|[grpc](infer/serialization/grpc.md)}
 
 ### 🍬 数据后处理
 
-### 🍬 部署框架 [🐾](infer/README.md)
+### 🍬 [部署框架 ](infer/README.md)
 
 ####  🍃ONNX
 
-- 🐾   [ONNX介绍](infer/onnx/introduce.md) 
-- 🐾   [ONNX API Python](infer/onnx/python_api.md) | [ONNX Tutorials](https://github.com/TD-4/onnx-tutorial)
-- 🐾   [ONNX支持框架有哪些](https://onnx.ai/supported-tools.html)
+- 🐾   [ONNX介绍](infer/onnx/introduce.md) | [ONNX Tutorials](https://github.com/AICoreRef/onnx-tutorial)| [ONNX支持框架有哪些](https://onnx.ai/supported-tools.html)
 
 ####  🍃 TVM
 
-- [介绍](infer/tvm/introduce.md)
-- [编译安装](infer/tvm/install.md)
-- [TVM架构设计](infer/tvm/arch.md)
-- [TVM部署](infer/tvm/TVMB.md)
-- [TVM原理](infer/tvm/TVMY.md)
-- [TVM源码学习](infer/tvm/src.md)
-- [Relay学习](infer/tvm/relay.md)`TODO`
-- [学习笔记-代码](infer/tvm/pytorch2onnx2tvm.md) | [Github](https://github.com/TD-4/pytorch2onnx2tvm) | [DockerHub:`dockerhub:docker pull fusimeng/project:tvm-deploy-cpp`]
+- 🐾  [介绍](infer/tvm/introduce.md)|[编译安装](infer/tvm/install.md)|[TVM架构设计](infer/tvm/arch.md)|[TVM部署](infer/tvm/TVMB.md)|[TVM原理](infer/tvm/TVMY.md)|[TVM源码学习](infer/tvm/src.md)|[Relay学习](infer/tvm/relay.md)`TODO`
+- 🐾  [学习笔记-代码1](infer/tvm/pytorch2onnx2tvm.md) | [代码2](https://github.com/AICoreRef/pytorch2onnx2tvm) 
 
 ####  🍃TensorRT
 
-- [了解什么是TensorRT?](infer/tensorrt/Introduce.md)
-- [案例和讲解（C++）](infer/tensorrt/tensorrtcpp.md)
-- [使用TensorRT遇到的问题](infer/tensorrt/problem.md)
-- [入门案例代码解析(python)](infer/tensorrt/Code.md)
-- [自己收集的案例1(python)](https://github.com/TD-4/TensorRT) | [2(python)](https://github.com/TD-4/TensorRT2)
-- [TensorRT8.0API学习](infer/tensorrt/api.md)
+- 🐾  [了解什么是TensorRT?](infer/tensorrt/Introduce.md)
+- 🐾  [案例和讲解（C++）](infer/tensorrt/tensorrtcpp.md)| [入门案例代码解析(python)-1](infer/tensorrt/Code.md) |[(python)-2](https://github.com/AICoreRef/TensorRT) | [(python)-3](https://github.com/AICoreRef/TensorRT2)
+- 🐾  [TensorRT8.0API学习](infer/tensorrt/api.md)
 
 ### 🍬 网站部署-BS
 
@@ -451,31 +400,19 @@
 ### 🍬 嵌入式设备
 
 - 🐾   [Nano](https://github.com/TD-4/Nano_DLI)
-- 🐾   树莓派 
-  - [安装系统](infer/embedded/pi_install.md)
+- 🐾   树莓派 : [安装系统](infer/embedded/pi_install.md)
 
 ### 🍬 视频处理与流媒体
 
-- [协议](infer/video/protocal.md)
-
 #### 🍃 基本概念
 
-- [视频基本概念与多媒体概念](infer/video/introduce1.md)
-- [视频编解码与GPU](infer/video/gpu_codec.md)
+- 🐾   [协议](infer/video/protocal.md)
 
-#### 🍃 视频编解码理论基础
+- 🐾   [视频基本概念与多媒体概念](infer/video/introduce1.md)
+- 🐾   [视频编解码与GPU](infer/video/gpu_codec.md)
 
-- [第一章 介绍](infer/VideoCodecTheoryBasis/notes/introduce.md)
-- [第二章 数字视频](infer/VideoCodecTheoryBasis/notes/digitalvideo.md)
-- [第三章 信息论基础](infer/VideoCodecTheoryBasis/notes/base.md)
-- [第四章 视频编解码理论基础](infer/VideoCodecTheoryBasis/notes/codec.md)
+#### 🍃 [视频编解码学习](https://www.cnblogs.com/xkfz007/archive/2012/07/28/2613690.html)
 
-#### 🍃 信息论与编码基础（雷菁）
+#### 🍃 DeepStream
 
-* [第一章 绪论](infer/VideoCodecTheoryBasis/info/introduce.md)
-* [第二章 离散信源](infer/VideoCodecTheoryBasis/info/source.md)
-* [第三章 离散信道](infer/VideoCodecTheoryBasis/info/xindao.md)
-
-### 🍬  DeepStream
-
-- [DeepStream介绍](infer/deepstream/introduce.md)
+- 🐾   [DeepStream介绍](infer/deepstream/introduce.md)
