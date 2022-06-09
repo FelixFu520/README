@@ -19,7 +19,7 @@
 - 🐾 [cpp编译过程](theory/cpp/complier.md) --> [C++静态库与动态库](theory/cpp/lib.md) -->  [gcc、cmake](theory/cpp/introduce_make.md) | [gcc参数选项](http://www.shanghai.ws/gnu/gcc_1.htm) -->  [makefile手册](https://seisman.github.io/how-to-write-makefile/introduction.html) 
 - 🐾 [why make --> cmake](theory/cpp/make2cmake.md)
 - 🐾 [CMake Tutorial](theory/cpp/cmake.md) | [CMakeLists.txt格式](theory/cpp/cmakelists.md) | [CMake官方教程-英文](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#a-basic-starting-point-step-1) | [CMake手册-别人的blog](https://www.zybuluo.com/khan-lau/note/254724) |[CMake Demo Github](https://github.com/TD-4/cmake-demo) | [Cmake Demo github2](https://github.com/TD-4/CMakePractice)
-- 🐾   [CMake 教程中文版](https://www.bookstack.cn/read/CMake-Cookbook/README.md)
+- 🐾  [CMake 教程中文版](https://www.bookstack.cn/read/CMake-Cookbook/README.md)
 
 #### 🍃 C++学习
 
@@ -129,21 +129,7 @@
 - 🐾   [Ubuntu16.04 安装NVIDIA Docker](envs/parallel_computing/nvdocker.md)【十二、安装NV-Docker】
 - 🐾   [在Docker中运行Horovod](envs/parallel_computing/all.md)【十三、在Docker中运行Horovod】
 
-### 🍬Pytorch函数学习
-
-- 🐾   Pytorch1.4学习[📒](https://github.com/AICoreRef/Pytorch1.4)
-
-- 🐾   [clone、detached、copy](envs/pytorch/clone_detache.md)
-- 🐾   [expand & repeat](envs/pytorch/expand_repeat.md)
-- 🐾   [cat & stack](envs/pytorch/cat_stack.md)
-- 🐾   [transpose & permute](envs/pytorch/transpose_permute.md)
-- 🐾   [contiguous](envs/pytorch/contiguous.md)
-- 🐾   [squeeze & unsqueeze](envs/pytorch/squeeze_unsqueeze.md)
-- 🐾   [max, argmax, size, clamp, sum, topk](envs/pytorch/max_argmax.md)
-- 🐾   [train、eval](envs/pytorch/train_eval.md)
-- 🐾   [权重加载修改名称](envs/pytorch/load_weights.md)
-- 🐾   [上采样：interpolate、PixelShuffle](envs/pytorch/upsample.md)
-- 🐾   [scatter](envs/pytorch/scatter.md)
+### 🍬Pytorch函数学习[📒](https://github.com/AICoreRef/Pytorch1.4)
 
 ## 3⃣️ 工具
 
@@ -205,16 +191,10 @@
 - 🐾   [加速训练 —提高 GPU 利用率](train/preprocess/loaddata.md)
 - 🐾   [加速训练—NN如何占用GPU显存以及如何节约显存](train/preprocess/save_mem.md)
 
-<<<<<<< HEAD
 #### 🍃 Python读取图片
 
 - 🐾   [opencv读取数据--segmentation fault](train/preprocess/sefgmentationfault.md)
-- 🐾   [直方图处理](train/preprocess/histogram.md)
-- 🐾   [python读取图片的几种方式](train/preprocess/open_image.md)
-=======
 - 🐾   [使用不同的库读取图片](train/preprocess/open_image.md)
->>>>>>> a619f5763e328f7441ace9c037b9e528fb08afc3
-
 ### 🍬 网络模型
 
 #### 🍃 机器学习
@@ -297,37 +277,10 @@
 
 #### 🍃 Anomaly Detection
 
-<<<<<<< HEAD
 - [综述与研究进展](https://blog.csdn.net/qq_36560894/article/details/120698709)
 
 
 ### 🍬 损失函数：[详细见AICore中的loss](https://github.com/FelixFu520/AICore/blob/main/dao/losses/__init__.py)
-=======
-- 🐾   综述与研究进展--[1](https://blog.csdn.net/qq_36560894/article/details/120698709)
-  - [CFLOW-AD: Real-Time Unsupervised Anomaly Detection with Localization via Conditional Normalizing Flows]()
-  -  [PaDiM](train/anomalydetection/padim.md)  
-
-
-### 🍬 损失函数
-
-- 🐾   [距离计算方法总结](train/loss/distance.md) (2022-01-06)
-
-- 🐾   [交叉墒](train/loss/entropy.md)
-- 🐾   [Pytorch的损失函数](train/loss/losses_pytorch.md)
-- [三个相关系数](https://www.cnblogs.com/yjd_hycf_space/p/11537153.html)
-- [机器学习-距离度量](https://blog.csdn.net/xjp_xujiping/article/details/108576496)|[2](https://zhuanlan.zhihu.com/p/46626607)
-- [方差](https://blog.csdn.net/lijinxiu123/article/details/52450858)|[2](https://geek.digiasset.org/pages/mathbasic/correlation-co-variances-variance-coeffi_21Mar07115144053588/#%E4%B8%89%E5%8D%8F%E6%96%B9%E5%B7%AE)|[3](https://zhuanlan.zhihu.com/p/86181679)|[4](https://zhuanlan.zhihu.com/p/68967565)|[5](https://blog.csdn.net/lilong117194/article/details/78399568)
-- Lovasz-Softmax Loss
-- Exponential Logarithmic loss
-- Focal Loss + Dice Loss
-- BCE + Dice Loss
-- Generalized Dice loss
-- Tversky Loss
-- IOU Loss
-- Dice Loss
-- Focal Loss
->>>>>>> a619f5763e328f7441ace9c037b9e528fb08afc3
-
 ### 🍬 优化器
 
 - 🐾   [优化器整理](train/optim/introduce.md)
@@ -341,14 +294,8 @@
 
 ### 🍬 评价指标
 
-<<<<<<< HEAD
 - 🐾   [分割评价指标](train/assessment/seg_metris.md)
 - 🐾   [目标检测评价指标-mAP](train/assessment/map.md) [code](https://github.com/TD-4/mAP)
-=======
-- 🐾   [语义分割评价指标](train/assessment/seg_metris.md)
-- 🐾   [mAP](train/assessment/map.md) [code](https://github.com/TD-4/mAP)
->>>>>>> a619f5763e328f7441ace9c037b9e528fb08afc3
-
 ### 🍬 网络可视化
 
 #### 🍃权重、梯度、特征图可视化
@@ -377,18 +324,7 @@
 
 ## 3⃣️测试模型--train e↔︎test e ↓
 
-<<<<<<< HEAD
 ### 🍬 [欠拟合&过拟合](train/overfitting/introduce_overfitting.md)
-=======
-### 🍬 过拟合[🐾](train/overfitting/introduce_overfitting.md)
-
-- 🐾   [正则化](train/overfitting/regularization.md)
-- 🐾 early stop
-- 🐾  数据增强
-- 🐾 dropout
-- ...
->>>>>>> a619f5763e328f7441ace9c037b9e528fb08afc3
-
 ## 4⃣️ 微调/迁移学习
 
 - 🐾   随机网格搜索
@@ -398,12 +334,7 @@
 
 ### 🍬 压缩
 
-<<<<<<< HEAD
 - 🐾   [序列化](infer/serialization/introduce.md) -{[yaml](infer/serialization/yaml.md)|[protobuf](infer/serialization/protobuf.md)|[grpc](infer/serialization/grpc.md)}
-=======
-- 🐾   [序列化](infer/serialization/introduce.md)->[yaml](infer/serialization/yaml.md)->[protobuf](infer/serialization/protobuf.md)->[grpc](infer/serialization/grpc.md)
->>>>>>> a619f5763e328f7441ace9c037b9e528fb08afc3
-
 ### 🍬 数据后处理
 
 ### 🍬 [部署框架 ](infer/README.md)
