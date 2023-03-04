@@ -1,3 +1,4 @@
+2023年03月4号以后，笔记更改为飞书记录，链接：https://g3zl906jfq.feishu.cn/wiki/wikcnKU1GWH6NF6TDmsV0e5JhDe
 # 🍭理论篇
 
 ## 1⃣️ 数学
